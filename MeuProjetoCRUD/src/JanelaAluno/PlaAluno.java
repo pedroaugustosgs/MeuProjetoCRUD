@@ -87,7 +87,6 @@ public class PlaAluno {
 	 */
 	private void initialize() {
 		frmMeuCrud = new JFrame();
-		frmMeuCrud.setIconImage(Toolkit.getDefaultToolkit().getImage(PlaAluno.class.getResource("/47 - Copia.png")));
 		frmMeuCrud.setTitle("MEU CRUD - Alunos Cadastrados");               
 		frmMeuCrud.setBounds(100, 100, 1043, 550);
 		frmMeuCrud.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -181,7 +180,6 @@ public class PlaAluno {
 		frmMeuCrud.getContentPane().add(btnNovaAula);
 		
 		label = new JLabel("New label");
-		label.setIcon(new ImageIcon(PlaAluno.class.getResource("/47 - Copia.png")));
 		label.setBounds(705, -174, 1027, 511);
 		frmMeuCrud.getContentPane().add(label);
 		
@@ -220,7 +218,6 @@ public class PlaAluno {
 		frmMeuCrud.getContentPane().add(btnconfig);
 		
 		lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon(PlaAluno.class.getResource("/aluno-menu.png")));
 		lblNewLabel_1.setBounds(775, 339, 252, 219);
 		frmMeuCrud.getContentPane().add(lblNewLabel_1);
 		
@@ -257,7 +254,6 @@ public class PlaAluno {
 		frmMeuCrud.getContentPane().add(btnSair);
 		
 		lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon(PlaAluno.class.getResource("/wrarrer-bg - Copia - Copia.png")));
 		lblNewLabel.setBounds(0, 0, 1057, 522);
 		frmMeuCrud.getContentPane().add(lblNewLabel);
 		

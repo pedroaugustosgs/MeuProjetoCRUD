@@ -62,7 +62,6 @@ public class Principal2 {
 		Conexao.getConexao();
 		frmMeuProjetoCrud = new JFrame();
 		frmMeuProjetoCrud.getContentPane().setBackground(Color.BLACK);
-		frmMeuProjetoCrud.setIconImage(Toolkit.getDefaultToolkit().getImage(Principal2.class.getResource("/47 - Copia.png")));
 		frmMeuProjetoCrud.setTitle("MEU PROJETO CRUD");
 		frmMeuProjetoCrud.setBounds(100, 100, 1001, 634);
 		frmMeuProjetoCrud.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -171,12 +171,10 @@ public class Login extends Principal2{
 		lblImagem = new JLabel("");
 		ImageIcon logo = new ImageIcon("C:\\\\Users\\\\SENAI\\\\Desktop\\\\LoginSenhaDB\\\\fiemg3.png");
 		logo.setImage(logo.getImage().getScaledInstance(414, 89, 100));
-		lblImagem.setIcon(new ImageIcon(Login.class.getResource("/47 - Copia.png")));
 		lblImagem.setBounds(106, 21, 329, 168);
 		frame.getContentPane().add(lblImagem);
 		
 		lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon(Login.class.getResource("/x2.png")));
 		lblNewLabel.setBounds(0, 0, 572, 364);
 		frame.getContentPane().add(lblNewLabel);
 		//fim jlabel lblImagem
