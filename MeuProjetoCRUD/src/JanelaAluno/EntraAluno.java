@@ -51,12 +51,14 @@ public class EntraAluno extends Principal2{
 	 */
 	private void initialize() {
 		frmEntraInstitu = new JFrame();
-		frmEntraInstitu.setBounds(100, 100, 587, 396);
+		frmEntraInstitu.getContentPane().setBackground(Color.BLACK);
+		frmEntraInstitu.setBounds(100, 100, 780, 733);
 		frmEntraInstitu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmEntraInstitu.getContentPane().setLayout(null);
 		frmEntraInstitu.setResizable(false);
 		frmEntraInstitu.setLocationRelativeTo(null);
 		JButton btnLogar = new JButton("LOGAR");
+		btnLogar.setBackground(Color.LIGHT_GRAY);
 		btnLogar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				Login.main(null);
@@ -71,35 +73,61 @@ public class EntraAluno extends Principal2{
 				Principal2.main(null);
 			}
 		});
-		btnVoltar.setForeground(new Color(0, 191, 255));
-		btnVoltar.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		btnVoltar.setBounds(182, 324, 201, 33);
+		btnVoltar.setForeground(Color.BLACK);
+		btnVoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnVoltar.setBounds(307, 672, 201, 33);
 		frmEntraInstitu.getContentPane().add(btnVoltar);
-		btnLogar.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		btnLogar.setForeground(new Color(0, 191, 255));
-		btnLogar.setBounds(182, 236, 201, 33);
+		btnLogar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnLogar.setForeground(Color.BLACK);
+		btnLogar.setBounds(0, 300, 201, 33);
 		frmEntraInstitu.getContentPane().add(btnLogar);
 		
 		JButton btnCadastrar = new JButton("CADASTRAR");
+		btnCadastrar.setBackground(Color.LIGHT_GRAY);
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmEntraInstitu.setVisible(false);
 				Cadastrar_login.main(null);
 			}
 		});
-		btnCadastrar.setForeground(new Color(0, 191, 255));
-		btnCadastrar.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		btnCadastrar.setBounds(182, 280, 201, 33);
+		btnCadastrar.setForeground(Color.BLACK);
+		btnCadastrar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnCadastrar.setBounds(573, 300, 201, 33);
 		frmEntraInstitu.getContentPane().add(btnCadastrar);
 		
-		JLabel lblImage = new JLabel("");
-		lblImage.setIcon(new ImageIcon(EntraAluno.class.getResource("/47 - Copia.png")));
-		lblImage.setBounds(103, 11, 339, 158);
-		frmEntraInstitu.getContentPane().add(lblImage);
-		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon(EntraAluno.class.getResource("/Principal (2).png")));
-		lblNewLabel.setBounds(0, 2, 581, 366);
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel.setBounds(0, 573, 458, 33);
 		frmEntraInstitu.getContentPane().add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("New label");
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_1.setBounds(453, 573, 321, 33);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_2.setBounds(0, 62, 458, 33);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_3.setBounds(453, 62, 321, 33);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Coluna grega em p\u00E9.jpg"));
+		lblNewLabel_4.setBounds(382, 89, 46, 491);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_6 = new JLabel("");
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_6.setBounds(382, 89, 367, 491);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_5 = new JLabel("New label");
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_5.setBounds(-20, 89, 385, 491);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_5);
 	}
 }

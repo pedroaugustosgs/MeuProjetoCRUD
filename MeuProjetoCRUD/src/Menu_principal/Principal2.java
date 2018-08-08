@@ -182,5 +182,20 @@ public class Principal2 {
 		JLabel lblNewLabel_9 = new JLabel("New label");
 		lblNewLabel_9.setBounds(474, 113, 46, 14);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_9);
+		
+		JLabel lblNewLabel_14 = new JLabel("New label");
+		lblNewLabel_14.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_14.setBounds(13, 102, 507, 364);
+		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_14);
+		
+		JLabel lblNewLabel_15 = new JLabel("New label");
+		lblNewLabel_15.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_15.setBounds(659, 122, 46, 14);
+		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_15);
+		
+		JLabel lblNewLabel_16 = new JLabel("");
+		lblNewLabel_16.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_16.setBounds(474, 102, 477, 364);
+		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_16);
 	}
 }
