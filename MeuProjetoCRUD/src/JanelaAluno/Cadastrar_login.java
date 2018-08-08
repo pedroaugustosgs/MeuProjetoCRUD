@@ -9,6 +9,8 @@ import javax.swing.JOptionPane;
 
 import java.awt.Font;
 import javax.swing.JTextField;
+import javax.swing.SpinnerModel;
+import javax.swing.SpinnerNumberModel;
 import javax.swing.text.MaskFormatter;
 
 
@@ -40,6 +42,10 @@ import java.awt.event.FocusEvent;
 
 import java.awt.SystemColor;
 import javax.swing.JSpinner;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeEvent;
 
 public class Cadastrar_login extends LoginInstitu{
 
@@ -109,6 +115,13 @@ public class Cadastrar_login extends LoginInstitu{
 		});
 		
 		SpIdade = new JSpinner();
+		
+		SpinnerModel model = new SpinnerNumberModel(1, 1, 100, 1);
+		SpIdade.setModel(model);
+		SpIdade.setEditor(new JSpinner.NumberEditor(SpIdade, "#"));
+
+		
+		
 		SpIdade.setBounds(73, 187, 80, 20);
 		frame.getContentPane().add(SpIdade);
 		
@@ -523,5 +536,15 @@ public class Cadastrar_login extends LoginInstitu{
 		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_7.setBounds(279, 495, 100, 24);
 		frame.getContentPane().add(lblNewLabel_7);
+	}
+
+	private void JSpinner(SpinnerModel spIdade2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private SpinnerModel SpIdade(int i, int j, double maxValue, int k) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
