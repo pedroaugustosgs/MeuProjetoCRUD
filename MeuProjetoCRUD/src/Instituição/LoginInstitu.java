@@ -49,11 +49,19 @@ public class LoginInstitu extends Principal2{
 	Connection conexao; //conectorpara ligar o banco de dados
 	protected java.sql.Statement stmt; //afirmação componente usado para passar os comandos SQL
 	protected ResultSet tabela; //variável para armazenar o resultado do select
-
-	
-	private JLabel lblImagem;
-	private JLabel lblNewLabel;
 	private JButton btnVoltar;
+	private JLabel lblNewLabel_2;
+	private JLabel lblNewLabel_1;
+	private JLabel lblNewLabel;
+	private JLabel lblNewLabel_3;
+	private JLabel lblNewLabel_5;
+	private JLabel lblNewLabel_4;
+	private JLabel lblNewLabel_6;
+	private JLabel lblNewLabel_7;
+	private JLabel lblNewLabel_8;
+	private JLabel lblNewLabel_9;
+	private JLabel lblNewLabel_10;
+	private JLabel lblNewLabel_11;
 	
 	
 	/**
@@ -84,7 +92,8 @@ public class LoginInstitu extends Principal2{
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 576, 392);
+		frame.getContentPane().setBackground(Color.BLACK);
+		frame.setBounds(100, 100, 656, 727);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -95,21 +104,16 @@ public class LoginInstitu extends Principal2{
 				frame.dispose();
 			}
 		});
-		btnVoltar.setForeground(SystemColor.textHighlight);
-		btnVoltar.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		btnVoltar.setBackground(Color.WHITE);
-		btnVoltar.setBounds(45, 313, 201, 40);
+		
+		lblNewLabel = new JLabel("New label");
+		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\Approfe.png"));
+		lblNewLabel.setBounds(86, 321, 509, 96);
+		frame.getContentPane().add(lblNewLabel);
+		btnVoltar.setForeground(Color.BLACK);
+		btnVoltar.setFont(new Font("Arial Narrow", Font.PLAIN, 20));
+		btnVoltar.setBackground(Color.LIGHT_GRAY);
+		btnVoltar.setBounds(0, 659, 201, 40);
 		frame.getContentPane().add(btnVoltar);
-		
-		JLabel lblcnpj = new JLabel("CNPJ:");
-		lblcnpj.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblcnpj.setBounds(126, 216, 95, 30);
-		frame.getContentPane().add(lblcnpj);
-		
-		JLabel lblSenha = new JLabel("Senha:");
-		lblSenha.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblSenha.setBounds(126, 257, 95, 30);
-		frame.getContentPane().add(lblSenha);
 		
 		try {
 			tcnpj = new MaskFormatter("##.###.###/####-##");
@@ -127,7 +131,7 @@ public class LoginInstitu extends Principal2{
 			}
 		});
 		tfcnpj.setColumns(10);
-		tfcnpj.setBounds(231, 224, 188, 20);
+		tfcnpj.setBounds(225, 161, 270, 30);
 		frame.getContentPane().add(tfcnpj);
 		
 		pfSenha = new JPasswordField();
@@ -139,12 +143,12 @@ public class LoginInstitu extends Principal2{
 				}
 			}
 		});
-		pfSenha.setBounds(231, 265, 188, 20);
+		pfSenha.setBounds(275, 523, 212, 30);
 		frame.getContentPane().add(pfSenha);
 		
 		btnEntrar = new JButton("ENTRAR");
-		btnEntrar.setBackground(SystemColor.textHighlightText);
-		btnEntrar.setForeground(SystemColor.textHighlight);
+		btnEntrar.setBackground(Color.LIGHT_GRAY);
+		btnEntrar.setForeground(Color.BLACK);
 		btnEntrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				login = tfcnpj.getText(); //preenche a variável login com o conteudo do tfUsuario
@@ -177,22 +181,66 @@ public class LoginInstitu extends Principal2{
 			}
 		}
 	});
-		btnEntrar.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		btnEntrar.setBounds(313, 313, 201, 40);
+		btnEntrar.setFont(new Font("Arial Narrow", Font.PLAIN, 20));
+		btnEntrar.setBounds(449, 659, 201, 40);
 		frame.getContentPane().add(btnEntrar);
 		
-		//Jlabel utilizado para utilizar uma imagem
-		lblImagem = new JLabel("");
+		lblNewLabel_2 = new JLabel("New label");
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_2.setBounds(369, 357, 320, 25);
+		frame.getContentPane().add(lblNewLabel_2);
+		
+		lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_1.setBounds(-14, 352, 373, 30);
+		frame.getContentPane().add(lblNewLabel_1);
+		
+		lblNewLabel_5 = new JLabel("New label");
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\senha.jpg"));
+		lblNewLabel_5.setBounds(87, 478, 208, 121);
+		frame.getContentPane().add(lblNewLabel_5);
+		
+		lblNewLabel_3 = new JLabel("New label");
+		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\CCCC.jpg"));
+		lblNewLabel_3.setBounds(87, 98, 259, 156);
+		frame.getContentPane().add(lblNewLabel_3);
+		
+		lblNewLabel_4 = new JLabel("New label");
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\4e8ce731c4f5940854198b75c6166d1f.png"));
+		lblNewLabel_4.setBounds(0, 362, 612, 14);
+		frame.getContentPane().add(lblNewLabel_4);
+		
+		lblNewLabel_6 = new JLabel("New label");
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_6.setBounds(-57, -171, 750, 619);
+		frame.getContentPane().add(lblNewLabel_6);
+		
+		lblNewLabel_7 = new JLabel("New label");
+		lblNewLabel_7.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_7.setBounds(180, -157, 526, 666);
+		frame.getContentPane().add(lblNewLabel_7);
+		
+		lblNewLabel_8 = new JLabel("New label");
+		lblNewLabel_8.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_8.setBounds(-57, 326, 445, 397);
+		frame.getContentPane().add(lblNewLabel_8);
+		
+		lblNewLabel_9 = new JLabel("New label");
+		lblNewLabel_9.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_9.setBounds(344, 202, 320, 486);
+		frame.getContentPane().add(lblNewLabel_9);
+		
+		lblNewLabel_10 = new JLabel("New label");
+		lblNewLabel_10.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_10.setBounds(379, 202, 249, 205);
+		frame.getContentPane().add(lblNewLabel_10);
+		
+		lblNewLabel_11 = new JLabel("New label");
+		lblNewLabel_11.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_11.setBounds(420, 280, 259, 245);
+		frame.getContentPane().add(lblNewLabel_11);
 		ImageIcon logo = new ImageIcon("C:\\\\Users\\\\SENAI\\\\Desktop\\\\LoginSenhaDB\\\\fiemg3.png");
 		logo.setImage(logo.getImage().getScaledInstance(414, 89, 100));
-		lblImagem.setIcon(new ImageIcon(LoginInstitu.class.getResource("/47 - Copia.png")));
-		lblImagem.setBounds(106, 21, 329, 168);
-		frame.getContentPane().add(lblImagem);
-		
-		lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon(LoginInstitu.class.getResource("/x2.png")));
-		lblNewLabel.setBounds(0, 0, 572, 364);
-		frame.getContentPane().add(lblNewLabel);
 		//fim jlabel lblImagem
 		
 		
