@@ -30,6 +30,7 @@ import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.JTextField;
 
 public class VisualizaAulas extends Login{
 
@@ -38,7 +39,6 @@ public class VisualizaAulas extends Login{
 	private JLabel lblmateria;
 	private JLabel lblprofessor;
 	private JLabel lblconteudo;
-	private JLabel lbllocal;
 	private JLabel lblvagas;
 	private JCheckBox chSegunda;
 	private JCheckBox chTerca;
@@ -50,19 +50,20 @@ public class VisualizaAulas extends Login{
 	private JCheckBox chckbxManh;
 	private JCheckBox chckbxNoite;
 	private JCheckBox chckbxTarde;
-	private JLabel lbldemanha;
-	private JLabel lbldetarde;
-	private JLabel lblDeNoite;
-	private JLabel lblatemanha;
-	private JLabel lblatetarde;
-	private JLabel lblatenoite;
 	private JPanel panel_1;
 	private JLabel lbldata;
-	private JLabel lblatedata;
-	private JLabel lbldedata;
 	private JPanel panel;
 	private int panels=1;
 	private JTable tabela; 
+	private JTextField lbllocal;
+	private JTextField lbldemanha;
+	private JTextField lbldetarde;
+	private JTextField lblDeNoite;
+	private JTextField lblatemanha;
+	private JTextField lblatetarde;
+	private JTextField lblatenoite;
+	private JTextField lbldedata;
+	private JTextField lblatedata;
 
 	
 	/**
@@ -104,6 +105,50 @@ public class VisualizaAulas extends Login{
 		
 		panel = new JPanel();
 		panel.setVisible(false);
+		
+		panel_1 = new JPanel();
+		panel_1.setBounds(232, 70, 422, 190);
+		frame.getContentPane().add(panel_1);
+		panel_1.setVisible(false);
+		panel_1.setLayout(null);
+		
+		JLabel lblNewLabel_1 = new JLabel("Data:");
+		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblNewLabel_1.setBounds(10, 11, 56, 19);
+		panel_1.add(lblNewLabel_1);
+		
+		lbldata = new JLabel("");
+		lbldata.setBounds(78, 11, 86, 19);
+		panel_1.add(lbldata);
+		
+		JLabel lblDe = new JLabel("DE:");
+		lblDe.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblDe.setBounds(10, 39, 56, 19);
+		panel_1.add(lblDe);
+		
+		JLabel lblAt_1 = new JLabel("AT\u00C9:");
+		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblAt_1.setBounds(10, 60, 56, 19);
+		panel_1.add(lblAt_1);
+		
+		lbldedata = new JTextField();
+		lbldedata.setColumns(10);
+		lbldedata.setBounds(64, 41, 72, 20);
+		panel_1.add(lbldedata);
+		
+		lblatedata = new JTextField();
+		lblatedata.setColumns(10);
+		lblatedata.setBounds(64, 61, 72, 20);
+		panel_1.add(lblatedata);
+		
+		JButton btnNewButton_1 = new JButton("New button");
+		btnNewButton_1.setBounds(174, 11, 42, 23);
+		panel_1.add(btnNewButton_1);
+		
+		JCalendar calendar = new JCalendar();
+		calendar.setVisible(false);
+		calendar.setBounds(226, 11, 191, 153);
+		panel_1.add(calendar);
 		panel.setBounds(232, 70, 700, 190);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
@@ -256,68 +301,35 @@ public class VisualizaAulas extends Login{
 		label_11.setBounds(186, 153, 40, 23);
 		panel.add(label_11);
 		
-		lbldemanha = new JLabel("");
-		lbldemanha.setVisible(false);
-		lbldemanha.setBounds(107, 101, 66, 23);
+		lbldemanha = new JTextField();
+		lbldemanha.setBounds(107, 102, 72, 20);
 		panel.add(lbldemanha);
+		lbldemanha.setColumns(10);
 		
-		lbldetarde = new JLabel("");
-		lbldetarde.setVisible(false);
-		lbldetarde.setBounds(117, 127, 66, 20);
+		lbldetarde = new JTextField();
+		lbldetarde.setColumns(10);
+		lbldetarde.setBounds(107, 128, 72, 20);
 		panel.add(lbldetarde);
 		
-		lblDeNoite = new JLabel("");
-		lblDeNoite.setVisible(false);
-		lblDeNoite.setBounds(107, 153, 66, 20);
+		lblDeNoite = new JTextField();
+		lblDeNoite.setColumns(10);
+		lblDeNoite.setBounds(94, 154, 72, 20);
 		panel.add(lblDeNoite);
 		
-		lblatemanha = new JLabel("");
-		lblatemanha.setVisible(false);
-		lblatemanha.setBounds(233, 101, 72, 21);
+		lblatemanha = new JTextField();
+		lblatemanha.setColumns(10);
+		lblatemanha.setBounds(221, 102, 72, 20);
 		panel.add(lblatemanha);
 		
-		lblatetarde = new JLabel("");
-		lblatetarde.setVisible(false);
-		lblatetarde.setBounds(220, 127, 73, 21);
+		lblatetarde = new JTextField();
+		lblatetarde.setColumns(10);
+		lblatetarde.setBounds(220, 128, 72, 20);
 		panel.add(lblatetarde);
 		
-		lblatenoite = new JLabel("");
-		lblatenoite.setVisible(false);
-		lblatenoite.setBounds(231, 153, 74, 23);
+		lblatenoite = new JTextField();
+		lblatenoite.setColumns(10);
+		lblatenoite.setBounds(221, 154, 72, 20);
 		panel.add(lblatenoite);
-		
-		panel_1 = new JPanel();
-		panel_1.setBounds(232, 70, 196, 109);
-		frame.getContentPane().add(panel_1);
-		panel_1.setVisible(false);
-		panel_1.setLayout(null);
-		
-		JLabel lblNewLabel_1 = new JLabel("Data:");
-		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblNewLabel_1.setBounds(10, 11, 56, 19);
-		panel_1.add(lblNewLabel_1);
-		
-		lbldata = new JLabel("");
-		lbldata.setBounds(78, 11, 86, 19);
-		panel_1.add(lbldata);
-		
-		JLabel lblDe = new JLabel("DE:");
-		lblDe.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblDe.setBounds(10, 39, 56, 19);
-		panel_1.add(lblDe);
-		
-		JLabel lblAt_1 = new JLabel("AT\u00C9:");
-		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblAt_1.setBounds(10, 60, 56, 19);
-		panel_1.add(lblAt_1);
-		
-		lbldedata = new JLabel("");
-		lbldedata.setBounds(64, 36, 80, 19);
-		panel_1.add(lbldedata);
-		
-		lblatedata = new JLabel("");
-		lblatedata.setBounds(64, 59, 86, 19);
-		panel_1.add(lblatedata);
 		
 		JLabel lblConfirmarAula = new JLabel("Confirmar Aula");
 		lblConfirmarAula.setFont(new Font("Trebuchet MS", Font.BOLD | Font.ITALIC, 26));
@@ -365,10 +377,6 @@ public class VisualizaAulas extends Login{
 		lblconteudo = new JLabel("");
 		lblconteudo.setBounds(92, 125, 168, 22);
 		frame.getContentPane().add(lblconteudo);
-		
-		lbllocal = new JLabel("");
-		lbllocal.setBounds(65, 153, 160, 22);
-		frame.getContentPane().add(lbllocal);
 		
 		lblvagas = new JLabel("");
 		lblvagas.setBounds(65, 183, 153, 19);
@@ -424,7 +432,6 @@ public class VisualizaAulas extends Login{
 			public void actionPerformed(ActionEvent arg0) {
 				String sql="DELETE FROM aulas WHERE idAula=?";
 				
-				
 				int res = JOptionPane.showConfirmDialog(null, "Você deseja mesmo remover esta aula?");
 				
 				if(res==0) {
@@ -445,6 +452,11 @@ public class VisualizaAulas extends Login{
 		});
 		btnRemover.setBounds(432, 493, 89, 23);
 		frame.getContentPane().add(btnRemover);
+		
+		lbllocal = new JTextField();
+		lbllocal.setBounds(57, 153, 165, 20);
+		frame.getContentPane().add(lbllocal);
+		lbllocal.setColumns(10);
 		
 		preencherTela();
 		

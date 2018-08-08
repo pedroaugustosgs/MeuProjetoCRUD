@@ -57,7 +57,7 @@ public class Cadastrar_login extends LoginInstitu{
 	private MaskFormatter mascaraFone;
 	private JComboBox<String> cbEscola;
 	private JSpinner SpIdade;
-	public String idC;
+	public static String idC;
 	
 	/**
 	 * Launch the application.
@@ -333,7 +333,7 @@ public class Cadastrar_login extends LoginInstitu{
 					return;
 				}
 				ResultSet usuarios;
-				String sql34 ="SELECT * FROM alunos WHERE nome=?";
+				String sql34 ="SELECT * FROM alunos WHERE usuario=?";
 				PreparedStatement stmt34;
 				try {
 					stmt34 = Conexao.conexao.prepareStatement(sql34);
@@ -342,7 +342,7 @@ public class Cadastrar_login extends LoginInstitu{
 					stmt34.execute();
 					stmt34.close();
 					if(usuarios.next()) {
-						if(usuario.equals(usuarios.getString("nome"))) {
+						if(usuario.equals(usuarios.getString("usuario"))) {
 							JOptionPane.showMessageDialog(null, "Usuário já existente!");
 							tfUsuario.setText(null);
 							return;
@@ -427,6 +427,7 @@ public class Cadastrar_login extends LoginInstitu{
 					JOptionPane.showMessageDialog(null, "Novo usuário cadastrado com sucesso");
 					
 					ResultSet dd=null;
+					EntraAluno.volt = 0;
 					
 					String sql3 ="SELECT * FROM alunos";
 					try {
@@ -438,12 +439,12 @@ public class Cadastrar_login extends LoginInstitu{
 						
 						if(dd.last()) {
 							idC = dd.getString("idaluno");
+							System.out.println(idC);
 							PlaAluno.main(new String[] {String.valueOf(idC)});
 							EntraAluno.vtt=0;
 							frame.dispose();
 						}
 					
-						EntraAluno.volt = 0;
 					} catch (SQLException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();

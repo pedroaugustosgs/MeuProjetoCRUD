@@ -231,7 +231,6 @@ public class Config extends Login {
 		}else {
 			PreencheTela();
 		}
-		System.out.println(Cadastrar_login.id);
 		
 	}// fim do método inicialize
 	
@@ -262,7 +261,7 @@ public class Config extends Login {
 		PreparedStatement stmt;
 		try {
 			stmt = Conexao.conexao.prepareStatement(sql);
-			stmt.setInt(1, Cadastrar_login.id);
+			stmt.setString(1, Cadastrar_login.idC);
 			dados = stmt.executeQuery();
 			stmt.execute();
 			stmt.close();

@@ -381,7 +381,7 @@ public class ConfirmaAula extends Login{
 				String sql ="INSERT INTO alunosconfirmados (idAluno ,idConfirmar) VALUES (?,?)";
 				try {
 					PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
-					stmt.setString(1, id);
+					stmt.setString(1, PlaAluno.idaluno);
 					stmt.setString(2, idAula);
 					stmt.execute();					
 					stmt.close();
