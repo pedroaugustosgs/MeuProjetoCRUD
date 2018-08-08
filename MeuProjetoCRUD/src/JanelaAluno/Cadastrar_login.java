@@ -425,9 +425,6 @@ public class Cadastrar_login extends LoginInstitu{
 						sexo, tfemail.getText(), tel.getText() , senha,Integer.parseInt(escola));
 				if(resposta){
 					JOptionPane.showMessageDialog(null, "Novo usuário cadastrado com sucesso");
-					PlaAluno.main(new String[] {String.valueOf(id)});
-					EntraAluno.vtt=0;
-					frame.dispose();
 					
 					ResultSet dd=null;
 					
@@ -441,6 +438,9 @@ public class Cadastrar_login extends LoginInstitu{
 						
 						if(dd.last()) {
 							idC = dd.getString("idaluno");
+							PlaAluno.main(new String[] {String.valueOf(idC)});
+							EntraAluno.vtt=0;
+							frame.dispose();
 						}
 					
 						EntraAluno.volt = 0;

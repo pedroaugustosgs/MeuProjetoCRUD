@@ -23,6 +23,8 @@ import Instituição.EntraInstitu;
 import JanelaAluno.EntraAluno;
 import javax.swing.SwingConstants;
 
+import Banco.Conexao;
+
 
 public class Principal2 {
 
@@ -57,6 +59,7 @@ public class Principal2 {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		Conexao.getConexao();
 		frmMeuProjetoCrud = new JFrame();
 		frmMeuProjetoCrud.getContentPane().setBackground(Color.BLACK);
 		frmMeuProjetoCrud.setIconImage(Toolkit.getDefaultToolkit().getImage(Principal2.class.getResource("/47 - Copia.png")));
