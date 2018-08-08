@@ -100,6 +100,7 @@ public class AlteraAula extends Login{
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.BLACK);
 		frame.setBounds(100, 100, 958, 563);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
