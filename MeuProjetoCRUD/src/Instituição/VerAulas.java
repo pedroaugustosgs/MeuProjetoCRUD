@@ -141,7 +141,7 @@ public class VerAulas extends LoginInstitu{
 			    String sql = "Select * from alunos WHERE usuario = ?";
 			    PreparedStatement s;
 				try {
-					s = Conexao.getConexao().prepareStatement(sql);
+					s = Conexao.conexao.prepareStatement(sql);
 					s.setString(1, alunoEdit.getUsuario());
 					dados = s.executeQuery();
 					s.execute();
@@ -240,7 +240,7 @@ public class VerAulas extends LoginInstitu{
 			while (dados.next()) {
 								
 				/*String sql ="SELECT * FROM aulas WHERE professor=?";
-				PreparedStatement s = Conexao.getConexao().prepareStatement(sql);
+				PreparedStatement s = Conexao.conexao.prepareStatement(sql);
 				s.setString(1, alunos.getString("idaluno"));
 				aulas = s.executeQuery();
 				s.execute();
@@ -292,7 +292,7 @@ public class VerAulas extends LoginInstitu{
 		String sql = "SELECT * FROM alunos "
 				+ "INNER JOIN aulas ON alunos.idaluno = aulas.professor Where professor = ?";
 		try {
-			PreparedStatement s = Banco.Conexao.getConexao().prepareStatement(sql);
+			PreparedStatement s = Banco.Conexao.conexao.prepareStatement(sql);
 			s.setInt(1, id); //
 			dadosProf = s.executeQuery();
 			s.execute();
@@ -316,7 +316,7 @@ public class VerAulas extends LoginInstitu{
 		String sql1 ="SELECT * FROM aulas INNER JOIN alunos ON alunos.idaluno = aulas.professor WHERE escola=?";
 		//String sql1 ="SELECT * FROM alunos WHERE escola=?";
 		try {
-			PreparedStatement stmt = Conexao.getConexao().prepareStatement(sql1);
+			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql1);
 			stmt.setInt(1, id);
 			alunos = stmt.executeQuery();
 			stmt.execute();

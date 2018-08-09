@@ -458,7 +458,7 @@ public class ConfirmaAula extends Login{
 				while (dados.next()) {	
 					/*ResultSet alunos = null;
 					String sql6="SELECT * FROM alunos WHERE idaluno=?";
-					PreparedStatement stmt6 = Conexao.getConexao().prepareStatement(sql6);
+					PreparedStatement stmt6 = Conexao.conexao.prepareStatement(sql6);
 					stmt6.setString(1, dados.getString("idaluno"));
 					alunos = stmt6.executeQuery();
 					stmt6.execute();
@@ -467,7 +467,7 @@ public class ConfirmaAula extends Login{
 					
 					ResultSet escola = null;
 					String sql7="SELECT * FROM instituição WHERE id=?";
-					PreparedStatement stmt7 = Conexao.getConexao().prepareStatement(sql7);
+					PreparedStatement stmt7 = Conexao.conexao.prepareStatement(sql7);
 					stmt7.setString(1, alunos.getString("escola"));
 					escola = stmt7.executeQuery();
 					stmt7.execute();
@@ -667,7 +667,7 @@ public class ConfirmaAula extends Login{
 			stmt.close();
 			/*while(aula.next()) {
 				String sql6="SELECT * FROM alunos WHERE idaluno=?";
-				PreparedStatement stmt6 = Conexao.getConexao().prepareStatement(sql6);
+				PreparedStatement stmt6 = Conexao.conexao.prepareStatement(sql6);
 				stmt6.setString(1, aula.getString("idaluno"));
 				alunos = stmt6.executeQuery();
 				stmt6.execute();

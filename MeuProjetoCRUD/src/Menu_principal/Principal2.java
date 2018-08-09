@@ -183,9 +183,9 @@ public class Principal2 {
 		lblNewLabel_9.setBounds(474, 113, 46, 14);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_9);
 		
-		JLabel lblNewLabel_14 = new JLabel("New label");
+		JLabel lblNewLabel_14 = new JLabel("");
 		lblNewLabel_14.setIcon(new ImageIcon("D:\\1.png"));
-		lblNewLabel_14.setBounds(13, 102, 507, 364);
+		lblNewLabel_14.setBounds(10, 96, 507, 364);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_14);
 		
 		JLabel lblNewLabel_15 = new JLabel("New label");

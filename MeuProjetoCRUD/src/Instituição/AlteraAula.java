@@ -385,7 +385,7 @@ public class AlteraAula extends Login{
 				boolean res = false;
 				String sql ="INSERT INTO alunosconfirmados (idAluno ,idConfirmar) VALUES (?,?)";
 				try {
-					PreparedStatement stmt = Conexao.getConexao().prepareStatement(sql);
+					PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
 					stmt.setString(1, id);
 					stmt.setString(2, idAula);
 					stmt.execute();					
@@ -511,7 +511,7 @@ public class AlteraAula extends Login{
 		ResultSet dados=null;
 		String sql="SELECT * FROM instituição Where id=?";
 		try {
-			PreparedStatement stmt = Conexao.getConexao().prepareStatement(sql);
+			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
 			stmt.setString(1, d.getString("escola"));
 			dados = stmt.executeQuery();
 			stmt.execute();
@@ -535,7 +535,7 @@ public class AlteraAula extends Login{
 		String sql ="SELECT * FROM aulas WHERE idaula=?";
 		ResultSet dados=null;
 		try {
-			PreparedStatement stmt = Conexao.getConexao().prepareStatement(sql);
+			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
 			stmt.setString(1, idAula);
 			dados = stmt.executeQuery();
 			stmt.execute();
@@ -623,7 +623,7 @@ public class AlteraAula extends Login{
 		ResultSet ddNome;
 		String sql ="Select * From aulas Where idaula=?";
 		try {
-			PreparedStatement s = Conexao.getConexao().prepareStatement(sql);
+			PreparedStatement s = Conexao.conexao.prepareStatement(sql);
 			s.setString(1, idAula2);
 			dadosAula = s.executeQuery();
 			s.execute();
@@ -632,7 +632,7 @@ public class AlteraAula extends Login{
 				idprof = dadosAula.getString("professor");
 			}
 			String sql2="Select * From alunos Where idAluno=?";
-			PreparedStatement stmt = Conexao.getConexao().prepareStatement(sql2);
+			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql2);
 			stmt.setString(1, idprof);
 			ddNome = stmt.executeQuery();
 			stmt.execute();
@@ -652,14 +652,14 @@ public class AlteraAula extends Login{
 		//String sql="SELECT * FROM alunosconfirmados WHERE idconfirmar=?";
 		String sql="SELECT * FROM alunos INNER JOIN alunosconfirmados ON alunos.idaluno = alunosconfirmados.idAluno WHERE idConfirmar=?";
 		try {
-			PreparedStatement stmt = Conexao.getConexao().prepareStatement(sql);
+			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
 			stmt.setString(1, idAula);
 			alunos = stmt.executeQuery();
 			stmt.execute();
 			stmt.close();
 			/*while(aula.next()) {
 				String sql6="SELECT * FROM alunos WHERE idaluno=?";
-				PreparedStatement stmt6 = Conexao.getConexao().prepareStatement(sql6);
+				PreparedStatement stmt6 = Conexao.conexao.prepareStatement(sql6);
 				stmt6.setString(1, aula.getString("idaluno"));
 				alunos = stmt6.executeQuery();
 				stmt6.execute();

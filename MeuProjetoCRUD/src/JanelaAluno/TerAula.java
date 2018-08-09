@@ -128,7 +128,7 @@ public class TerAula extends Login{
 					ResultSet dadosLike;
 					String sql="SELECT * FROM aulas WHERE materia LIKE ? ORDER BY conteudo";
 					try {
-						PreparedStatement s = Conexao.getConexao().prepareStatement(sql);
+						PreparedStatement s = Conexao.conexao.prepareStatement(sql);
 						s.setString(1, "%"+tfProcurar.getText()+"%");
 						dadosLike = s.executeQuery();
 						s.execute();
@@ -286,7 +286,7 @@ public class TerAula extends Login{
 		String sql = "SELECT * FROM alunos "
 				+ "INNER JOIN aulas ON alunos.idaluno = aulas.professor Where professor = ?";
 		try {
-			PreparedStatement s = Banco.Conexao.getConexao().prepareStatement(sql);
+			PreparedStatement s = Banco.Conexao.conexao.prepareStatement(sql);
 			s.setInt(1, id); //
 			dadosProf = s.executeQuery();
 			s.execute();

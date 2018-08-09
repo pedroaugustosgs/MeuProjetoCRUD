@@ -202,7 +202,7 @@ public class RecomendarAula extends Login {
 				/*int prof=0;
 				String sql="SELECT * FROM alunos WHERE idaluno=?";
 				try {
-					PreparedStatement stmt = Banco.Conexao.getConexao().prepareStatement(sql);
+					PreparedStatement stmt = Banco.Conexao.conexao.prepareStatement(sql);
 					stmt.setInt(1, id);
 					dados = stmt.executeQuery();
 					stmt.execute();
@@ -594,7 +594,7 @@ public class RecomendarAula extends Login {
 				+ "DeTarde,AteTarde,DeNoite,AteNoite,DiaUmaVez,DeUmaVez,AteUmaVez)"
 				+ "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		try {
-			PreparedStatement stmt = Conexao.getConexao().prepareStatement(sql);
+			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
 			stmt.setString(1, idSoli);
 			stmt.setString(2, m);
 			stmt.setString(3, c);

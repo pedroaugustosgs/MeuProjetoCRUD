@@ -220,7 +220,7 @@ public class EditarRemover {
 		    String sql = "Select * from alunos WHERE usuario = ?";
 		    PreparedStatement s;
 			try {
-				s = Conexao.getConexao().prepareStatement(sql);
+				s = Conexao.conexao.prepareStatement(sql);
 				s.setString(1, idAluno);
 				dados = s.executeQuery();
 				s.execute();

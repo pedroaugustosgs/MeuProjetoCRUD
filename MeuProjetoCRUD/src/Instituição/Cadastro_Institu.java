@@ -282,7 +282,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 				String sql34 ="SELECT * FROM instituição WHERE cnpj=?";
 				PreparedStatement stmt34;
 				try {
-					stmt34 = Conexao.getConexao().prepareStatement(sql34);
+					stmt34 = Conexao.conexao.prepareStatement(sql34);
 					stmt34.setString(1, cnpj);
 					cnpjInsti = stmt34.executeQuery();
 					stmt34.execute();

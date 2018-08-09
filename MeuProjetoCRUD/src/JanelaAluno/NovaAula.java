@@ -217,7 +217,7 @@ public class NovaAula extends Login {
 				int prof=0;
 				String sql="SELECT * FROM alunos WHERE idaluno=?";
 				try {
-					PreparedStatement stmt = Banco.Conexao.getConexao().prepareStatement(sql);
+					PreparedStatement stmt = Banco.Conexao.conexao.prepareStatement(sql);
 					stmt.setString(1, PlaAluno.idaluno);
 					dados = stmt.executeQuery();
 					stmt.execute();

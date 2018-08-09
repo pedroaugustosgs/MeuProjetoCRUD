@@ -191,7 +191,7 @@ public class Login extends Principal2{
 		JOptionPane.showMessageDialog(null,"Erro ao conectar ao banco de dados");
 		}
 		try {
-			stmt = Conexao.getConexao().createStatement();
+			stmt = Conexao.conexao.createStatement();
 		} catch (SQLException e) {
 		e.printStackTrace();
 		}
