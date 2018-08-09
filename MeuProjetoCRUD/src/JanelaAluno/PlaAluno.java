@@ -116,7 +116,7 @@ public class PlaAluno {
 			
 				try {
 					dadd.absolute(linha+1);
-					VisualizaAulas.main(new String[] {dadd.getString("idaula")});
+					VisualizaAulaREC.main(new String[] {dadd.getString("idaula")});
 				} catch (SQLException s) {
 					// TODO Auto-generated catch block
 					s.printStackTrace();
