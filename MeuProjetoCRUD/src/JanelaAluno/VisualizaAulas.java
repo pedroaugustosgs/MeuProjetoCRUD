@@ -73,7 +73,7 @@ public class VisualizaAulas extends Login{
 	private JTextField lbldedata;
 	private JTextField lblatedata;
 	private JCalendar calendario;
-	public MaskFormatter DeAte;
+	private MaskFormatter DeAte;
 	
 	/**
 	 * Launch the application.
@@ -166,30 +166,152 @@ public class VisualizaAulas extends Login{
 		JButton btnNewButton = new JButton("Salvar");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
+				System.out.println(panels);
 				if(!(chSegunda.isSelected() || chTerca.isSelected() || chQuartafeira.isSelected() || chQuintafeira.isSelected() || chSextafeira.isSelected()
-						|| chSbado.isSelected() || chDomingo.isSelected())) {
+						|| chSbado.isSelected() || chDomingo.isSelected()) && panels==0) {
 					JOptionPane.showMessageDialog(null, "Marque algum dia da semana para dar a aula!");
 					return;
 				}
 				
-				if(!(chckbxManh.isSelected() || chckbxTarde.isSelected() || chckbxNoite.isSelected())) {
+				int seg=0;
+				if(chSegunda.isSelected()) {
+					seg=1;
+				}
+				int ter=0;
+				if(chTerca.isSelected()) {
+					ter=1;
+				}
+				int qua=0;
+				if(chQuartafeira.isSelected()) {
+					qua=1;
+				}
+				int qui=0;
+				if(chQuintafeira.isSelected()) {
+					qui=1;
+				}
+				int sex=0;
+				if(chSextafeira.isSelected()) {
+					sex=1;
+				}
+				int sab=0;
+				if(chSbado.isSelected()) {
+					sab=1;
+				}
+				int dom=0;
+				if(chDomingo.isSelected()) {
+					dom=1;
+				}
+				
+				if(!(chckbxManh.isSelected() || chckbxTarde.isSelected() || chckbxNoite.isSelected()) && panels==0) {
 					JOptionPane.showMessageDialog(null, "Marque um período do dia para dar a aula!");
 					return;
+				}
+				int man=0;
+				if(chckbxManh.isSelected()) {
+					man=1;
+				}
+				int tar=0;
+				if(chckbxTarde.isSelected()) {
+					tar=1;
+				}
+				int noi=0;
+				if(chckbxNoite.isSelected()) {
+					noi=1;
 				}
 				
 				if(lbllocal.getText().isEmpty()) {
 					JOptionPane.showMessageDialog(null, "Entre com o local da aula!");
 					return;
 				}
+				String loc = lbllocal.getText().toString();
+				
+				if(lblatetarde.isVisible()==false || lblatetarde.getText().isEmpty() && panels==0) {
+					JOptionPane.showMessageDialog(null, "Entre com o horario de termino da aula");
+					return;
+				}
+				String aTarde = lblatetarde.getText().toString();
+				
+				if(lbldemanha.isVisible()==false || lbldemanha.getText().isEmpty() && panels==0) {
+					JOptionPane.showMessageDialog(null, "Entre com o horario de inicio da aula");
+					return;
+				}
+				String dMAnha = lbldemanha.getText().toString();
+				
+				if(lblatemanha.isVisible()==false || lblatemanha.getText().isEmpty() && panels==0) {
+					JOptionPane.showMessageDialog(null, "Entre com o horario de termino da aula");
+					return;
+				}
+				String aManha = lblatemanha.getText().toString();
+				
+				if(lblDeNoite.isVisible()==false || lblDeNoite.getText().isEmpty() && panels==0) {
+					JOptionPane.showMessageDialog(null, "Entre com o horario de inicio da aula");
+					return;
+				}
+				String dNoite = lblDeNoite.getText().toString();
+				
+				if(lblatenoite.isVisible()==false || lblatenoite.getText().isEmpty() && panels==0) {
+					JOptionPane.showMessageDialog(null, "Entre com o horario de termino da aula");
+					return;
+				}
+				String aNoite = lblatenoite.getText().toString();
+				
+				if(lbldetarde.isVisible()==false || lbldetarde.getText().isEmpty() && panels==0) {
+					JOptionPane.showMessageDialog(null, "Entre com o horario de inicio da aula");
+					return;
+				}
+				String dTarde = lbldetarde.getText().toString();
+				
+				if(lbldedata.getText().equals("  :  ") && panels==1) {
+					JOptionPane.showMessageDialog(null, "Entre com o horario de inicio da aula!");
+					return;
+				}
+				String dData = lbldedata.getText().toString();
+				
+				if(lblatedata.getText().isEmpty() && panels==1) {
+					JOptionPane.showMessageDialog(null, "Entre com o horario de termino da aula!");
+					return;
+				}
+				
+			
+				String aData = lblatedata.getText().toString();
 				
 				String sql="UPDATE aulas SET DiaUmaVez=?, DeUmaVez =?, AteUmaVez=?, local=?, cedo=?, tarde=?, noite=?, DeManha=?, AteManha=?,"
-						+ " DeTarde=?, AteTarde=?, DeNoite=? AteNoite=?, segunda=? terca=?, quarta=?, quinta=?, sexta=?, sabado=?, domingo=? "
+						+ " DeTarde=?, AteTarde=?, DeNoite=?, AteNoite=?, segunda=?, terca=?, quarta=?, quinta=?, sexta=?, sabado=?, domingo=? "
 						+ "WHERE idAula=?";
 				
 				try {
 					PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
-					//stmt.setString(1, );
+					stmt.setString(1, lbldata.getText().toString());
+					stmt.setString(2, dData);
+					stmt.setString(3, aData);
+					stmt.setString(4, loc);
+					stmt.setInt(5, man);
+					stmt.setInt(6, tar);
+					stmt.setInt(7, noi);
+					stmt.setString(8, dMAnha);
+					stmt.setString(9, aManha);
+					stmt.setString(10, dTarde);
+					stmt.setString(11, aTarde);
+					stmt.setString(12, dNoite);
+					stmt.setString(13, aNoite);
+					stmt.setInt(14, seg);
+					stmt.setInt(15, ter);
+					stmt.setInt(16, qua);
+					stmt.setInt(17, qui);
+					stmt.setInt(18, sex);
+					stmt.setInt(19, sab);
+					stmt.setInt(20, dom);
+					stmt.setString(21, idAula);
+					stmt.execute();
+					stmt.close();
+					
+					
+					JOptionPane.showMessageDialog(null, "Aula atualizada com sucesso!");
+					
+					//*****************************   FAZER O ENVIAR EMAIL E COLOCAR AQUI *******************//
+					
+					PlaAluno.main(null);
+					frame.dispose();
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -255,6 +377,76 @@ public class VisualizaAulas extends Login{
 			e1.printStackTrace();
 		}
 		
+		panel_1 = new JPanel();
+		panel_1.setBounds(232, 70, 422, 190);
+		frame.getContentPane().add(panel_1);
+		panel_1.setVisible(false);
+		panel_1.setLayout(null);
+		
+		JLabel lblNewLabel_1 = new JLabel("Data:");
+		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblNewLabel_1.setBounds(10, 11, 56, 19);
+		panel_1.add(lblNewLabel_1);
+		
+		lbldata = new JLabel("");
+		lbldata.setBounds(78, 11, 86, 19);
+		panel_1.add(lbldata);
+		
+		JLabel lblDe = new JLabel("DE:");
+		lblDe.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblDe.setBounds(10, 39, 56, 19);
+		panel_1.add(lblDe);
+		
+		JLabel lblAt_1 = new JLabel("AT\u00C9:");
+		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblAt_1.setBounds(10, 76, 56, 19);
+		panel_1.add(lblAt_1);
+		
+		lbldedata = new JFormattedTextField(DeAte);
+		lbldedata.setColumns(10);
+		lbldedata.setBounds(64, 41, 72, 20);
+		panel_1.add(lbldedata);
+		
+		lblatedata = new JFormattedTextField(DeAte);
+		lblatedata.setColumns(10);
+		lblatedata.setBounds(64, 77, 72, 20);
+		panel_1.add(lblatedata);
+		
+		JButton btnNewButton_1 = new JButton("New button");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if(calendario.isVisible()) {
+					calendario.setVisible(false);
+				}else {
+					calendario.setVisible(true);
+				}
+			}
+		});
+		btnNewButton_1.setBounds(174, 11, 42, 23);
+		panel_1.add(btnNewButton_1);
+		
+		calendario = new JCalendar();
+		calendario.addPropertyChangeListener(new PropertyChangeListener() {
+			public void propertyChange(PropertyChangeEvent arg0) {
+				Date hoje = new Date();
+				
+				Date entrada = new Date();
+				entrada = calendario.getDate();
+				
+				if(entrada.after(hoje) || entrada.getDate() == hoje.getDate()) {
+					SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
+					String umaVez = s.format(calendario.getDate());
+					lbldata.setText(umaVez);
+				}else {
+					JOptionPane.showMessageDialog(null, "A data escolhida deve ser superior ou igual a data de hoje!","Data Inválida",JOptionPane.ERROR_MESSAGE);
+					calendario.setDate(hoje);
+				}
+			}
+		});
+		calendario.setVisible(false);
+		calendario.setBounds(226, 11, 191, 153);
+		panel_1.add(calendario);
+		
 		panel = new JPanel();
 		panel.setVisible(false);
 		panel.setBounds(232, 70, 700, 190);
@@ -269,31 +461,16 @@ public class VisualizaAulas extends Login{
 		
 		chckbxManh = new JCheckBox("Manh\u00E3");
 		chckbxManh.setSelected(true);
-		chckbxManh.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				chckbxManh.setSelected(true);
-			}
-		});
 		chckbxManh.setEnabled(false);
 		chckbxManh.setBounds(8, 101, 66, 23);
 		panel.add(chckbxManh);
 		
 		chckbxTarde = new JCheckBox("Tarde");
-		chckbxTarde.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				chckbxTarde.setSelected(true);
-			}
-		});
 		chckbxTarde.setEnabled(false);
 		chckbxTarde.setBounds(8, 127, 58, 23);
 		panel.add(chckbxTarde);
 		
 		chckbxNoite = new JCheckBox("Noite");
-		chckbxNoite.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				chckbxNoite.setSelected(true);
-			}
-		});
 		chckbxNoite.setEnabled(false);
 		chckbxNoite.setBounds(8, 153, 51, 23);
 		panel.add(chckbxNoite);
@@ -377,104 +554,40 @@ public class VisualizaAulas extends Login{
 		panel.add(label_11);
 		
 		lbldemanha = new JFormattedTextField(DeAte);
+		lbldemanha.setVisible(false);
 		lbldemanha.setBounds(107, 102, 72, 20);
 		panel.add(lbldemanha);
 		lbldemanha.setColumns(10);
 		
 		lbldetarde = new JFormattedTextField(DeAte);
+		lbldetarde.setVisible(false);
 		lbldetarde.setColumns(10);
 		lbldetarde.setBounds(107, 128, 72, 20);
 		panel.add(lbldetarde);
 		
 		lblDeNoite = new JFormattedTextField(DeAte);
+		lblDeNoite.setVisible(false);
 		lblDeNoite.setColumns(10);
 		lblDeNoite.setBounds(94, 154, 72, 20);
 		panel.add(lblDeNoite);
 		
 		lblatemanha = new JFormattedTextField(DeAte);
+		lblatemanha.setVisible(false);
 		lblatemanha.setColumns(10);
 		lblatemanha.setBounds(221, 102, 72, 20);
 		panel.add(lblatemanha);
 		
 		lblatetarde = new JFormattedTextField(DeAte);
+		lblatetarde.setVisible(false);
 		lblatetarde.setColumns(10);
 		lblatetarde.setBounds(220, 128, 72, 20);
 		panel.add(lblatetarde);
 		
 		lblatenoite = new JFormattedTextField(DeAte);
+		lblatenoite.setVisible(false);
 		lblatenoite.setColumns(10);
 		lblatenoite.setBounds(221, 154, 72, 20);
 		panel.add(lblatenoite);
-		
-		panel_1 = new JPanel();
-		panel_1.setBounds(232, 70, 422, 190);
-		frame.getContentPane().add(panel_1);
-		panel_1.setVisible(false);
-		panel_1.setLayout(null);
-		
-		JLabel lblNewLabel_1 = new JLabel("Data:");
-		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblNewLabel_1.setBounds(10, 11, 56, 19);
-		panel_1.add(lblNewLabel_1);
-		
-		lbldata = new JLabel("");
-		lbldata.setBounds(78, 11, 86, 19);
-		panel_1.add(lbldata);
-		
-		JLabel lblDe = new JLabel("DE:");
-		lblDe.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblDe.setBounds(10, 39, 56, 19);
-		panel_1.add(lblDe);
-		
-		JLabel lblAt_1 = new JLabel("AT\u00C9:");
-		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblAt_1.setBounds(10, 76, 56, 19);
-		panel_1.add(lblAt_1);
-		
-		lbldedata = new JFormattedTextField(DeAte);
-		lbldedata.setColumns(10);
-		lbldedata.setBounds(64, 41, 72, 20);
-		panel_1.add(lbldedata);
-		
-		lblatedata = new JFormattedTextField(DeAte);
-		lblatedata.setColumns(10);
-		lblatedata.setBounds(64, 77, 72, 20);
-		panel_1.add(lblatedata);
-		
-		JButton btnNewButton_1 = new JButton("New button");
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				if(calendario.isVisible()) {
-					calendario.setVisible(false);
-				}else {
-					calendario.setVisible(true);
-				}
-			}
-		});
-		btnNewButton_1.setBounds(174, 11, 42, 23);
-		panel_1.add(btnNewButton_1);
-		
-		calendario = new JCalendar();
-		calendario.addPropertyChangeListener(new PropertyChangeListener() {
-			public void propertyChange(PropertyChangeEvent arg0) {
-				Date hoje = new Date();
-				
-				Date entrada = new Date();
-				entrada = calendario.getDate();
-				
-				if(entrada.after(hoje) || entrada.getDate() == hoje.getDate()) {
-					SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
-					String umaVez = s.format(calendario.getDate());
-					lbldata.setText(umaVez);
-				}else {
-					JOptionPane.showMessageDialog(null, "A data escolhida deve ser superior ou igual a data de hoje!","Data Inválida",JOptionPane.ERROR_MESSAGE);
-					calendario.setDate(hoje);
-				}
-			}
-		});
-		calendario.setVisible(false);
-		calendario.setBounds(226, 11, 191, 153);
-		panel_1.add(calendario);
 		
 		preencherTela();
 		
@@ -618,6 +731,7 @@ public class VisualizaAulas extends Login{
 				lblprofessor.setText(NomeProf(idAula));
 				lblvagas.setText(dados.getString("vagas"));
 				lbllocal.setText(dados.getString("local"));
+				
 				if(dados.getString("segunda").equals("1")) {
 					chSegunda.setSelected(true);
 					panels = 0;
