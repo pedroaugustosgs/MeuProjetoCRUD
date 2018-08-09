@@ -167,6 +167,17 @@ public class NovaAula extends Login {
 					disciplina= "FILOS";
 				}
 				
+				if(!(chSegunda.isSelected() || chTerca.isSelected() || chQuarta.isSelected() || chQuinta.isSelected() || chSexta.isSelected()
+						|| chSabado.isSelected() || chDomingo.isSelected()) && rdbtnPeridico.isSelected()) {
+					JOptionPane.showMessageDialog(null, "Marque algum dia da semana para dar a aula!");
+					return;
+				}
+				
+				if(!(chManha.isSelected() || chTarde.isSelected() || chNoite.isSelected()) && rdbtnPeridico.isSelected()) {
+					JOptionPane.showMessageDialog(null, "Marque um período do dia para dar a aula!");
+					return;
+				}
+				
 				String conteudo;
 				if(!tfConteudo.getText().toString().isEmpty()) {
 					conteudo = tfConteudo.getText().toString();
@@ -211,7 +222,7 @@ public class NovaAula extends Login {
 					local = tfLocal.getText().toString();
 				}else {
 					JOptionPane.showMessageDialog(null, "Insira um local válido!");
-					
+					return;
 				}
 				
 				int prof=0;
@@ -230,7 +241,14 @@ public class NovaAula extends Login {
 					e.printStackTrace();
 				}
 				
-				int vagas = Integer.parseInt(tfVagas.getText());
+				int vagas;
+				if(!tfVagas.getText().isEmpty()) {
+					vagas = Integer.parseInt(tfVagas.getText());
+				}else {
+					JOptionPane.showMessageDialog(null, "Insira um total de vagas");
+					return;
+				}
+				
 				CRUDAulas novaAula = new CRUDAulas();
 				if(chManha.isSelected()) {
 					DeManha = tfDeManha.getText();
