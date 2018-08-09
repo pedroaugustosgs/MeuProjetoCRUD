@@ -14,7 +14,7 @@ public class CRUDAlunos {
 		String sql = "INSERT INTO alunos (usuario, nome,idade,sexo,email,fone,senha,escola) "
 				+ "VALUES (?,?,?,?,?,?,?,?)";
 		try {
-			PreparedStatement stmt = Conexao.getConexao().prepareStatement(sql);
+			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
 			stmt.setString(1, u);
 			stmt.setString(2, n);
 			stmt.setInt(3, i);
@@ -36,7 +36,7 @@ public class CRUDAlunos {
 	public boolean removeAluno(int id) {
 		String sql = "DELETE FROM alunos WHERE idaluno=?";
 		try {
-			PreparedStatement stmt = Conexao.getConexao().prepareStatement(sql);
+			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
 			stmt.setInt(1, id);
 			stmt.execute();
 			stmt.close();
@@ -53,7 +53,7 @@ public class CRUDAlunos {
 		String sql = "UPDATE alunos "
 				+ "SET senha=? WHERE idaluno =?";
 		try {
-			PreparedStatement stmt = Conexao.getConexao().prepareStatement(sql);
+			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
 			stmt.setString(1, s);
 			stmt.setString(2, id);
 			stmt.execute();
@@ -71,7 +71,7 @@ public class CRUDAlunos {
 				+ "SET nome=?, idade=?,email=?,fone=? "
 				+ "WHERE idaluno = ?";
 		try {
-			PreparedStatement stmt = Conexao.getConexao().prepareStatement(sql);
+			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
 			stmt.setString(1, n);
 			stmt.setString(2, i);
 			stmt.setString(3, e);
@@ -91,7 +91,7 @@ public class CRUDAlunos {
 		ResultSet tabela = null;
 		String sql = "SELECT * FROM alunos";
 		try {
-			PreparedStatement stmt = Conexao.getConexao().prepareStatement(sql);
+			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
 			tabela = stmt.executeQuery();
 			stmt.execute();
 			stmt.close();
@@ -108,7 +108,7 @@ public class CRUDAlunos {
 		ResultSet tabela = null;
 		String sql = "SELECT * FROM alunos WHERE nome LIKE ?";
 		try {
-			PreparedStatement s = Conexao.getConexao().prepareStatement(sql);
+			PreparedStatement s = Conexao.conexao.prepareStatement(sql);
 			s.setString(1, "%"+n+"%");
 			tabela = s.executeQuery();
 			s.execute();
@@ -127,7 +127,7 @@ public class CRUDAlunos {
 		String sql = "INSERT INTO login (login,senha) "
 				+ "VALUES (?,?)";
 		try {
-			PreparedStatement stmt = Conexao.getConexao().prepareStatement(sql);
+			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
 			stmt.setString(1, l);
 			stmt.setString(2, s);
 			stmt.execute();

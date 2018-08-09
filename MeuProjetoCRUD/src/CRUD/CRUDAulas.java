@@ -16,7 +16,7 @@ public class CRUDAulas {
 				+ "DeTarde,AteTarde,DeNoite,AteNoite,DiaUmaVez,DeUmaVez,AteUmaVez)"
 				+" VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		try {
-			PreparedStatement stmt = Conexao.getConexao().prepareStatement(sql);
+			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
 			stmt.setString(1, m);
 			stmt.setString(2, c);
 			stmt.setInt(3, s);
@@ -56,7 +56,7 @@ public class CRUDAulas {
 		ResultSet aulas=null;
 		String sql ="SELECT * FROM aulas";
 		try {
-			PreparedStatement stmt = Conexao.getConexao().prepareStatement(sql);
+			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
 			aulas = stmt.executeQuery();
 			stmt.execute();
 			stmt.close();

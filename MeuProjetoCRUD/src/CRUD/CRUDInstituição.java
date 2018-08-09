@@ -14,7 +14,7 @@ public class CRUDInstituição {
 		String sql = "INSERT INTO instituição (nome,cnpj,email,fone,senha) "
 				+ "VALUES (?,?,?,?,?)";
 		try {
-			PreparedStatement stmt = Conexao.getConexao().prepareStatement(sql);
+			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
 			stmt.setString(1, n);
 			stmt.setString(2, cnpj);
 			stmt.setString(3, e);
@@ -34,7 +34,7 @@ public class CRUDInstituição {
 		ResultSet tabela = null;
 		String sql = "SELECT * FROM instituição";
 		try {
-			PreparedStatement stmt = Conexao.getConexao().prepareStatement(sql);
+			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
 			tabela = stmt.executeQuery();
 			stmt.execute();
 			stmt.close();
@@ -51,7 +51,7 @@ public class CRUDInstituição {
 		ResultSet tabela = null;
 		String sql = "SELECT * FROM instituição WHERE cnpj LIKE ?";
 		try {
-			PreparedStatement s = Conexao.getConexao().prepareStatement(sql);
+			PreparedStatement s = Conexao.conexao.prepareStatement(sql);
 			s.setString(1, "%"+n+"%");
 			tabela = s.executeQuery();
 			s.execute();
@@ -72,7 +72,7 @@ public class CRUDInstituição {
 				+ "SET nome=?, idade=?,email=?,fone=? "
 				+ "WHERE idaluno = ?";
 		try {
-			PreparedStatement stmt = Conexao.getConexao().prepareStatement(sql);
+			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
 			stmt.setString(1, n);
 			stmt.setInt(2, i);
 			stmt.setString(3, e);
