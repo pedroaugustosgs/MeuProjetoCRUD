@@ -23,6 +23,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JScrollPane;
@@ -64,6 +65,7 @@ public class VisualizaAulas extends Login{
 	private JTextField lblatenoite;
 	private JTextField lbldedata;
 	private JTextField lblatedata;
+	private JCalendar calendario;
 
 	
 	/**
@@ -103,8 +105,125 @@ public class VisualizaAulas extends Login{
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(true);
 		
-		panel = new JPanel();
-		panel.setVisible(false);
+		JLabel lblConfirmarAula = new JLabel("Confirmar Aula");
+		lblConfirmarAula.setFont(new Font("Trebuchet MS", Font.BOLD | Font.ITALIC, 26));
+		lblConfirmarAula.setBounds(232, 11, 196, 48);
+		frame.getContentPane().add(lblConfirmarAula);
+		
+		Label label = new Label("Mat\u00E9ria:");
+		label.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
+		label.setForeground(Color.BLACK);
+		label.setBounds(10, 69, 58, 22);
+		frame.getContentPane().add(label);
+		
+		Label label_1 = new Label("Professor:");
+		label_1.setForeground(Color.BLACK);
+		label_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
+		label_1.setBounds(10, 97, 66, 22);
+		frame.getContentPane().add(label_1);
+		
+		Label label_2 = new Label("Conte\u00FAdo:");
+		label_2.setForeground(Color.BLACK);
+		label_2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
+		label_2.setBounds(10, 125, 66, 22);
+		frame.getContentPane().add(label_2);
+		
+		Label label_3 = new Label("Local:");
+		label_3.setForeground(Color.BLACK);
+		label_3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
+		label_3.setBounds(10, 153, 49, 22);
+		frame.getContentPane().add(label_3);
+		
+		Label label_4 = new Label("Vagas:");
+		label_4.setForeground(Color.BLACK);
+		label_4.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
+		label_4.setBounds(10, 180, 49, 22);
+		frame.getContentPane().add(label_4);
+		
+		lblmateria = new JLabel("");
+		lblmateria.setBounds(82, 70, 140, 22);
+		frame.getContentPane().add(lblmateria);
+		
+		lblprofessor = new JLabel("");
+		lblprofessor.setBounds(92, 94, 130, 22);
+		frame.getContentPane().add(lblprofessor);
+		
+		lblconteudo = new JLabel("");
+		lblconteudo.setBounds(74, 125, 153, 22);
+		frame.getContentPane().add(lblconteudo);
+		
+		lblvagas = new JLabel("");
+		lblvagas.setBounds(65, 183, 153, 19);
+		frame.getContentPane().add(lblvagas);
+		
+		JButton btnNewButton = new JButton("Salvar");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				String sql="UPDATE aulas SET DiaUmaVez=?, DeUmaVez =?, AteUmaVez=?, local=?, cedo=?, tarde=?, noite=?, DeManha=?, AteManha=?,"
+						+ " DeTarde=?, AteTarde=?, DeNoite=? AteNoite=?, segunda=? terca=?, quarta=?, quinta=?, sexta=?, sabado=?, domingo=? "
+						+ "WHERE idAula=?";
+				
+				try {
+					PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
+					//stmt.setString(1, );
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				
+			}
+		});
+		btnNewButton.setBounds(57, 493, 129, 23);
+		frame.getContentPane().add(btnNewButton);
+		
+		JButton btnNovoltar = new JButton("Voltar");
+		btnNovoltar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				PlaAluno.main(null);
+				frame.dispose();
+			}
+		});
+		btnNovoltar.setBounds(778, 493, 123, 23);
+		frame.getContentPane().add(btnNovoltar);
+		
+		tabela = new JTable();
+		
+		JScrollPane scrollPane = new JScrollPane(tabela);
+		scrollPane.setBounds(242, 271, 502, 213);
+		frame.getContentPane().add(scrollPane);
+		
+		JButton btnRemover = new JButton("Remover");
+		btnRemover.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String sql="DELETE FROM aulas WHERE idAula=?";
+				
+				int res = JOptionPane.showConfirmDialog(null, "Você deseja mesmo remover esta aula?");
+				
+				if(res==0) {
+					try {
+						PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
+						stmt.setString(1, idAula);
+						stmt.execute();
+						stmt.close();
+						JOptionPane.showMessageDialog(null, "Aula removida com sucesso!");
+						frame.dispose();
+						PlaAluno.main(null);
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+				}
+				return;
+			}
+		});
+		btnRemover.setBounds(432, 493, 89, 23);
+		frame.getContentPane().add(btnRemover);
+		
+		lbllocal = new JTextField();
+		lbllocal.setBounds(57, 153, 165, 20);
+		frame.getContentPane().add(lbllocal);
+		lbllocal.setColumns(10);
 		
 		panel_1 = new JPanel();
 		panel_1.setBounds(232, 70, 422, 190);
@@ -142,13 +261,25 @@ public class VisualizaAulas extends Login{
 		panel_1.add(lblatedata);
 		
 		JButton btnNewButton_1 = new JButton("New button");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if(calendario.isVisible()) {
+					calendario.setVisible(false);
+				}else {
+					calendario.setVisible(true);
+				}
+			}
+		});
 		btnNewButton_1.setBounds(174, 11, 42, 23);
 		panel_1.add(btnNewButton_1);
 		
-		JCalendar calendar = new JCalendar();
-		calendar.setVisible(false);
-		calendar.setBounds(226, 11, 191, 153);
-		panel_1.add(calendar);
+		calendario = new JCalendar();
+		calendario.setVisible(false);
+		calendario.setBounds(226, 11, 191, 153);
+		panel_1.add(calendario);
+		
+		panel = new JPanel();
+		panel.setVisible(false);
 		panel.setBounds(232, 70, 700, 190);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
@@ -330,133 +461,6 @@ public class VisualizaAulas extends Login{
 		lblatenoite.setColumns(10);
 		lblatenoite.setBounds(221, 154, 72, 20);
 		panel.add(lblatenoite);
-		
-		JLabel lblConfirmarAula = new JLabel("Confirmar Aula");
-		lblConfirmarAula.setFont(new Font("Trebuchet MS", Font.BOLD | Font.ITALIC, 26));
-		lblConfirmarAula.setBounds(232, 11, 196, 48);
-		frame.getContentPane().add(lblConfirmarAula);
-		
-		Label label = new Label("Mat\u00E9ria:");
-		label.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label.setForeground(Color.BLACK);
-		label.setBounds(10, 69, 58, 22);
-		frame.getContentPane().add(label);
-		
-		Label label_1 = new Label("Professor:");
-		label_1.setForeground(Color.BLACK);
-		label_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_1.setBounds(10, 97, 66, 22);
-		frame.getContentPane().add(label_1);
-		
-		Label label_2 = new Label("Conte\u00FAdo:");
-		label_2.setForeground(Color.BLACK);
-		label_2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_2.setBounds(10, 125, 66, 22);
-		frame.getContentPane().add(label_2);
-		
-		Label label_3 = new Label("Local:");
-		label_3.setForeground(Color.BLACK);
-		label_3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_3.setBounds(10, 153, 49, 22);
-		frame.getContentPane().add(label_3);
-		
-		Label label_4 = new Label("Vagas:");
-		label_4.setForeground(Color.BLACK);
-		label_4.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_4.setBounds(10, 180, 49, 22);
-		frame.getContentPane().add(label_4);
-		
-		lblmateria = new JLabel("");
-		lblmateria.setBounds(82, 70, 160, 22);
-		frame.getContentPane().add(lblmateria);
-		
-		lblprofessor = new JLabel("");
-		lblprofessor.setBounds(92, 94, 153, 22);
-		frame.getContentPane().add(lblprofessor);
-		
-		lblconteudo = new JLabel("");
-		lblconteudo.setBounds(92, 125, 168, 22);
-		frame.getContentPane().add(lblconteudo);
-		
-		lblvagas = new JLabel("");
-		lblvagas.setBounds(65, 183, 153, 19);
-		frame.getContentPane().add(lblvagas);
-		
-		JButton btnNewButton = new JButton("Salvar");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				boolean res = false;
-				String sql ="INSERT INTO alunosconfirmados (idAluno ,idConfirmar) VALUES (?,?)";
-				try {
-					PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
-					stmt.setString(1, id);
-					stmt.setString(2, idAula);
-					stmt.execute();					
-					stmt.close();
-					res = true;
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-				}
-				if(res) {
-					JOptionPane.showMessageDialog(null, "Nova Aula Confirmada com Sucesso!");
-					frame.dispose();
-					PlaAluno.main(null);
-				}else {
-					JOptionPane.showMessageDialog(null, "Erro ao confirmar nova aula!");
-				}
-				
-			}
-		});
-		btnNewButton.setBounds(57, 493, 129, 23);
-		frame.getContentPane().add(btnNewButton);
-		
-		JButton btnNovoltar = new JButton("Voltar");
-		btnNovoltar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				PlaAluno.main(null);
-				frame.dispose();
-			}
-		});
-		btnNovoltar.setBounds(778, 493, 123, 23);
-		frame.getContentPane().add(btnNovoltar);
-		
-		tabela = new JTable();
-		
-		JScrollPane scrollPane = new JScrollPane(tabela);
-		scrollPane.setBounds(242, 271, 502, 213);
-		frame.getContentPane().add(scrollPane);
-		
-		JButton btnRemover = new JButton("Remover");
-		btnRemover.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				String sql="DELETE FROM aulas WHERE idAula=?";
-				
-				int res = JOptionPane.showConfirmDialog(null, "Você deseja mesmo remover esta aula?");
-				
-				if(res==0) {
-					try {
-						PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
-						stmt.setString(1, idAula);
-						stmt.execute();
-						stmt.close();
-						JOptionPane.showMessageDialog(null, "Aula removida com sucesso!");
-						frame.dispose();
-						PlaAluno.main(null);
-					} catch (SQLException e) {
-						e.printStackTrace();
-					}
-				}
-				return;
-			}
-		});
-		btnRemover.setBounds(432, 493, 89, 23);
-		frame.getContentPane().add(btnRemover);
-		
-		lbllocal = new JTextField();
-		lbllocal.setBounds(57, 153, 165, 20);
-		frame.getContentPane().add(lbllocal);
-		lbllocal.setColumns(10);
 		
 		preencherTela();
 		
