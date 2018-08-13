@@ -17,7 +17,10 @@ import java.awt.Color;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+
 import com.jgoodies.forms.factories.DefaultComponentFactory;
 
 import Banco.Conexao;
@@ -270,6 +273,25 @@ public class PlaAluno {
 		
 		try {
 			while (dados.next()) {
+				
+				boolean continuar=false;
+				Date data = new Date();
+				Date hoje = new Date();
+				
+				try {
+					data = dados.getDate("DiaUmaVez");
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					continuar=true;
+					//e.printStackTrace();
+				}
+				
+				//SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
+				
+				if(data.before(hoje) && continuar==false) {
+					continue;
+				}
+				
 				linhas.add(new Object[] {
 						Materia(dados.getString("materia")),
 						dados.getString("conteudo"),

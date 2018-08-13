@@ -267,7 +267,7 @@ public class VisualizaAulas extends Login{
 				}
 				String dData = lbldedata.getText().toString();
 				
-				if(lblatedata.getText().isEmpty() && panels==1) {
+				if(lblatedata.getText().equals("  :  ") && panels==1) {
 					JOptionPane.showMessageDialog(null, "Entre com o horario de termino da aula!");
 					return;
 				}
@@ -460,7 +460,6 @@ public class VisualizaAulas extends Login{
 		label_7.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
 		
 		chckbxManh = new JCheckBox("Manh\u00E3");
-		chckbxManh.setSelected(true);
 		chckbxManh.setEnabled(false);
 		chckbxManh.setBounds(8, 101, 66, 23);
 		panel.add(chckbxManh);
@@ -482,7 +481,6 @@ public class VisualizaAulas extends Login{
 		label_6.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
 		
 		chSegunda = new JCheckBox("Segunda-Feira");
-		chSegunda.setSelected(true);
 		chSegunda.setEnabled(false);
 		chSegunda.setBounds(7, 43, 104, 23);
 		panel.add(chSegunda);
@@ -805,8 +803,20 @@ public class VisualizaAulas extends Login{
 				lblatetarde.setText(dados.getString("ateTarde"));
 				lblDeNoite.setText(dados.getString("deNoite"));
 				lblatenoite.setText(dados.getString("ateNoite"));
-
+				
 				lbldata.setText(dados.getString("DiaUmaVez"));
+				Date data = new Date();
+				String dataS= dados.getString("DiaUmaVez");
+				SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
+				try {
+					data = s.parse(dataS);
+				} catch (ParseException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				calendario.setDate(data);
+				
 				lbldedata.setText(dados.getString("DeUmaVez"));
 				lblatedata.setText(dados.getString("AteUmaVez"));
 			}

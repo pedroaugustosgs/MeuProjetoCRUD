@@ -13,6 +13,8 @@ import CRUD.Aluno;
 import CRUD.CRUDAlunos;
 
 import javax.swing.JButton;
+import javax.swing.JFileChooser;
+
 import java.awt.Color;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -21,6 +23,9 @@ import java.text.ParseException;
 
 
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.awt.event.ActionEvent;
 
 import java.awt.Font;
@@ -33,6 +38,8 @@ import com.jgoodies.forms.factories.DefaultComponentFactory;
 import java.awt.Toolkit;
 
 import javax.swing.JFormattedTextField;
+import javax.swing.SwingConstants;
+import javax.swing.filechooser.FileNameExtensionFilter;
 public class Config extends Login {
 	
 	int ee;
@@ -48,6 +55,12 @@ public class Config extends Login {
 	public ResultSet dados = null;
 	public static int voltar=0;
 	//public static Aluno aluno;
+	
+	File file=null;
+	FileInputStream fis=null;
+	String caminho=null;
+	JFileChooser explorer = new JFileChooser();
+	private JLabel lblFotoPerfil;
 
 	/**
 	 * Launch the application.
@@ -121,6 +134,16 @@ public class Config extends Login {
 				}
 				String idade = tfIdade.getText().toString();
 				
+				if(caminho != null) {
+					file = new File(caminho);
+					try {
+						fis = new FileInputStream(file);
+					} catch (FileNotFoundException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				///***********************************************************************
 				CRUDAlunos alterar = new CRUDAlunos();
 				if(alterar.alterarAluno(nome, idade, email, fone, id)) {
 					JOptionPane.showMessageDialog(null, "Aluno alterado com sucesso!");
@@ -147,13 +170,19 @@ public class Config extends Login {
 				}
 		});
 		
+		lblFotoPerfil = new JLabel("");
+		lblFotoPerfil.setForeground(Color.WHITE);
+		lblFotoPerfil.setBackground(Color.WHITE);
+		lblFotoPerfil.setBounds(498, 72, 258, 198);
+		frmMeuCrud.getContentPane().add(lblFotoPerfil);
+		
 		tfIdade = new JTextField();
-		tfIdade.setBounds(101, 138, 86, 20);
+		tfIdade.setBounds(89, 252, 86, 20);
 		frmMeuCrud.getContentPane().add(tfIdade);
 		tfIdade.setColumns(10);
 		btnNewButton.setForeground(Color.BLACK);
 		btnNewButton.setFont(new Font("Arial Narrow", Font.BOLD, 20));
-		btnNewButton.setBounds(280, 252, 194, 39);
+		btnNewButton.setBounds(27, 406, 194, 39);
 		frmMeuCrud.getContentPane().add(btnNewButton);
 		
 		try {
@@ -164,36 +193,36 @@ public class Config extends Login {
 		}
 		tftelefone = new JFormattedTextField(mascaraFone);
 		tftelefone.setColumns(10);
-		tftelefone.setBounds(101, 169, 135, 20);
+		tftelefone.setBounds(123, 302, 135, 20);
 		frmMeuCrud.getContentPane().add(tftelefone);
 		
 		JLabel lblTelefone = new JLabel("Telefone:");
 		lblTelefone.setForeground(Color.WHITE);
 		lblTelefone.setFont(new Font("Arial Narrow", Font.PLAIN, 20));
-		lblTelefone.setBounds(0, 169, 146, 21);
+		lblTelefone.setBounds(27, 299, 86, 21);
 		frmMeuCrud.getContentPane().add(lblTelefone);
-		btnSalvar.setBounds(0, 496, 119, 26);
+		btnSalvar.setBounds(27, 485, 119, 26);
 		frmMeuCrud.getContentPane().add(btnSalvar);
 		
 		JLabel lblSenha = new JLabel("Idade:");
 		lblSenha.setForeground(Color.WHITE);
 		lblSenha.setFont(new Font("Arial Narrow", Font.PLAIN, 20));
-		lblSenha.setBounds(0, 137, 146, 21);
+		lblSenha.setBounds(27, 249, 60, 21);
 		frmMeuCrud.getContentPane().add(lblSenha);
 		
 		tfemail = new JTextField();
 		tfemail.setColumns(10);
-		tfemail.setBounds(528, 138, 229, 20);
+		tfemail.setBounds(89, 121, 229, 20);
 		frmMeuCrud.getContentPane().add(tfemail);
 		
 		JLabel lblEmail = new JLabel("E-mail:");
 		lblEmail.setForeground(Color.WHITE);
 		lblEmail.setFont(new Font("Arial Narrow", Font.PLAIN, 20));
-		lblEmail.setBounds(451, 135, 180, 21);
+		lblEmail.setBounds(27, 118, 180, 21);
 		frmMeuCrud.getContentPane().add(lblEmail);
 		
 		tfNome = new JTextField();
-		tfNome.setBounds(528, 169, 229, 20);
+		tfNome.setBounds(164, 183, 229, 20);
 		frmMeuCrud.getContentPane().add(tfNome);
 		tfNome.setColumns(10);
 		
@@ -208,23 +237,44 @@ public class Config extends Login {
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setFont(new Font("Arial Narrow", Font.PLAIN, 20));
 		btnVoltar.setBackground(Color.WHITE);
-		btnVoltar.setBounds(652, 496, 126, 26);
+		btnVoltar.setBounds(630, 485, 126, 26);
 		frmMeuCrud.getContentPane().add(btnVoltar);
 		
 		JLabel lblNomeCtfnoompleto = DefaultComponentFactory.getInstance().createTitle("Nome Completo:");
 		lblNomeCtfnoompleto.setForeground(Color.WHITE);
 		lblNomeCtfnoompleto.setFont(new Font("Arial Narrow", Font.PLAIN, 20));
-		lblNomeCtfnoompleto.setBounds(374, 161, 193, 30);
+		lblNomeCtfnoompleto.setBounds(27, 175, 135, 30);
 		frmMeuCrud.getContentPane().add(lblNomeCtfnoompleto);
-		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel.setBounds(0, 303, 446, 30);
-		frmMeuCrud.getContentPane().add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setBounds(456, 311, 46, 14);
 		frmMeuCrud.getContentPane().add(lblNewLabel_1);
+		
+		JLabel lblEditarPerfil = new JLabel("EDITAR PERFIL");
+		lblEditarPerfil.setFont(new Font("Trebuchet MS", Font.BOLD | Font.ITALIC, 25));
+		lblEditarPerfil.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEditarPerfil.setForeground(Color.WHITE);
+		lblEditarPerfil.setBounds(311, 11, 237, 50);
+		frmMeuCrud.getContentPane().add(lblEditarPerfil);
+		
+		JButton btnTrocarFoto = new JButton("trocar foto");
+		btnTrocarFoto.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				 FileNameExtensionFilter filter = new FileNameExtensionFilter("JPG & GIF IMAGENS","jpg","gif","png");
+				 explorer.setFileFilter(filter);
+				 int resposta = explorer.showOpenDialog(null);
+				 
+				 if(resposta == explorer.APPROVE_OPTION) {
+					 caminho = explorer.getSelectedFile().getAbsolutePath();
+					 
+					 ImageIcon icone = new ImageIcon(caminho);
+					 icone.setImage(icone.getImage().getScaledInstance(168, 138, 100));
+					 lblFotoPerfil.setIcon(icone);
+				 }
+			}
+		});
+		btnTrocarFoto.setBounds(667, 301, 89, 23);
+		frmMeuCrud.getContentPane().add(btnTrocarFoto);
 		//System.out.println(EntraAluno.volt);
 		if(EntraAluno.volt==0) {
 			PreencheTelaC();
@@ -278,5 +328,4 @@ public class Config extends Login {
 		
 		
 	}
-	
 }
