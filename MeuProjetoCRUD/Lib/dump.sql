@@ -35,6 +35,40 @@ USE `alunos`;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+--
+-- Host: localhost    Database: alunos
+-- ------------------------------------------------------
+-- Server version	5.7.19-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+--
+-- Host: localhost    Database: alunos
+-- ------------------------------------------------------
+-- Server version	5.7.19-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
 --
 -- Table structure for table `alunos`
 --
@@ -52,10 +86,11 @@ CREATE TABLE `alunos` (
   `senha` varchar(45) NOT NULL,
   `usuario` varchar(100) NOT NULL,
   `escola` int(11) DEFAULT NULL,
+  `foto` longblob,
   PRIMARY KEY (`idaluno`),
   UNIQUE KEY `idaluno_UNIQUE` (`idaluno`),
   UNIQUE KEY `usuario_UNIQUE` (`usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +99,7 @@ CREATE TABLE `alunos` (
 
 LOCK TABLES `alunos` WRITE;
 /*!40000 ALTER TABLE `alunos` DISABLE KEYS */;
-INSERT INTO `alunos` VALUES (1,'pedro',16,'M','pedro@gmail.com','934834632','123','pedro',2),(2,'qwe',16,'M','pedro@gmail.com','934834632','123','qwe',2),(3,'123',123,'M','123@.','324','123','123',2),(4,'321',321,'F','321.@','321','321','321',2),(5,'rerd',32,'F','fds@.','7876','45','3454',2);
+INSERT INTO `alunos` VALUES (1,'pedro',16,'M','pedro@gmail.com','934834632','123','pedro',2,NULL),(2,'qwe',16,'M','pedro@gmail.com','934834632','123','qwe',2,NULL),(3,'123',123,'M','123@.','324','123','123',2,NULL),(4,'321',321,'F','321.@','321','321','321',2,NULL),(5,'rerd',32,'F','fds@.','7876','45','3454',2,NULL),(6,'add',100,'M','add@gmail.com','46 8378-4574','123','add',3,NULL);
 /*!40000 ALTER TABLE `alunos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -77,7 +112,7 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-08-03 13:44:13
+-- Dump completed on 2018-08-13 16:27:39
 
 
 --
@@ -188,6 +223,23 @@ UNLOCK TABLES;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+--
+-- Host: localhost    Database: alunos
+-- ------------------------------------------------------
+-- Server version	5.7.19-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
 --
 -- Table structure for table `aulas`
 --
@@ -220,10 +272,10 @@ CREATE TABLE `aulas` (
   `AteNoite` varchar(45) DEFAULT NULL,
   `DeUmaVez` varchar(45) DEFAULT NULL,
   `AteUmaVez` varchar(45) DEFAULT NULL,
-  `DiaUmaVez` varchar(45) DEFAULT NULL,
+  `DiaUmaVez` date DEFAULT NULL,
   PRIMARY KEY (`idAula`),
   UNIQUE KEY `idAula_UNIQUE` (`idAula`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -232,7 +284,7 @@ CREATE TABLE `aulas` (
 
 LOCK TABLES `aulas` WRITE;
 /*!40000 ALTER TABLE `aulas` DISABLE KEYS */;
-INSERT INTO `aulas` VALUES (2,'Matemática','cfefdf',1,1,0,0,0,0,0,1,1,0,'eferere',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(4,'Redação','wewe',0,0,0,0,0,0,0,0,0,0,'ewsd',1,23,NULL,NULL,NULL,NULL,NULL,NULL,'22:22','22:22','18/07/18 17:02'),(5,'Filosofia','wewsdw',0,0,0,0,0,0,0,0,0,0,'sdd',1,53,NULL,NULL,NULL,NULL,NULL,NULL,'22:22','22:22','24/07/2018'),(6,'Inglês','yu',1,1,1,0,0,0,0,0,1,0,'8uuj',1,98,NULL,NULL,'88:88','88:88',NULL,NULL,'22:22','22:22','24/07/2018'),(7,'Química','sdsds',0,0,0,0,0,0,0,0,0,0,'sdsds',1,54,NULL,NULL,NULL,NULL,NULL,NULL,'22:22','22:11','17/07/2018');
+INSERT INTO `aulas` VALUES (2,'Matemática','cfefdf',1,1,0,0,0,0,0,1,1,0,'eferere',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-08-10'),(4,'Redação','wewe',0,0,0,0,0,0,0,0,0,0,'ewsd',1,23,NULL,NULL,NULL,NULL,NULL,NULL,'22:22','22:22','2018-08-10'),(5,'Filosofia','wewsdw',0,0,0,0,0,0,0,0,0,0,'sdd',1,53,NULL,NULL,NULL,NULL,NULL,NULL,'22:22','22:22','2018-08-10'),(6,'Inglês','yu',1,1,1,0,0,0,0,0,1,0,'8uuj',1,98,NULL,NULL,'88:88','88:88',NULL,NULL,'22:22','22:22','0000-00-00'),(7,'Química','sdsds',0,0,0,0,0,0,0,0,0,0,'sdsds',1,54,NULL,NULL,NULL,NULL,NULL,NULL,'22:22','22:11','2018-08-15'),(8,'PORT','d',0,0,0,0,0,0,0,0,0,0,'sds',1,2,NULL,NULL,NULL,NULL,NULL,NULL,'33:33','33:33','2018-08-15'),(9,'BIO','df',0,0,0,0,0,0,0,0,0,0,'dsd',1,23,NULL,NULL,NULL,NULL,NULL,NULL,'33:33','33:33','2018-08-29'),(10,'BIO','ds',0,0,0,0,0,0,0,0,0,0,'d',1,2,NULL,NULL,NULL,NULL,NULL,NULL,'22:22','22:22','2018-08-21'),(12,'BIO','hgh',0,0,0,0,0,0,0,0,0,0,'ds',1,2,NULL,NULL,NULL,NULL,NULL,NULL,'33:33','33:33','2018-08-14');
 /*!40000 ALTER TABLE `aulas` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -245,7 +297,8 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-07-05 17:03:19
+-- Dump completed on 2018-08-13 16:27:39
+
 
 
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)

@@ -213,7 +213,23 @@ public class TerAula extends Login{
 		
 		try {
 			while (dados.next()) {
-				String data = dados.getString("DiaUmaVez");
+				boolean continuar=false;
+				java.util.Date data = new java.util.Date();
+				java.util.Date hoje = new java.util.Date();
+				
+				try {
+					data = dados.getDate("DiaUmaVez");
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					continuar=true;
+					//e.printStackTrace();
+				}
+				
+				//SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
+				
+				if(data.before(hoje) && continuar==false) {
+					continue;
+				}
 				
 				linhas.add(new Object[] {
 						//dados.getString("idAula"),
@@ -348,8 +364,6 @@ public class TerAula extends Login{
 		if(m.equals("SOCIO")) {
 			materia="SOCIOLOGIA";
 		}
-		
-		
 		return materia;
 	}
 }

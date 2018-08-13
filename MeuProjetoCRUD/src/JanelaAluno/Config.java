@@ -16,6 +16,7 @@ import javax.swing.JButton;
 import javax.swing.JFileChooser;
 
 import java.awt.Color;
+import java.sql.Blob;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -23,15 +24,19 @@ import java.text.ParseException;
 
 
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.awt.event.ActionEvent;
 
 import java.awt.Font;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import java.awt.SystemColor;
 import com.jgoodies.forms.factories.DefaultComponentFactory;
@@ -40,6 +45,7 @@ import java.awt.Toolkit;
 import javax.swing.JFormattedTextField;
 import javax.swing.SwingConstants;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.UIManager;
 public class Config extends Login {
 	
 	int ee;
@@ -58,7 +64,7 @@ public class Config extends Login {
 	
 	File file=null;
 	FileInputStream fis=null;
-	String caminho=null;
+	public String caminho=null;
 	JFileChooser explorer = new JFileChooser();
 	private JLabel lblFotoPerfil;
 
@@ -144,12 +150,35 @@ public class Config extends Login {
 					}
 				}
 				///***********************************************************************
-				CRUDAlunos alterar = new CRUDAlunos();
+				String sql = "UPDATE alunos "
+						+ "SET nome=?, idade=?,email=?,fone=?,foto=? "
+						+ "WHERE idaluno = ?";
+				try {
+					PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
+					stmt.setString(1, nome);
+					stmt.setString(2, idade);
+					stmt.setString(3, email);
+					stmt.setString(4, fone);
+					if(caminho==null) {
+						stmt.setBinaryStream(5, fis, 0);
+					}else {
+						stmt.setBinaryStream(5, fis,file.length());
+					}
+					stmt.setString(6, id);
+					stmt.execute();
+					stmt.close();
+					
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+					
+				}
+				/*CRUDAlunos alterar = new CRUDAlunos();
 				if(alterar.alterarAluno(nome, idade, email, fone, id)) {
 					JOptionPane.showMessageDialog(null, "Aluno alterado com sucesso!");
 				}else {
 					JOptionPane.showMessageDialog(null, "Erro ao alterar o aluno!");
-				}
+				}*/
 				
 			}
 		});
@@ -303,8 +332,33 @@ public class Config extends Login {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
+		Blob blob=null;
+		try {
+			blob = dados.getBlob("foto");
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		BufferedImage bi = null;
+		InputStream is = null;
+		if(blob!=null) {
+			try {
+				is = blob.getBinaryStream();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			try {
+				bi = ImageIO.read(is);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			 ImageIcon icone = new ImageIcon(bi);
+			 icone.setImage(icone.getImage().getScaledInstance(168, 138, 100));
+			 lblFotoPerfil.setIcon(icone);	
+		}
 	}
 	public void PreencheTelaC() {
 		String sql = "SELECT * FROM alunos WHERE idaluno=?";
@@ -326,6 +380,32 @@ public class Config extends Login {
 			e.printStackTrace();
 		}
 		
-		
+		Blob blob=null;
+		try {
+			blob = dados.getBlob("foto");
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		BufferedImage bi = null;
+		InputStream is = null;
+		if(blob!=null) {
+			try {
+				is = blob.getBinaryStream();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			try {
+				bi = ImageIO.read(is);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			 ImageIcon icone = new ImageIcon(bi);
+			 icone.setImage(icone.getImage().getScaledInstance(168, 138, 100));
+			 lblFotoPerfil.setIcon(icone);	
+	}
 	}
 }

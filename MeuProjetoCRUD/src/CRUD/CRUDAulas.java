@@ -1,16 +1,17 @@
 package CRUD;
 
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import Banco.Conexao;
 
 public class CRUDAulas {
 	
 	public boolean novaAula(String m,String c,int s,int t,int q,int Qui,int sex,int sab,int dom, int cedo,int tar,int noi,String local,int prof,int vagas,
-			String DeManha,String ateManha, String DeTarde,String AteTarde, String DeNoite, String AteNoite,String DiaUmaVez, String DeUmaVez, String AteUmaVez) {
+			String DeManha,String ateManha, String DeTarde,String AteTarde, String DeNoite, String AteNoite,Date date, String DeUmaVez, String AteUmaVez) {
 		
 		String sql="INSERT INTO aulas (materia,conteudo,segunda,terca,quarta,quinta,sexta,sabado,domingo,cedo,tarde,noite,local,professor,vagas,DeManha,AteManha,"
 				+ "DeTarde,AteTarde,DeNoite,AteNoite,DiaUmaVez,DeUmaVez,AteUmaVez)"
@@ -38,7 +39,16 @@ public class CRUDAulas {
 			stmt.setString(19, AteTarde);
 			stmt.setString(20, DeNoite);
 			stmt.setString(21, AteNoite);
-			stmt.setString(22, DiaUmaVez);
+			SimpleDateFormat simples = new SimpleDateFormat("yyyy/MM/dd");
+			
+			if(date != null) {
+				long d = date.getTime();
+				stmt.setDate(22, new java.sql.Date(d));
+			}else {
+				 long d = 0000-00-00;
+				stmt.setDate(22, new java.sql.Date(d));
+			}
+			
 			stmt.setString(23, DeUmaVez);
 			stmt.setString(24, AteUmaVez);
 			stmt.execute();
@@ -50,7 +60,7 @@ public class CRUDAulas {
 			return false;
 		}
 		
-	}	
+	}
 	
 	public ResultSet pegaAula() {
 		ResultSet aulas=null;

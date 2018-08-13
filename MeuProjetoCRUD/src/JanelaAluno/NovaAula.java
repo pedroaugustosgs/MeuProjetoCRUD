@@ -266,10 +266,15 @@ public class NovaAula extends Login {
 				if(chNoite.isSelected()) {
 					AteNoite = tfAteNoite.getText();
 				} 
-				SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
-				String umaVez = s.format(calendario.getDate());
+				//SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
+				//String umaVez = s.format(calendario.getDate());
+				Date data=null;
+				if(rdbtnUmaVez.isSelected()) {
+					data = calendario.getDate();
+				}
+				
 				if(novaAula.novaAula(disciplina, conteudo, segunda, terca, quarta, quinta, sexta, sabado, domingo, manha, tarde, noite, local, prof,vagas,DeManha,AteManha,
-						DeTarde,AteTarde,DeNoite,AteNoite,umaVez,tfDeUmaVez.getText(),tfAteUmaVez.getText())) {
+						DeTarde,AteTarde,DeNoite,AteNoite,data,tfDeUmaVez.getText(),tfAteUmaVez.getText())) {
 					JOptionPane.showMessageDialog(null, "Nova aula cadastrada com sucesso!");
 				}else {
 					JOptionPane.showMessageDialog(null, "Erro ao cadastrar nova aula!");

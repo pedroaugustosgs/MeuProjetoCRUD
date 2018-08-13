@@ -68,7 +68,7 @@ public class CRUDAlunos {
 	public boolean alterarAluno(
 			String n,String i,String e, String f,String id) {
 		String sql = "UPDATE alunos "
-				+ "SET nome=?, idade=?,email=?,fone=? "
+				+ "SET nome=?, idade=?,email=?,fone=?,foto=? "
 				+ "WHERE idaluno = ?";
 		try {
 			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
