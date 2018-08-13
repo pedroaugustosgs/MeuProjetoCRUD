@@ -127,7 +127,7 @@ public class VerAulas extends LoginInstitu{
 				}
 				
 				try {
-					AlteraAula.main(new String[] {dadostabela.getString("idaula")});
+					AlteraAulas.main(new String[] {dadostabela.getString("idaula")});
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
