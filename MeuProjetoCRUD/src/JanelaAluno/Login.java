@@ -43,8 +43,11 @@ public class Login extends Principal2{
 	protected String senha;
 	
 	Principal janelaPrincipal = new Principal();
-	private JLabel lblImagem;
 	private JLabel lblNewLabel;
+	private JLabel lblNewLabel_1;
+	private JLabel lblNewLabel_2;
+	private JLabel lblNewLabel_3;
+	private JLabel lblNewLabel_4;
 	
 	
 	/**
@@ -75,7 +78,8 @@ public class Login extends Principal2{
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 576, 392);
+		frame.getContentPane().setBackground(Color.BLACK);
+		frame.setBounds(100, 100, 577, 395);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -86,18 +90,20 @@ public class Login extends Principal2{
 				frame.dispose();
 			}
 		});
-		btnVoltar.setForeground(SystemColor.textHighlight);
-		btnVoltar.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		btnVoltar.setForeground(Color.BLACK);
+		btnVoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnVoltar.setBackground(Color.WHITE);
 		btnVoltar.setBounds(73, 313, 201, 40);
 		frame.getContentPane().add(btnVoltar);
 		
 		JLabel lblUsuario = new JLabel("Usu\u00E1rio:");
+		lblUsuario.setForeground(Color.WHITE);
 		lblUsuario.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblUsuario.setBounds(126, 216, 95, 30);
 		frame.getContentPane().add(lblUsuario);
 		
 		JLabel lblSenha = new JLabel("Senha:");
+		lblSenha.setForeground(Color.WHITE);
 		lblSenha.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblSenha.setBounds(126, 257, 95, 30);
 		frame.getContentPane().add(lblSenha);
@@ -129,7 +135,7 @@ public class Login extends Principal2{
 		
 		btnEntrar = new JButton("ENTRAR");
 		btnEntrar.setBackground(SystemColor.textHighlightText);
-		btnEntrar.setForeground(SystemColor.textHighlight);
+		btnEntrar.setForeground(Color.BLACK);
 		btnEntrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				login = tfUsuario.getText(); //preenche a variável login com o conteudo do tfUsuario
@@ -163,20 +169,36 @@ public class Login extends Principal2{
 			}
 			}
 		});
-		btnEntrar.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		btnEntrar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnEntrar.setBounds(308, 313, 201, 40);
 		frame.getContentPane().add(btnEntrar);
 		
-		//Jlabel utilizado para utilizar uma imagem
-		lblImagem = new JLabel("");
+		lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
+		lblNewLabel.setBounds(39, 35, 532, 135);
+		frame.getContentPane().add(lblNewLabel);
+		
+		lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_1.setBounds(0, 166, 490, 28);
+		frame.getContentPane().add(lblNewLabel_1);
+		
+		lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_2.setBounds(486, 166, 85, 28);
+		frame.getContentPane().add(lblNewLabel_2);
+		
+		lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_3.setBounds(-11, 3, 385, 28);
+		frame.getContentPane().add(lblNewLabel_3);
+		
+		lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_4.setBounds(366, 3, 215, 28);
+		frame.getContentPane().add(lblNewLabel_4);
 		ImageIcon logo = new ImageIcon("C:\\\\Users\\\\SENAI\\\\Desktop\\\\LoginSenhaDB\\\\fiemg3.png");
 		logo.setImage(logo.getImage().getScaledInstance(414, 89, 100));
-		lblImagem.setBounds(106, 21, 329, 168);
-		frame.getContentPane().add(lblImagem);
-		
-		lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(0, 0, 572, 364);
-		frame.getContentPane().add(lblNewLabel);
 		//fim jlabel lblImagem
 		
 		

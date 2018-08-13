@@ -45,8 +45,16 @@ public class AulasSolicitadas extends Login{
 	public static JButton btnProcurar;
 	private JTable tabela; 
 	public String Dias[];
-	private JLabel label;
 	private JLabel lblNewLabel;
+	private JLabel lblNewLabel_1;
+	private JLabel lblNewLabel_2;
+	private JLabel lblNewLabel_3;
+	private JLabel lblNewLabel_4;
+	private JLabel lblNewLabel_5;
+	private JLabel lblNewLabel_6;
+	private JLabel lblNewLabel_7;
+	private JLabel lblNewLabel_8;
+	private JLabel lblNewLabel_9;
 	
 	
 	/**
@@ -114,9 +122,24 @@ public class AulasSolicitadas extends Login{
 					
 			}
 		});
+		
+		lblNewLabel_9 = new JLabel("");
+		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\pesquisa.png"));
+		lblNewLabel_9.setBounds(789, 452, 246, 178);
+		frmMeuCrud.getContentPane().add(lblNewLabel_9);
+		
+		lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_1.setBounds(-9, 494, 491, 26);
+		frmMeuCrud.getContentPane().add(lblNewLabel_1);
+		
+		lblNewLabel_8 = new JLabel("");
+		lblNewLabel_8.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_8.setBounds(478, 494, 233, 26);
+		frmMeuCrud.getContentPane().add(lblNewLabel_8);
 		tfProcurar.setForeground(Color.LIGHT_GRAY);
 		tfProcurar.setText("Entre com a mat\u00E9ria a ser procurada");
-		tfProcurar.setBounds(10, 121, 821, 26);
+		tfProcurar.setBounds(10, 176, 821, 26);
 		frmMeuCrud.getContentPane().add(tfProcurar);
 		tfProcurar.setColumns(10);
 		
@@ -146,23 +169,8 @@ public class AulasSolicitadas extends Login{
 				}
 			}
 		});
-		btnProcurar.setBounds(844, 115, 166, 29);
+		btnProcurar.setBounds(841, 170, 166, 29);
 		frmMeuCrud.getContentPane().add(btnProcurar);
-		
-		tabela = new JTable();
-		tabela.addMouseListener(new MouseAdapter() {
-			
-			@Override
-			public void mouseClicked(MouseEvent arg0) {     /////////////////////******************
-				ConfirmaAula.main(new String[] {String.valueOf(tabela.getValueAt(tabela.getSelectedRow(), 0))});  //*****************************
-				frmMeuCrud.dispose();
-			}
-			
-		});
-	
-		JScrollPane scrollPane = new JScrollPane(tabela);
-		scrollPane.setBounds(10, 172, 1000, 222);
-		frmMeuCrud.getContentPane().add(scrollPane);
 		
 		JButton btnVoltar = new JButton("Voltar");
 		btnVoltar.setForeground(Color.BLACK);
@@ -177,15 +185,54 @@ public class AulasSolicitadas extends Login{
 		btnVoltar.setBounds(0, 573, 157, 39);
 		frmMeuCrud.getContentPane().add(btnVoltar);
 		
-		label = new JLabel("");
-		label.setIcon(new ImageIcon("D:\\Imagem\\img\\Lupa.png"));
-		label.setBounds(899, 470, 136, 142);
-		frmMeuCrud.getContentPane().add(label);
-		
 		lblNewLabel = new JLabel("New label");
 		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\agendaaula.png"));
-		lblNewLabel.setBounds(229, 26, 469, 62);
+		lblNewLabel.setBounds(231, 11, 469, 62);
 		frmMeuCrud.getContentPane().add(lblNewLabel);
+		
+		lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_2.setBounds(701, 494, 264, 26);
+		frmMeuCrud.getContentPane().add(lblNewLabel_2);
+		
+		lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_3.setBounds(961, 494, 74, 26);
+		frmMeuCrud.getContentPane().add(lblNewLabel_3);
+		
+		lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_4.setBounds(0, 120, 448, 26);
+		frmMeuCrud.getContentPane().add(lblNewLabel_4);
+		
+		lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_5.setBounds(444, 120, 491, 26);
+		frmMeuCrud.getContentPane().add(lblNewLabel_5);
+		
+		lblNewLabel_6 = new JLabel("");
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_6.setBounds(927, 120, 124, 26);
+		frmMeuCrud.getContentPane().add(lblNewLabel_6);
+		
+		lblNewLabel_7 = new JLabel("New label");
+		lblNewLabel_7.setBounds(547, 506, 46, 14);
+		frmMeuCrud.getContentPane().add(lblNewLabel_7);
+		
+		tabela = new JTable();
+		tabela.addMouseListener(new MouseAdapter() {
+			
+			@Override
+			public void mouseClicked(MouseEvent arg0) {     /////////////////////******************
+				ConfirmaAula.main(new String[] {String.valueOf(tabela.getValueAt(tabela.getSelectedRow(), 0))});  //*****************************
+				frmMeuCrud.dispose();
+			}
+			
+		});
+		
+			JScrollPane scrollPane = new JScrollPane(tabela);
+			scrollPane.setBounds(10, 235, 1000, 222);
+			frmMeuCrud.getContentPane().add(scrollPane);
 		
 		criaTabela(pegaAulaSolicitada());
 	}// fim do método inicialize

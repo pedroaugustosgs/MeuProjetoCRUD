@@ -90,6 +90,10 @@ public class Splash implements Runnable{
 		lblNewLabel.setBounds(41, 81, 492, 129);
 		frame.getContentPane().add(lblNewLabel);
 		
+		JLabel lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setBounds(103, 194, 46, 14);
+		frame.getContentPane().add(lblNewLabel_5);
+		
 		
 		tarefa = new Thread(Splash.this);
 		tarefa.start(); // vai para run multitarefa

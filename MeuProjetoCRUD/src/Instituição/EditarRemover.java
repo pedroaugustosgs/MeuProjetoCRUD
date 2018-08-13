@@ -29,6 +29,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JSpinner;
 import javax.swing.event.ChangeListener;
 import javax.swing.event.ChangeEvent;
+import java.awt.Color;
 
 public class EditarRemover {
 
@@ -73,8 +74,9 @@ public class EditarRemover {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.BLACK);
 		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(EditarRemover.class.getResource("/47 - Copia.png")));
-		frame.setBounds(100, 100, 468, 328);
+		frame.setBounds(100, 100, 852, 712);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setResizable(false);
@@ -93,27 +95,36 @@ public class EditarRemover {
 				
 			}
 		});
-		SpinerSprend.setBounds(67, 59, 88, 20);
+		
+		JLabel lblNewLabel_6 = new JLabel("New label");
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_6.setBounds(-8, 185, 492, 23);
+		frame.getContentPane().add(lblNewLabel_6);
+		SpinerSprend.setBounds(63, 436, 88, 20);
 		frame.getContentPane().add(SpinerSprend);
 		
 		JLabel lblNome = new JLabel("Nome:");
+		lblNome.setForeground(Color.WHITE);
 		lblNome.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblNome.setBounds(10, 11, 64, 15);
+		lblNome.setBounds(405, 436, 64, 15);
 		frame.getContentPane().add(lblNome);
 		
 		lblIdade = new JLabel("Idade:");
+		lblIdade.setForeground(Color.WHITE);
 		lblIdade.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblIdade.setBounds(10, 59, 64, 15);
+		lblIdade.setBounds(3, 436, 64, 15);
 		frame.getContentPane().add(lblIdade);
 		
 		JLabel lblEmail = new JLabel("E-Mail:");
+		lblEmail.setForeground(Color.WHITE);
 		lblEmail.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblEmail.setBounds(10, 105, 64, 15);
+		lblEmail.setBounds(405, 492, 64, 15);
 		frame.getContentPane().add(lblEmail);
 		
 		JLabel lblTelefone = new JLabel("Telefone:");
+		lblTelefone.setForeground(Color.WHITE);
 		lblTelefone.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblTelefone.setBounds(10, 166, 88, 15);
+		lblTelefone.setBounds(3, 492, 88, 15);
 		frame.getContentPane().add(lblTelefone);
 		
 		/*ButtonGroup grupo = new ButtonGroup();
@@ -122,9 +133,9 @@ public class EditarRemover {
 		grupo.add(rbaluprof);
 		*/
 		JButton btnEditar = new JButton("Editar");
-		btnEditar.setForeground(SystemColor.textHighlight);
+		btnEditar.setForeground(Color.BLACK);
 		btnEditar.setBackground(SystemColor.control);
-		btnEditar.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		btnEditar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnEditar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
@@ -145,12 +156,12 @@ public class EditarRemover {
 				frame.dispose();
 			}
 		});
-		btnEditar.setBounds(10, 251, 131, 33);
+		btnEditar.setBounds(0, 651, 131, 33);
 		frame.getContentPane().add(btnEditar);
 		
 		JButton btnRemover = new JButton("Remover");
 		btnRemover.setBackground(SystemColor.control);
-		btnRemover.setForeground(SystemColor.textHighlight);
+		btnRemover.setForeground(Color.BLACK);
 		btnRemover.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CRUDAlunos remover = new CRUDAlunos();
@@ -173,12 +184,12 @@ public class EditarRemover {
 		});
 		
 		
-		btnRemover.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		btnRemover.setBounds(164, 251, 118, 33);
+		btnRemover.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnRemover.setBounds(407, 651, 118, 33);
 		frame.getContentPane().add(btnRemover);
 		
 		JButton btnCancelar = new JButton("Voltar");
-		btnCancelar.setForeground(SystemColor.textHighlight);
+		btnCancelar.setForeground(Color.BLACK);
 		btnCancelar.setBackground(SystemColor.control);
 		btnCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -187,29 +198,78 @@ public class EditarRemover {
 				frame.dispose();
 			}
 		});
-		btnCancelar.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		btnCancelar.setBounds(304, 251, 131, 33);
+		btnCancelar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnCancelar.setBounds(715, 651, 131, 33);
 		frame.getContentPane().add(btnCancelar);
 		
 		tfNome = new JTextField();
-		tfNome.setBounds(67, 11, 374, 20);
+		tfNome.setBounds(462, 436, 374, 20);
 		frame.getContentPane().add(tfNome);
 		tfNome.setColumns(10);
 		
 		tfEmail = new JTextField();
-		tfEmail.setBounds(84, 105, 357, 20);
+		tfEmail.setBounds(479, 492, 357, 20);
 		frame.getContentPane().add(tfEmail);
 		tfEmail.setColumns(10);
 		
 		tfTelefone = new JTextField();
-		tfTelefone.setBounds(93, 166, 168, 20);
+		tfTelefone.setBounds(91, 492, 168, 20);
 		frame.getContentPane().add(tfTelefone);
 		tfTelefone.setColumns(10);
 		
-		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon(EditarRemover.class.getResource("/Principal (2).png")));
-		label.setBounds(0, 0, 462, 304);
-		frame.getContentPane().add(label);
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\Monografia oficial\\BARRA ofcial.png"));
+		lblNewLabel_1.setBounds(3, 534, 492, 14);
+		frame.getContentPane().add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\Monografia oficial\\BARRA ofcial.png"));
+		lblNewLabel_2.setBounds(444, 534, 421, 14);
+		frame.getContentPane().add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon("D:\\Monografia oficial\\BARRA ofcial.png"));
+		lblNewLabel_3.setBounds(3, 467, 412, 14);
+		frame.getContentPane().add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Monografia oficial\\BARRA ofcial.png"));
+		lblNewLabel_4.setBounds(405, 467, 441, 14);
+		frame.getContentPane().add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
+		lblNewLabel_5.setBounds(173, 0, 585, 214);
+		frame.getContentPane().add(lblNewLabel_5);
+		
+		JLabel lblNewLabel_8 = new JLabel("");
+		lblNewLabel_8.setBounds(461, 211, 46, 14);
+		frame.getContentPane().add(lblNewLabel_8);
+		
+		JLabel lblNewLabel_10 = new JLabel("");
+		lblNewLabel_10.setIcon(new ImageIcon("D:\\BARRA ofcial.png"));
+		lblNewLabel_10.setBounds(3, 401, 492, 14);
+		frame.getContentPane().add(lblNewLabel_10);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("D:\\BARRA ofcial.png"));
+		lblNewLabel.setBounds(492, 401, 354, 14);
+		frame.getContentPane().add(lblNewLabel);
+		
+		JLabel lblNewLabel_9 = new JLabel("");
+		lblNewLabel_9.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_9.setBounds(479, 185, 367, 23);
+		frame.getContentPane().add(lblNewLabel_9);
+		
+		JLabel lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_7.setBounds(-9, 0, 478, 33);
+		frame.getContentPane().add(lblNewLabel_7);
+		
+		JLabel lblNewLabel_12 = new JLabel("");
+		lblNewLabel_12.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_12.setBounds(462, 0, 384, 33);
+		frame.getContentPane().add(lblNewLabel_12);
 		
 		
 		

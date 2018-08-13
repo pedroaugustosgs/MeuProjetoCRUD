@@ -51,6 +51,7 @@ public class Principal {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.BLACK);
 		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(Principal.class.getResource("/47 - Copia.png")));
 		frame.setBounds(100, 100, 826, 522);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -58,8 +59,8 @@ public class Principal {
 		
 		JButton btnNewButton_1 = new JButton("Sair");
 		btnNewButton_1.setBackground(Color.WHITE);
-		btnNewButton_1.setFont(new Font("Bell MT", Font.BOLD | Font.ITALIC, 22));
-		btnNewButton_1.setForeground(SystemColor.textHighlight);
+		btnNewButton_1.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnNewButton_1.setForeground(Color.BLACK);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
@@ -89,17 +90,12 @@ public class Principal {
 				frame.dispose();
 			}
 		});
-		btnAulas.setForeground(SystemColor.textHighlight);
-		btnAulas.setFont(new Font("Trebuchet MS", Font.BOLD | Font.ITALIC, 18));
-		btnAulas.setBounds(316, 225, 211, 40);
+		btnAulas.setForeground(Color.BLACK);
+		btnAulas.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnAulas.setBounds(531, 200, 211, 40);
 		frame.getContentPane().add(btnAulas);
-		btnNewButton_1.setBounds(316, 327, 211, 40);
+		btnNewButton_1.setBounds(356, 443, 211, 40);
 		frame.getContentPane().add(btnNewButton_1);
-		
-		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon(Principal.class.getResource("/47 - Copia.png")));
-		lblNewLabel_1.setBounds(484, -14, 326, 194);
-		frame.getContentPane().add(lblNewLabel_1);
 		
 		JButton btnVisualizarAlunos = new JButton("Visualizar Usu\u00E1rios");
 		btnVisualizarAlunos.addActionListener(new ActionListener() {
@@ -108,16 +104,46 @@ public class Principal {
 				VerAlunos.main(null);
 			}
 		});
-		btnVisualizarAlunos.setForeground(SystemColor.textHighlight);
-		btnVisualizarAlunos.setFont(new Font("Bell MT", Font.BOLD | Font.ITALIC, 20));
+		btnVisualizarAlunos.setForeground(Color.BLACK);
+		btnVisualizarAlunos.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnVisualizarAlunos.setBackground(Color.WHITE);
-		btnVisualizarAlunos.setBounds(316, 276, 211, 40);
+		btnVisualizarAlunos.setBounds(81, 200, 211, 40);
 		frame.getContentPane().add(btnVisualizarAlunos);
 		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon(Principal.class.getResource("/Principal (2).png")));
-		lblNewLabel.setBounds(-105, 0, 925, 494);
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel.setBounds(0, 378, 470, 24);
 		frame.getContentPane().add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_1.setBounds(463, 378, 357, 24);
+		frame.getContentPane().add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Coluna grega em p\u00E9.jpg"));
+		lblNewLabel_4.setBounds(415, 0, 59, 390);
+		frame.getContentPane().add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon("D:\\Bot\u00E3o png.png"));
+		lblNewLabel_3.setBounds(92, 133, 286, 185);
+		frame.getContentPane().add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_5.setBounds(10, 28, 357, 328);
+		frame.getContentPane().add(lblNewLabel_5);
+		
+		JLabel lblNewLabel_6 = new JLabel("New label");
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\Bot\u00E3o png.png"));
+		lblNewLabel_6.setBounds(531, 131, 250, 185);
+		frame.getContentPane().add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_2.setBounds(463, 28, 347, 328);
+		frame.getContentPane().add(lblNewLabel_2);
 		
 		frame.setResizable(false);//impede a tela de ser redimensionada
 		frame.setLocationRelativeTo(null);//faz com que a tela apareça no centro

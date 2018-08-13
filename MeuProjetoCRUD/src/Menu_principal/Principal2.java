@@ -83,15 +83,10 @@ public class Principal2 {
 				}
 			}
 		});
-		
-		JLabel lblNewLabel_13 = new JLabel("New label");
-		lblNewLabel_13.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		lblNewLabel_13.setBounds(256, 36, 449, 187);
-		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_13);
 		sair.setForeground(Color.BLACK);
 		sair.setFont(new Font("DialogInput", Font.BOLD, 25));
 		sair.setBackground(Color.LIGHT_GRAY);
-		sair.setBounds(429, 543, 164, 39);
+		sair.setBounds(429, 530, 164, 39);
 		frmMeuProjetoCrud.getContentPane().add(sair);
 		
 		JButton btnVisualizarAlunos = new JButton("INSTITUIÇÃO");
@@ -185,7 +180,7 @@ public class Principal2 {
 		
 		JLabel lblNewLabel_14 = new JLabel("");
 		lblNewLabel_14.setIcon(new ImageIcon("D:\\1.png"));
-		lblNewLabel_14.setBounds(10, 96, 507, 364);
+		lblNewLabel_14.setBounds(-24, 138, 507, 364);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_14);
 		
 		JLabel lblNewLabel_15 = new JLabel("New label");
@@ -195,7 +190,27 @@ public class Principal2 {
 		
 		JLabel lblNewLabel_16 = new JLabel("");
 		lblNewLabel_16.setIcon(new ImageIcon("D:\\1.png"));
-		lblNewLabel_16.setBounds(474, 102, 477, 364);
+		lblNewLabel_16.setBounds(484, 143, 477, 364);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_16);
+		
+		JLabel lblNewLabel_17 = new JLabel("");
+		lblNewLabel_17.setIcon(new ImageIcon("D:\\e38f872da28d3d9d30db079615f82a71.png"));
+		lblNewLabel_17.setBounds(0, 507, 520, 99);
+		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_17);
+		
+		JLabel lblNewLabel_18 = new JLabel("");
+		lblNewLabel_18.setIcon(new ImageIcon("D:\\e38f872da28d3d9d30db079615f82a71.png"));
+		lblNewLabel_18.setBounds(493, 507, 502, 99);
+		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_18);
+		
+		JLabel lblNewLabel_19 = new JLabel("");
+		lblNewLabel_19.setIcon(new ImageIcon("D:\\e38f872da28d3d9d30db079615f82a71.png"));
+		lblNewLabel_19.setBounds(0, 0, 491, 127);
+		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_19);
+		
+		JLabel lblNewLabel_13 = new JLabel("");
+		lblNewLabel_13.setIcon(new ImageIcon("D:\\e38f872da28d3d9d30db079615f82a71.png"));
+		lblNewLabel_13.setBounds(517, 0, 478, 111);
+		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_13);
 	}
 }

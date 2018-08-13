@@ -14,6 +14,7 @@ import javax.swing.JLabel;
 
 
 import Menu_principal.Principal2;
+import javax.swing.SwingConstants;
 
 
 
@@ -52,7 +53,7 @@ public class EntraAluno extends Principal2{
 	private void initialize() {
 		frmEntraInstitu = new JFrame();
 		frmEntraInstitu.getContentPane().setBackground(Color.BLACK);
-		frmEntraInstitu.setBounds(100, 100, 780, 733);
+		frmEntraInstitu.setBounds(100, 100, 780, 699);
 		frmEntraInstitu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmEntraInstitu.getContentPane().setLayout(null);
 		frmEntraInstitu.setResizable(false);
@@ -73,13 +74,18 @@ public class EntraAluno extends Principal2{
 				Principal2.main(null);
 			}
 		});
+		
+		JLabel lblNewLabel_9 = new JLabel("New label");
+		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
+		lblNewLabel_9.setBounds(159, 33, 458, 139);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_9);
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
-		btnVoltar.setBounds(307, 672, 201, 33);
+		btnVoltar.setBounds(305, 617, 201, 33);
 		frmEntraInstitu.getContentPane().add(btnVoltar);
 		btnLogar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnLogar.setForeground(Color.BLACK);
-		btnLogar.setBounds(0, 300, 201, 33);
+		btnLogar.setBounds(73, 315, 201, 33);
 		frmEntraInstitu.getContentPane().add(btnLogar);
 		
 		JButton btnCadastrar = new JButton("CADASTRAR");
@@ -92,7 +98,7 @@ public class EntraAluno extends Principal2{
 		});
 		btnCadastrar.setForeground(Color.BLACK);
 		btnCadastrar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
-		btnCadastrar.setBounds(573, 300, 201, 33);
+		btnCadastrar.setBounds(526, 315, 201, 33);
 		frmEntraInstitu.getContentPane().add(btnCadastrar);
 		
 		JLabel lblNewLabel = new JLabel("");
@@ -116,18 +122,64 @@ public class EntraAluno extends Principal2{
 		frmEntraInstitu.getContentPane().add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("");
-		lblNewLabel_4.setIcon(new ImageIcon("D:\\Coluna grega em p\u00E9.jpg"));
-		lblNewLabel_4.setBounds(382, 89, 46, 491);
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Bot\u00E3o png.png"));
+		lblNewLabel_4.setBounds(67, 237, 269, 193);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_4);
 		
-		JLabel lblNewLabel_6 = new JLabel("");
-		lblNewLabel_6.setIcon(new ImageIcon("D:\\1.png"));
-		lblNewLabel_6.setBounds(382, 89, 367, 491);
+		JLabel lblNewLabel_5 = new JLabel("New label");
+		lblNewLabel_5.setBounds(97, 469, 46, 14);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_5);
+		
+		JLabel lblNewLabel_6 = new JLabel("New labe");
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\Bot\u00E3o png.png"));
+		lblNewLabel_6.setBounds(500, 215, 274, 239);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_6);
 		
-		JLabel lblNewLabel_5 = new JLabel("New label");
-		lblNewLabel_5.setIcon(new ImageIcon("D:\\1.png"));
-		lblNewLabel_5.setBounds(-20, 89, 385, 491);
-		frmEntraInstitu.getContentPane().add(lblNewLabel_5);
+		JLabel lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setBounds(412, 106, 46, 14);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_7);
+		
+		JLabel lblNewLabel_12 = new JLabel("");
+		lblNewLabel_12.setBounds(381, 106, 46, 14);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_12);
+		
+		JLabel lblNewLabel_13 = new JLabel("");
+		lblNewLabel_13.setIcon(new ImageIcon("D:\\Coluna grega em p\u00E9.jpg"));
+		lblNewLabel_13.setBounds(397, 89, 46, 488);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_13);
+		
+		JLabel lblNewLabel_14 = new JLabel("New label");
+		lblNewLabel_14.setBounds(180, 530, 46, 14);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_14);
+		
+		JLabel lblNewLabel_11 = new JLabel("");
+		lblNewLabel_11.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_11.setBounds(-21, 89, 408, 488);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_11);
+		
+		JLabel lblNewLabel_15 = new JLabel("New label");
+		lblNewLabel_15.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_15.setBounds(397, 93, 352, 482);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_15);
+		
+		JLabel lblNewLabel_8 = new JLabel("");
+		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
+		lblNewLabel_8.setBounds(212, 64, 478, 162);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_8);
+		
+		JLabel label = new JLabel("New label");
+		label.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
+		label.setBounds(381, 78, 46, 14);
+		frmEntraInstitu.getContentPane().add(label);
+		
+		JLabel lblNewLabel_10 = new JLabel("");
+		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega em p\u00E9.jpg"));
+		lblNewLabel_10.setBounds(396, 0, 62, 78);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_10);
+		
+		JLabel lblNewLabel_18 = new JLabel("");
+		lblNewLabel_18.setIcon(new ImageIcon("D:\\e38f872da28d3d9d30db079615f82a71.png"));
+		lblNewLabel_18.setBounds(218, 604, 352, 67);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_18);
 	}
 }

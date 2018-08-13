@@ -117,6 +117,16 @@ public class Cadastrar_login extends LoginInstitu{
 		SpIdade = new JSpinner();
 		
 		SpinnerModel model = new SpinnerNumberModel(1, 1, 100, 1);
+		
+		JLabel lblNewLabel_5 = new JLabel("New label");
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_5.setBounds(1, 505, 290, 24);
+		frame.getContentPane().add(lblNewLabel_5);
+		
+		JLabel lblNewLabel_7 = new JLabel("New label");
+		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_7.setBounds(278, 505, 128, 24);
+		frame.getContentPane().add(lblNewLabel_7);
 		SpIdade.setModel(model);
 		SpIdade.setEditor(new JSpinner.NumberEditor(SpIdade, "#"));
 
@@ -512,7 +522,7 @@ public class Cadastrar_login extends LoginInstitu{
 		
 		JLabel lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\professores.png"));
-		lblNewLabel_4.setBounds(457, 213, 319, 263);
+		lblNewLabel_4.setBounds(457, 222, 319, 263);
 		frame.getContentPane().add(lblNewLabel_4);
 		
 		JLabel label_5 = new JLabel("*");
@@ -522,20 +532,10 @@ public class Cadastrar_login extends LoginInstitu{
 		label_5.setBounds(337, 396, 12, 14);
 		frame.getContentPane().add(label_5);
 		
-		JLabel lblNewLabel_5 = new JLabel("New label");
-		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_5.setBounds(1, 495, 290, 24);
-		frame.getContentPane().add(lblNewLabel_5);
-		
 		JLabel lblNewLabel_6 = new JLabel("New label");
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_6.setBounds(376, 495, 428, 24);
+		lblNewLabel_6.setBounds(393, 505, 405, 24);
 		frame.getContentPane().add(lblNewLabel_6);
-		
-		JLabel lblNewLabel_7 = new JLabel("New label");
-		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_7.setBounds(279, 495, 100, 24);
-		frame.getContentPane().add(lblNewLabel_7);
 	}
 
 	private void JSpinner(SpinnerModel spIdade2) {
