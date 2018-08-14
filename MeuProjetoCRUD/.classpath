@@ -19,5 +19,7 @@
 	<classpathentry exported="true" kind="lib" path="jgoodies-forms-1.8.0.jar"/>
 	<classpathentry kind="lib" path="Lib/IMAGEM.zip"/>
 	<classpathentry kind="lib" path="Lib/jcalendar-1.4.jar"/>
+	<classpathentry kind="lib" path="Lib/commons-email-1.4.jar"/>
+	<classpathentry kind="lib" path="Lib/mail.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

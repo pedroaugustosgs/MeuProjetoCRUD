@@ -53,6 +53,9 @@ public class PlaAluno {
 	public JTable tabela;
 	public JTable tabelaREC;
 	public static String idaluno=null;
+	
+	public String ids[]= new String[100];
+	int cont=0;
 
 	/**
 	 * Launch the application.
@@ -147,22 +150,20 @@ public class PlaAluno {
 				
 				int linha = tabela.getSelectedRow();
 				
-				ResultSet dadd=null;
+				/*ResultSet dadd=null;
 				dadd = dadosTabela();
 				try {
-					dadd.first();
+					//dadd.first();
 					dadd.absolute(linha+1);
 				} catch (SQLException s) {
 					// TODO Auto-generated catch block
 					s.printStackTrace();
-				}
+				}*/
 				
-				try {
-					VisualizaAulas.main(new String[] {dadd.getString("idaula"),idaluno});
-				} catch (SQLException q) {
-					// TODO Auto-generated catch block
-					q.printStackTrace();
-				}  //*****************************
+				
+					System.out.println(ids[tabela.getSelectedRow()]);
+					VisualizaAulas.main(new String[] {ids[tabela.getSelectedRow()],idaluno});
+				
 				frmMeuCrud.dispose();
 			}
 			
@@ -292,7 +293,10 @@ public class PlaAluno {
 					continue;
 				}
 				
+				ids[cont++]=dados.getString("idaula");
+				
 				linhas.add(new Object[] {
+						
 						Materia(dados.getString("materia")),
 						dados.getString("conteudo"),
 						dados.getString("local"),
