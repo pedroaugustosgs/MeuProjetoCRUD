@@ -338,7 +338,7 @@ public class PlaAluno {
 			try {
 				while (dados.next()) {
 					
-					boolean continuar=false;
+					/*boolean continuar=false;
 					Date data = new Date();
 					Date hoje = new Date();
 					
@@ -354,7 +354,7 @@ public class PlaAluno {
 					
 					if(data.before(hoje) && continuar==false) {
 						continue;
-					}
+					}*/
 					
 					linhas.add(new Object[] {
 							Materia(dados.getString("materia")),

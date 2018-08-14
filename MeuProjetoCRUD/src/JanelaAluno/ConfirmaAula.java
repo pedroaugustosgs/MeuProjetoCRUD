@@ -22,7 +22,10 @@ import java.awt.event.ActionListener;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JScrollPane;
@@ -615,9 +618,12 @@ public class ConfirmaAula extends Login{
 				lblDeNoite.setText(dados.getString("deNoite"));
 				lblatenoite.setText(dados.getString("ateNoite"));
 
-				lbldata.setText(dados.getString("DiaUmaVez"));
-				lbldedata.setText(dados.getString("DeUmaVez"));
-				lblatedata.setText(dados.getString("AteUmaVez"));
+				if(panels==1) {
+					
+					lbldata.setText(dados.getString("DiaUmaVez"));
+					lbldedata.setText(dados.getString("DeUmaVez"));
+					lblatedata.setText(dados.getString("AteUmaVez"));
+				}
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

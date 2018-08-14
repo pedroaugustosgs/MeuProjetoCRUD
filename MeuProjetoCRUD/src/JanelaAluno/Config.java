@@ -167,11 +167,13 @@ public class Config extends Login {
 					stmt.setString(6, id);
 					stmt.execute();
 					stmt.close();
-					
+					JOptionPane.showMessageDialog(null, "Aluno alterado com sucesso!");
+					PlaAluno.main(null);
+					frmMeuCrud.dispose();
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
-					
+					JOptionPane.showMessageDialog(null, "Erro ao alterar o aluno!");
 				}
 				/*CRUDAlunos alterar = new CRUDAlunos();
 				if(alterar.alterarAluno(nome, idade, email, fone, id)) {

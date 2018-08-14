@@ -64,6 +64,8 @@ public class Splash implements Runnable{
 		barra = new JProgressBar();			
 		barra.setBounds(10, 272, 558, 14);
 		frame.getContentPane().add(barra);
+		barra.setBackground(Color.WHITE);
+        barra.setForeground(Color.RED); 
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
 		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
@@ -99,18 +101,25 @@ public class Splash implements Runnable{
 		tarefa.start(); // vai para run multitarefa
 		
 		
+		
 	}
 	
 	public void run() {
-		try {
+		barra.setValue(0);
+		barra.setMaximum(3000);
+		for(int x=0;x<3000;x++) {
+			barra.setValue(x);
 			//definir uma pause 
-			Thread.sleep(3000);//2segundos de pausa
+			try {
+				Thread.sleep(1);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}//2segundos de pausa
 			//apos os 2 segundos abre a janela principal
-			Principal2.main(null);
-			frame.dispose();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 		
+		}
+		Principal2.main(null);
+		frame.dispose();
 	}
+	
 }

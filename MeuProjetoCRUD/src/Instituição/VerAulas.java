@@ -247,10 +247,10 @@ public class VerAulas extends LoginInstitu{
 				s.close();*/
 				
 				linhas.add(new Object[] {
-						dados.getString("materia"),
+						Materia(dados.getString("materia")),
 						dados.getString("conteudo"),
 						dados.getString("local"),
-						dados.getString("professor"),
+						NomeProf(dados.getString("professor")),  /////////****************************ERRO*******************************//////////
 						//dados.getString("sexo").equals("M")?"Masculino":"Feminino",
 						//dados.getString("email"),
 						//dados.getString("fone"),
@@ -328,6 +328,81 @@ public class VerAulas extends LoginInstitu{
 		return alunos;
 		                                         //*********************************************ERRO******************************************/
 	}
-	
-	
+public String Materia(String m){
+
+		
+		String materia=null;
+		
+		if(m.equals("RED")) {
+			materia="REDAÇÃO";
+		}
+		if(m.equals("MAT")) {
+			materia="MATEMÁTICA";
+		}
+		if(m.equals("QUI")) {
+			materia="QUÍMICA";
+		}
+		if(m.equals("FIS")) {
+			materia="FÍSICA";
+		}
+		if(m.equals("BIO")) {
+			materia="BIOLOGIA";
+		}
+		if(m.equals("HIS")) {
+			materia="HISTÓRIA";
+		}
+		if(m.equals("GEO")) {
+			materia="GEOGRAFIA";
+		}
+		if(m.equals("PORT")) {
+			materia="PORTUGUÊS";
+		}
+		if(m.equals("FILOS")) {
+			materia="FILOSOFIA";
+		}
+		if(m.equals("ING")) {
+			materia="INGLÊS";
+		}
+		if(m.equals("ESP")) {
+			materia="ESPANHOL";
+		}
+		if(m.equals("LIT")) {
+			materia="LITERATURA";
+		}
+		if(m.equals("SOCIO")) {
+			materia="SOCIOLOGIA";
+		}
+		return materia;
+	}
+public String NomeProf(String idAula2) {
+	String nomeProf=null;
+	ResultSet dadosAula=null;
+
+	String idprof=null;
+	ResultSet ddNome;
+	String sql ="Select * From aulas Where idaula=?";
+	try {
+		PreparedStatement s = Conexao.conexao.prepareStatement(sql);
+		s.setString(1, idAula2);
+		dadosAula = s.executeQuery();
+		s.execute();
+		s.close();
+		if(dadosAula.next()) {
+			idprof = dadosAula.getString("professor");
+		} 
+		String sql2="Select * From alunos Where idAluno=?";
+		PreparedStatement stmt = Conexao.conexao.prepareStatement(sql2);
+		stmt.setString(1, idprof);
+		ddNome = stmt.executeQuery();
+		stmt.execute();
+		stmt.close();
+		if(ddNome.next()) {
+			nomeProf = ddNome.getString("nome");
+		}
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	return nomeProf;
+}
  }

@@ -213,6 +213,7 @@ public class TerAula extends Login{
 		
 		try {
 			while (dados.next()) {
+				
 				boolean continuar=false;
 				java.util.Date data = new java.util.Date();
 				java.util.Date hoje = new java.util.Date();
