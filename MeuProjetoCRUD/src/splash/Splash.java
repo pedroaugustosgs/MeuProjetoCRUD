@@ -65,7 +65,7 @@ public class Splash implements Runnable{
 		barra.setBounds(10, 272, 558, 14);
 		frame.getContentPane().add(barra);
 		barra.setBackground(Color.WHITE);
-        barra.setForeground(Color.RED); 
+        barra.setForeground(Color.GRAY); 
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
 		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
