@@ -193,16 +193,6 @@ public class Principal2 {
 		lblNewLabel_16.setBounds(484, 143, 477, 364);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_16);
 		
-		JLabel lblNewLabel_17 = new JLabel("");
-		lblNewLabel_17.setIcon(new ImageIcon("D:\\e38f872da28d3d9d30db079615f82a71.png"));
-		lblNewLabel_17.setBounds(0, 507, 520, 99);
-		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_17);
-		
-		JLabel lblNewLabel_18 = new JLabel("");
-		lblNewLabel_18.setIcon(new ImageIcon("D:\\e38f872da28d3d9d30db079615f82a71.png"));
-		lblNewLabel_18.setBounds(493, 507, 502, 99);
-		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_18);
-		
 		JLabel lblNewLabel_19 = new JLabel("");
 		lblNewLabel_19.setIcon(new ImageIcon("D:\\e38f872da28d3d9d30db079615f82a71.png"));
 		lblNewLabel_19.setBounds(0, 0, 491, 127);

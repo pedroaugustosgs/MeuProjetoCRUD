@@ -45,7 +45,6 @@ public class AulasSolicitadas extends Login{
 	public static JButton btnProcurar;
 	private JTable tabela; 
 	public String Dias[];
-	private JLabel lblNewLabel;
 	private JLabel lblNewLabel_1;
 	private JLabel lblNewLabel_2;
 	private JLabel lblNewLabel_3;
@@ -55,6 +54,8 @@ public class AulasSolicitadas extends Login{
 	private JLabel lblNewLabel_7;
 	private JLabel lblNewLabel_8;
 	private JLabel lblNewLabel_9;
+	private JLabel lblNewLabel;
+	private JLabel lblNewLabel_10;
 	
 	
 	/**
@@ -185,11 +186,6 @@ public class AulasSolicitadas extends Login{
 		btnVoltar.setBounds(0, 573, 157, 39);
 		frmMeuCrud.getContentPane().add(btnVoltar);
 		
-		lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\agendaaula.png"));
-		lblNewLabel.setBounds(231, 11, 469, 62);
-		frmMeuCrud.getContentPane().add(lblNewLabel);
-		
 		lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
 		lblNewLabel_2.setBounds(701, 494, 264, 26);
@@ -233,6 +229,15 @@ public class AulasSolicitadas extends Login{
 			JScrollPane scrollPane = new JScrollPane(tabela);
 			scrollPane.setBounds(10, 235, 1000, 222);
 			frmMeuCrud.getContentPane().add(scrollPane);
+			
+			lblNewLabel = new JLabel("");
+			lblNewLabel.setBounds(478, 50, 46, 14);
+			frmMeuCrud.getContentPane().add(lblNewLabel);
+			
+			lblNewLabel_10 = new JLabel("");
+			lblNewLabel_10.setIcon(new ImageIcon("D:\\Money.png"));
+			lblNewLabel_10.setBounds(283, 25, 520, 84);
+			frmMeuCrud.getContentPane().add(lblNewLabel_10);
 		
 		criaTabela(pegaAulaSolicitada());
 	}// fim do método inicialize

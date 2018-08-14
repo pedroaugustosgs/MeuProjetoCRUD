@@ -505,11 +505,6 @@ public class Cadastrar_login extends LoginInstitu{
 		lblNewLabel.setBounds(621, 68, 46, 14);
 		frame.getContentPane().add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Cadastro.png"));
-		lblNewLabel_1.setBounds(177, 0, 428, 352);
-		frame.getContentPane().add(lblNewLabel_1);
-		
 		JLabel lblNewLabel_2 = new JLabel("New label");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_2.setBounds(0, 82, 365, 32);
