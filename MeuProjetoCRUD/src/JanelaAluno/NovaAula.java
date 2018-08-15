@@ -37,6 +37,7 @@ import Banco.Conexao;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeEvent;
+import java.awt.Color;
 
 public class NovaAula extends Login {
 
@@ -80,6 +81,12 @@ public class NovaAula extends Login {
 	private JRadioButton rdbtnUmaVez;
 	private JRadioButton rdbtnPeridico;
 	private JCalendar calendario;
+	private JLabel lblNewLabel;
+	private JLabel lblNewLabel_1;
+	private JLabel lblNewLabel_2;
+	private JLabel lblNewLabel_3;
+	private JLabel lblNewLabel_4;
+	private JLabel lblNewLabel_5;
 	/**
 	 * Launch the application.
 	 */
@@ -108,6 +115,7 @@ public class NovaAula extends Login {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.BLACK);
 		frame.setBounds(100, 100, 955, 578);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -316,6 +324,8 @@ public class NovaAula extends Login {
 		});
 		
 		rdbtnUmaVez = new JRadioButton("Uma vez");
+		rdbtnUmaVez.setBackground(Color.BLACK);
+		rdbtnUmaVez.setForeground(Color.WHITE);
 		rdbtnUmaVez.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panel.setVisible(false);
@@ -332,9 +342,10 @@ public class NovaAula extends Login {
 		panel_1.setLayout(null);
 		
 		JLabel lblDe_1 = new JLabel("DE:");
+		lblDe_1.setForeground(Color.WHITE);
 		lblDe_1.setBounds(10, 119, 46, 20);
 		panel_1.add(lblDe_1);
-		lblDe_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblDe_1.setFont(new Font("Times New Roman", Font.BOLD, 16));
 		
 		tfDeUmaVez = new JFormattedTextField(DeAte);
 		tfDeUmaVez.setBounds(45, 119, 143, 20);
@@ -342,9 +353,10 @@ public class NovaAula extends Login {
 		tfDeUmaVez.setColumns(10);
 		
 		JLabel lblAt_1 = new JLabel("AT\u00C9:");
+		lblAt_1.setForeground(Color.WHITE);
 		lblAt_1.setBounds(10, 143, 46, 20);
 		panel_1.add(lblAt_1);
-		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD, 16));
 		
 		tfAteUmaVez = new JFormattedTextField(DeAte);
 		tfAteUmaVez.setBounds(60, 145, 143, 20);
@@ -371,6 +383,7 @@ public class NovaAula extends Login {
 		panel_1.add(calendario);
 		
 		JLabel lblData_1 = new JLabel("DATA:");
+		lblData_1.setForeground(Color.WHITE);
 		lblData_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		lblData_1.setBounds(157, 11, 70, 20);
 		panel_1.add(lblData_1);
@@ -378,6 +391,8 @@ public class NovaAula extends Login {
 		frame.getContentPane().add(rdbtnUmaVez);
 		
 		rdbtnPeridico = new JRadioButton("Peri\u00F3dico");
+		rdbtnPeridico.setBackground(Color.BLACK);
+		rdbtnPeridico.setForeground(Color.WHITE);
 		rdbtnPeridico.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				panel.setVisible(true);
@@ -389,27 +404,28 @@ public class NovaAula extends Login {
 		rdbtnPeridico.setSelected(true);
 		rdbtnPeridico.setBounds(37, 147, 109, 23);
 		frame.getContentPane().add(rdbtnPeridico);
-		btnRecomendaesDeAulas.setForeground(SystemColor.textHighlight);
-		btnRecomendaesDeAulas.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 20));
-		btnRecomendaesDeAulas.setBounds(332, 502, 254, 37);
+		btnRecomendaesDeAulas.setForeground(Color.BLACK);
+		btnRecomendaesDeAulas.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnRecomendaesDeAulas.setBounds(352, 513, 254, 37);
 		frame.getContentPane().add(btnRecomendaesDeAulas);
 		
 		tfVagas = new JTextField();
 		tfVagas.setColumns(10);
-		tfVagas.setBounds(80, 448, 86, 20);
+		tfVagas.setBounds(80, 428, 86, 20);
 		frame.getContentPane().add(tfVagas);
 		
 		JLabel lblVagas = new JLabel("VAGAS:");
+		lblVagas.setForeground(Color.WHITE);
 		lblVagas.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblVagas.setBounds(10, 447, 61, 19);
+		lblVagas.setBounds(10, 427, 61, 19);
 		frame.getContentPane().add(lblVagas);
-		btnVoltar.setForeground(SystemColor.textHighlight);
-		btnVoltar.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 20));
-		btnVoltar.setBounds(10, 502, 156, 37);
+		btnVoltar.setForeground(Color.BLACK);
+		btnVoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnVoltar.setBounds(0, 513, 156, 37);
 		frame.getContentPane().add(btnVoltar);
-		btnCriarAula.setForeground(SystemColor.textHighlight);
-		btnCriarAula.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 20));
-		btnCriarAula.setBounds(783, 502, 156, 37);
+		btnCriarAula.setForeground(Color.BLACK);
+		btnCriarAula.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnCriarAula.setBounds(793, 513, 156, 37);
 		frame.getContentPane().add(btnCriarAula);
 		
 		tfLocal = new JTextField();
@@ -418,22 +434,24 @@ public class NovaAula extends Login {
 		frame.getContentPane().add(tfLocal);
 		
 		JLabel lblLocal = new JLabel("LOCAL:");
-		lblLocal.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblLocal.setForeground(Color.WHITE);
+		lblLocal.setFont(new Font("Times New Roman", Font.BOLD, 16));
 		lblLocal.setBounds(10, 396, 61, 19);
 		frame.getContentPane().add(lblLocal);
 		
 		tfConteudo = new JTextField();
-		tfConteudo.setBounds(119, 97, 515, 20);
+		tfConteudo.setBounds(119, 120, 515, 20);
 		frame.getContentPane().add(tfConteudo);
 		tfConteudo.setColumns(10);
 		
 		JLabel lblContedo = new JLabel("CONTE\u00DADO:");
-		lblContedo.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblContedo.setBounds(10, 96, 107, 19);
+		lblContedo.setForeground(Color.WHITE);
+		lblContedo.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		lblContedo.setBounds(10, 121, 107, 19);
 		frame.getContentPane().add(lblContedo);
 		
 		cbMaterias = new JComboBox<String>();
-		cbMaterias.setBounds(119, 62, 136, 20);
+		cbMaterias.setBounds(117, 89, 136, 20);
 		frame.getContentPane().add(cbMaterias);
 		cbMaterias.addItem("Biologia");
 		cbMaterias.addItem("Matemática");  
@@ -450,14 +468,10 @@ public class NovaAula extends Login {
 		cbMaterias.addItem("Filosofia");  
 		
 		JLabel lblMatria = new JLabel("MAT\u00C9RIA:");
-		lblMatria.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblMatria.setBounds(10, 61, 89, 19);
+		lblMatria.setForeground(Color.WHITE);
+		lblMatria.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		lblMatria.setBounds(10, 91, 89, 19);
 		frame.getContentPane().add(lblMatria);
-		
-		JLabel lblCadastrarAula = new JLabel("CADASTRAR AULA");
-		lblCadastrarAula.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 20));
-		lblCadastrarAula.setBounds(242, 11, 185, 47);
-		frame.getContentPane().add(lblCadastrarAula);
 		
 		ButtonGroup gripo = new ButtonGroup();
 		gripo.add(rdbtnPeridico);
@@ -589,6 +603,35 @@ public class NovaAula extends Login {
 		tfAteTarde.setBounds(284, 114, 125, 20);
 		panel.add(tfAteTarde);
 		tfAteTarde.setColumns(10);
+		
+		lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel.setBounds(0, 474, 481, 28);
+		frame.getContentPane().add(lblNewLabel);
+		
+		lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_1.setBounds(470, 474, 320, 28);
+		frame.getContentPane().add(lblNewLabel_1);
+		
+		lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_2.setBounds(782, 474, 167, 28);
+		frame.getContentPane().add(lblNewLabel_2);
+		
+		lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_3.setBounds(0, 50, 481, 28);
+		frame.getContentPane().add(lblNewLabel_3);
+		
+		lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_4.setBounds(470, 50, 320, 28);
+		frame.getContentPane().add(lblNewLabel_4);
+		
+		lblNewLabel_5 = new JLabel("New label");
+		lblNewLabel_5.setBounds(800, 60, 46, 14);
+		frame.getContentPane().add(lblNewLabel_5);
 		chTarde.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(chTarde.isSelected()) {

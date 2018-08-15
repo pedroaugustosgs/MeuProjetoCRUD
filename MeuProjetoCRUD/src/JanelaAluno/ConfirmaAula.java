@@ -66,6 +66,14 @@ public class ConfirmaAula extends Login{
 	private JPanel panel;
 	private int panels=1;
 	private JTable tabela; 
+	private JLabel lblNewLabel_2;
+	private JLabel lblNewLabel_3;
+	private JLabel lblNewLabel_4;
+	private JLabel lblNewLabel_5;
+	private JLabel lblNewLabel_6;
+	private JLabel lblNewLabel_7;
+	private JLabel lblNewLabel_8;
+	private JLabel lblNewLabel_9;
 
 	
 	/**
@@ -99,7 +107,8 @@ public class ConfirmaAula extends Login{
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 958, 563);
+		frame.getContentPane().setBackground(Color.BLACK);
+		frame.setBounds(100, 100, 1055, 634);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
@@ -107,7 +116,22 @@ public class ConfirmaAula extends Login{
 		
 		panel = new JPanel();
 		panel.setVisible(false);
-		panel.setBounds(232, 70, 700, 190);
+		
+		lblNewLabel_9 = new JLabel("");
+		lblNewLabel_9.setIcon(new ImageIcon("D:\\chapeu.png"));
+		lblNewLabel_9.setBounds(915, 21, 124, 81);
+		frame.getContentPane().add(lblNewLabel_9);
+		
+		lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_5.setBounds(0, 53, 455, 34);
+		frame.getContentPane().add(lblNewLabel_5);
+		
+		lblNewLabel_6 = new JLabel("");
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_6.setBounds(435, 53, 470, 34);
+		frame.getContentPane().add(lblNewLabel_6);
+		panel.setBounds(232, 93, 700, 190);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
@@ -290,8 +314,8 @@ public class ConfirmaAula extends Login{
 		panel.add(lblatenoite);
 		
 		panel_1 = new JPanel();
-		panel_1.setBounds(232, 70, 196, 109);
-		frame.getContentPane().add(panel_1);
+		panel_1.setBounds(0, 0, 196, 109);
+		panel.add(panel_1);
 		panel_1.setVisible(false);
 		panel_1.setLayout(null);
 		
@@ -322,62 +346,63 @@ public class ConfirmaAula extends Login{
 		lblatedata.setBounds(64, 59, 86, 19);
 		panel_1.add(lblatedata);
 		
-		JLabel lblConfirmarAula = new JLabel("Confirmar Aula");
-		lblConfirmarAula.setFont(new Font("Trebuchet MS", Font.BOLD | Font.ITALIC, 26));
-		lblConfirmarAula.setBounds(232, 11, 196, 48);
-		frame.getContentPane().add(lblConfirmarAula);
+		lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_2.setBounds(-33, 504, 488, 52);
+		frame.getContentPane().add(lblNewLabel_2);
 		
 		Label label = new Label("Mat\u00E9ria:");
 		label.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label.setForeground(Color.BLACK);
-		label.setBounds(10, 69, 58, 22);
+		label.setForeground(Color.WHITE);
+		label.setBounds(10, 113, 58, 22);
 		frame.getContentPane().add(label);
 		
 		Label label_1 = new Label("Professor:");
-		label_1.setForeground(Color.BLACK);
+		label_1.setForeground(Color.WHITE);
 		label_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_1.setBounds(10, 97, 66, 22);
+		label_1.setBounds(10, 141, 66, 22);
 		frame.getContentPane().add(label_1);
 		
 		Label label_2 = new Label("Conte\u00FAdo:");
-		label_2.setForeground(Color.BLACK);
+		label_2.setForeground(Color.WHITE);
 		label_2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_2.setBounds(10, 125, 66, 22);
+		label_2.setBounds(10, 169, 66, 22);
 		frame.getContentPane().add(label_2);
 		
 		Label label_3 = new Label("Local:");
-		label_3.setForeground(Color.BLACK);
+		label_3.setForeground(Color.WHITE);
 		label_3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_3.setBounds(10, 153, 49, 22);
+		label_3.setBounds(10, 197, 49, 22);
 		frame.getContentPane().add(label_3);
 		
 		Label label_4 = new Label("Vagas:");
-		label_4.setForeground(Color.BLACK);
+		label_4.setForeground(Color.WHITE);
 		label_4.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_4.setBounds(10, 180, 49, 22);
+		label_4.setBounds(10, 225, 49, 22);
 		frame.getContentPane().add(label_4);
 		
 		lblmateria = new JLabel("");
-		lblmateria.setBounds(82, 70, 160, 22);
+		lblmateria.setBounds(75, 113, 160, 22);
 		frame.getContentPane().add(lblmateria);
 		
 		lblprofessor = new JLabel("");
-		lblprofessor.setBounds(92, 94, 153, 22);
+		lblprofessor.setBounds(82, 141, 153, 22);
 		frame.getContentPane().add(lblprofessor);
 		
 		lblconteudo = new JLabel("");
-		lblconteudo.setBounds(92, 125, 168, 22);
+		lblconteudo.setBounds(82, 169, 168, 22);
 		frame.getContentPane().add(lblconteudo);
 		
 		lbllocal = new JLabel("");
-		lbllocal.setBounds(65, 153, 193, 22);
+		lbllocal.setBounds(57, 197, 193, 22);
 		frame.getContentPane().add(lbllocal);
 		
 		lblvagas = new JLabel("");
-		lblvagas.setBounds(65, 183, 153, 19);
+		lblvagas.setBounds(65, 228, 153, 19);
 		frame.getContentPane().add(lblvagas);
 		
-		JButton btnNewButton = new JButton("Confirmar");
+		JButton btnNewButton = new JButton("CONFIRMAR");
+		btnNewButton.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				boolean res = false;
@@ -403,24 +428,45 @@ public class ConfirmaAula extends Login{
 				
 			}
 		});
-		btnNewButton.setBounds(57, 493, 129, 23);
+		btnNewButton.setBounds(0, 562, 153, 34);
 		frame.getContentPane().add(btnNewButton);
 		
-		JButton btnNovoltar = new JButton("Voltar");
+		JButton btnNovoltar = new JButton("VOLTAR");
+		btnNovoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnNovoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TerAula.main(null);
 				frame.dispose();
 			}
 		});
-		btnNovoltar.setBounds(778, 493, 123, 23);
+		btnNovoltar.setBounds(886, 567, 153, 34);
 		frame.getContentPane().add(btnNovoltar);
 		
 		tabela = new JTable();
 		
 		JScrollPane scrollPane = new JScrollPane(tabela);
-		scrollPane.setBounds(10, 269, 922, 213);
+		scrollPane.setBounds(10, 294, 922, 213);
 		frame.getContentPane().add(scrollPane);
+		
+		lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_3.setBounds(435, 504, 488, 52);
+		frame.getContentPane().add(lblNewLabel_3);
+		
+		lblNewLabel_4 = new JLabel("New label");
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_4.setBounds(910, 504, 129, 52);
+		frame.getContentPane().add(lblNewLabel_4);
+		
+		lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_7.setBounds(871, 58, 168, 24);
+		frame.getContentPane().add(lblNewLabel_7);
+		
+		lblNewLabel_8 = new JLabel("");
+		lblNewLabel_8.setIcon(new ImageIcon("D:\\Confirmaraula.png"));
+		lblNewLabel_8.setBounds(363, 11, 330, 52);
+		frame.getContentPane().add(lblNewLabel_8);
 		
 		preencherTela();
 		

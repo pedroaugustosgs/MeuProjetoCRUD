@@ -84,6 +84,7 @@ public class RecomendarAula extends Login {
 	private JLabel lblNewLabel_1;
 	private JLabel lblNewLabel_2;
 	private JLabel lblNewLabel_3;
+	private JLabel lblNewLabel_6;
 	/**
 	 * Launch the application.
 	 */
@@ -586,6 +587,11 @@ public class RecomendarAula extends Login {
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_5.setBounds(903, 74, 46, 23);
 		frame.getContentPane().add(lblNewLabel_5);
+		
+		lblNewLabel_6 = new JLabel("");
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\RecomendaAula.png"));
+		lblNewLabel_6.setBounds(287, 11, 515, 59);
+		frame.getContentPane().add(lblNewLabel_6);
 		chTarde.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(chTarde.isSelected()) {

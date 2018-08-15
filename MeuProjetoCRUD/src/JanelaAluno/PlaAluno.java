@@ -46,10 +46,7 @@ public class PlaAluno {
 	
 	public JFrame frmMeuCrud;
 	public static JButton btnteraula;
-	private JLabel lblNewLabel;
-	private JLabel lblNewLabel_1;
 	public static String anterior = "";
-	private JLabel label;
 	public JTable tabela;
 	public JTable tabelaREC;
 	public static String idaluno=null;
@@ -93,8 +90,9 @@ public class PlaAluno {
 	 */
 	private void initialize() {
 		frmMeuCrud = new JFrame();
+		frmMeuCrud.getContentPane().setBackground(Color.BLACK);
 		frmMeuCrud.setTitle("MEU CRUD - Alunos Cadastrados");               
-		frmMeuCrud.setBounds(100, 100, 1043, 550);
+		frmMeuCrud.setBounds(100, 100, 1090, 640);
 		frmMeuCrud.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frmMeuCrud.getContentPane().setLayout(null);
 		frmMeuCrud.setResizable(false);
@@ -134,13 +132,34 @@ public class PlaAluno {
 			
 		});
 		
+		JLabel lblNewLabel_5 = new JLabel("New label");
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Bot\u00E3o png.png"));
+		lblNewLabel_5.setBounds(432, 175, 331, 301);
+		frmMeuCrud.getContentPane().add(lblNewLabel_5);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_1.setBounds(0, 82, 407, 43);
+		frmMeuCrud.getContentPane().add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_4.setBounds(396, 82, 469, 43);
+		frmMeuCrud.getContentPane().add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_6 = new JLabel("");
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_6.setBounds(837, 81, 237, 44);
+		frmMeuCrud.getContentPane().add(lblNewLabel_6);
+		
 		JScrollPane scrollPaneREC = new JScrollPane(tabelaREC);
-		scrollPaneREC.setBounds(649, 136, 321, 331);
+		scrollPaneREC.setBounds(724, 167, 321, 331);
 		frmMeuCrud.getContentPane().add(scrollPaneREC);
 		
 		JLabel lblAulasQueVai_1 = new JLabel("AULAS QUE VAI RECEBER");
+		lblAulasQueVai_1.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		lblAulasQueVai_1.setForeground(Color.WHITE);
-		lblAulasQueVai_1.setBounds(747, 107, 137, 33);
+		lblAulasQueVai_1.setBounds(761, 123, 256, 33);
 		frmMeuCrud.getContentPane().add(lblAulasQueVai_1);
 		
 		tabela = new JTable();
@@ -170,28 +189,19 @@ public class PlaAluno {
 		});
 		
 		JScrollPane scrollPane = new JScrollPane(tabela);
-		scrollPane.setBounds(10, 136, 321, 331);
+		scrollPane.setBounds(10, 167, 321, 331);
 		frmMeuCrud.getContentPane().add(scrollPane);
 		
 		JLabel lblAulasQueVai = new JLabel("AULAS QUE VAI DAR");
+		lblAulasQueVai.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		lblAulasQueVai.setForeground(Color.WHITE);
-		lblAulasQueVai.setBounds(76, 98, 137, 33);
+		lblAulasQueVai.setBounds(51, 123, 213, 33);
 		frmMeuCrud.getContentPane().add(lblAulasQueVai);
-		btnNovaAula.setForeground(SystemColor.textHighlight);
-		btnNovaAula.setFont(new Font("Bell MT", Font.BOLD | Font.ITALIC, 18));
+		btnNovaAula.setForeground(Color.BLACK);
+		btnNovaAula.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnNovaAula.setBackground(Color.WHITE);
-		btnNovaAula.setBounds(401, 478, 121, 33);
+		btnNovaAula.setBounds(480, 306, 121, 33);
 		frmMeuCrud.getContentPane().add(btnNovaAula);
-		
-		label = new JLabel("New label");
-		label.setBounds(705, -174, 1027, 511);
-		frmMeuCrud.getContentPane().add(label);
-		
-		JLabel lblGerenciaSuasAulas = DefaultComponentFactory.getInstance().createLabel("Gerencie suas aulas aqui");
-		lblGerenciaSuasAulas.setFont(new Font("Harrington", Font.BOLD | Font.ITALIC, 23));
-		lblGerenciaSuasAulas.setForeground(SystemColor.textHighlightText);
-		lblGerenciaSuasAulas.setBounds(389, 61, 288, 33);
-		frmMeuCrud.getContentPane().add(lblGerenciaSuasAulas);
 		
 		btnteraula = new JButton("Solicitar Aula");
 		btnteraula.addActionListener(new ActionListener() {
@@ -200,17 +210,17 @@ public class PlaAluno {
 				frmMeuCrud.dispose();
 			}
 		});
-		btnteraula.setFont(new Font("Bell MT", Font.BOLD | Font.ITALIC, 18));
-		btnteraula.setForeground(SystemColor.textHighlight);
+		btnteraula.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnteraula.setForeground(Color.BLACK);
 		btnteraula.setBackground(SystemColor.textHighlightText);
 		
-		btnteraula.setBounds(201, 478, 176, 33);
+		btnteraula.setBounds(0, 579, 176, 33);
 		frmMeuCrud.getContentPane().add(btnteraula);
 		
 		JButton btnconfig = new JButton("Editar Perfil");
-		btnconfig.setForeground(SystemColor.textHighlight);
+		btnconfig.setForeground(Color.BLACK);
 		btnconfig.setBackground(SystemColor.textHighlightText);
-		btnconfig.setFont(new Font("Bell MT", Font.BOLD | Font.ITALIC, 20));
+		btnconfig.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnconfig.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				Config.voltar=1;
@@ -218,19 +228,8 @@ public class PlaAluno {
 				Config.main(null);
 			}
 		});
-		btnconfig.setBounds(10, 478, 168, 33);
+		btnconfig.setBounds(447, 579, 168, 33);
 		frmMeuCrud.getContentPane().add(btnconfig);
-		
-		lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setBounds(775, 339, 252, 219);
-		frmMeuCrud.getContentPane().add(lblNewLabel_1);
-		
-		JLabel lblSuaPlataforma = DefaultComponentFactory.getInstance().createLabel("Sua Plataforma");
-		lblSuaPlataforma.setForeground(SystemColor.textHighlightText);
-		lblSuaPlataforma.setFont(new Font("Harrington", Font.BOLD | Font.ITALIC, 23));
-		lblSuaPlataforma.setBackground(SystemColor.textHighlightText);
-		lblSuaPlataforma.setBounds(448, 23, 176, 43);
-		frmMeuCrud.getContentPane().add(lblSuaPlataforma);
 		
 		JButton btnSair = new JButton("Sair");
 		btnSair.addActionListener(new ActionListener() {
@@ -251,15 +250,51 @@ public class PlaAluno {
 				}
 			}
 		});
-		btnSair.setForeground(SystemColor.textHighlight);
-		btnSair.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18));
+		btnSair.setForeground(Color.BLACK);
+		btnSair.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnSair.setBackground(Color.WHITE);
-		btnSair.setBounds(532, 478, 106, 32);
+		btnSair.setBounds(978, 579, 106, 32);
 		frmMeuCrud.getContentPane().add(btnSair);
 		
-		lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(0, 0, 1057, 522);
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel.setBounds(0, 509, 425, 33);
 		frmMeuCrud.getContentPane().add(lblNewLabel);
+		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_2.setBounds(408, 509, 414, 33);
+		frmMeuCrud.getContentPane().add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_3.setBounds(816, 509, 268, 33);
+		frmMeuCrud.getContentPane().add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setIcon(new ImageIcon("D:\\Money.png"));
+		lblNewLabel_7.setBounds(317, 24, 475, 61);
+		frmMeuCrud.getContentPane().add(lblNewLabel_7);
+		
+		JLabel lblNewLabel_8 = new JLabel("");
+		lblNewLabel_8.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_8.setBounds(261, 116, 475, 407);
+		frmMeuCrud.getContentPane().add(lblNewLabel_8);
+		
+		JLabel lblNewLabel_9 = new JLabel("");
+		lblNewLabel_9.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_9.setBounds(-16, 123, 347, 45);
+		frmMeuCrud.getContentPane().add(lblNewLabel_9);
+		
+		JLabel lblNewLabel_10 = new JLabel("");
+		lblNewLabel_10.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_10.setBounds(707, 123, 338, 45);
+		frmMeuCrud.getContentPane().add(lblNewLabel_10);
+		
+		JLabel lblNewLabel_11 = new JLabel("");
+		lblNewLabel_11.setIcon(new ImageIcon("D:\\Bot\u00E3o png.png"));
+		lblNewLabel_11.setBounds(517, 281, 46, 14);
+		frmMeuCrud.getContentPane().add(lblNewLabel_11);
 		
 		criaTabela(dadosTabela());
 		criaTabelaREC(dadosTabelaREC());
@@ -333,7 +368,6 @@ public class PlaAluno {
 		tabela.getColumnModel().getColumn(2).setCellRenderer(centralizado);
 		tabela.getColumnModel().getColumn(3).setCellRenderer(centralizado);
 	}
-	
 		//responsavel por definir os parametros da tabela
 		public void criaTabelaREC(ResultSet dados) {
 			String[] colunas = {"Matéria","Conteúdo","Local","Vagas"};

@@ -165,7 +165,7 @@ public class EntraAluno extends Principal2{
 		
 		JLabel lblNewLabel_10 = new JLabel("");
 		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega em p\u00E9.jpg"));
-		lblNewLabel_10.setBounds(396, 0, 62, 78);
+		lblNewLabel_10.setBounds(396, 32, 62, 46);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_10);
 	}
 }
