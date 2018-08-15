@@ -332,11 +332,12 @@ public class VisualizaAulas extends Login{
 					stmt2.execute();
 					stmt2.close();
 					
-					CRUDEmail enviar = new CRUDEmail();
-					if(dados.next() && dado.next()) {
-						enviar.EmailVisuAulas(NomeProf(idAula),Materia(dados.getString("materia")) , dados.getString("conteudo"),dado.getString("email"));
+					if(dado !=null) {
+						CRUDEmail enviar = new CRUDEmail();
+						if(dados.next() && dado.next()) {
+							enviar.EmailVisuAulas(NomeProf(idAula),Materia(dados.getString("materia")) , dados.getString("conteudo"),dado.getString("email"));
+						}
 					}
-				
 					PlaAluno.main(null);
 					frame.dispose();
 				} catch (SQLException e) {
