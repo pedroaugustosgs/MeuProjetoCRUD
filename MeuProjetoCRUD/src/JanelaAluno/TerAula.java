@@ -55,6 +55,9 @@ public class TerAula extends Login{
 	private JLabel lblNewLabel_5;
 	private JLabel lblNewLabel_6;
 	
+	
+	public String ids[]= new String[100];
+	int cont=0;
 	/**
 	 * Launch the application.-
 	 */
@@ -171,23 +174,24 @@ public class TerAula extends Login{
 			@Override
 			public void mouseClicked(MouseEvent arg0) {     /////////////////////******************
 					
-				int linha = tabela.getSelectedRow();
+				/*int linha = tabela.getSelectedRow();
 				
 				try {
 					dadostabela.absolute(linha+1);
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				}
-				
-			
-				try {
+				}*/
+				System.out.println(ids[tabela.getSelectedRow()]);
+				ConfirmaAula.main(new String[] {ids[tabela.getSelectedRow()]});
+
+				/*try {
 					ConfirmaAula.main(new String[] {dadostabela.getString("idaula")});
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}  //*****************************
-				frmMeuCrud.dispose();
+*/				frmMeuCrud.dispose();
 			}
 			
 		});
@@ -276,6 +280,9 @@ public class TerAula extends Login{
 				if(data.before(hoje) && continuar==false) {
 					continue;
 				}
+				
+				ids[cont++]=dados.getString("idaula");
+
 				
 				linhas.add(new Object[] {
 						//dados.getString("idAula"),
