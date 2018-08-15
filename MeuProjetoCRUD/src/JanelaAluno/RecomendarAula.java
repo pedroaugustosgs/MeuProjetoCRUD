@@ -307,12 +307,12 @@ public class RecomendarAula extends Login {
 		panel_1.setVisible(false);
 		
 		lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel.setBounds(-12, 515, 446, 27);
 		frame.getContentPane().add(lblNewLabel);
 		
 		lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_1.setBounds(397, 515, 469, 27);
 		frame.getContentPane().add(lblNewLabel_1);
 		panel_1.setBounds(10, 222, 929, 197);
@@ -569,12 +569,12 @@ public class RecomendarAula extends Login {
 		tfAteTarde.setColumns(10);
 		
 		lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_2.setBounds(0, 74, 452, 23);
 		frame.getContentPane().add(lblNewLabel_2);
 		
 		lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_3.setBounds(444, 74, 469, 23);
 		frame.getContentPane().add(lblNewLabel_3);
 		

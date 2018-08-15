@@ -100,7 +100,7 @@ public class Principal2 {
 			}
 		});
 		btnVisualizarAlunos.setFont(new Font("DialogInput", Font.BOLD, 25));
-		btnVisualizarAlunos.setBounds(96, 388, 221, 39);
+		btnVisualizarAlunos.setBounds(115, 388, 230, 39);
 		frmMeuProjetoCrud.getContentPane().add(btnVisualizarAlunos);
 		
 		JButton btnSair = new JButton("ALUNO");
@@ -141,7 +141,7 @@ public class Principal2 {
 		
 		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega em p\u00E9.jpg"));
-		lblNewLabel_3.setBounds(493, 0, 27, 196);
+		lblNewLabel_3.setBounds(493, 114, 27, 82);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_7 = new JLabel("");
@@ -151,12 +151,12 @@ public class Principal2 {
 		
 		JLabel lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\escola.png"));
-		lblNewLabel_6.setBounds(105, 206, 200, 187);
+		lblNewLabel_6.setBounds(133, 207, 200, 187);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_8 = new JLabel("");
 		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\aluno.png"));
-		lblNewLabel_8.setBounds(679, 193, 293, 214);
+		lblNewLabel_8.setBounds(676, 193, 200, 214);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_8);
 		
 		JLabel lblNewLabel_10 = new JLabel("");
@@ -179,8 +179,8 @@ public class Principal2 {
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_9);
 		
 		JLabel lblNewLabel_14 = new JLabel("");
-		lblNewLabel_14.setIcon(new ImageIcon("D:\\1.png"));
-		lblNewLabel_14.setBounds(-24, 138, 507, 364);
+		lblNewLabel_14.setIcon(new ImageIcon("D:\\Imagem\\img\\1.png"));
+		lblNewLabel_14.setBounds(0, 138, 476, 364);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_14);
 		
 		JLabel lblNewLabel_15 = new JLabel("");
@@ -189,8 +189,8 @@ public class Principal2 {
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_15);
 		
 		JLabel lblNewLabel_16 = new JLabel("");
-		lblNewLabel_16.setIcon(new ImageIcon("D:\\1.png"));
-		lblNewLabel_16.setBounds(484, 143, 477, 364);
+		lblNewLabel_16.setIcon(new ImageIcon("D:\\Imagem\\img\\1.png"));
+		lblNewLabel_16.setBounds(493, 120, 502, 364);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_16);
 	}
 }

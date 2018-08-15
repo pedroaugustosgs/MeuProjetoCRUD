@@ -113,12 +113,12 @@ public class VisualizaAulaREC extends Login{
 		panel.setVisible(false);
 		
 		lblNewLabel_5 = new JLabel("");
-		lblNewLabel_5.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_5.setBounds(0, 88, 482, 22);
 		frame.getContentPane().add(lblNewLabel_5);
 		
 		lblNewLabel_6 = new JLabel("");
-		lblNewLabel_6.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_6.setBounds(467, 88, 489, 22);
 		frame.getContentPane().add(lblNewLabel_6);
 		panel.setBounds(212, 121, 700, 190);
@@ -434,17 +434,17 @@ public class VisualizaAulaREC extends Login{
 		frame.getContentPane().add(scrollPane);
 		
 		lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_2.setBounds(-13, 535, 489, 30);
 		frame.getContentPane().add(lblNewLabel_2);
 		
 		lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_3.setBounds(467, 535, 306, 30);
 		frame.getContentPane().add(lblNewLabel_3);
 		
 		lblNewLabel_4 = new JLabel("");
-		lblNewLabel_4.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_4.setBounds(762, 535, 194, 31);
 		frame.getContentPane().add(lblNewLabel_4);
 		
