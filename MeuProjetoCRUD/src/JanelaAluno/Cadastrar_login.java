@@ -201,7 +201,7 @@ public class Cadastrar_login extends LoginInstitu{
 			// TODO Auto-generated catch block
 			e2.printStackTrace();
 		}
-		btnLimpar.setFont(new Font("Arial Narrow", Font.PLAIN, 25));
+		btnLimpar.setFont(new Font("Arial Narrow", Font.PLAIN, 20));
 		btnLimpar.setBounds(621, 551, 155, 45);
 		frame.getContentPane().add(btnLimpar);
 		
@@ -491,7 +491,7 @@ public class Cadastrar_login extends LoginInstitu{
 				EntraAluno.main(null);
 			}
 		});
-		btnVoltar.setFont(new Font("Arial Narrow", Font.PLAIN, 25));
+		btnVoltar.setFont(new Font("Arial Narrow", Font.PLAIN, 20));
 		btnVoltar.setBounds(337, 551, 155, 45);
 		frame.getContentPane().add(btnVoltar);
 		frame.setResizable(false);//impede a tela de ser redimensionada
@@ -532,10 +532,14 @@ public class Cadastrar_login extends LoginInstitu{
 		lblNewLabel_6.setBounds(393, 505, 405, 24);
 		frame.getContentPane().add(lblNewLabel_6);
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\SENAI\\Downloads\\Money.png"));
-		lblNewLabel_1.setBounds(275, 11, 353, 60);
-		frame.getContentPane().add(lblNewLabel_1);
+		JLabel lblNewLabel_8 = new JLabel("New label");
+		lblNewLabel_8.setBounds(488, 45, 46, 14);
+		frame.getContentPane().add(lblNewLabel_8);
+		
+		JLabel lblNewLabel_9 = new JLabel("");
+		lblNewLabel_9.setIcon(new ImageIcon("C:\\Users\\SENAI\\Downloads\\Crimson (3).png"));
+		lblNewLabel_9.setBounds(288, -21, 478, 134);
+		frame.getContentPane().add(lblNewLabel_9);
 	}
 
 	private void JSpinner(SpinnerModel spIdade2) {

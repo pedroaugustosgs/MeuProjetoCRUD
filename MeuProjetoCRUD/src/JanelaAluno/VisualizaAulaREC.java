@@ -68,7 +68,7 @@ public class VisualizaAulaREC extends Login{
 	private JLabel lblNewLabel_4;
 	private JLabel lblNewLabel_5;
 	private JLabel lblNewLabel_6;
-	private JLabel lblNewLabel_8;
+	private JLabel lblNewLabel_7;
 
 	
 	/**
@@ -448,10 +448,10 @@ public class VisualizaAulaREC extends Login{
 		lblNewLabel_4.setBounds(762, 535, 194, 31);
 		frame.getContentPane().add(lblNewLabel_4);
 		
-		lblNewLabel_8 = new JLabel("");
-		lblNewLabel_8.setIcon(new ImageIcon("D:\\VisualizarAula.png"));
-		lblNewLabel_8.setBounds(279, 11, 405, 95);
-		frame.getContentPane().add(lblNewLabel_8);
+		lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\VisualizarAula.png"));
+		lblNewLabel_7.setBounds(310, 23, 461, 87);
+		frame.getContentPane().add(lblNewLabel_7);
 		
 		preencherTela();
 		
