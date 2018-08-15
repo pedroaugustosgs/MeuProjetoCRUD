@@ -17,6 +17,7 @@ import com.toedter.calendar.JCalendar;
 
 import Banco.Conexao;
 import CRUD.CRUDAlunos;
+import CRUD.CRUDEmail;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -225,37 +226,37 @@ public class VisualizaAulas extends Login{
 				}
 				String loc = lbllocal.getText().toString();
 				
-				if(lblatetarde.isVisible()==false || lblatetarde.getText().isEmpty() && panels==0) {
+				if((lblatetarde.isVisible()==false || lblatetarde.getText().isEmpty()) && panels==0) {
 					JOptionPane.showMessageDialog(null, "Entre com o horario de termino da aula");
 					return;
 				}
 				String aTarde = lblatetarde.getText().toString();
 				
-				if(lbldemanha.isVisible()==false || lbldemanha.getText().isEmpty() && panels==0) {
+				if((lbldemanha.isVisible()==false || lbldemanha.getText().isEmpty()) && panels==0) {
 					JOptionPane.showMessageDialog(null, "Entre com o horario de inicio da aula");
 					return;
 				}
 				String dMAnha = lbldemanha.getText().toString();
 				
-				if(lblatemanha.isVisible()==false || lblatemanha.getText().isEmpty() && panels==0) {
+				if((lblatemanha.isVisible()==false || lblatemanha.getText().isEmpty()) && panels==0) {
 					JOptionPane.showMessageDialog(null, "Entre com o horario de termino da aula");
 					return;
 				}
 				String aManha = lblatemanha.getText().toString();
 				
-				if(lblDeNoite.isVisible()==false || lblDeNoite.getText().isEmpty() && panels==0) {
+				if((lblDeNoite.isVisible()==false || lblDeNoite.getText().isEmpty()) && panels==0) {
 					JOptionPane.showMessageDialog(null, "Entre com o horario de inicio da aula");
 					return;
 				}
 				String dNoite = lblDeNoite.getText().toString();
 				
-				if(lblatenoite.isVisible()==false || lblatenoite.getText().isEmpty() && panels==0) {
+				if((lblatenoite.isVisible()==false || lblatenoite.getText().isEmpty()) && panels==0) {
 					JOptionPane.showMessageDialog(null, "Entre com o horario de termino da aula");
 					return;
 				}
 				String aNoite = lblatenoite.getText().toString();
 				
-				if(lbldetarde.isVisible()==false || lbldetarde.getText().isEmpty() && panels==0) {
+				if((lbldetarde.isVisible()==false || lbldetarde.getText().isEmpty() )&& panels==0) {
 					JOptionPane.showMessageDialog(null, "Entre com o horario de inicio da aula");
 					return;
 				}
@@ -272,7 +273,10 @@ public class VisualizaAulas extends Login{
 					return;
 				}
 				
-			
+				Date data = calendario.getDate();
+				SimpleDateFormat s= new SimpleDateFormat("yyyy-MM-dd");
+				String dataS = s.format(data);
+				
 				String aData = lblatedata.getText().toString();
 				
 				String sql="UPDATE aulas SET DiaUmaVez=?, DeUmaVez =?, AteUmaVez=?, local=?, cedo=?, tarde=?, noite=?, DeManha=?, AteManha=?,"
@@ -281,7 +285,7 @@ public class VisualizaAulas extends Login{
 				
 				try {
 					PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
-					stmt.setString(1, lbldata.getText().toString());
+					stmt.setString(1, dataS);
 					stmt.setString(2, dData);
 					stmt.setString(3, aData);
 					stmt.setString(4, loc);
@@ -308,8 +312,22 @@ public class VisualizaAulas extends Login{
 					
 					JOptionPane.showMessageDialog(null, "Aula atualizada com sucesso!");
 					
+					
+					
 					//*****************************   FAZER O ENVIAR EMAIL E COLOCAR AQUI *******************//
 					
+					ResultSet dados=null;
+					String sql1="SELECT * FROM aulas WHERE idaula=?";
+					PreparedStatement stmt1 = Conexao.conexao.prepareStatement(sql1);
+					stmt1.setString(1, idAula);
+					dados = stmt1.executeQuery();
+					stmt1.execute();
+					stmt1.close();
+					
+					CRUDEmail enviar = new CRUDEmail();
+					if(dados.next()) {
+						enviar.EmailVisuAulas(NomeProf(idAula),Materia(dados.getString("materia")) , dados.getString("conteudo"));
+					}
 					
 					
 					PlaAluno.main(null);
@@ -591,6 +609,19 @@ public class VisualizaAulas extends Login{
 		lblatenoite.setBounds(221, 154, 72, 20);
 		panel.add(lblatenoite);
 		
+		
+		NomeProf(idAula);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		preencherTela();
 		
 		if(panels==0) {
@@ -839,20 +870,21 @@ public class VisualizaAulas extends Login{
 			e.printStackTrace();
 		}
 	}
+	
 	public String NomeProf(String idAula2) {
 		String nomeProf=null;
 		ResultSet dadosAula=null;
 
 		String idprof=null;
 		ResultSet ddNome;
-		String sql ="Select * From aulas Where idaula=?";
+		String sql ="Select * From alunos INNER JOIN aulas ON Alunos.idAluno=aulas.professor Where idaula=?";
 		try {
 			PreparedStatement s = Conexao.conexao.prepareStatement(sql);
 			s.setString(1, idAula2);
 			dadosAula = s.executeQuery();
 			s.execute();
 			s.close();
-			if(dadosAula.next()) {
+			/*if(dadosAula.next()) {
 				idprof = dadosAula.getString("professor");
 			} 
 			String sql2="Select * From alunos Where idAluno=?";
@@ -860,9 +892,9 @@ public class VisualizaAulas extends Login{
 			stmt.setString(1, idprof);
 			ddNome = stmt.executeQuery();
 			stmt.execute();
-			stmt.close();
-			if(ddNome.next()) {
-				nomeProf = ddNome.getString("nome");
+			stmt.close();*/
+			if(dadosAula.next()) {
+				nomeProf = dadosAula.getString("nome");
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -870,6 +902,7 @@ public class VisualizaAulas extends Login{
 		}
 		return nomeProf;
 	}
+	
 	public ResultSet dadosAlunos() {
 		ResultSet aula=null;
 		ResultSet alunos=null;
@@ -893,5 +926,49 @@ public class VisualizaAulas extends Login{
 			e.printStackTrace();
 		}
 		return alunos;
+	}
+	public String Materia(String m){
+		String materia=null;
+		
+		if(m.equals("RED")) {
+			materia="REDAÇÃO";
+		}
+		if(m.equals("MAT")) {
+			materia="MATEMÁTICA";
+		}
+		if(m.equals("QUI")) {
+			materia="QUÍMICA";
+		}
+		if(m.equals("FIS")) {
+			materia="FÍSICA";
+		}
+		if(m.equals("BIO")) {
+			materia="BIOLOGIA";
+		}
+		if(m.equals("HIS")) {
+			materia="HISTÓRIA";
+		}
+		if(m.equals("GEO")) {
+			materia="GEOGRAFIA";
+		}
+		if(m.equals("PORT")) {
+			materia="PORTUGUÊS";
+		}
+		if(m.equals("FILOS")) {
+			materia="FILOSOFIA";
+		}
+		if(m.equals("ING")) {
+			materia="INGLÊS";
+		}
+		if(m.equals("ESP")) {
+			materia="ESPANHOL";
+		}
+		if(m.equals("LIT")) {
+			materia="LITERATURA";
+		}
+		if(m.equals("SOCIO")) {
+			materia="SOCIOLOGIA";
+		}
+		return materia;
 	}
 }

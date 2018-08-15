@@ -4,7 +4,7 @@ import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.SimpleEmail;
 
 public class CRUDEmail {
-	public void EmailVisuAulas() {
+	public void EmailVisuAulas(String prof,String materia,String conteudo) {
 		
 		String de = "projetojavasenai@gmail.com";
 		boolean ssl = true;
@@ -12,7 +12,10 @@ public class CRUDEmail {
 		String porta = "465";
 		String usuario = "projetojavasenai@gmail.com";
 		String senha = "senai123";
-
+		
+		String msg="Sua aula com o professor "+prof+" de "+materia+" sobre "+conteudo+" sofreu uma alteração! "
+				+ "Acesse o Approfe para mais informações!";
+		
 	try {
 		SimpleEmail email = new SimpleEmail();
 		email.setFrom(de);
@@ -23,19 +26,12 @@ public class CRUDEmail {
 		
 		email.addTo("pedrovilelasgs@gmail.com");
 		email.setSubject("Aula Alterada");
-		email.setMsg("Sua aula foi alterada, entre no programa para mais informacoes");
+		email.setMsg(msg);
 		email.send();
 	} catch (EmailException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
 	}
-	public static void main(String[] args) {
-		
-		
-		CRUDEmail s = new CRUDEmail();
-		s.EmailVisuAulas();
-		
-		
-	}
+	
 }
