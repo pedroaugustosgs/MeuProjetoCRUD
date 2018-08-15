@@ -115,6 +115,7 @@ public class ConfirmaAula extends Login{
 		frame.setResizable(true);
 		
 		panel = new JPanel();
+		panel.setBackground(Color.BLACK);
 		panel.setVisible(false);
 		
 		lblNewLabel_9 = new JLabel("");
@@ -142,6 +143,8 @@ public class ConfirmaAula extends Login{
 		label_7.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
 		
 		chckbxManh = new JCheckBox("Manh\u00E3");
+		chckbxManh.setBackground(Color.BLACK);
+		chckbxManh.setForeground(Color.WHITE);
 		chckbxManh.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				chckbxManh.setSelected(true);
@@ -152,6 +155,8 @@ public class ConfirmaAula extends Login{
 		panel.add(chckbxManh);
 		
 		chckbxTarde = new JCheckBox("Tarde");
+		chckbxTarde.setBackground(Color.BLACK);
+		chckbxTarde.setForeground(Color.WHITE);
 		chckbxTarde.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				chckbxTarde.setSelected(true);
@@ -162,6 +167,8 @@ public class ConfirmaAula extends Login{
 		panel.add(chckbxTarde);
 		
 		chckbxNoite = new JCheckBox("Noite");
+		chckbxNoite.setBackground(Color.BLACK);
+		chckbxNoite.setForeground(Color.WHITE);
 		chckbxNoite.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				chckbxNoite.setSelected(true);
@@ -178,6 +185,8 @@ public class ConfirmaAula extends Login{
 		label_6.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
 		
 		chSegunda = new JCheckBox("Segunda-Feira");
+		chSegunda.setBackground(Color.BLACK);
+		chSegunda.setForeground(Color.WHITE);
 		chSegunda.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				chSegunda.setSelected(true);
@@ -188,6 +197,8 @@ public class ConfirmaAula extends Login{
 		panel.add(chSegunda);
 		
 		chTerca = new JCheckBox("Ter\u00E7a-Feira");
+		chTerca.setBackground(Color.BLACK);
+		chTerca.setForeground(Color.WHITE);
 		chTerca.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				chTerca.setSelected(true);
@@ -198,6 +209,8 @@ public class ConfirmaAula extends Login{
 		panel.add(chTerca);
 		
 		chQuartafeira = new JCheckBox("Quarta-Feira");
+		chQuartafeira.setBackground(Color.BLACK);
+		chQuartafeira.setForeground(Color.WHITE);
 		chQuartafeira.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				chQuartafeira.setSelected(true);
@@ -208,6 +221,8 @@ public class ConfirmaAula extends Login{
 		panel.add(chQuartafeira);
 		
 		chQuintafeira = new JCheckBox("Quinta-Feira");
+		chQuintafeira.setBackground(Color.BLACK);
+		chQuintafeira.setForeground(Color.WHITE);
 		chQuintafeira.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				chQuintafeira.setSelected(true);
@@ -218,6 +233,8 @@ public class ConfirmaAula extends Login{
 		panel.add(chQuintafeira);
 		
 		chSextafeira = new JCheckBox("Sexta-Feira");
+		chSextafeira.setBackground(Color.BLACK);
+		chSextafeira.setForeground(Color.WHITE);
 		chSextafeira.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				chSextafeira.setSelected(true);
@@ -228,16 +245,20 @@ public class ConfirmaAula extends Login{
 		panel.add(chSextafeira);
 		
 		chSbado = new JCheckBox("S\u00E1bado");
+		chSbado.setBackground(Color.BLACK);
+		chSbado.setForeground(Color.WHITE);
 		chSbado.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				chSbado.setSelected(true);
 			}
 		});
 		chSbado.setEnabled(false);
-		chSbado.setBounds(512, 43, 72, 23);
+		chSbado.setBounds(517, 43, 72, 23);
 		panel.add(chSbado);
 		
 		chDomingo = new JCheckBox("Domingo");
+		chDomingo.setBackground(Color.BLACK);
+		chDomingo.setForeground(Color.WHITE);
 		chDomingo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				chDomingo.setSelected(true);
@@ -250,7 +271,7 @@ public class ConfirmaAula extends Login{
 		JLabel lblNewLabel = new JLabel("DE:");
 		lblNewLabel.setVisible(false);
 		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		lblNewLabel.setBounds(80, 101, 40, 23);
+		lblNewLabel.setBounds(72, 101, 40, 23);
 		panel.add(lblNewLabel);
 		
 		JLabel lblAt = new JLabel("AT\u00C9:");
@@ -290,7 +311,7 @@ public class ConfirmaAula extends Login{
 		
 		lbldetarde = new JLabel("");
 		lbldetarde.setVisible(false);
-		lbldetarde.setBounds(117, 127, 66, 20);
+		lbldetarde.setBounds(107, 130, 66, 20);
 		panel.add(lbldetarde);
 		
 		lblDeNoite = new JLabel("");
@@ -305,7 +326,7 @@ public class ConfirmaAula extends Login{
 		
 		lblatetarde = new JLabel("");
 		lblatetarde.setVisible(false);
-		lblatetarde.setBounds(220, 127, 73, 21);
+		lblatetarde.setBounds(232, 127, 73, 21);
 		panel.add(lblatetarde);
 		
 		lblatenoite = new JLabel("");
@@ -314,6 +335,7 @@ public class ConfirmaAula extends Login{
 		panel.add(lblatenoite);
 		
 		panel_1 = new JPanel();
+		panel_1.setBackground(Color.BLACK);
 		panel_1.setBounds(0, 0, 196, 109);
 		panel.add(panel_1);
 		panel_1.setVisible(false);
@@ -382,22 +404,27 @@ public class ConfirmaAula extends Login{
 		frame.getContentPane().add(label_4);
 		
 		lblmateria = new JLabel("");
-		lblmateria.setBounds(75, 113, 160, 22);
+		lblmateria.setForeground(Color.WHITE);
+		lblmateria.setBounds(75, 113, 147, 22);
 		frame.getContentPane().add(lblmateria);
 		
 		lblprofessor = new JLabel("");
-		lblprofessor.setBounds(82, 141, 153, 22);
+		lblprofessor.setForeground(Color.WHITE);
+		lblprofessor.setBounds(82, 141, 140, 22);
 		frame.getContentPane().add(lblprofessor);
 		
 		lblconteudo = new JLabel("");
-		lblconteudo.setBounds(82, 169, 168, 22);
+		lblconteudo.setForeground(Color.WHITE);
+		lblconteudo.setBounds(82, 169, 146, 22);
 		frame.getContentPane().add(lblconteudo);
 		
 		lbllocal = new JLabel("");
-		lbllocal.setBounds(57, 197, 193, 22);
+		lbllocal.setForeground(Color.WHITE);
+		lbllocal.setBounds(57, 197, 168, 22);
 		frame.getContentPane().add(lbllocal);
 		
 		lblvagas = new JLabel("");
+		lblvagas.setForeground(Color.WHITE);
 		lblvagas.setBounds(65, 228, 153, 19);
 		frame.getContentPane().add(lblvagas);
 		
@@ -445,7 +472,7 @@ public class ConfirmaAula extends Login{
 		tabela = new JTable();
 		
 		JScrollPane scrollPane = new JScrollPane(tabela);
-		scrollPane.setBounds(10, 294, 922, 213);
+		scrollPane.setBounds(232, 294, 498, 213);
 		frame.getContentPane().add(scrollPane);
 		
 		lblNewLabel_3 = new JLabel("");
