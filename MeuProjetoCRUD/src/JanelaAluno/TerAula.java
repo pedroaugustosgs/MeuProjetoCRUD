@@ -58,6 +58,7 @@ public class TerAula extends Login{
 	
 	public String ids[]= new String[100];
 	int cont=0;
+	private JLabel lblNewLabel_7;
 	/**
 	 * Launch the application.-
 	 */
@@ -197,7 +198,7 @@ public class TerAula extends Login{
 		});
 	
 		JScrollPane scrollPane = new JScrollPane(tabela);
-		scrollPane.setBounds(10, 166, 1000, 203);
+		scrollPane.setBounds(178, 159, 601, 203);
 		frmMeuCrud.getContentPane().add(scrollPane);
 		
 		JButton btnVoltar = new JButton("Voltar");
@@ -250,6 +251,11 @@ public class TerAula extends Login{
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\ter aula.png"));
 		lblNewLabel_6.setBounds(376, 21, 403, 61);
 		frmMeuCrud.getContentPane().add(lblNewLabel_6);
+		
+		lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setIcon(new ImageIcon("D:\\img\\Lupa.png"));
+		lblNewLabel_7.setBounds(855, 190, 173, 147);
+		frmMeuCrud.getContentPane().add(lblNewLabel_7);
 		
 		dadostabela = new CRUDAulas().pegaAula();
 		criaTabela(dadostabela);
