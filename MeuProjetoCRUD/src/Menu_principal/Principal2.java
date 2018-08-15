@@ -124,17 +124,17 @@ public class Principal2 {
 		lblNewLabel_5.setBounds(356, 530, 46, 14);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_5);
 		
-		JLabel lblNewLabel = new JLabel("New label");
+		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel.setBounds(0, 446, 431, 99);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("New label");
+		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_1.setBounds(429, 483, 324, 24);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("New label");
+		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_2.setBounds(748, 480, 247, 30);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_2);
@@ -159,22 +159,22 @@ public class Principal2 {
 		lblNewLabel_8.setBounds(679, 193, 293, 214);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_8);
 		
-		JLabel lblNewLabel_10 = new JLabel("New label");
+		JLabel lblNewLabel_10 = new JLabel("");
 		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_10.setBounds(0, 96, 333, 49);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_10);
 		
-		JLabel lblNewLabel_11 = new JLabel("New label");
+		JLabel lblNewLabel_11 = new JLabel("");
 		lblNewLabel_11.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_11.setBounds(329, 104, 178, 32);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_11);
 		
-		JLabel lblNewLabel_12 = new JLabel("New label");
+		JLabel lblNewLabel_12 = new JLabel("");
 		lblNewLabel_12.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_12.setBounds(506, 98, 489, 45);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_12);
 		
-		JLabel lblNewLabel_9 = new JLabel("New label");
+		JLabel lblNewLabel_9 = new JLabel("");
 		lblNewLabel_9.setBounds(474, 113, 46, 14);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_9);
 		
@@ -183,7 +183,7 @@ public class Principal2 {
 		lblNewLabel_14.setBounds(-24, 138, 507, 364);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_14);
 		
-		JLabel lblNewLabel_15 = new JLabel("New label");
+		JLabel lblNewLabel_15 = new JLabel("");
 		lblNewLabel_15.setIcon(new ImageIcon("D:\\1.png"));
 		lblNewLabel_15.setBounds(659, 122, 46, 14);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_15);
@@ -192,15 +192,5 @@ public class Principal2 {
 		lblNewLabel_16.setIcon(new ImageIcon("D:\\1.png"));
 		lblNewLabel_16.setBounds(484, 143, 477, 364);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_16);
-		
-		JLabel lblNewLabel_19 = new JLabel("");
-		lblNewLabel_19.setIcon(new ImageIcon("D:\\e38f872da28d3d9d30db079615f82a71.png"));
-		lblNewLabel_19.setBounds(0, 0, 491, 127);
-		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_19);
-		
-		JLabel lblNewLabel_13 = new JLabel("");
-		lblNewLabel_13.setIcon(new ImageIcon("D:\\e38f872da28d3d9d30db079615f82a71.png"));
-		lblNewLabel_13.setBounds(517, 0, 478, 111);
-		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_13);
 	}
 }

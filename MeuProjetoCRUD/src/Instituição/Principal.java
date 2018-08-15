@@ -125,7 +125,7 @@ public class Principal {
 		lblNewLabel_3.setBounds(81, 140, 166, 164);
 		frame.getContentPane().add(lblNewLabel_3);
 		
-		JLabel lblNewLabel_6 = new JLabel("New label");
+		JLabel lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Bot\u00E3o png.png"));
 		lblNewLabel_6.setBounds(531, 131, 250, 185);
 		frame.getContentPane().add(lblNewLabel_6);
@@ -134,10 +134,6 @@ public class Principal {
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Coluna grega em p\u00E9.jpg"));
 		lblNewLabel_4.setBounds(409, 76, 59, 305);
 		frame.getContentPane().add(lblNewLabel_4);
-		
-		JLabel lblNewLabel_7 = new JLabel("New label");
-		lblNewLabel_7.setBounds(0, 45, 46, 14);
-		frame.getContentPane().add(lblNewLabel_7);
 		
 		JLabel lblNewLabel_8 = new JLabel("");
 		lblNewLabel_8.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));

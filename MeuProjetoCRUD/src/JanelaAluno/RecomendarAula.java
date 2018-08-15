@@ -37,6 +37,7 @@ import Banco.Conexao;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeEvent;
+import java.awt.Color;
 
 public class RecomendarAula extends Login {
 
@@ -79,6 +80,10 @@ public class RecomendarAula extends Login {
 	private JRadioButton rdbtnUmaVez;
 	private JRadioButton rdbtnPeridico;
 	private JCalendar calendario;
+	private JLabel lblNewLabel;
+	private JLabel lblNewLabel_1;
+	private JLabel lblNewLabel_2;
+	private JLabel lblNewLabel_3;
 	/**
 	 * Launch the application.
 	 */
@@ -107,6 +112,7 @@ public class RecomendarAula extends Login {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.BLACK);
 		frame.setBounds(100, 100, 955, 629);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -121,6 +127,7 @@ public class RecomendarAula extends Login {
 		}
 		
 		JButton btnCriarAula = new JButton("Criar Aula");
+		btnCriarAula.setBackground(Color.GRAY);
 		btnCriarAula.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
@@ -274,6 +281,7 @@ public class RecomendarAula extends Login {
 		});
 		
 		JButton btnVoltar = new JButton("Voltar");
+		btnVoltar.setBackground(Color.GRAY);
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TerAula.main(null);
@@ -282,6 +290,8 @@ public class RecomendarAula extends Login {
 		});
 		
 		rdbtnUmaVez = new JRadioButton("Uma vez");
+		rdbtnUmaVez.setForeground(Color.WHITE);
+		rdbtnUmaVez.setBackground(Color.BLACK);
 		rdbtnUmaVez.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panel.setVisible(false);
@@ -292,12 +302,24 @@ public class RecomendarAula extends Login {
 		});
 		
 		panel_1 = new JPanel();
+		panel_1.setBackground(Color.BLACK);
 		panel_1.setVisible(false);
+		
+		lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel.setBounds(-12, 515, 446, 27);
+		frame.getContentPane().add(lblNewLabel);
+		
+		lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_1.setBounds(397, 515, 469, 27);
+		frame.getContentPane().add(lblNewLabel_1);
 		panel_1.setBounds(10, 222, 929, 197);
 		frame.getContentPane().add(panel_1);
 		panel_1.setLayout(null);
 		
 		JLabel lblDe_1 = new JLabel("DE:");
+		lblDe_1.setForeground(Color.WHITE);
 		lblDe_1.setBounds(10, 119, 46, 20);
 		panel_1.add(lblDe_1);
 		lblDe_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
@@ -308,6 +330,7 @@ public class RecomendarAula extends Login {
 		tfDeUmaVez.setColumns(10);
 		
 		JLabel lblAt_1 = new JLabel("AT\u00C9:");
+		lblAt_1.setForeground(Color.WHITE);
 		lblAt_1.setBounds(10, 143, 46, 20);
 		panel_1.add(lblAt_1);
 		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
@@ -337,13 +360,16 @@ public class RecomendarAula extends Login {
 		panel_1.add(calendario);
 		
 		JLabel lblData_1 = new JLabel("DATA:");
-		lblData_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblData_1.setForeground(Color.WHITE);
+		lblData_1.setFont(new Font("Times New Roman", Font.BOLD, 16));
 		lblData_1.setBounds(157, 11, 70, 20);
 		panel_1.add(lblData_1);
 		rdbtnUmaVez.setBounds(119, 180, 109, 23);
 		frame.getContentPane().add(rdbtnUmaVez);
 		
 		rdbtnPeridico = new JRadioButton("Peri\u00F3dico");
+		rdbtnPeridico.setBackground(Color.BLACK);
+		rdbtnPeridico.setForeground(Color.WHITE);
 		rdbtnPeridico.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				panel.setVisible(true);
@@ -355,12 +381,12 @@ public class RecomendarAula extends Login {
 		rdbtnPeridico.setSelected(true);
 		rdbtnPeridico.setBounds(8, 180, 109, 23);
 		frame.getContentPane().add(rdbtnPeridico);
-		btnVoltar.setForeground(SystemColor.textHighlight);
-		btnVoltar.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 20));
+		btnVoltar.setForeground(Color.BLACK);
+		btnVoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnVoltar.setBounds(10, 553, 156, 37);
 		frame.getContentPane().add(btnVoltar);
-		btnCriarAula.setForeground(SystemColor.textHighlight);
-		btnCriarAula.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 20));
+		btnCriarAula.setForeground(Color.BLACK);
+		btnCriarAula.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		btnCriarAula.setBounds(783, 553, 156, 37);
 		frame.getContentPane().add(btnCriarAula);
 		
@@ -370,22 +396,24 @@ public class RecomendarAula extends Login {
 		frame.getContentPane().add(tfLocal);
 		
 		JLabel lblLocal = new JLabel("LOCAL:");
+		lblLocal.setForeground(Color.WHITE);
 		lblLocal.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		lblLocal.setBounds(10, 465, 61, 19);
 		frame.getContentPane().add(lblLocal);
 		
 		tfConteudo = new JTextField();
-		tfConteudo.setBounds(124, 135, 515, 20);
+		tfConteudo.setBounds(119, 152, 515, 20);
 		frame.getContentPane().add(tfConteudo);
 		tfConteudo.setColumns(10);
 		
 		JLabel lblContedo = new JLabel("CONTE\u00DADO:");
-		lblContedo.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblContedo.setBounds(10, 134, 107, 19);
+		lblContedo.setForeground(Color.WHITE);
+		lblContedo.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		lblContedo.setBounds(10, 154, 107, 19);
 		frame.getContentPane().add(lblContedo);
 		
 		cbMaterias = new JComboBox<String>();
-		cbMaterias.setBounds(124, 101, 136, 20);
+		cbMaterias.setBounds(115, 121, 136, 20);
 		frame.getContentPane().add(cbMaterias);
 		cbMaterias.addItem("Biologia");
 		cbMaterias.addItem("Matemática");  
@@ -402,20 +430,17 @@ public class RecomendarAula extends Login {
 		cbMaterias.addItem("Filosofia");  
 		
 		JLabel lblMatria = new JLabel("MAT\u00C9RIA:");
-		lblMatria.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblMatria.setBounds(10, 100, 89, 19);
+		lblMatria.setForeground(Color.WHITE);
+		lblMatria.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		lblMatria.setBounds(10, 124, 89, 19);
 		frame.getContentPane().add(lblMatria);
-		
-		JLabel lblCadastrarAula = new JLabel("Solicite uma nova aula");
-		lblCadastrarAula.setFont(new Font("Trebuchet MS", Font.BOLD | Font.ITALIC, 25));
-		lblCadastrarAula.setBounds(290, 11, 297, 47);
-		frame.getContentPane().add(lblCadastrarAula);
 		
 		ButtonGroup gripo = new ButtonGroup();
 		gripo.add(rdbtnPeridico);
 		gripo.add(rdbtnUmaVez);
 		
 		panel = new JPanel();
+		panel.setBackground(Color.BLACK);
 		panel.setBounds(10, 238, 929, 197);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
@@ -541,6 +566,20 @@ public class RecomendarAula extends Login {
 		tfAteTarde.setBounds(284, 114, 125, 20);
 		panel.add(tfAteTarde);
 		tfAteTarde.setColumns(10);
+		
+		lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_2.setBounds(0, 74, 452, 23);
+		frame.getContentPane().add(lblNewLabel_2);
+		
+		lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_3.setBounds(444, 74, 469, 23);
+		frame.getContentPane().add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_4 = new JLabel("New label");
+		lblNewLabel_4.setBounds(876, 515, 46, 14);
+		frame.getContentPane().add(lblNewLabel_4);
 		chTarde.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(chTarde.isSelected()) {

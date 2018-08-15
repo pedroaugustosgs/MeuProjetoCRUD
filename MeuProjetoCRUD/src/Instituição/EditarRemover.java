@@ -100,31 +100,31 @@ public class EditarRemover {
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_6.setBounds(-8, 185, 492, 23);
 		frame.getContentPane().add(lblNewLabel_6);
-		SpinerSprend.setBounds(63, 436, 88, 20);
+		SpinerSprend.setBounds(68, 357, 88, 20);
 		frame.getContentPane().add(SpinerSprend);
 		
 		JLabel lblNome = new JLabel("Nome:");
 		lblNome.setForeground(Color.WHITE);
 		lblNome.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblNome.setBounds(405, 436, 64, 15);
+		lblNome.setBounds(385, 357, 64, 15);
 		frame.getContentPane().add(lblNome);
 		
 		lblIdade = new JLabel("Idade:");
 		lblIdade.setForeground(Color.WHITE);
 		lblIdade.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblIdade.setBounds(3, 436, 64, 15);
+		lblIdade.setBounds(10, 357, 64, 15);
 		frame.getContentPane().add(lblIdade);
 		
 		JLabel lblEmail = new JLabel("E-Mail:");
 		lblEmail.setForeground(Color.WHITE);
 		lblEmail.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblEmail.setBounds(405, 492, 64, 15);
+		lblEmail.setBounds(385, 431, 64, 15);
 		frame.getContentPane().add(lblEmail);
 		
 		JLabel lblTelefone = new JLabel("Telefone:");
 		lblTelefone.setForeground(Color.WHITE);
 		lblTelefone.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblTelefone.setBounds(3, 492, 88, 15);
+		lblTelefone.setBounds(10, 431, 88, 15);
 		frame.getContentPane().add(lblTelefone);
 		
 		/*ButtonGroup grupo = new ButtonGroup();
@@ -203,38 +203,38 @@ public class EditarRemover {
 		frame.getContentPane().add(btnCancelar);
 		
 		tfNome = new JTextField();
-		tfNome.setBounds(462, 436, 374, 20);
+		tfNome.setBounds(459, 357, 374, 20);
 		frame.getContentPane().add(tfNome);
 		tfNome.setColumns(10);
 		
 		tfEmail = new JTextField();
-		tfEmail.setBounds(479, 492, 357, 20);
+		tfEmail.setBounds(459, 431, 357, 20);
 		frame.getContentPane().add(tfEmail);
 		tfEmail.setColumns(10);
 		
 		tfTelefone = new JTextField();
-		tfTelefone.setBounds(91, 492, 168, 20);
+		tfTelefone.setBounds(100, 431, 168, 20);
 		frame.getContentPane().add(tfTelefone);
 		tfTelefone.setColumns(10);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon("D:\\Monografia oficial\\BARRA ofcial.png"));
-		lblNewLabel_1.setBounds(3, 534, 492, 14);
+		lblNewLabel_1.setBounds(-8, 468, 492, 14);
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Monografia oficial\\BARRA ofcial.png"));
-		lblNewLabel_2.setBounds(444, 534, 421, 14);
+		lblNewLabel_2.setBounds(446, 468, 421, 14);
 		frame.getContentPane().add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Monografia oficial\\BARRA ofcial.png"));
-		lblNewLabel_3.setBounds(3, 467, 412, 14);
+		lblNewLabel_3.setBounds(-8, 388, 412, 14);
 		frame.getContentPane().add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Monografia oficial\\BARRA ofcial.png"));
-		lblNewLabel_4.setBounds(405, 467, 441, 14);
+		lblNewLabel_4.setBounds(395, 388, 451, 14);
 		frame.getContentPane().add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("");
@@ -248,12 +248,12 @@ public class EditarRemover {
 		
 		JLabel lblNewLabel_10 = new JLabel("");
 		lblNewLabel_10.setIcon(new ImageIcon("D:\\BARRA ofcial.png"));
-		lblNewLabel_10.setBounds(3, 401, 492, 14);
+		lblNewLabel_10.setBounds(3, 314, 492, 14);
 		frame.getContentPane().add(lblNewLabel_10);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("D:\\BARRA ofcial.png"));
-		lblNewLabel.setBounds(492, 401, 354, 14);
+		lblNewLabel.setBounds(482, 314, 364, 14);
 		frame.getContentPane().add(lblNewLabel);
 		
 		JLabel lblNewLabel_9 = new JLabel("");
@@ -270,6 +270,16 @@ public class EditarRemover {
 		lblNewLabel_12.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
 		lblNewLabel_12.setBounds(462, 0, 384, 33);
 		frame.getContentPane().add(lblNewLabel_12);
+		
+		JLabel lblNewLabel_11 = new JLabel("");
+		lblNewLabel_11.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_11.setBounds(-8, 583, 477, 33);
+		frame.getContentPane().add(lblNewLabel_11);
+		
+		JLabel lblNewLabel_13 = new JLabel("");
+		lblNewLabel_13.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_13.setBounds(459, 583, 421, 33);
+		frame.getContentPane().add(lblNewLabel_13);
 		
 		
 		
