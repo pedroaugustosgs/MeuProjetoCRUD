@@ -58,6 +58,14 @@ public class EntraAluno extends Principal2{
 		frmEntraInstitu.getContentPane().setLayout(null);
 		frmEntraInstitu.setResizable(false);
 		frmEntraInstitu.setLocationRelativeTo(null);
+		
+		JButton btnVoltar = new JButton("VOLTAR");
+		btnVoltar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frmEntraInstitu.setVisible(false);
+				Principal2.main(null);
+			}
+		});
 		JButton btnLogar = new JButton("LOGAR");
 		btnLogar.setBackground(Color.LIGHT_GRAY);
 		btnLogar.addActionListener(new ActionListener() {
@@ -67,21 +75,38 @@ public class EntraAluno extends Principal2{
 			}
 		});
 		
-		JButton btnVoltar = new JButton("VOLTAR");
-		btnVoltar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				frmEntraInstitu.setVisible(false);
-				Principal2.main(null);
-			}
-		});
-		btnVoltar.setForeground(Color.BLACK);
-		btnVoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
-		btnVoltar.setBounds(305, 617, 201, 33);
-		frmEntraInstitu.getContentPane().add(btnVoltar);
+		JLabel lblNewLabel_20 = new JLabel("");
+		lblNewLabel_20.setIcon(new ImageIcon("D:\\Imagem\\img\\Chapeu azul.png"));
+		lblNewLabel_20.setBounds(352, 65, 138, 94);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_20);
+		
+		JLabel lblNewLabel_6 = new JLabel("");
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\Bot\u00E3o png.png"));
+		lblNewLabel_6.setBounds(516, 215, 274, 239);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Bot\u00E3o png.png"));
+		lblNewLabel_4.setBounds(73, 240, 269, 193);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_16 = new JLabel("");
+		lblNewLabel_16.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_16.setBounds(-39, 377, 321, 200);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_16);
 		btnLogar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnLogar.setForeground(Color.BLACK);
 		btnLogar.setBounds(73, 315, 201, 33);
 		frmEntraInstitu.getContentPane().add(btnLogar);
+		
+		JLabel lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_7.setBounds(-39, 530, 347, 47);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_7);
+		btnVoltar.setForeground(Color.BLACK);
+		btnVoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnVoltar.setBounds(305, 617, 201, 33);
+		frmEntraInstitu.getContentPane().add(btnVoltar);
 		
 		JButton btnCadastrar = new JButton("CADASTRAR");
 		btnCadastrar.setBackground(Color.LIGHT_GRAY);
@@ -108,55 +133,21 @@ public class EntraAluno extends Principal2{
 		
 		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
-		lblNewLabel_2.setBounds(0, 62, 458, 33);
+		lblNewLabel_2.setBounds(0, 87, 458, 33);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
-		lblNewLabel_3.setBounds(453, 62, 321, 33);
+		lblNewLabel_3.setBounds(453, 87, 321, 33);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_3);
-		
-		JLabel lblNewLabel_4 = new JLabel("");
-		lblNewLabel_4.setIcon(new ImageIcon("D:\\Bot\u00E3o png.png"));
-		lblNewLabel_4.setBounds(67, 237, 269, 193);
-		frmEntraInstitu.getContentPane().add(lblNewLabel_4);
-		
-		JLabel lblNewLabel_6 = new JLabel("");
-		lblNewLabel_6.setIcon(new ImageIcon("D:\\Bot\u00E3o png.png"));
-		lblNewLabel_6.setBounds(500, 219, 274, 239);
-		frmEntraInstitu.getContentPane().add(lblNewLabel_6);
-		
-		JLabel lblNewLabel_7 = new JLabel("");
-		lblNewLabel_7.setBounds(412, 106, 46, 14);
-		frmEntraInstitu.getContentPane().add(lblNewLabel_7);
 		
 		JLabel lblNewLabel_12 = new JLabel("");
 		lblNewLabel_12.setBounds(381, 106, 46, 14);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_12);
 		
-		JLabel lblNewLabel_13 = new JLabel("");
-		lblNewLabel_13.setIcon(new ImageIcon("D:\\Coluna grega em p\u00E9.jpg"));
-		lblNewLabel_13.setBounds(397, 89, 46, 488);
-		frmEntraInstitu.getContentPane().add(lblNewLabel_13);
-		
 		JLabel lblNewLabel_14 = new JLabel("");
 		lblNewLabel_14.setBounds(180, 530, 46, 14);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_14);
-		
-		JLabel lblNewLabel_11 = new JLabel("");
-		lblNewLabel_11.setIcon(new ImageIcon("D:\\1.png"));
-		lblNewLabel_11.setBounds(-34, 89, 436, 517);
-		frmEntraInstitu.getContentPane().add(lblNewLabel_11);
-		
-		JLabel lblNewLabel_15 = new JLabel("");
-		lblNewLabel_15.setIcon(new ImageIcon("D:\\1.png"));
-		lblNewLabel_15.setBounds(381, 100, 393, 517);
-		frmEntraInstitu.getContentPane().add(lblNewLabel_15);
-		
-		JLabel label = new JLabel("New label");
-		label.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		label.setBounds(381, 78, 46, 14);
-		frmEntraInstitu.getContentPane().add(label);
 		
 		JLabel lblNewLabel_10 = new JLabel("");
 		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega em p\u00E9.jpg"));
@@ -166,5 +157,44 @@ public class EntraAluno extends Principal2{
 		JLabel lblNewLabel_8 = new JLabel("");
 		lblNewLabel_8.setBounds(381, 7, 46, 14);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_8);
+		
+		JLabel lblNewLabel_9 = new JLabel("");
+		lblNewLabel_9.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_9.setBounds(73, 456, 321, 122);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_9);
+		
+		JLabel lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_5.setBounds(-39, 78, 288, 500);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_5);
+		
+		JLabel lblNewLabel_13 = new JLabel("");
+		lblNewLabel_13.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_13.setBounds(20, 109, 378, 239);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_13);
+		
+		JLabel lblNewLabel_15 = new JLabel("");
+		lblNewLabel_15.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega em p\u00E9.jpg"));
+		lblNewLabel_15.setBounds(408, 106, 46, 471);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_15);
+		
+		JLabel lblNewLabel_11 = new JLabel("");
+		lblNewLabel_11.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_11.setBounds(-72, 345, 540, 187);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_11);
+		
+		JLabel lblNewLabel_18 = new JLabel("");
+		lblNewLabel_18.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_18.setBounds(247, 111, 527, 109);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_18);
+		
+		JLabel lblNewLabel_17 = new JLabel("");
+		lblNewLabel_17.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_17.setBounds(352, 106, 422, 500);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_17);
+		
+		JLabel lblNewLabel_19 = new JLabel("");
+		lblNewLabel_19.setBounds(412, 106, 46, 14);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_19);
 	}
 }

@@ -450,7 +450,7 @@ public class VisualizaAulaREC extends Login{
 		
 		lblNewLabel_7 = new JLabel("");
 		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\VisualizarAula.png"));
-		lblNewLabel_7.setBounds(310, 23, 461, 87);
+		lblNewLabel_7.setBounds(312, 11, 461, 87);
 		frame.getContentPane().add(lblNewLabel_7);
 		
 		preencherTela();
