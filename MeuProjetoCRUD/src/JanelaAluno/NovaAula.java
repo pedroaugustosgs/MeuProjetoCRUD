@@ -609,28 +609,28 @@ public class NovaAula extends Login {
 		tfAteTarde.setColumns(10);
 		
 		lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel.setBounds(0, 474, 481, 28);
 		frame.getContentPane().add(lblNewLabel);
 		
 		lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_1.setBounds(470, 474, 320, 28);
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_2.setBounds(782, 474, 167, 28);
 		frame.getContentPane().add(lblNewLabel_2);
 		
 		lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_3.setBounds(0, 50, 481, 28);
 		frame.getContentPane().add(lblNewLabel_3);
 		
 		lblNewLabel_4 = new JLabel("");
-		lblNewLabel_4.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
-		lblNewLabel_4.setBounds(470, 50, 320, 28);
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_4.setBounds(470, 50, 479, 28);
 		frame.getContentPane().add(lblNewLabel_4);
 		
 		lblNewLabel_6 = new JLabel("");

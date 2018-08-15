@@ -212,8 +212,8 @@ public class Config extends Login {
 		frmMeuCrud.getContentPane().add(tfIdade);
 		tfIdade.setColumns(10);
 		btnNewButton.setForeground(Color.BLACK);
-		btnNewButton.setFont(new Font("Arial Narrow", Font.BOLD, 20));
-		btnNewButton.setBounds(27, 406, 194, 39);
+		btnNewButton.setFont(new Font("DialogInput", Font.BOLD, 20));
+		btnNewButton.setBounds(231, 484, 250, 26);
 		frmMeuCrud.getContentPane().add(btnNewButton);
 		
 		try {
@@ -232,7 +232,7 @@ public class Config extends Login {
 		lblTelefone.setFont(new Font("Arial Narrow", Font.PLAIN, 20));
 		lblTelefone.setBounds(27, 299, 86, 21);
 		frmMeuCrud.getContentPane().add(lblTelefone);
-		btnSalvar.setBounds(27, 485, 119, 26);
+		btnSalvar.setBounds(23, 485, 119, 26);
 		frmMeuCrud.getContentPane().add(btnSalvar);
 		
 		JLabel lblSenha = new JLabel("Idade:");
@@ -281,13 +281,6 @@ public class Config extends Login {
 		lblNewLabel_1.setBounds(456, 311, 46, 14);
 		frmMeuCrud.getContentPane().add(lblNewLabel_1);
 		
-		JLabel lblEditarPerfil = new JLabel("EDITAR PERFIL");
-		lblEditarPerfil.setFont(new Font("Trebuchet MS", Font.BOLD | Font.ITALIC, 25));
-		lblEditarPerfil.setHorizontalAlignment(SwingConstants.CENTER);
-		lblEditarPerfil.setForeground(Color.WHITE);
-		lblEditarPerfil.setBounds(311, 11, 237, 50);
-		frmMeuCrud.getContentPane().add(lblEditarPerfil);
-		
 		JButton btnTrocarFoto = new JButton("trocar foto");
 		btnTrocarFoto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -304,7 +297,7 @@ public class Config extends Login {
 				 }
 			}
 		});
-		btnTrocarFoto.setBounds(667, 301, 89, 23);
+		btnTrocarFoto.setBounds(621, 301, 89, 23);
 		frmMeuCrud.getContentPane().add(btnTrocarFoto);
 		//System.out.println(EntraAluno.volt);
 		if(EntraAluno.volt==0) {

@@ -138,17 +138,17 @@ public class PlaAluno {
 		frmMeuCrud.getContentPane().add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_1.setBounds(0, 82, 407, 43);
 		frmMeuCrud.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_4 = new JLabel("");
-		lblNewLabel_4.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_4.setBounds(396, 82, 469, 43);
 		frmMeuCrud.getContentPane().add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_6 = new JLabel("");
-		lblNewLabel_6.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_6.setBounds(837, 81, 237, 44);
 		frmMeuCrud.getContentPane().add(lblNewLabel_6);
 		
@@ -257,17 +257,17 @@ public class PlaAluno {
 		frmMeuCrud.getContentPane().add(btnSair);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel.setBounds(0, 509, 425, 33);
 		frmMeuCrud.getContentPane().add(lblNewLabel);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_2.setBounds(408, 509, 414, 33);
 		frmMeuCrud.getContentPane().add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_3.setBounds(816, 509, 268, 33);
 		frmMeuCrud.getContentPane().add(lblNewLabel_3);
 		

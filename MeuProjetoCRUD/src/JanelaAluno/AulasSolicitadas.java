@@ -126,16 +126,16 @@ public class AulasSolicitadas extends Login{
 		
 		lblNewLabel_9 = new JLabel("");
 		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\pesquisa.png"));
-		lblNewLabel_9.setBounds(789, 452, 246, 178);
+		lblNewLabel_9.setBounds(789, 474, 246, 156);
 		frmMeuCrud.getContentPane().add(lblNewLabel_9);
 		
 		lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_1.setBounds(-9, 494, 491, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_1);
 		
 		lblNewLabel_8 = new JLabel("");
-		lblNewLabel_8.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_8.setBounds(478, 494, 233, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_8);
 		tfProcurar.setForeground(Color.LIGHT_GRAY);
@@ -187,7 +187,7 @@ public class AulasSolicitadas extends Login{
 		frmMeuCrud.getContentPane().add(btnVoltar);
 		
 		lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_2.setBounds(701, 494, 264, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_2);
 		
@@ -197,17 +197,17 @@ public class AulasSolicitadas extends Login{
 		frmMeuCrud.getContentPane().add(lblNewLabel_3);
 		
 		lblNewLabel_4 = new JLabel("");
-		lblNewLabel_4.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_4.setBounds(0, 120, 448, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_4);
 		
 		lblNewLabel_5 = new JLabel("");
-		lblNewLabel_5.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_5.setBounds(444, 120, 491, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_5);
 		
 		lblNewLabel_6 = new JLabel("");
-		lblNewLabel_6.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_6.setBounds(927, 120, 124, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_6);
 		

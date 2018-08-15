@@ -186,17 +186,17 @@ public class LoginInstitu extends Principal2{
 		frame.getContentPane().add(btnEntrar);
 		
 		lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_2.setBounds(369, 357, 320, 25);
 		frame.getContentPane().add(lblNewLabel_2);
 		
 		lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_1.setBounds(-14, 352, 373, 30);
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		lblNewLabel_5 = new JLabel("New label");
-		lblNewLabel_5.setIcon(new ImageIcon("D:\\senha.jpg"));
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\senha.jpg"));
 		lblNewLabel_5.setBounds(87, 478, 208, 121);
 		frame.getContentPane().add(lblNewLabel_5);
 		
@@ -211,22 +211,22 @@ public class LoginInstitu extends Principal2{
 		frame.getContentPane().add(lblNewLabel_4);
 		
 		lblNewLabel_6 = new JLabel("New label");
-		lblNewLabel_6.setIcon(new ImageIcon("D:\\1.png"));
-		lblNewLabel_6.setBounds(-57, -171, 750, 619);
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\1.png"));
+		lblNewLabel_6.setBounds(-57, -171, 642, 619);
 		frame.getContentPane().add(lblNewLabel_6);
 		
 		lblNewLabel_7 = new JLabel("New label");
-		lblNewLabel_7.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\1.png"));
 		lblNewLabel_7.setBounds(180, -157, 526, 666);
 		frame.getContentPane().add(lblNewLabel_7);
 		
 		lblNewLabel_8 = new JLabel("New label");
-		lblNewLabel_8.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\1.png"));
 		lblNewLabel_8.setBounds(-57, 326, 445, 397);
 		frame.getContentPane().add(lblNewLabel_8);
 		
 		lblNewLabel_9 = new JLabel("New label");
-		lblNewLabel_9.setIcon(new ImageIcon("D:\\1.png"));
+		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\1.png"));
 		lblNewLabel_9.setBounds(359, 182, 320, 486);
 		frame.getContentPane().add(lblNewLabel_9);
 		
