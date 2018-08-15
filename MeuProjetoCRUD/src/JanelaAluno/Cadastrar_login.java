@@ -480,7 +480,7 @@ public class Cadastrar_login extends LoginInstitu{
 				}
 			}
 				});
-		btnSalvar.setFont(new Font("Arial Narrow", Font.PLAIN, 25));
+		btnSalvar.setFont(new Font("Arial Narrow", Font.PLAIN, 20));
 		btnSalvar.setBounds(1, 551, 155, 45);
 		frame.getContentPane().add(btnSalvar);
 		

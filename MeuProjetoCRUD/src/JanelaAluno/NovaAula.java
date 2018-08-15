@@ -86,6 +86,7 @@ public class NovaAula extends Login {
 	private JLabel lblNewLabel_2;
 	private JLabel lblNewLabel_3;
 	private JLabel lblNewLabel_4;
+	private JLabel lblNewLabel_6;
 	private JLabel lblNewLabel_5;
 	/**
 	 * Launch the application.
@@ -130,6 +131,7 @@ public class NovaAula extends Login {
 		}
 		
 		JButton btnCriarAula = new JButton("Criar Aula");
+		btnCriarAula.setBackground(Color.LIGHT_GRAY);
 		btnCriarAula.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
@@ -306,6 +308,7 @@ public class NovaAula extends Login {
 		});
 		
 		JButton btnVoltar = new JButton("Voltar");
+		btnVoltar.setBackground(Color.LIGHT_GRAY);
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				PlaAluno.main(null);
@@ -314,6 +317,7 @@ public class NovaAula extends Login {
 		});
 		
 		JButton btnRecomendaesDeAulas = new JButton("Recomenda\u00E7\u00F5es De Aulas");
+		btnRecomendaesDeAulas.setBackground(Color.LIGHT_GRAY);
 		btnRecomendaesDeAulas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
@@ -629,8 +633,14 @@ public class NovaAula extends Login {
 		lblNewLabel_4.setBounds(470, 50, 320, 28);
 		frame.getContentPane().add(lblNewLabel_4);
 		
-		lblNewLabel_5 = new JLabel("New label");
-		lblNewLabel_5.setBounds(800, 60, 46, 14);
+		lblNewLabel_6 = new JLabel("");
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\img\\Coluna grega.jpg"));
+		lblNewLabel_6.setBounds(782, 50, 181, 28);
+		frame.getContentPane().add(lblNewLabel_6);
+		
+		lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Crimson (2).png"));
+		lblNewLabel_5.setBounds(343, 0, 338, 55);
 		frame.getContentPane().add(lblNewLabel_5);
 		chTarde.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
