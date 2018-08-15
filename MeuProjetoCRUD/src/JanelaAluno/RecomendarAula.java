@@ -383,11 +383,11 @@ public class RecomendarAula extends Login {
 		frame.getContentPane().add(rdbtnPeridico);
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
-		btnVoltar.setBounds(10, 553, 156, 37);
+		btnVoltar.setBounds(-12, 564, 156, 37);
 		frame.getContentPane().add(btnVoltar);
 		btnCriarAula.setForeground(Color.BLACK);
-		btnCriarAula.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		btnCriarAula.setBounds(783, 553, 156, 37);
+		btnCriarAula.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnCriarAula.setBounds(803, 564, 156, 37);
 		frame.getContentPane().add(btnCriarAula);
 		
 		tfLocal = new JTextField();
@@ -577,9 +577,15 @@ public class RecomendarAula extends Login {
 		lblNewLabel_3.setBounds(444, 74, 469, 23);
 		frame.getContentPane().add(lblNewLabel_3);
 		
-		JLabel lblNewLabel_4 = new JLabel("New label");
-		lblNewLabel_4.setBounds(876, 515, 46, 14);
+		JLabel lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_4.setBounds(860, 515, 89, 27);
 		frame.getContentPane().add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_5.setBounds(903, 74, 46, 23);
+		frame.getContentPane().add(lblNewLabel_5);
 		chTarde.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(chTarde.isSelected()) {
