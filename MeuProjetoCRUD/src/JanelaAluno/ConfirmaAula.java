@@ -136,6 +136,46 @@ public class ConfirmaAula extends Login{
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
+		panel_1 = new JPanel();
+		panel_1.setBackground(Color.BLACK);
+		panel_1.setBounds(0, 0, 196, 109);
+		panel.add(panel_1);
+		panel_1.setVisible(false);
+		panel_1.setLayout(null);
+		
+		JLabel lblNewLabel_1 = new JLabel("Data:");
+		lblNewLabel_1.setForeground(Color.WHITE);
+		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblNewLabel_1.setBounds(10, 11, 56, 19);
+		panel_1.add(lblNewLabel_1);
+		
+		lbldata = new JLabel("");
+		lbldata.setForeground(Color.WHITE);
+		lbldata.setBounds(78, 11, 86, 19);
+		panel_1.add(lbldata);
+		
+		JLabel lblDe = new JLabel("DE:");
+		lblDe.setForeground(Color.WHITE);
+		lblDe.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblDe.setBounds(10, 39, 56, 19);
+		panel_1.add(lblDe);
+		
+		JLabel lblAt_1 = new JLabel("AT\u00C9:");
+		lblAt_1.setForeground(Color.WHITE);
+		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblAt_1.setBounds(10, 60, 56, 19);
+		panel_1.add(lblAt_1);
+		
+		lbldedata = new JLabel("");
+		lbldedata.setForeground(Color.WHITE);
+		lbldedata.setBounds(64, 36, 80, 19);
+		panel_1.add(lbldedata);
+		
+		lblatedata = new JLabel("");
+		lblatedata.setForeground(Color.WHITE);
+		lblatedata.setBounds(64, 59, 86, 19);
+		panel_1.add(lblatedata);
+		
 		Label label_7 = new Label("Turno:");
 		label_7.setBounds(8, 72, 51, 23);
 		panel.add(label_7);
@@ -333,40 +373,6 @@ public class ConfirmaAula extends Login{
 		lblatenoite.setVisible(false);
 		lblatenoite.setBounds(231, 153, 74, 23);
 		panel.add(lblatenoite);
-		
-		panel_1 = new JPanel();
-		panel_1.setBackground(Color.BLACK);
-		panel_1.setBounds(0, 0, 196, 109);
-		panel.add(panel_1);
-		panel_1.setVisible(false);
-		panel_1.setLayout(null);
-		
-		JLabel lblNewLabel_1 = new JLabel("Data:");
-		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblNewLabel_1.setBounds(10, 11, 56, 19);
-		panel_1.add(lblNewLabel_1);
-		
-		lbldata = new JLabel("");
-		lbldata.setBounds(78, 11, 86, 19);
-		panel_1.add(lbldata);
-		
-		JLabel lblDe = new JLabel("DE:");
-		lblDe.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblDe.setBounds(10, 39, 56, 19);
-		panel_1.add(lblDe);
-		
-		JLabel lblAt_1 = new JLabel("AT\u00C9:");
-		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblAt_1.setBounds(10, 60, 56, 19);
-		panel_1.add(lblAt_1);
-		
-		lbldedata = new JLabel("");
-		lbldedata.setBounds(64, 36, 80, 19);
-		panel_1.add(lbldedata);
-		
-		lblatedata = new JLabel("");
-		lblatedata.setBounds(64, 59, 86, 19);
-		panel_1.add(lblatedata);
 		
 		lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
