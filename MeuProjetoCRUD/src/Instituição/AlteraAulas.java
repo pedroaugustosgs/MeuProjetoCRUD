@@ -114,7 +114,7 @@ public class AlteraAulas extends Login{
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(true);
 		
-		JLabel lblConfirmarAula = new JLabel("Confirmar Aula");
+		JLabel lblConfirmarAula = new JLabel("Alterar Aula");
 		lblConfirmarAula.setFont(new Font("Trebuchet MS", Font.BOLD | Font.ITALIC, 26));
 		lblConfirmarAula.setBounds(232, 11, 196, 48);
 		frame.getContentPane().add(lblConfirmarAula);
@@ -274,7 +274,10 @@ public class AlteraAulas extends Login{
 					return;
 				}
 				
-			
+				Date data = calendario.getDate();
+				SimpleDateFormat s= new SimpleDateFormat("yyyy-MM-dd");
+				String dataS = s.format(data);
+				
 				String aData = lblatedata.getText().toString();
 				
 				String sql="UPDATE aulas SET DiaUmaVez=?, DeUmaVez =?, AteUmaVez=?, local=?, cedo=?, tarde=?, noite=?, DeManha=?, AteManha=?,"
@@ -283,7 +286,7 @@ public class AlteraAulas extends Login{
 				
 				try {
 					PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
-					stmt.setString(1, lbldata.getText().toString());
+					stmt.setString(1, dataS);
 					stmt.setString(2, dData);
 					stmt.setString(3, aData);
 					stmt.setString(4, loc);

@@ -324,9 +324,13 @@ public class VisualizaAulas extends Login{
 					stmt1.execute();
 					stmt1.close();
 					
+					String sql2="SELECT * FROM alunosconfirmados WHERE idconfirmar=?";
+					PreparedStatement stmt2 = Conexao.conexao.prepareStatement(sql2);
+					
+					
 					CRUDEmail enviar = new CRUDEmail();
 					if(dados.next()) {
-						enviar.EmailVisuAulas(NomeProf(idAula),Materia(dados.getString("materia")) , dados.getString("conteudo"));
+						//enviar.EmailVisuAulas(NomeProf(idAula),Materia(dados.getString("materia")) , dados.getString("conteudo"),);
 					}
 					
 					
