@@ -108,27 +108,22 @@ public class EntraInstitu extends Principal2{
 		frmEntraInstitu.getContentPane().add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_3.setBounds(0, 515, 442, 30);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("");
-		lblNewLabel_4.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_4.setBounds(429, 515, 362, 30);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_1.setBounds(0, 21, 465, 30);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_5 = new JLabel("");
-		lblNewLabel_5.setIcon(new ImageIcon("D:\\Coluna grega em p\u00E9.jpg"));
-		lblNewLabel_5.setBounds(414, 44, 63, 501);
-		frmEntraInstitu.getContentPane().add(lblNewLabel_5);
-		
 		JLabel lblNewLabel_6 = new JLabel("");
-		lblNewLabel_6.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_6.setBounds(447, 21, 344, 30);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_6);
 		
@@ -136,16 +131,6 @@ public class EntraInstitu extends Principal2{
 		lblNewLabel_7.setIcon(new ImageIcon("D:\\1.png"));
 		lblNewLabel_7.setBounds(-77, 44, 415, 473);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_7);
-		
-		JLabel lblNewLabel_8 = new JLabel("");
-		lblNewLabel_8.setIcon(new ImageIcon("D:\\1.png"));
-		lblNewLabel_8.setBounds(300, 44, 120, 473);
-		frmEntraInstitu.getContentPane().add(lblNewLabel_8);
-		
-		JLabel lblNewLabel_9 = new JLabel("");
-		lblNewLabel_9.setIcon(new ImageIcon("D:\\1.png"));
-		lblNewLabel_9.setBounds(212, 459, 158, 56);
-		frmEntraInstitu.getContentPane().add(lblNewLabel_9);
 		
 		JLabel lblNewLabel_10 = new JLabel("");
 		lblNewLabel_10.setIcon(new ImageIcon("D:\\1.png"));

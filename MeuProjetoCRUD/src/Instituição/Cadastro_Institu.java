@@ -75,6 +75,16 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(false);
 		
+		JLabel lblNewLabel_4 = new JLabel("New label");
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_4.setBounds(483, 62, 259, 31);
+		frame.getContentPane().add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_3 = new JLabel("New label");
+		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_3.setBounds(656, 62, 363, 31);
+		frame.getContentPane().add(lblNewLabel_3);
+		
 		JLabel label_8 = new JLabel("*");
 		label_8.setHorizontalAlignment(SwingConstants.CENTER);
 		label_8.setForeground(Color.RED);
@@ -350,18 +360,8 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		
 		JLabel lblNewLabel_2 = new JLabel("New label");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_2.setBounds(-11, 66, 485, 23);
+		lblNewLabel_2.setBounds(-11, 66, 594, 23);
 		frame.getContentPane().add(lblNewLabel_2);
-		
-		JLabel lblNewLabel_3 = new JLabel("New label");
-		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_3.setBounds(662, 62, 357, 31);
-		frame.getContentPane().add(lblNewLabel_3);
-		
-		JLabel lblNewLabel_4 = new JLabel("New label");
-		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_4.setBounds(472, 62, 194, 31);
-		frame.getContentPane().add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("New label");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
@@ -380,7 +380,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		
 		JLabel lblNewLabel_8 = new JLabel("");
 		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\chapeu.png"));
-		lblNewLabel_8.setBounds(234, 149, 568, 289);
+		lblNewLabel_8.setBounds(234, 149, 499, 264);
 		frame.getContentPane().add(lblNewLabel_8);
 		
 		
