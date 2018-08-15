@@ -324,16 +324,19 @@ public class VisualizaAulas extends Login{
 					stmt1.execute();
 					stmt1.close();
 					
-					String sql2="SELECT * FROM alunosconfirmados WHERE idconfirmar=?";
+					ResultSet dado = null;
+					String sql2="SELECT * FROM alunos INNER JOIN alunosconfirmados ON Alunos.idAluno = alunosconfirmados.idaluno WHERE idconfirmar=?";
 					PreparedStatement stmt2 = Conexao.conexao.prepareStatement(sql2);
-					
+					stmt2.setString(1, idAula);
+					dado = stmt2.executeQuery();
+					stmt2.execute();
+					stmt2.close();
 					
 					CRUDEmail enviar = new CRUDEmail();
-					if(dados.next()) {
-						//enviar.EmailVisuAulas(NomeProf(idAula),Materia(dados.getString("materia")) , dados.getString("conteudo"),);
+					if(dados.next() && dado.next()) {
+						enviar.EmailVisuAulas(NomeProf(idAula),Materia(dados.getString("materia")) , dados.getString("conteudo"),dado.getString("email"));
 					}
-					
-					
+				
 					PlaAluno.main(null);
 					frame.dispose();
 				} catch (SQLException e) {
