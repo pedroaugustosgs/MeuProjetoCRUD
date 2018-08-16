@@ -401,6 +401,7 @@ public class VisualizaAulaREC extends Login{
 						stmt.setString(2, idAula);
 						stmt.execute();
 						stmt.close();
+						//******************pra baixo
 						
 						ResultSet dd=null;
 						String sql1="SELECT * FROM aulas INNER JOIN alunosconfirmados ON aulas.idaula=alunosconfirmados.idconfirmar WHERE idaula=?";
@@ -411,19 +412,27 @@ public class VisualizaAulaREC extends Login{
 						s.close();
 						
 						ResultSet dad=null;
-						String d ="SELECT * FROM alunos INNER JOIN alunosconfirmados ON alunos.idaluno = alunosconfirmados.idaluno WHERE idConfirmar=?";
+						String d ="SELECT * FROM alunos INNER JOIN alunosconfirmados ON alunos.idaluno = alunosconfirmados.idaluno WHERE idconfirmar=?";
 						PreparedStatement ds =Conexao.conexao.prepareStatement(d);
 						ds.setString(1, idAula);
 						dad = ds.executeQuery();
 						ds.execute();
 						ds.close();
 						
+						
+						
 						String msg=null;
 						if(dd.next()) {
 							msg = "O aluno "+NomeProf(idAula)+" inscrito em sua aula de "+Materia(dd.getString("materia"))+" sobre "+dd.getString("conteudo")+" saiu "
 									+ "da aula!";
 						}
-						String email = dad.getString("email");
+						System.out.println(msg);
+						
+						String email = null;
+						if(dad.next()) {
+							email = dad.getString("email");
+						}
+						System.out.println(email);
 						
 						CRUDEmail D = new CRUDEmail();
 						D.EmailVisuAulas(email, msg);

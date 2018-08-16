@@ -453,8 +453,9 @@ public class ConfirmaAula extends Login{
 				}
 				if(res) {
 					JOptionPane.showMessageDialog(null, "Nova Aula Confirmada com Sucesso!");
-					frame.dispose();
 					PlaAluno.main(null);
+					frame.dispose();
+					
 				}else {
 					JOptionPane.showMessageDialog(null, "Erro ao confirmar nova aula!");
 				}

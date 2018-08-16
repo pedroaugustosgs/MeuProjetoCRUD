@@ -278,11 +278,11 @@ public class NovaAula extends Login {
 				} 
 				//SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
 				//String umaVez = s.format(calendario.getDate());
-				Date data=null;
+				Date data = null;
 				if(rdbtnUmaVez.isSelected()) {
 					data = calendario.getDate();
 				}
-				
+				System.out.println(data);
 				if(novaAula.novaAula(disciplina, conteudo, segunda, terca, quarta, quinta, sexta, sabado, domingo, manha, tarde, noite, local, prof,vagas,DeManha,AteManha,
 						DeTarde,AteTarde,DeNoite,AteNoite,data,tfDeUmaVez.getText(),tfAteUmaVez.getText())) {
 					JOptionPane.showMessageDialog(null, "Nova aula cadastrada com sucesso!");
