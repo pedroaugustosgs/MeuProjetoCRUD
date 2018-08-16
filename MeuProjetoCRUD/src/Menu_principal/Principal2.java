@@ -63,7 +63,7 @@ public class Principal2 {
 		frmMeuProjetoCrud = new JFrame();
 		frmMeuProjetoCrud.getContentPane().setBackground(Color.BLACK);
 		frmMeuProjetoCrud.setTitle("MEU PROJETO CRUD");
-		frmMeuProjetoCrud.setBounds(100, 100, 1001, 634);
+		frmMeuProjetoCrud.setBounds(100, 100, 1001, 606);
 		frmMeuProjetoCrud.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmMeuProjetoCrud.getContentPane().setLayout(null);
 		
@@ -178,19 +178,24 @@ public class Principal2 {
 		lblNewLabel_9.setBounds(474, 113, 46, 14);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_9);
 		
-		JLabel lblNewLabel_14 = new JLabel("");
-		lblNewLabel_14.setIcon(new ImageIcon("D:\\Imagem\\img\\1.png"));
-		lblNewLabel_14.setBounds(0, 138, 476, 364);
-		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_14);
-		
 		JLabel lblNewLabel_15 = new JLabel("");
 		lblNewLabel_15.setIcon(new ImageIcon("D:\\1.png"));
 		lblNewLabel_15.setBounds(659, 122, 46, 14);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_15);
 		
+		JLabel lblNewLabel_13 = new JLabel("New label");
+		lblNewLabel_13.setIcon(new ImageIcon("D:\\Imagem\\img\\fundo.png"));
+		lblNewLabel_13.setBounds(0, 126, 496, 358);
+		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_13);
+		
+		JLabel lblNewLabel_14 = new JLabel("New label");
+		lblNewLabel_14.setIcon(new ImageIcon("D:\\Imagem\\img\\fundo.png"));
+		lblNewLabel_14.setBounds(516, 126, 479, 358);
+		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_14);
+		
 		JLabel lblNewLabel_16 = new JLabel("");
-		lblNewLabel_16.setIcon(new ImageIcon("D:\\Imagem\\img\\1.png"));
-		lblNewLabel_16.setBounds(493, 120, 502, 364);
+		lblNewLabel_16.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
+		lblNewLabel_16.setBounds(313, 0, 472, 118);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_16);
 	}
 }
