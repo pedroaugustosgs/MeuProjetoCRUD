@@ -36,6 +36,8 @@ import java.awt.event.MouseEvent;
 import java.awt.Font;
 import java.awt.SystemColor;
 import java.awt.Toolkit;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 
 public class VerAlunos extends LoginInstitu{
 
@@ -44,6 +46,12 @@ public class VerAlunos extends LoginInstitu{
 	public static JButton btnProcurar;
 	private JTable tabela; 
 	 String pegaEscola=null;
+	 private JLabel lblNewLabel;
+	 private JLabel lblNewLabel_1;
+	 private JLabel lblNewLabel_2;
+	 private JLabel lblNewLabel_3;
+	 private JLabel lblNewLabel_4;
+	 private JLabel lblNewLabel_5;
 	/**
 	 * Launch the application.
 	 */
@@ -72,9 +80,10 @@ public class VerAlunos extends LoginInstitu{
 	 */
 	private void initialize() {
 		frmMeuCrud = new JFrame();
+		frmMeuCrud.getContentPane().setBackground(Color.BLACK);
 		frmMeuCrud.setIconImage(Toolkit.getDefaultToolkit().getImage(VerAlunos.class.getResource("/47 - Copia.png")));
 		frmMeuCrud.setTitle("MEU CRUD - Alunos Cadastrados");
-		frmMeuCrud.setBounds(100, 100, 799, 340);
+		frmMeuCrud.setBounds(100, 100, 799, 475);
 		frmMeuCrud.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frmMeuCrud.getContentPane().setLayout(null);
 		frmMeuCrud.setResizable(false);
@@ -169,19 +178,29 @@ public class VerAlunos extends LoginInstitu{
 			}
 			
 		});
+			
+			lblNewLabel_2 = new JLabel("");
+			lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+			lblNewLabel_2.setBounds(-4, 71, 305, 28);
+			frmMeuCrud.getContentPane().add(lblNewLabel_2);
+			
+			lblNewLabel_3 = new JLabel("");
+			lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+			lblNewLabel_3.setBounds(299, 71, 269, 28);
+			frmMeuCrud.getContentPane().add(lblNewLabel_3);
 		
 			JScrollPane scrollPane = new JScrollPane(tabela);
-			scrollPane.setBounds(31, 48, 671, 203);
+			scrollPane.setBounds(26, 143, 671, 203);
 			frmMeuCrud.getContentPane().add(scrollPane);
 		tfProcurar.setForeground(Color.LIGHT_GRAY);
 		tfProcurar.setText("Entre com o nome a ser procurado");
-		tfProcurar.setBounds(31, 11, 591, 26);
+		tfProcurar.setBounds(21, 110, 591, 26);
 		frmMeuCrud.getContentPane().add(tfProcurar);
 		tfProcurar.setColumns(10);
 		
 		btnProcurar = new JButton("Procurar");
-		btnProcurar.setFont(new Font("Times New Roman", Font.PLAIN, 18));
-		btnProcurar.setForeground(SystemColor.textHighlight);
+		btnProcurar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnProcurar.setForeground(Color.BLACK);
 		btnProcurar.setBackground(SystemColor.textHighlightText);
 		btnProcurar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -192,21 +211,40 @@ public class VerAlunos extends LoginInstitu{
 				}
 			}
 		});
-		btnProcurar.setBounds(626, 9, 157, 28);
+		btnProcurar.setBounds(618, 106, 157, 28);
 		frmMeuCrud.getContentPane().add(btnProcurar);
 		
 		JButton btnVoltar = new JButton("Voltar");
-		btnVoltar.setForeground(SystemColor.textHighlight);
+		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setBackground(SystemColor.textHighlightText);
-		btnVoltar.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		btnVoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				frmMeuCrud.dispose();
 				Principal.main(null);
 			}
 		});
-		btnVoltar.setBounds(31, 262, 122, 39);
+		btnVoltar.setBounds(-4, 411, 122, 39);
 		frmMeuCrud.getContentPane().add(btnVoltar);
+		
+		lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel.setBounds(-4, 357, 469, 29);
+		frmMeuCrud.getContentPane().add(lblNewLabel);
+		
+		lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_1.setBounds(452, 360, 344, 24);
+		frmMeuCrud.getContentPane().add(lblNewLabel_1);
+		
+		lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_4.setBounds(565, 73, 231, 24);
+		frmMeuCrud.getContentPane().add(lblNewLabel_4);
+		
+		lblNewLabel_5 = new JLabel("New label");
+		lblNewLabel_5.setBounds(396, 21, 46, 14);
+		frmMeuCrud.getContentPane().add(lblNewLabel_5);
 		ResultSet alunos=null;
 		String sql1 ="SELECT * FROM alunos WHERE escola=?";
 		try {

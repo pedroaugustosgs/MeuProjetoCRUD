@@ -36,6 +36,8 @@ import java.awt.event.MouseEvent;
 import java.awt.Font;
 import java.awt.SystemColor;
 import java.awt.Toolkit;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 
 public class VerAulas extends LoginInstitu{
 
@@ -46,6 +48,14 @@ public class VerAulas extends LoginInstitu{
 	 String pegaEscola=null;
 	 ResultSet alunos=null;
 	 ResultSet aulas=null;     
+	 private JLabel lblNewLabel_1;
+	 private JLabel lblNewLabel;
+	 private JLabel lblNewLabel_2;
+	 private JLabel lblNewLabel_3;
+	 private JLabel lblNewLabel_4;
+	 private JLabel lblNewLabel_6;
+	 private JLabel lblNewLabel_5;
+	 private JLabel lblNewLabel_7;
 	/**
 	 * Launch the application.
 	 */
@@ -74,9 +84,10 @@ public class VerAulas extends LoginInstitu{
 	 */
 	private void initialize() {
 		frmMeuCrud = new JFrame();
+		frmMeuCrud.getContentPane().setBackground(Color.BLACK);
 		frmMeuCrud.setIconImage(Toolkit.getDefaultToolkit().getImage(VerAulas.class.getResource("/47 - Copia.png")));
 		frmMeuCrud.setTitle("MEU CRUD - Alunos Cadastrados");
-		frmMeuCrud.setBounds(100, 100, 799, 340);
+		frmMeuCrud.setBounds(100, 100, 887, 525);
 		frmMeuCrud.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frmMeuCrud.getContentPane().setLayout(null);
 		frmMeuCrud.setResizable(false);
@@ -186,19 +197,29 @@ public class VerAulas extends LoginInstitu{
 			}
 			
 		});
+			
+			lblNewLabel_4 = new JLabel("");
+			lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+			lblNewLabel_4.setBounds(-11, 84, 460, 39);
+			frmMeuCrud.getContentPane().add(lblNewLabel_4);
+			
+			lblNewLabel = new JLabel("");
+			lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+			lblNewLabel.setBounds(0, 390, 328, 32);
+			frmMeuCrud.getContentPane().add(lblNewLabel);
 		
 			JScrollPane scrollPane = new JScrollPane(tabela);
-			scrollPane.setBounds(31, 48, 671, 203);
+			scrollPane.setBounds(29, 179, 671, 203);
 			frmMeuCrud.getContentPane().add(scrollPane);
 		tfProcurar.setForeground(Color.LIGHT_GRAY);
 		tfProcurar.setText("Entre com o nome a ser procurado");
-		tfProcurar.setBounds(31, 11, 591, 26);
+		tfProcurar.setBounds(29, 142, 591, 26);
 		frmMeuCrud.getContentPane().add(tfProcurar);
 		tfProcurar.setColumns(10);
 		
 		btnProcurar = new JButton("Procurar");
-		btnProcurar.setFont(new Font("Times New Roman", Font.PLAIN, 18));
-		btnProcurar.setForeground(SystemColor.textHighlight);
+		btnProcurar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnProcurar.setForeground(Color.BLACK);
 		btnProcurar.setBackground(SystemColor.textHighlightText);
 		btnProcurar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -209,21 +230,50 @@ public class VerAulas extends LoginInstitu{
 				}
 			}
 		});
-		btnProcurar.setBounds(626, 9, 157, 28);
+		btnProcurar.setBounds(631, 140, 157, 28);
 		frmMeuCrud.getContentPane().add(btnProcurar);
 		
 		JButton btnVoltar = new JButton("Voltar");
-		btnVoltar.setForeground(SystemColor.textHighlight);
+		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setBackground(SystemColor.textHighlightText);
-		btnVoltar.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		btnVoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				frmMeuCrud.dispose();
 				Principal.main(null);
 			}
 		});
-		btnVoltar.setBounds(31, 262, 122, 39);
+		btnVoltar.setBounds(2, 458, 122, 39);
 		frmMeuCrud.getContentPane().add(btnVoltar);
+		
+		lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_1.setBounds(284, 393, 484, 29);
+		frmMeuCrud.getContentPane().add(lblNewLabel_1);
+		
+		lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_2.setBounds(757, 393, 124, 29);
+		frmMeuCrud.getContentPane().add(lblNewLabel_2);
+		
+		lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setBounds(0, 38, 46, 14);
+		frmMeuCrud.getContentPane().add(lblNewLabel_3);
+		
+		lblNewLabel_6 = new JLabel("");
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\VisualizarAula.png"));
+		lblNewLabel_6.setBounds(241, 11, 504, 83);
+		frmMeuCrud.getContentPane().add(lblNewLabel_6);
+		
+		lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_5.setBounds(399, 89, 489, 29);
+		frmMeuCrud.getContentPane().add(lblNewLabel_5);
+		
+		lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\Lupa.png"));
+		lblNewLabel_7.setBounds(729, 210, 219, 175);
+		frmMeuCrud.getContentPane().add(lblNewLabel_7);
 		
 		
 		

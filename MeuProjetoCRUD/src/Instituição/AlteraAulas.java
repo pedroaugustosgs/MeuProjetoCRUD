@@ -76,6 +76,12 @@ public class AlteraAulas extends Login{
 	private JTextField lblatedata;
 	private JCalendar calendario;
 	private MaskFormatter DeAte;
+	private JLabel lblNewLabel_2;
+	private JLabel lblNewLabel_3;
+	private JLabel lblNewLabel_4;
+	private JLabel lblNewLabel_5;
+	private JLabel lblNewLabel_6;
+	private JLabel lblNewLabel_7;
 	
 	/**
 	 * Launch the application.
@@ -108,64 +114,65 @@ public class AlteraAulas extends Login{
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 958, 563);
+		frame.getContentPane().setBackground(Color.BLACK);
+		frame.setBounds(100, 100, 1026, 639);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(true);
 		
-		JLabel lblConfirmarAula = new JLabel("Alterar Aula");
-		lblConfirmarAula.setFont(new Font("Trebuchet MS", Font.BOLD | Font.ITALIC, 26));
-		lblConfirmarAula.setBounds(232, 11, 196, 48);
-		frame.getContentPane().add(lblConfirmarAula);
-		
 		Label label = new Label("Mat\u00E9ria:");
 		label.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label.setForeground(Color.BLACK);
-		label.setBounds(10, 69, 58, 22);
+		label.setForeground(Color.WHITE);
+		label.setBounds(10, 382, 58, 22);
 		frame.getContentPane().add(label);
 		
 		Label label_1 = new Label("Professor:");
-		label_1.setForeground(Color.BLACK);
+		label_1.setForeground(Color.WHITE);
 		label_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_1.setBounds(10, 97, 66, 22);
+		label_1.setBounds(2, 410, 66, 22);
 		frame.getContentPane().add(label_1);
 		
 		Label label_2 = new Label("Conte\u00FAdo:");
-		label_2.setForeground(Color.BLACK);
+		label_2.setForeground(Color.WHITE);
 		label_2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_2.setBounds(10, 125, 66, 22);
+		label_2.setBounds(2, 437, 66, 22);
 		frame.getContentPane().add(label_2);
 		
 		Label label_3 = new Label("Local:");
-		label_3.setForeground(Color.BLACK);
+		label_3.setForeground(Color.WHITE);
 		label_3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_3.setBounds(10, 153, 49, 22);
+		label_3.setBounds(10, 465, 49, 22);
 		frame.getContentPane().add(label_3);
 		
 		Label label_4 = new Label("Vagas:");
-		label_4.setForeground(Color.BLACK);
+		label_4.setForeground(Color.WHITE);
 		label_4.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_4.setBounds(10, 180, 49, 22);
+		label_4.setBounds(10, 493, 49, 22);
 		frame.getContentPane().add(label_4);
 		
 		lblmateria = new JLabel("");
-		lblmateria.setBounds(82, 70, 140, 22);
+		lblmateria.setForeground(Color.WHITE);
+		lblmateria.setBounds(74, 382, 140, 22);
 		frame.getContentPane().add(lblmateria);
 		
 		lblprofessor = new JLabel("");
-		lblprofessor.setBounds(92, 94, 130, 22);
+		lblprofessor.setForeground(Color.WHITE);
+		lblprofessor.setBounds(74, 410, 130, 22);
 		frame.getContentPane().add(lblprofessor);
 		
 		lblconteudo = new JLabel("");
-		lblconteudo.setBounds(74, 125, 153, 22);
+		lblconteudo.setForeground(Color.WHITE);
+		lblconteudo.setBounds(69, 437, 153, 22);
 		frame.getContentPane().add(lblconteudo);
 		
 		lblvagas = new JLabel("");
-		lblvagas.setBounds(65, 183, 153, 19);
+		lblvagas.setForeground(Color.WHITE);
+		lblvagas.setBounds(69, 496, 153, 19);
 		frame.getContentPane().add(lblvagas);
 		
 		JButton btnNewButton = new JButton("Salvar");
+		btnNewButton.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			
@@ -325,26 +332,28 @@ public class AlteraAulas extends Login{
 				
 			}
 		});
-		btnNewButton.setBounds(57, 493, 129, 23);
+		btnNewButton.setBounds(0, 568, 140, 33);
 		frame.getContentPane().add(btnNewButton);
 		
 		JButton btnNovoltar = new JButton("Voltar");
+		btnNovoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnNovoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				VerAulas.main(null);
 				frame.dispose();
 			}
 		});
-		btnNovoltar.setBounds(778, 493, 123, 23);
+		btnNovoltar.setBounds(864, 568, 146, 33);
 		frame.getContentPane().add(btnNovoltar);
 		
 		tabela = new JTable();
 		
 		JScrollPane scrollPane = new JScrollPane(tabela);
-		scrollPane.setBounds(242, 271, 502, 213);
+		scrollPane.setBounds(232, 306, 502, 213);
 		frame.getContentPane().add(scrollPane);
 		
 		JButton btnRemover = new JButton("Remover");
+		btnRemover.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnRemover.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String sql="DELETE FROM aulas WHERE idAula=?";
@@ -367,11 +376,12 @@ public class AlteraAulas extends Login{
 				return;
 			}
 		});
-		btnRemover.setBounds(432, 493, 89, 23);
+		btnRemover.setBounds(425, 568, 146, 33);
 		frame.getContentPane().add(btnRemover);
 		
 		lbllocal = new JTextField();
-		lbllocal.setBounds(57, 153, 165, 20);
+		lbllocal.setForeground(Color.WHITE);
+		lbllocal.setBounds(57, 467, 165, 20);
 		frame.getContentPane().add(lbllocal);
 		lbllocal.setColumns(10);
 		
@@ -591,6 +601,36 @@ public class AlteraAulas extends Login{
 		lblatenoite.setColumns(10);
 		lblatenoite.setBounds(221, 154, 72, 20);
 		panel.add(lblatenoite);
+		
+		lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_2.setBounds(2, 521, 480, 32);
+		frame.getContentPane().add(lblNewLabel_2);
+		
+		lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_3.setBounds(452, 521, 494, 31);
+		frame.getContentPane().add(lblNewLabel_3);
+		
+		lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_4.setBounds(924, 524, 86, 24);
+		frame.getContentPane().add(lblNewLabel_4);
+		
+		lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Lupa.png"));
+		lblNewLabel_5.setBounds(789, 347, 233, 168);
+		frame.getContentPane().add(lblNewLabel_5);
+		
+		lblNewLabel_6 = new JLabel("");
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_6.setBounds(2, 38, 409, 33);
+		frame.getContentPane().add(lblNewLabel_6);
+		
+		lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_7.setBounds(408, 41, 492, 29);
+		frame.getContentPane().add(lblNewLabel_7);
 		
 		preencherTela();
 		

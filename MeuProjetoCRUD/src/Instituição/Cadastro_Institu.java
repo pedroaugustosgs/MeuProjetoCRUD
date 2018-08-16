@@ -383,6 +383,11 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		lblNewLabel_8.setBounds(234, 149, 499, 264);
 		frame.getContentPane().add(lblNewLabel_8);
 		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\Crimson (3).png"));
+		lblNewLabel.setBounds(384, -12, 520, 97);
+		frame.getContentPane().add(lblNewLabel);
+		
 		
 
 	}

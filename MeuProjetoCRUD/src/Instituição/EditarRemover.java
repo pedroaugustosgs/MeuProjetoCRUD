@@ -246,11 +246,6 @@ public class EditarRemover {
 		lblNewLabel_8.setBounds(461, 211, 46, 14);
 		frame.getContentPane().add(lblNewLabel_8);
 		
-		JLabel lblNewLabel_10 = new JLabel("");
-		lblNewLabel_10.setIcon(new ImageIcon("D:\\BARRA ofcial.png"));
-		lblNewLabel_10.setBounds(3, 314, 492, 14);
-		frame.getContentPane().add(lblNewLabel_10);
-		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("D:\\BARRA ofcial.png"));
 		lblNewLabel.setBounds(482, 314, 364, 14);
@@ -280,6 +275,16 @@ public class EditarRemover {
 		lblNewLabel_13.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_13.setBounds(459, 583, 421, 33);
 		frame.getContentPane().add(lblNewLabel_13);
+		
+		JLabel lblNewLabel_14 = new JLabel("");
+		lblNewLabel_14.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
+		lblNewLabel_14.setBounds(-25, 332, 508, 14);
+		frame.getContentPane().add(lblNewLabel_14);
+		
+		JLabel lblNewLabel_10 = new JLabel("");
+		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
+		lblNewLabel_10.setBounds(459, 332, 387, 14);
+		frame.getContentPane().add(lblNewLabel_10);
 		
 		
 		
