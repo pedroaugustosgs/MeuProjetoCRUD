@@ -208,7 +208,7 @@ public class Config extends Login {
 		frmMeuCrud.getContentPane().add(lblFotoPerfil);
 		
 		tfIdade = new JTextField();
-		tfIdade.setBounds(89, 252, 86, 20);
+		tfIdade.setBounds(77, 302, 86, 20);
 		frmMeuCrud.getContentPane().add(tfIdade);
 		tfIdade.setColumns(10);
 		btnNewButton.setForeground(Color.BLACK);
@@ -224,13 +224,13 @@ public class Config extends Login {
 		}
 		tftelefone = new JFormattedTextField(mascaraFone);
 		tftelefone.setColumns(10);
-		tftelefone.setBounds(123, 302, 135, 20);
+		tftelefone.setBounds(104, 346, 135, 20);
 		frmMeuCrud.getContentPane().add(tftelefone);
 		
 		JLabel lblTelefone = new JLabel("Telefone:");
 		lblTelefone.setForeground(Color.WHITE);
 		lblTelefone.setFont(new Font("Arial Narrow", Font.PLAIN, 20));
-		lblTelefone.setBounds(27, 299, 86, 21);
+		lblTelefone.setBounds(23, 343, 86, 21);
 		frmMeuCrud.getContentPane().add(lblTelefone);
 		btnSalvar.setBounds(23, 485, 119, 26);
 		frmMeuCrud.getContentPane().add(btnSalvar);
@@ -238,22 +238,22 @@ public class Config extends Login {
 		JLabel lblSenha = new JLabel("Idade:");
 		lblSenha.setForeground(Color.WHITE);
 		lblSenha.setFont(new Font("Arial Narrow", Font.PLAIN, 20));
-		lblSenha.setBounds(27, 249, 60, 21);
+		lblSenha.setBounds(23, 299, 60, 21);
 		frmMeuCrud.getContentPane().add(lblSenha);
 		
 		tfemail = new JTextField();
 		tfemail.setColumns(10);
-		tfemail.setBounds(89, 121, 229, 20);
+		tfemail.setBounds(89, 218, 229, 20);
 		frmMeuCrud.getContentPane().add(tfemail);
 		
 		JLabel lblEmail = new JLabel("E-mail:");
 		lblEmail.setForeground(Color.WHITE);
 		lblEmail.setFont(new Font("Arial Narrow", Font.PLAIN, 20));
-		lblEmail.setBounds(27, 118, 180, 21);
+		lblEmail.setBounds(23, 215, 100, 21);
 		frmMeuCrud.getContentPane().add(lblEmail);
 		
 		tfNome = new JTextField();
-		tfNome.setBounds(164, 183, 229, 20);
+		tfNome.setBounds(161, 255, 229, 20);
 		frmMeuCrud.getContentPane().add(tfNome);
 		tfNome.setColumns(10);
 		
@@ -274,14 +274,14 @@ public class Config extends Login {
 		JLabel lblNomeCtfnoompleto = DefaultComponentFactory.getInstance().createTitle("Nome Completo:");
 		lblNomeCtfnoompleto.setForeground(Color.WHITE);
 		lblNomeCtfnoompleto.setFont(new Font("Arial Narrow", Font.PLAIN, 20));
-		lblNomeCtfnoompleto.setBounds(27, 175, 135, 30);
+		lblNomeCtfnoompleto.setBounds(23, 247, 135, 30);
 		frmMeuCrud.getContentPane().add(lblNomeCtfnoompleto);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setBounds(456, 311, 46, 14);
 		frmMeuCrud.getContentPane().add(lblNewLabel_1);
 		
-		JButton btnTrocarFoto = new JButton("trocar foto");
+		JButton btnTrocarFoto = new JButton("Alterar Foto");
 		btnTrocarFoto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				 FileNameExtensionFilter filter = new FileNameExtensionFilter("JPG & GIF IMAGENS","jpg","gif","png");
@@ -297,7 +297,7 @@ public class Config extends Login {
 				 }
 			}
 		});
-		btnTrocarFoto.setBounds(621, 301, 89, 23);
+		btnTrocarFoto.setBounds(572, 301, 135, 23);
 		frmMeuCrud.getContentPane().add(btnTrocarFoto);
 		//System.out.println(EntraAluno.volt);
 		if(EntraAluno.volt==0) {

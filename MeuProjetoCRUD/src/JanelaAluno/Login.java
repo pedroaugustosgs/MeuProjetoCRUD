@@ -10,14 +10,17 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.ParseException;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import javax.swing.text.MaskFormatter;
 
 import Banco.Conexao;
 import Instituição.Principal;
@@ -31,9 +34,12 @@ public class Login extends Principal2{
 	public JFrame frame;
 	public static String id;
 	private JTextField tfUsuario;
+	private MaskFormatter tusuario;
 	private JPasswordField pfSenha;
 	private JButton btnEntrar;
 	static ResultSet  dados;
+	int tamanho = 10;
+
 	
 	Connection conexao; //conectorpara ligar o banco de dados
 	protected java.sql.Statement stmt; //afirmação componente usado para passar os comandos SQL
@@ -108,12 +114,22 @@ public class Login extends Principal2{
 		lblSenha.setBounds(126, 257, 95, 30);
 		frame.getContentPane().add(lblSenha);
 		
+		
+		if(tfUsuario.getText().length()==5) {
+			System.out.println("insira um nome menor");
+		}
+		
 		tfUsuario = new JTextField();
+		
+		
+
+		
 		tfUsuario.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent arg0) {
 				if(arg0.getKeyCode() == KeyEvent.VK_ENTER) {
 					pfSenha.requestFocus();
+					
 				}
 			}
 		});

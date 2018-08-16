@@ -53,6 +53,8 @@ public class PlaAluno {
 	
 	public String ids[]= new String[100];
 	int cont=0;
+	private JScrollPane scrollPane;
+	private JScrollPane scrollPaneREC;
 
 	/**
 	 * Launch the application.
@@ -153,7 +155,7 @@ public class PlaAluno {
 		
 		JLabel lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Bot\u00E3o png.png"));
-		lblNewLabel_5.setBounds(424, 142, 200, 201);
+		lblNewLabel_5.setBounds(433, 146, 200, 201);
 		frmMeuCrud.getContentPane().add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
@@ -171,14 +173,14 @@ public class PlaAluno {
 		lblNewLabel_6.setBounds(837, 81, 237, 44);
 		frmMeuCrud.getContentPane().add(lblNewLabel_6);
 		
-		JScrollPane scrollPaneREC = new JScrollPane(tabelaREC);
-		scrollPaneREC.setBounds(724, 167, 321, 331);
+		scrollPaneREC = new JScrollPane(tabelaREC);
+		scrollPaneREC.setBounds(724, 167, 350, 331);
 		frmMeuCrud.getContentPane().add(scrollPaneREC);
 		
-		JLabel lblAulasQueVai_1 = new JLabel("AULAS QUE VAI RECEBER");
+		JLabel lblAulasQueVai_1 = new JLabel("AULAS COMO ALUNO");
 		lblAulasQueVai_1.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		lblAulasQueVai_1.setForeground(Color.WHITE);
-		lblAulasQueVai_1.setBounds(761, 123, 256, 33);
+		lblAulasQueVai_1.setBounds(792, 123, 256, 33);
 		frmMeuCrud.getContentPane().add(lblAulasQueVai_1);
 		
 		tabela = new JTable();
@@ -207,19 +209,19 @@ public class PlaAluno {
 			
 		});
 		
-		JScrollPane scrollPane = new JScrollPane(tabela);
+		scrollPane = new JScrollPane(tabela);
 		scrollPane.setBounds(10, 167, 321, 331);
 		frmMeuCrud.getContentPane().add(scrollPane);
 		
-		JLabel lblAulasQueVai = new JLabel("AULAS QUE VAI DAR");
+		JLabel lblAulasQueVai = new JLabel("AULAS COMO PROFESSOR");
 		lblAulasQueVai.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		lblAulasQueVai.setForeground(Color.WHITE);
-		lblAulasQueVai.setBounds(51, 123, 213, 33);
+		lblAulasQueVai.setBounds(51, 123, 303, 33);
 		frmMeuCrud.getContentPane().add(lblAulasQueVai);
 		btnNovaAula.setForeground(Color.BLACK);
 		btnNovaAula.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnNovaAula.setBackground(Color.WHITE);
-		btnNovaAula.setBounds(462, 220, 121, 33);
+		btnNovaAula.setBounds(441, 220, 168, 33);
 		frmMeuCrud.getContentPane().add(btnNovaAula);
 		
 		JButton btnconfig = new JButton("Editar Perfil");
@@ -233,7 +235,7 @@ public class PlaAluno {
 				Config.main(null);
 			}
 		});
-		btnconfig.setBounds(45, 557, 168, 33);
+		btnconfig.setBounds(36, 569, 168, 33);
 		frmMeuCrud.getContentPane().add(btnconfig);
 		
 		JButton btnSair = new JButton("Sair");
@@ -283,7 +285,7 @@ public class PlaAluno {
 		
 		JLabel lblNewLabel_8 = new JLabel("");
 		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\1.png"));
-		lblNewLabel_8.setBounds(262, 108, 475, 407);
+		lblNewLabel_8.setBounds(330, 167, 394, 331);
 		frmMeuCrud.getContentPane().add(lblNewLabel_8);
 		
 		JLabel lblNewLabel_9 = new JLabel("");
