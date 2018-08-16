@@ -58,6 +58,7 @@ public class TerAula extends Login{
 	
 	public String ids[]= new String[100];
 	int cont=0;
+	private JLabel lblNewLabel_7;
 	/**
 	 * Launch the application.-
 	 */
@@ -125,17 +126,17 @@ public class TerAula extends Login{
 		});
 		
 		lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_2.setBounds(-13, 83, 432, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_2);
 		
 		lblNewLabel_4 = new JLabel("");
-		lblNewLabel_4.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
-		lblNewLabel_4.setBounds(408, 83, 438, 26);
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_4.setBounds(408, 83, 496, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_4);
 		tfProcurar.setForeground(Color.LIGHT_GRAY);
 		tfProcurar.setText("Entre com a mat\u00E9ria a ser procurada");
-		tfProcurar.setBounds(10, 122, 821, 26);
+		tfProcurar.setBounds(180, 126, 606, 26);
 		frmMeuCrud.getContentPane().add(tfProcurar);
 		tfProcurar.setColumns(10);
 		
@@ -165,7 +166,7 @@ public class TerAula extends Login{
 				}
 			}
 		});
-		btnProcurar.setBounds(841, 120, 157, 28);
+		btnProcurar.setBounds(841, 127, 157, 28);
 		frmMeuCrud.getContentPane().add(btnProcurar);
 		
 		tabela = new JTable();
@@ -197,7 +198,7 @@ public class TerAula extends Login{
 		});
 	
 		JScrollPane scrollPane = new JScrollPane(tabela);
-		scrollPane.setBounds(178, 159, 601, 203);
+		scrollPane.setBounds(183, 209, 601, 203);
 		frmMeuCrud.getContentPane().add(scrollPane);
 		
 		JButton btnVoltar = new JButton("Voltar");
@@ -242,14 +243,20 @@ public class TerAula extends Login{
 		frmMeuCrud.getContentPane().add(lblNewLabel_3);
 		
 		lblNewLabel_5 = new JLabel("");
-		lblNewLabel_5.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_5.setBounds(841, 83, 234, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_5);
 		
 		lblNewLabel_6 = new JLabel("");
-		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\ter aula.png"));
-		lblNewLabel_6.setBounds(376, 21, 403, 61);
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\ter aula.png"));
+		lblNewLabel_6.setBounds(376, 21, 233, 61);
 		frmMeuCrud.getContentPane().add(lblNewLabel_6);
+		
+		lblNewLabel_7 = new JLabel("AULAS J\u00C1 DISPON\u00CDVEIS");
+		lblNewLabel_7.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblNewLabel_7.setForeground(Color.WHITE);
+		lblNewLabel_7.setBounds(363, 185, 278, 20);
+		frmMeuCrud.getContentPane().add(lblNewLabel_7);
 		
 		dadostabela = new CRUDAulas().pegaAula();
 		criaTabela(dadostabela);

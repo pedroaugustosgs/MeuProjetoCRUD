@@ -74,6 +74,7 @@ public class ConfirmaAula extends Login{
 	private JLabel lblNewLabel_7;
 	private JLabel lblNewLabel_8;
 	private JLabel lblNewLabel_9;
+	private JLabel lblNewLabel_10;
 
 	
 	/**
@@ -118,6 +119,12 @@ public class ConfirmaAula extends Login{
 		panel.setBackground(Color.BLACK);
 		panel.setVisible(false);
 		
+		lblNewLabel_10 = new JLabel("ALUNOS J\u00C1 CONFIRMADOS NESTA AULA");
+		lblNewLabel_10.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblNewLabel_10.setForeground(Color.WHITE);
+		lblNewLabel_10.setBounds(343, 262, 453, 42);
+		frame.getContentPane().add(lblNewLabel_10);
+		
 		lblNewLabel_9 = new JLabel("");
 		lblNewLabel_9.setIcon(new ImageIcon("D:\\chapeu.png"));
 		lblNewLabel_9.setBounds(915, 21, 124, 81);
@@ -132,54 +139,14 @@ public class ConfirmaAula extends Login{
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_6.setBounds(435, 53, 470, 34);
 		frame.getContentPane().add(lblNewLabel_6);
-		panel.setBounds(232, 93, 700, 190);
+		panel.setBounds(198, 73, 674, 188);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
-		
-		panel_1 = new JPanel();
-		panel_1.setBackground(Color.BLACK);
-		panel_1.setBounds(0, 0, 196, 109);
-		panel.add(panel_1);
-		panel_1.setVisible(false);
-		panel_1.setLayout(null);
-		
-		JLabel lblNewLabel_1 = new JLabel("Data:");
-		lblNewLabel_1.setForeground(Color.WHITE);
-		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblNewLabel_1.setBounds(10, 11, 56, 19);
-		panel_1.add(lblNewLabel_1);
-		
-		lbldata = new JLabel("");
-		lbldata.setForeground(Color.WHITE);
-		lbldata.setBounds(78, 11, 86, 19);
-		panel_1.add(lbldata);
-		
-		JLabel lblDe = new JLabel("DE:");
-		lblDe.setForeground(Color.WHITE);
-		lblDe.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblDe.setBounds(10, 39, 56, 19);
-		panel_1.add(lblDe);
-		
-		JLabel lblAt_1 = new JLabel("AT\u00C9:");
-		lblAt_1.setForeground(Color.WHITE);
-		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblAt_1.setBounds(10, 60, 56, 19);
-		panel_1.add(lblAt_1);
-		
-		lbldedata = new JLabel("");
-		lbldedata.setForeground(Color.WHITE);
-		lbldedata.setBounds(64, 36, 80, 19);
-		panel_1.add(lbldedata);
-		
-		lblatedata = new JLabel("");
-		lblatedata.setForeground(Color.WHITE);
-		lblatedata.setBounds(64, 59, 86, 19);
-		panel_1.add(lblatedata);
 		
 		Label label_7 = new Label("Turno:");
 		label_7.setBounds(8, 72, 51, 23);
 		panel.add(label_7);
-		label_7.setForeground(Color.BLACK);
+		label_7.setForeground(Color.WHITE);
 		label_7.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
 		
 		chckbxManh = new JCheckBox("Manh\u00E3");
@@ -203,7 +170,7 @@ public class ConfirmaAula extends Login{
 			}
 		});
 		chckbxTarde.setEnabled(false);
-		chckbxTarde.setBounds(8, 127, 58, 23);
+		chckbxTarde.setBounds(8, 127, 66, 23);
 		panel.add(chckbxTarde);
 		
 		chckbxNoite = new JCheckBox("Noite");
@@ -215,7 +182,7 @@ public class ConfirmaAula extends Login{
 			}
 		});
 		chckbxNoite.setEnabled(false);
-		chckbxNoite.setBounds(8, 153, 51, 23);
+		chckbxNoite.setBounds(8, 153, 66, 23);
 		panel.add(chckbxNoite);
 		
 		Label label_6 = new Label("Data:");
@@ -311,67 +278,67 @@ public class ConfirmaAula extends Login{
 		JLabel lblNewLabel = new JLabel("DE:");
 		lblNewLabel.setVisible(false);
 		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		lblNewLabel.setBounds(72, 101, 40, 23);
+		lblNewLabel.setBounds(84, 101, 40, 23);
 		panel.add(lblNewLabel);
 		
 		JLabel lblAt = new JLabel("AT\u00C9:");
 		lblAt.setVisible(false);
 		lblAt.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		lblAt.setBounds(186, 101, 40, 23);
+		lblAt.setBounds(211, 101, 40, 23);
 		panel.add(lblAt);
 		
 		JLabel label_8 = new JLabel("DE:");
 		label_8.setVisible(false);
 		label_8.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_8.setBounds(72, 127, 40, 23);
+		label_8.setBounds(84, 127, 40, 23);
 		panel.add(label_8);
 		
 		JLabel label_9 = new JLabel("AT\u00C9:");
 		label_9.setVisible(false);
 		label_9.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_9.setBounds(186, 127, 40, 23);
+		label_9.setBounds(211, 127, 40, 23);
 		panel.add(label_9);
 		
 		JLabel lbldenoite = new JLabel("DE:");
 		lbldenoite.setVisible(false);
 		lbldenoite.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		lbldenoite.setBounds(71, 153, 40, 23);
+		lbldenoite.setBounds(84, 153, 40, 23);
 		panel.add(lbldenoite);
 		
 		JLabel label_11 = new JLabel("AT\u00C9:");
 		label_11.setVisible(false);
 		label_11.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_11.setBounds(186, 153, 40, 23);
+		label_11.setBounds(211, 153, 40, 23);
 		panel.add(label_11);
 		
 		lbldemanha = new JLabel("");
 		lbldemanha.setVisible(false);
-		lbldemanha.setBounds(107, 101, 66, 23);
+		lbldemanha.setBounds(134, 101, 66, 23);
 		panel.add(lbldemanha);
 		
 		lbldetarde = new JLabel("");
 		lbldetarde.setVisible(false);
-		lbldetarde.setBounds(107, 130, 66, 20);
+		lbldetarde.setBounds(136, 126, 66, 20);
 		panel.add(lbldetarde);
 		
 		lblDeNoite = new JLabel("");
 		lblDeNoite.setVisible(false);
-		lblDeNoite.setBounds(107, 153, 66, 20);
+		lblDeNoite.setBounds(134, 156, 66, 20);
 		panel.add(lblDeNoite);
 		
 		lblatemanha = new JLabel("");
 		lblatemanha.setVisible(false);
-		lblatemanha.setBounds(233, 101, 72, 21);
+		lblatemanha.setBounds(290, 103, 72, 21);
 		panel.add(lblatemanha);
 		
 		lblatetarde = new JLabel("");
 		lblatetarde.setVisible(false);
-		lblatetarde.setBounds(232, 127, 73, 21);
+		lblatetarde.setBounds(290, 129, 73, 21);
 		panel.add(lblatetarde);
 		
 		lblatenoite = new JLabel("");
 		lblatenoite.setVisible(false);
-		lblatenoite.setBounds(231, 153, 74, 23);
+		lblatenoite.setBounds(290, 153, 74, 23);
 		panel.add(lblatenoite);
 		
 		lblNewLabel_2 = new JLabel("");
@@ -426,7 +393,7 @@ public class ConfirmaAula extends Login{
 		
 		lbllocal = new JLabel("");
 		lbllocal.setForeground(Color.WHITE);
-		lbllocal.setBounds(57, 197, 168, 22);
+		lbllocal.setBounds(66, 197, 159, 22);
 		frame.getContentPane().add(lbllocal);
 		
 		lblvagas = new JLabel("");
@@ -479,7 +446,7 @@ public class ConfirmaAula extends Login{
 		tabela = new JTable();
 		
 		JScrollPane scrollPane = new JScrollPane(tabela);
-		scrollPane.setBounds(232, 294, 498, 213);
+		scrollPane.setBounds(294, 300, 498, 213);
 		frame.getContentPane().add(scrollPane);
 		
 		lblNewLabel_3 = new JLabel("");
@@ -498,9 +465,49 @@ public class ConfirmaAula extends Login{
 		frame.getContentPane().add(lblNewLabel_7);
 		
 		lblNewLabel_8 = new JLabel("");
-		lblNewLabel_8.setIcon(new ImageIcon("D:\\Confirmaraula.png"));
-		lblNewLabel_8.setBounds(363, 11, 330, 52);
+		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\dddddd.png"));
+		lblNewLabel_8.setBounds(362, 5, 338, 52);
 		frame.getContentPane().add(lblNewLabel_8);
+		
+		panel_1 = new JPanel();
+		panel_1.setBounds(221, 102, 196, 106);
+		frame.getContentPane().add(panel_1);
+		panel_1.setBackground(Color.BLACK);
+		panel_1.setVisible(false);
+		panel_1.setLayout(null);
+		
+		JLabel lblNewLabel_1 = new JLabel("Data:");
+		lblNewLabel_1.setForeground(Color.WHITE);
+		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblNewLabel_1.setBounds(10, 11, 56, 19);
+		panel_1.add(lblNewLabel_1);
+		
+		lbldata = new JLabel("");
+		lbldata.setForeground(Color.WHITE);
+		lbldata.setBounds(78, 11, 86, 19);
+		panel_1.add(lbldata);
+		
+		JLabel lblDe = new JLabel("DE:");
+		lblDe.setForeground(Color.WHITE);
+		lblDe.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblDe.setBounds(10, 36, 56, 22);
+		panel_1.add(lblDe);
+		
+		JLabel lblAt_1 = new JLabel("AT\u00C9:");
+		lblAt_1.setForeground(Color.WHITE);
+		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblAt_1.setBounds(10, 69, 56, 18);
+		panel_1.add(lblAt_1);
+		
+		lbldedata = new JLabel("");
+		lbldedata.setForeground(Color.WHITE);
+		lbldedata.setBounds(64, 36, 80, 19);
+		panel_1.add(lbldedata);
+		
+		lblatedata = new JLabel("");
+		lblatedata.setForeground(Color.WHITE);
+		lblatedata.setBounds(64, 68, 86, 19);
+		panel_1.add(lblatedata);
 		
 		preencherTela();
 		
