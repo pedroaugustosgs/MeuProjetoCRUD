@@ -276,6 +276,10 @@ public class TerAula extends Login{
 				}
 				
 				//SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
+				//***************************************************************************CHAMA O TEO************************************//
+				if(dados.getString("professor")==PlaAluno.idaluno) {
+					continue;
+				}
 				
 				if(data.before(hoje) && continuar==false) {
 					continue;
