@@ -235,7 +235,7 @@ public class AulasSolicitadas extends Login{
 			frmMeuCrud.getContentPane().add(lblNewLabel);
 			
 			lblNewLabel_10 = new JLabel("");
-			lblNewLabel_10.setIcon(new ImageIcon("D:\\Money.png"));
+			lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\Money.png"));
 			lblNewLabel_10.setBounds(283, 25, 520, 84);
 			frmMeuCrud.getContentPane().add(lblNewLabel_10);
 		

@@ -629,7 +629,7 @@ public class AlteraAulas extends Login{
 		
 		lblNewLabel_7 = new JLabel("");
 		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_7.setBounds(408, 41, 492, 29);
+		lblNewLabel_7.setBounds(408, 41, 46, 29);
 		frame.getContentPane().add(lblNewLabel_7);
 		
 		preencherTela();

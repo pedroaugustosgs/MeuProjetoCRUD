@@ -9,6 +9,7 @@ import java.awt.SystemColor;
 import javax.swing.ImageIcon;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.Color;
 
 public class FaleConosco {
 
@@ -45,58 +46,92 @@ public class FaleConosco {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 952, 465);
+		frame.getContentPane().setBackground(Color.BLACK);
+		frame.setBounds(100, 100, 952, 620);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
+		JLabel lblNewLabel_9 = new JLabel("");
+		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\Chapeu azul.png"));
+		lblNewLabel_9.setBounds(392, 281, 164, 125);
+		frame.getContentPane().add(lblNewLabel_9);
+		
 		JButton btnNewButton = new JButton("Enviar");
-		btnNewButton.setForeground(SystemColor.textHighlight);
-		btnNewButton.setFont(new Font("Trebuchet MS", Font.BOLD | Font.ITALIC, 15));
-		btnNewButton.setBounds(592, 393, 89, 23);
+		btnNewButton.setForeground(Color.BLACK);
+		btnNewButton.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnNewButton.setBounds(404, 549, 136, 33);
 		frame.getContentPane().add(btnNewButton);
 		
 		textField_2 = new JTextField();
-		textField_2.setBounds(27, 273, 478, 143);
+		textField_2.setBounds(10, 345, 478, 143);
 		frame.getContentPane().add(textField_2);
 		textField_2.setColumns(10);
 		
-		JLabel lblNewLabel_3 = new JLabel("Escreva para n\u00F3s:");
-		lblNewLabel_3.setForeground(SystemColor.textText);
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 18));
-		lblNewLabel_3.setBounds(28, 235, 168, 27);
-		frame.getContentPane().add(lblNewLabel_3);
-		
 		textField_1 = new JTextField();
-		textField_1.setBounds(107, 135, 213, 20);
+		textField_1.setBounds(556, 468, 213, 20);
 		frame.getContentPane().add(textField_1);
 		textField_1.setColumns(10);
 		
 		JLabel lblEmail = new JLabel("E-mail:");
-		lblEmail.setForeground(SystemColor.textText);
-		lblEmail.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 18));
-		lblEmail.setBounds(27, 130, 70, 25);
+		lblEmail.setForeground(Color.WHITE);
+		lblEmail.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		lblEmail.setBounds(498, 463, 70, 25);
 		frame.getContentPane().add(lblEmail);
 		
 		textField = new JTextField();
-		textField.setBounds(107, 99, 213, 20);
+		textField.setBounds(556, 422, 213, 20);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
 		JLabel lblNewLabel_2 = new JLabel("Nome:");
-		lblNewLabel_2.setForeground(SystemColor.textText);
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 18));
-		lblNewLabel_2.setBounds(27, 94, 70, 25);
+		lblNewLabel_2.setForeground(Color.WHITE);
+		lblNewLabel_2.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		lblNewLabel_2.setBounds(498, 417, 70, 25);
 		frame.getContentPane().add(lblNewLabel_2);
 		
-		JLabel lblNewLabel = new JLabel("Fale Conosco");
-		lblNewLabel.setForeground(SystemColor.textHighlight);
-		lblNewLabel.setFont(new Font("Trebuchet MS", Font.BOLD | Font.ITALIC, 26));
-		lblNewLabel.setBounds(397, 11, 174, 27);
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_1.setBounds(-3, 492, 488, 29);
+		frame.getContentPane().add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_3.setBounds(481, 492, 381, 29);
+		frame.getContentPane().add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_4.setBounds(847, 492, 110, 29);
+		frame.getContentPane().add(lblNewLabel_4);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
+		lblNewLabel.setBounds(383, 29, 522, 128);
 		frame.getContentPane().add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon(FaleConosco.class.getResource("/Principal (2).png")));
-		lblNewLabel_1.setBounds(-63, 0, 999, 537);
-		frame.getContentPane().add(lblNewLabel_1);
+		JLabel lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_5.setBounds(-3, 89, 441, 33);
+		frame.getContentPane().add(lblNewLabel_5);
+		
+		JLabel lblNewLabel_6 = new JLabel("");
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_6.setBounds(434, 92, 429, 28);
+		frame.getContentPane().add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_7.setBounds(847, 89, 89, 33);
+		frame.getContentPane().add(lblNewLabel_7);
+		
+		JLabel lblNewLabel_8 = new JLabel("");
+		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\fale conosco.png"));
+		lblNewLabel_8.setBounds(10, 156, 363, 178);
+		frame.getContentPane().add(lblNewLabel_8);
+		
+		JLabel lblNewLabel_11 = new JLabel("");
+		lblNewLabel_11.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
+		lblNewLabel_11.setBounds(481, 397, 476, 14);
+		frame.getContentPane().add(lblNewLabel_11);
 	}
 }

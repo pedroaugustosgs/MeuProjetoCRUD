@@ -243,7 +243,8 @@ public class VerAlunos extends LoginInstitu{
 		frmMeuCrud.getContentPane().add(lblNewLabel_4);
 		
 		lblNewLabel_5 = new JLabel("New label");
-		lblNewLabel_5.setBounds(396, 21, 46, 14);
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\visualiza\u00E7\u00E3o.png"));
+		lblNewLabel_5.setBounds(299, 11, 354, 55);
 		frmMeuCrud.getContentPane().add(lblNewLabel_5);
 		ResultSet alunos=null;
 		String sql1 ="SELECT * FROM alunos WHERE escola=?";
