@@ -132,9 +132,28 @@ public class PlaAluno {
 			
 		});
 		
-		JLabel lblNewLabel_5 = new JLabel("New label");
-		lblNewLabel_5.setIcon(new ImageIcon("D:\\Bot\u00E3o png.png"));
-		lblNewLabel_5.setBounds(432, 175, 331, 301);
+		btnteraula = new JButton("Solicitar Aula");
+		btnteraula.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				TerAula.main(null);
+				frmMeuCrud.dispose();
+			}
+		});
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon("D:\\Imagem\\img\\Bot\u00E3o png.png"));
+		label.setBounds(416, 323, 213, 162);
+		frmMeuCrud.getContentPane().add(label);
+		btnteraula.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnteraula.setForeground(Color.BLACK);
+		btnteraula.setBackground(SystemColor.textHighlightText);
+		
+		btnteraula.setBounds(433, 378, 176, 33);
+		frmMeuCrud.getContentPane().add(btnteraula);
+		
+		JLabel lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Bot\u00E3o png.png"));
+		lblNewLabel_5.setBounds(424, 142, 200, 201);
 		frmMeuCrud.getContentPane().add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
@@ -200,22 +219,8 @@ public class PlaAluno {
 		btnNovaAula.setForeground(Color.BLACK);
 		btnNovaAula.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnNovaAula.setBackground(Color.WHITE);
-		btnNovaAula.setBounds(480, 306, 121, 33);
+		btnNovaAula.setBounds(462, 220, 121, 33);
 		frmMeuCrud.getContentPane().add(btnNovaAula);
-		
-		btnteraula = new JButton("Solicitar Aula");
-		btnteraula.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				TerAula.main(null);
-				frmMeuCrud.dispose();
-			}
-		});
-		btnteraula.setFont(new Font("Arial Narrow", Font.BOLD, 20));
-		btnteraula.setForeground(Color.BLACK);
-		btnteraula.setBackground(SystemColor.textHighlightText);
-		
-		btnteraula.setBounds(0, 579, 176, 33);
-		frmMeuCrud.getContentPane().add(btnteraula);
 		
 		JButton btnconfig = new JButton("Editar Perfil");
 		btnconfig.setForeground(Color.BLACK);
@@ -228,7 +233,7 @@ public class PlaAluno {
 				Config.main(null);
 			}
 		});
-		btnconfig.setBounds(447, 579, 168, 33);
+		btnconfig.setBounds(45, 557, 168, 33);
 		frmMeuCrud.getContentPane().add(btnconfig);
 		
 		JButton btnSair = new JButton("Sair");
@@ -253,7 +258,7 @@ public class PlaAluno {
 		btnSair.setForeground(Color.BLACK);
 		btnSair.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnSair.setBackground(Color.WHITE);
-		btnSair.setBounds(978, 579, 106, 32);
+		btnSair.setBounds(942, 569, 106, 32);
 		frmMeuCrud.getContentPane().add(btnSair);
 		
 		JLabel lblNewLabel = new JLabel("");
@@ -272,13 +277,13 @@ public class PlaAluno {
 		frmMeuCrud.getContentPane().add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_7 = new JLabel("");
-		lblNewLabel_7.setIcon(new ImageIcon("D:\\Money.png"));
+		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\Money.png"));
 		lblNewLabel_7.setBounds(317, 24, 475, 61);
 		frmMeuCrud.getContentPane().add(lblNewLabel_7);
 		
 		JLabel lblNewLabel_8 = new JLabel("");
-		lblNewLabel_8.setIcon(new ImageIcon("D:\\1.png"));
-		lblNewLabel_8.setBounds(261, 116, 475, 407);
+		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\1.png"));
+		lblNewLabel_8.setBounds(262, 108, 475, 407);
 		frmMeuCrud.getContentPane().add(lblNewLabel_8);
 		
 		JLabel lblNewLabel_9 = new JLabel("");
