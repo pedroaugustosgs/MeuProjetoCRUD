@@ -77,21 +77,21 @@ public class EntraAluno extends Principal2{
 		
 		JLabel lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Bot\u00E3o png.png"));
-		lblNewLabel_5.setBounds(78, 239, 261, 190);
+		lblNewLabel_5.setBounds(107, 260, 185, 190);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_20 = new JLabel("");
 		lblNewLabel_20.setIcon(new ImageIcon("D:\\Imagem\\img\\Chapeu azul.png"));
-		lblNewLabel_20.setBounds(349, 67, 138, 94);
+		lblNewLabel_20.setBounds(334, 66, 138, 94);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_20);
 		
 		JLabel lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Bot\u00E3o png.png"));
-		lblNewLabel_6.setBounds(516, 215, 274, 239);
+		lblNewLabel_6.setBounds(511, 240, 185, 239);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_6);
 		btnLogar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnLogar.setForeground(Color.BLACK);
-		btnLogar.setBounds(94, 315, 201, 33);
+		btnLogar.setBounds(107, 331, 201, 33);
 		frmEntraInstitu.getContentPane().add(btnLogar);
 		
 		JLabel lblNewLabel_7 = new JLabel("");
@@ -113,7 +113,7 @@ public class EntraAluno extends Principal2{
 		});
 		btnCadastrar.setForeground(Color.BLACK);
 		btnCadastrar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
-		btnCadastrar.setBounds(526, 315, 201, 33);
+		btnCadastrar.setBounds(511, 331, 201, 33);
 		frmEntraInstitu.getContentPane().add(btnCadastrar);
 		
 		JLabel lblNewLabel = new JLabel("");
@@ -155,21 +155,16 @@ public class EntraAluno extends Principal2{
 		
 		JLabel lblNewLabel_15 = new JLabel("");
 		lblNewLabel_15.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega em p\u00E9.jpg"));
-		lblNewLabel_15.setBounds(391, 106, 24, 471);
+		lblNewLabel_15.setBounds(381, 106, 24, 471);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_15);
 		
 		JLabel lblNewLabel_19 = new JLabel("");
 		lblNewLabel_19.setBounds(412, 106, 46, 14);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_19);
 		
-		JLabel lblNewLabel_4 = new JLabel("");
-		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\1.png"));
-		lblNewLabel_4.setBounds(-56, 106, 466, 471);
+		JLabel lblNewLabel_4 = new JLabel("New label");
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\fundo.png"));
+		lblNewLabel_4.setBounds(0, 117, 793, 443);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_4);
-		
-		JLabel label = new JLabel("New label");
-		label.setIcon(new ImageIcon("D:\\Imagem\\img\\1.png"));
-		label.setBounds(381, 106, 444, 471);
-		frmEntraInstitu.getContentPane().add(label);
 	}
 }
