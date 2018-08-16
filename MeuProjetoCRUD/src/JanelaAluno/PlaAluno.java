@@ -323,6 +323,10 @@ public class PlaAluno {
 				
 				try {
 					data = dados.getDate("DiaUmaVez");
+					if(dados.getString("DiaUmaVez").equals("1969-12-31")) {
+						continuar = true;
+					}
+					
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					continuar=true;

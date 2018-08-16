@@ -419,8 +419,6 @@ public class VisualizaAulaREC extends Login{
 						ds.execute();
 						ds.close();
 						
-						
-						
 						String msg=null;
 						if(dd.next()) {
 							msg = "O aluno "+NomeProf(idAula)+" inscrito em sua aula de "+Materia(dd.getString("materia"))+" sobre "+dd.getString("conteudo")+" saiu "
