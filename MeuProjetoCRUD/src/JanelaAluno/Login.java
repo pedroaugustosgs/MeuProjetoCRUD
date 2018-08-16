@@ -114,16 +114,9 @@ public class Login extends Principal2{
 		lblSenha.setBounds(126, 257, 95, 30);
 		frame.getContentPane().add(lblSenha);
 		
-		
-		if(tfUsuario.getText().length()==5) {
-			System.out.println("insira um nome menor");
-		}
+	
 		
 		tfUsuario = new JTextField();
-		
-		
-
-		
 		tfUsuario.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent arg0) {
