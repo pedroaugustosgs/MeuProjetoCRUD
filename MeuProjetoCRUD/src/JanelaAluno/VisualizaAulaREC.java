@@ -16,6 +16,7 @@ import com.toedter.calendar.JCalendar;
 
 import Banco.Conexao;
 import CRUD.CRUDAlunos;
+import CRUD.CRUDEmail;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -401,6 +402,33 @@ public class VisualizaAulaREC extends Login{
 						stmt.execute();
 						stmt.close();
 						
+						ResultSet dd=null;
+						String sql1="SELECT * FROM aulas INNER JOIN alunosconfirmados ON aulas.idaula=alunosconfirmados.idconfirmar WHERE idaula=?";
+						PreparedStatement s = Conexao.conexao.prepareStatement(sql1);
+						s.setString(1, idAula);
+						dd = s.executeQuery();
+						s.execute();
+						s.close();
+						
+						ResultSet dad=null;
+						String d ="SELECT * FROM alunos INNER JOIN alunosconfirmados ON alunos.idaluno = alunosconfirmados.idaluno WHERE idConfirmar=?";
+						PreparedStatement ds =Conexao.conexao.prepareStatement(d);
+						ds.setString(1, idAula);
+						dad = ds.executeQuery();
+						ds.execute();
+						ds.close();
+						
+						String msg=null;
+						if(dd.next()) {
+							msg = "O aluno "+NomeProf(idAula)+" inscrito em sua aula de "+Materia(dd.getString("materia"))+" sobre "+dd.getString("conteudo")+" saiu "
+									+ "da aula!";
+						}
+						String email = dad.getString("email");
+						
+						CRUDEmail D = new CRUDEmail();
+						D.EmailVisuAulas(email, msg);
+						
+						
 						JOptionPane.showMessageDialog(null, "Você saiu desta aula!");
 						PlaAluno.main(null);
 						frame.dispose();
@@ -664,14 +692,14 @@ public class VisualizaAulaREC extends Login{
 
 		String idprof=null;
 		ResultSet ddNome;
-		String sql ="Select * From aulas Where idaula=?";
+		String sql ="Select * From alunos INNER JOIN aulas ON Alunos.idAluno=aulas.professor Where idaula=?";
 		try {
 			PreparedStatement s = Conexao.conexao.prepareStatement(sql);
 			s.setString(1, idAula2);
 			dadosAula = s.executeQuery();
 			s.execute();
 			s.close();
-			if(dadosAula.next()) {
+			/*if(dadosAula.next()) {
 				idprof = dadosAula.getString("professor");
 			} 
 			String sql2="Select * From alunos Where idAluno=?";
@@ -679,9 +707,9 @@ public class VisualizaAulaREC extends Login{
 			stmt.setString(1, idprof);
 			ddNome = stmt.executeQuery();
 			stmt.execute();
-			stmt.close();
-			if(ddNome.next()) {
-				nomeProf = ddNome.getString("nome");
+			stmt.close();*/
+			if(dadosAula.next()) {
+				nomeProf = dadosAula.getString("nome");
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -712,5 +740,49 @@ public class VisualizaAulaREC extends Login{
 			e.printStackTrace();
 		}
 		return alunos;
+	}
+	public String Materia(String m){
+		String materia=null;
+		
+		if(m.equals("RED")) {
+			materia="REDAÇÃO";
+		}
+		if(m.equals("MAT")) {
+			materia="MATEMÁTICA";
+		}
+		if(m.equals("QUI")) {
+			materia="QUÍMICA";
+		}
+		if(m.equals("FIS")) {
+			materia="FÍSICA";
+		}
+		if(m.equals("BIO")) {
+			materia="BIOLOGIA";
+		}
+		if(m.equals("HIS")) {
+			materia="HISTÓRIA";
+		}
+		if(m.equals("GEO")) {
+			materia="GEOGRAFIA";
+		}
+		if(m.equals("PORT")) {
+			materia="PORTUGUÊS";
+		}
+		if(m.equals("FILOS")) {
+			materia="FILOSOFIA";
+		}
+		if(m.equals("ING")) {
+			materia="INGLÊS";
+		}
+		if(m.equals("ESP")) {
+			materia="ESPANHOL";
+		}
+		if(m.equals("LIT")) {
+			materia="LITERATURA";
+		}
+		if(m.equals("SOCIO")) {
+			materia="SOCIOLOGIA";
+		}
+		return materia;
 	}
 }

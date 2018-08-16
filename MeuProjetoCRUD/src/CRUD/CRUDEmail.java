@@ -4,7 +4,7 @@ import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.SimpleEmail;
 
 public class CRUDEmail {
-	public void EmailVisuAulas(String prof,String materia,String conteudo,String emails) {
+	public void EmailVisuAulas(String emails,String msg) {
 		
 		String de = "projetojavasenai@gmail.com";
 		boolean ssl = true;
@@ -13,8 +13,7 @@ public class CRUDEmail {
 		String usuario = "projetojavasenai@gmail.com";
 		String senha = "senai123";
 		
-		String msg="Sua aula com o professor "+prof+" de "+materia+" sobre "+conteudo+" sofreu uma alteração! "
-				+ "Acesse o Approfe para mais informações!";
+		
 		
 	try {
 		SimpleEmail email = new SimpleEmail();

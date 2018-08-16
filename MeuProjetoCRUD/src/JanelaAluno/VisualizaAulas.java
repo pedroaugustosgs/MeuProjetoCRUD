@@ -332,10 +332,14 @@ public class VisualizaAulas extends Login{
 					stmt2.execute();
 					stmt2.close();
 					
+					String msg="Sua aula com o professor "+NomeProf(idAula)+" de "+Materia(dados.getString("materia"))+" sobre "+dados.getString("conteudo")
+							+ " sofreu uma alteração! "
+							+ "Acesse o Approfe para mais informações!";
+					
 					if(dado !=null) {
 						CRUDEmail enviar = new CRUDEmail();
 						if(dados.next() && dado.next()) {
-							enviar.EmailVisuAulas(NomeProf(idAula),Materia(dados.getString("materia")) , dados.getString("conteudo"),dado.getString("email"));
+							enviar.EmailVisuAulas(dado.getString("email"),msg);
 						}
 					}
 					PlaAluno.main(null);
