@@ -169,7 +169,7 @@ public class EntraAluno extends Principal2{
 		
 		JLabel label = new JLabel("New label");
 		label.setIcon(new ImageIcon("D:\\Imagem\\img\\1.png"));
-		label.setBounds(359, 106, 466, 471);
+		label.setBounds(381, 106, 444, 471);
 		frmEntraInstitu.getContentPane().add(label);
 	}
 }
