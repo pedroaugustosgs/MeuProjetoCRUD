@@ -405,7 +405,7 @@ public class VisualizaAulaREC extends Login{
 						//******************pra baixo
 						
 						ResultSet dd=null;
-						String sql1="SELECT * FROM aulas INNER JOIN alunosconfirmados ON aulas.idaula=alunosconfirmados.idconfirmar WHERE idaula=?";
+						String sql1="SELECT * FROM aulas WHERE idaula=?";
 						PreparedStatement s = Conexao.conexao.prepareStatement(sql1);
 						s.setString(1, idAula);
 						dd = s.executeQuery();
@@ -413,7 +413,7 @@ public class VisualizaAulaREC extends Login{
 						s.close();
 						
 						ResultSet dad=null;
-						String d ="SELECT * FROM alunos INNER JOIN alunosconfirmados ON alunos.idaluno = alunosconfirmados.idaluno WHERE idconfirmar=?";
+						String d ="SELECT * FROM alunos INNER JOIN aulas ON alunos.idaluno = aulas.professor WHERE idaula=?";
 						PreparedStatement ds =Conexao.conexao.prepareStatement(d);
 						ds.setString(1, idAula);
 						dad = ds.executeQuery();
