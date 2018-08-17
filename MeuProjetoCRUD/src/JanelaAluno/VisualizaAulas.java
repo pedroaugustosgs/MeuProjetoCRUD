@@ -83,6 +83,8 @@ public class VisualizaAulas extends Login{
 	private JLabel lblNewLabel_7;
 	private JLabel lblNewLabel_8;
 	private JLabel lblNewLabel_9;
+	private Label label_5;
+	private Label label_10;
 	
 	/**
 	 * Launch the application.
@@ -386,7 +388,7 @@ public class VisualizaAulas extends Login{
 				
 			}
 		});
-		btnNewButton.setBounds(-1, 544, 139, 44);
+		btnNewButton.setBounds(10, 543, 139, 44);
 		frame.getContentPane().add(btnNewButton);
 		
 		JButton btnNovoltar = new JButton("Voltar");
@@ -397,13 +399,13 @@ public class VisualizaAulas extends Login{
 				frame.dispose();
 			}
 		});
-		btnNovoltar.setBounds(791, 545, 151, 41);
+		btnNovoltar.setBounds(781, 545, 151, 41);
 		frame.getContentPane().add(btnNovoltar);
 		
 		tabela = new JTable();
 		
 		JScrollPane scrollPane = new JScrollPane(tabela);
-		scrollPane.setBounds(227, 286, 502, 213);
+		scrollPane.setBounds(198, 297, 502, 201);
 		frame.getContentPane().add(scrollPane);
 		
 		JButton btnRemover = new JButton("Remover");
@@ -430,7 +432,7 @@ public class VisualizaAulas extends Login{
 				return;
 			}
 		});
-		btnRemover.setBounds(409, 543, 169, 45);
+		btnRemover.setBounds(394, 543, 169, 45);
 		frame.getContentPane().add(btnRemover);
 		
 		lbllocal = new JTextField();
@@ -449,14 +451,222 @@ public class VisualizaAulas extends Login{
 		panel = new JPanel();
 		panel.setBackground(Color.BLACK);
 		panel.setVisible(false);
-		panel.setBounds(227, 94, 700, 190);
+		panel.setBounds(248, 99, 672, 190);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
+		Label label_7 = new Label("Turno:");
+		label_7.setBackground(Color.BLACK);
+		label_7.setBounds(299, 12, 51, 23);
+		panel.add(label_7);
+		label_7.setForeground(Color.WHITE);
+		label_7.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
+		
+		chckbxManh = new JCheckBox("Manh\u00E3");
+		chckbxManh.setBackground(Color.BLACK);
+		chckbxManh.setForeground(Color.WHITE);
+		chckbxManh.setEnabled(false);
+		chckbxManh.setBounds(294, 41, 66, 23);
+		panel.add(chckbxManh);
+		
+		chckbxTarde = new JCheckBox("Tarde");
+		chckbxTarde.setBackground(Color.BLACK);
+		chckbxTarde.setForeground(Color.WHITE);
+		chckbxTarde.setEnabled(false);
+		chckbxTarde.setBounds(417, 41, 58, 23);
+		panel.add(chckbxTarde);
+		
+		chckbxNoite = new JCheckBox("Noite");
+		chckbxNoite.setBackground(Color.BLACK);
+		chckbxNoite.setForeground(new Color(255, 255, 255));
+		chckbxNoite.setEnabled(false);
+		chckbxNoite.setBounds(566, 41, 86, 23);
+		panel.add(chckbxNoite);
+		
+		Label label_6 = new Label("Data:");
+		label_6.setBackground(Color.BLACK);
+		label_6.setBounds(63, 11, 64, 24);
+		panel.add(label_6);
+		label_6.setForeground(Color.WHITE);
+		label_6.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		
+		chSegunda = new JCheckBox("Segunda-Feira");
+		chSegunda.setForeground(Color.WHITE);
+		chSegunda.setBackground(Color.BLACK);
+		chSegunda.setEnabled(false);
+		chSegunda.setBounds(7, 43, 120, 23);
+		panel.add(chSegunda);
+		
+		chTerca = new JCheckBox("Ter\u00E7a-Feira");
+		chTerca.setBackground(Color.BLACK);
+		chTerca.setForeground(Color.WHITE);
+		chTerca.setEnabled(false);
+		chTerca.setBounds(8, 72, 99, 23);
+		panel.add(chTerca);
+		
+		chQuartafeira = new JCheckBox("Quarta-Feira");
+		chQuartafeira.setForeground(Color.WHITE);
+		chQuartafeira.setBackground(Color.BLACK);
+		chQuartafeira.setEnabled(false);
+		chQuartafeira.setBounds(10, 101, 97, 23);
+		panel.add(chQuartafeira);
+		
+		chQuintafeira = new JCheckBox("Quinta-Feira");
+		chQuintafeira.setBackground(Color.BLACK);
+		chQuintafeira.setForeground(Color.WHITE);
+		chQuintafeira.setEnabled(false);
+		chQuintafeira.setBounds(10, 127, 97, 23);
+		panel.add(chQuintafeira);
+		
+		chSextafeira = new JCheckBox("Sexta-Feira");
+		chSextafeira.setForeground(Color.WHITE);
+		chSextafeira.setBackground(Color.BLACK);
+		chSextafeira.setEnabled(false);
+		chSextafeira.setBounds(10, 153, 97, 23);
+		panel.add(chSextafeira);
+		
+		chSbado = new JCheckBox("S\u00E1bado");
+		chSbado.setForeground(Color.WHITE);
+		chSbado.setBackground(new Color(0, 0, 0));
+		chSbado.setEnabled(false);
+		chSbado.setBounds(143, 43, 72, 23);
+		panel.add(chSbado);
+		
+		chDomingo = new JCheckBox("Domingo");
+		chDomingo.setForeground(Color.WHITE);
+		chDomingo.setBackground(Color.BLACK);
+		chDomingo.setEnabled(false);
+		chDomingo.setBounds(143, 72, 97, 23);
+		panel.add(chDomingo);
+		
+		JLabel lblNewLabel = new JLabel("DE:");
+		lblNewLabel.setForeground(Color.WHITE);
+		lblNewLabel.setBackground(Color.BLACK);
+		lblNewLabel.setVisible(false);
+		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblNewLabel.setBounds(249, 72, 40, 23);
+		panel.add(lblNewLabel);
+		
+		JLabel lblAt = new JLabel("AT\u00C9:");
+		lblAt.setBackground(Color.BLACK);
+		lblAt.setForeground(Color.WHITE);
+		lblAt.setVisible(false);
+		lblAt.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblAt.setBounds(246, 97, 40, 23);
+		panel.add(lblAt);
+		
+		JLabel label_8 = new JLabel("DE:");
+		label_8.setBackground(Color.BLACK);
+		label_8.setForeground(Color.WHITE);
+		label_8.setVisible(false);
+		label_8.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		label_8.setBounds(376, 71, 40, 23);
+		panel.add(label_8);
+		
+		JLabel label_9 = new JLabel("AT\u00C9:");
+		label_9.setBackground(Color.BLACK);
+		label_9.setForeground(Color.WHITE);
+		label_9.setVisible(false);
+		label_9.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		label_9.setBounds(373, 99, 40, 23);
+		panel.add(label_9);
+		
+		JLabel lbldenoite = new JLabel("DE:");
+		lbldenoite.setForeground(Color.WHITE);
+		lbldenoite.setBackground(Color.BLACK);
+		lbldenoite.setVisible(false);
+		lbldenoite.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lbldenoite.setBounds(522, 70, 40, 23);
+		panel.add(lbldenoite);
+		
+		JLabel label_11 = new JLabel("AT\u00C9:");
+		label_11.setBackground(Color.BLACK);
+		label_11.setForeground(Color.WHITE);
+		label_11.setVisible(false);
+		label_11.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		label_11.setBounds(510, 99, 40, 23);
+		panel.add(label_11);
+		
+		lbldemanha = new JFormattedTextField(DeAte);
+		lbldemanha.setForeground(Color.WHITE);
+		lbldemanha.setBackground(Color.BLACK);
+		lbldemanha.setVisible(false);
+		lbldemanha.setBounds(294, 73, 72, 20);
+		panel.add(lbldemanha);
+		lbldemanha.setColumns(10);
+		
+		lbldetarde = new JFormattedTextField(DeAte);
+		lbldetarde.setForeground(Color.WHITE);
+		lbldetarde.setBackground(Color.BLACK);
+		lbldetarde.setVisible(false);
+		lbldetarde.setColumns(10);
+		lbldetarde.setBounds(417, 71, 72, 20);
+		panel.add(lbldetarde);
+		
+		lblDeNoite = new JFormattedTextField(DeAte);
+		lblDeNoite.setForeground(Color.WHITE);
+		lblDeNoite.setBackground(Color.BLACK);
+		lblDeNoite.setVisible(false);
+		lblDeNoite.setColumns(10);
+		lblDeNoite.setBounds(560, 71, 72, 20);
+		panel.add(lblDeNoite);
+		
+		lblatemanha = new JFormattedTextField(DeAte);
+		lblatemanha.setBackground(Color.BLACK);
+		lblatemanha.setForeground(Color.WHITE);
+		lblatemanha.setVisible(false);
+		lblatemanha.setColumns(10);
+		lblatemanha.setBounds(294, 102, 72, 20);
+		panel.add(lblatemanha);
+		
+		lblatetarde = new JFormattedTextField(DeAte);
+		lblatetarde.setBackground(Color.BLACK);
+		lblatetarde.setForeground(Color.WHITE);
+		lblatetarde.setVisible(false);
+		lblatetarde.setColumns(10);
+		lblatetarde.setBounds(417, 102, 72, 20);
+		panel.add(lblatetarde);
+		
+		lblatenoite = new JFormattedTextField(DeAte);
+		lblatenoite.setBackground(Color.BLACK);
+		lblatenoite.setForeground(Color.WHITE);
+		lblatenoite.setVisible(false);
+		lblatenoite.setColumns(10);
+		lblatenoite.setBounds(560, 102, 72, 20);
+		panel.add(lblatenoite);
+		
+		label_5 = new Label("Turno:");
+		label_5.setForeground(Color.WHITE);
+		label_5.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
+		label_5.setBackground(Color.BLACK);
+		label_5.setBounds(414, 12, 51, 23);
+		panel.add(label_5);
+		
+		label_10 = new Label("Turno:");
+		label_10.setForeground(Color.WHITE);
+		label_10.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
+		label_10.setBackground(Color.BLACK);
+		label_10.setBounds(566, 12, 51, 23);
+		panel.add(label_10);
+		
+		lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setBounds(91, 234, 46, 14);
+		frame.getContentPane().add(lblNewLabel_7);
+		
+		lblNewLabel_8 = new JLabel("");
+		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\Lupa.png"));
+		lblNewLabel_8.setBounds(769, 336, 151, 141);
+		frame.getContentPane().add(lblNewLabel_8);
+		
+		lblNewLabel_9 = new JLabel("");
+		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\VisualizarAula.png"));
+		lblNewLabel_9.setBounds(351, 13, 476, 46);
+		frame.getContentPane().add(lblNewLabel_9);
+		
 		panel_1 = new JPanel();
+		panel_1.setBounds(226, 96, 422, 190);
+		frame.getContentPane().add(panel_1);
 		panel_1.setBackground(Color.BLACK);
-		panel_1.setBounds(1, 1, 422, 190);
-		panel.add(panel_1);
 		panel_1.setVisible(false);
 		panel_1.setLayout(null);
 		
@@ -479,12 +689,14 @@ public class VisualizaAulas extends Login{
 		panel_1.add(lblAt_1);
 		
 		lbldedata = new JFormattedTextField(DeAte);
+		lbldedata.setForeground(Color.WHITE);
 		lbldedata.setBackground(Color.BLACK);
 		lbldedata.setColumns(10);
 		lbldedata.setBounds(64, 41, 72, 20);
 		panel_1.add(lbldedata);
 		
 		lblatedata = new JFormattedTextField(DeAte);
+		lblatedata.setForeground(Color.WHITE);
 		lblatedata.setBackground(Color.BLACK);
 		lblatedata.setColumns(10);
 		lblatedata.setBounds(64, 77, 72, 20);
@@ -528,159 +740,10 @@ public class VisualizaAulas extends Login{
 		panel_1.add(calendario);
 		
 		lbldata = new JLabel("");
-		lbldata.setBounds(78, 11, 86, 19);
+		lbldata.setBackground(Color.BLACK);
+		lbldata.setForeground(Color.WHITE);
+		lbldata.setBounds(64, 11, 86, 19);
 		panel_1.add(lbldata);
-		
-		Label label_7 = new Label("Turno:");
-		label_7.setBounds(8, 72, 51, 23);
-		panel.add(label_7);
-		label_7.setForeground(Color.BLACK);
-		label_7.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		
-		chckbxManh = new JCheckBox("Manh\u00E3");
-		chckbxManh.setEnabled(false);
-		chckbxManh.setBounds(8, 101, 66, 23);
-		panel.add(chckbxManh);
-		
-		chckbxTarde = new JCheckBox("Tarde");
-		chckbxTarde.setEnabled(false);
-		chckbxTarde.setBounds(8, 127, 58, 23);
-		panel.add(chckbxTarde);
-		
-		chckbxNoite = new JCheckBox("Noite");
-		chckbxNoite.setEnabled(false);
-		chckbxNoite.setBounds(8, 153, 51, 23);
-		panel.add(chckbxNoite);
-		
-		Label label_6 = new Label("Data:");
-		label_6.setBounds(10, 10, 49, 24);
-		panel.add(label_6);
-		label_6.setForeground(Color.BLACK);
-		label_6.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		
-		chSegunda = new JCheckBox("Segunda-Feira");
-		chSegunda.setEnabled(false);
-		chSegunda.setBounds(7, 43, 104, 23);
-		panel.add(chSegunda);
-		
-		chTerca = new JCheckBox("Ter\u00E7a-Feira");
-		chTerca.setEnabled(false);
-		chTerca.setBounds(129, 43, 86, 23);
-		panel.add(chTerca);
-		
-		chQuartafeira = new JCheckBox("Quarta-Feira");
-		chQuartafeira.setEnabled(false);
-		chQuartafeira.setBounds(220, 43, 97, 23);
-		panel.add(chQuartafeira);
-		
-		chQuintafeira = new JCheckBox("Quinta-Feira");
-		chQuintafeira.setEnabled(false);
-		chQuintafeira.setBounds(319, 43, 97, 23);
-		panel.add(chQuintafeira);
-		
-		chSextafeira = new JCheckBox("Sexta-Feira");
-		chSextafeira.setBackground(Color.BLACK);
-		chSextafeira.setEnabled(false);
-		chSextafeira.setBounds(418, 43, 97, 23);
-		panel.add(chSextafeira);
-		
-		chSbado = new JCheckBox("S\u00E1bado");
-		chSbado.setBackground(Color.BLACK);
-		chSbado.setEnabled(false);
-		chSbado.setBounds(512, 43, 72, 23);
-		panel.add(chSbado);
-		
-		chDomingo = new JCheckBox("Domingo");
-		chDomingo.setBackground(Color.BLACK);
-		chDomingo.setEnabled(false);
-		chDomingo.setBounds(597, 43, 97, 23);
-		panel.add(chDomingo);
-		
-		JLabel lblNewLabel = new JLabel("DE:");
-		lblNewLabel.setVisible(false);
-		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		lblNewLabel.setBounds(80, 101, 40, 23);
-		panel.add(lblNewLabel);
-		
-		JLabel lblAt = new JLabel("AT\u00C9:");
-		lblAt.setVisible(false);
-		lblAt.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		lblAt.setBounds(186, 101, 40, 23);
-		panel.add(lblAt);
-		
-		JLabel label_8 = new JLabel("DE:");
-		label_8.setVisible(false);
-		label_8.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_8.setBounds(72, 127, 40, 23);
-		panel.add(label_8);
-		
-		JLabel label_9 = new JLabel("AT\u00C9:");
-		label_9.setVisible(false);
-		label_9.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_9.setBounds(186, 127, 40, 23);
-		panel.add(label_9);
-		
-		JLabel lbldenoite = new JLabel("DE:");
-		lbldenoite.setVisible(false);
-		lbldenoite.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		lbldenoite.setBounds(71, 153, 40, 23);
-		panel.add(lbldenoite);
-		
-		JLabel label_11 = new JLabel("AT\u00C9:");
-		label_11.setVisible(false);
-		label_11.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_11.setBounds(186, 153, 40, 23);
-		panel.add(label_11);
-		
-		lbldemanha = new JFormattedTextField(DeAte);
-		lbldemanha.setVisible(false);
-		lbldemanha.setBounds(107, 102, 72, 20);
-		panel.add(lbldemanha);
-		lbldemanha.setColumns(10);
-		
-		lbldetarde = new JFormattedTextField(DeAte);
-		lbldetarde.setVisible(false);
-		lbldetarde.setColumns(10);
-		lbldetarde.setBounds(107, 128, 72, 20);
-		panel.add(lbldetarde);
-		
-		lblDeNoite = new JFormattedTextField(DeAte);
-		lblDeNoite.setVisible(false);
-		lblDeNoite.setColumns(10);
-		lblDeNoite.setBounds(94, 154, 72, 20);
-		panel.add(lblDeNoite);
-		
-		lblatemanha = new JFormattedTextField(DeAte);
-		lblatemanha.setVisible(false);
-		lblatemanha.setColumns(10);
-		lblatemanha.setBounds(221, 102, 72, 20);
-		panel.add(lblatemanha);
-		
-		lblatetarde = new JFormattedTextField(DeAte);
-		lblatetarde.setVisible(false);
-		lblatetarde.setColumns(10);
-		lblatetarde.setBounds(220, 128, 72, 20);
-		panel.add(lblatetarde);
-		
-		lblatenoite = new JFormattedTextField(DeAte);
-		lblatenoite.setVisible(false);
-		lblatenoite.setColumns(10);
-		lblatenoite.setBounds(221, 154, 72, 20);
-		panel.add(lblatenoite);
-		
-		lblNewLabel_7 = new JLabel("");
-		lblNewLabel_7.setBounds(91, 234, 46, 14);
-		frame.getContentPane().add(lblNewLabel_7);
-		
-		lblNewLabel_8 = new JLabel("");
-		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\Lupa.png"));
-		lblNewLabel_8.setBounds(769, 336, 165, 141);
-		frame.getContentPane().add(lblNewLabel_8);
-		
-		lblNewLabel_9 = new JLabel("");
-		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\VisualizarAula.png"));
-		lblNewLabel_9.setBounds(351, 13, 476, 46);
-		frame.getContentPane().add(lblNewLabel_9);
 		
 		
 		NomeProf(idAula);
