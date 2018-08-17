@@ -150,51 +150,51 @@ public class VisualizaAulas extends Login{
 		Label label = new Label("Mat\u00E9ria:");
 		label.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
 		label.setForeground(Color.WHITE);
-		label.setBounds(8, 336, 58, 22);
+		label.setBounds(9, 116, 58, 22);
 		frame.getContentPane().add(label);
 		
 		Label label_1 = new Label("Professor:");
 		label_1.setForeground(Color.WHITE);
 		label_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_1.setBounds(9, 360, 66, 22);
+		label_1.setBounds(9, 144, 66, 22);
 		frame.getContentPane().add(label_1);
 		
 		Label label_2 = new Label("Conte\u00FAdo:");
 		label_2.setForeground(Color.WHITE);
 		label_2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_2.setBounds(8, 382, 66, 22);
+		label_2.setBounds(9, 172, 66, 22);
 		frame.getContentPane().add(label_2);
 		
 		Label label_3 = new Label("Local:");
 		label_3.setForeground(Color.WHITE);
 		label_3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_3.setBounds(7, 409, 49, 22);
+		label_3.setBounds(9, 200, 49, 22);
 		frame.getContentPane().add(label_3);
 		
 		Label label_4 = new Label("Vagas:");
 		label_4.setForeground(Color.WHITE);
 		label_4.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_4.setBounds(4, 429, 49, 22);
+		label_4.setBounds(9, 228, 49, 22);
 		frame.getContentPane().add(label_4);
 		
 		lblmateria = new JLabel("");
 		lblmateria.setForeground(Color.WHITE);
-		lblmateria.setBounds(67, 338, 140, 22);
+		lblmateria.setBounds(84, 116, 140, 22);
 		frame.getContentPane().add(lblmateria);
 		
 		lblprofessor = new JLabel("");
 		lblprofessor.setForeground(Color.WHITE);
-		lblprofessor.setBounds(75, 360, 130, 22);
+		lblprofessor.setBounds(94, 144, 130, 22);
 		frame.getContentPane().add(lblprofessor);
 		
 		lblconteudo = new JLabel("");
 		lblconteudo.setForeground(Color.WHITE);
-		lblconteudo.setBounds(71, 381, 153, 22);
+		lblconteudo.setBounds(84, 172, 140, 22);
 		frame.getContentPane().add(lblconteudo);
 		
 		lblvagas = new JLabel("");
 		lblvagas.setForeground(Color.WHITE);
-		lblvagas.setBounds(49, 432, 153, 19);
+		lblvagas.setBounds(71, 231, 153, 19);
 		frame.getContentPane().add(lblvagas);
 		
 		JButton btnNewButton = new JButton("Salvar");
@@ -435,7 +435,7 @@ public class VisualizaAulas extends Login{
 		
 		lbllocal = new JTextField();
 		lbllocal.setForeground(Color.WHITE);
-		lbllocal.setBounds(51, 412, 165, 20);
+		lbllocal.setBounds(71, 200, 153, 20);
 		frame.getContentPane().add(lbllocal);
 		lbllocal.setColumns(10);
 		
@@ -447,38 +447,45 @@ public class VisualizaAulas extends Login{
 		}
 		
 		panel = new JPanel();
+		panel.setBackground(Color.BLACK);
 		panel.setVisible(false);
 		panel.setBounds(227, 94, 700, 190);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
 		panel_1 = new JPanel();
+		panel_1.setBackground(Color.BLACK);
 		panel_1.setBounds(1, 1, 422, 190);
 		panel.add(panel_1);
 		panel_1.setVisible(false);
 		panel_1.setLayout(null);
 		
 		JLabel lblNewLabel_1 = new JLabel("Data:");
+		lblNewLabel_1.setForeground(Color.WHITE);
 		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		lblNewLabel_1.setBounds(10, 11, 56, 19);
 		panel_1.add(lblNewLabel_1);
 		
 		JLabel lblDe = new JLabel("DE:");
+		lblDe.setForeground(Color.WHITE);
 		lblDe.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblDe.setBounds(10, 39, 56, 19);
+		lblDe.setBounds(10, 41, 56, 19);
 		panel_1.add(lblDe);
 		
 		JLabel lblAt_1 = new JLabel("AT\u00C9:");
+		lblAt_1.setForeground(Color.WHITE);
 		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		lblAt_1.setBounds(10, 76, 56, 19);
 		panel_1.add(lblAt_1);
 		
 		lbldedata = new JFormattedTextField(DeAte);
+		lbldedata.setBackground(Color.BLACK);
 		lbldedata.setColumns(10);
 		lbldedata.setBounds(64, 41, 72, 20);
 		panel_1.add(lbldedata);
 		
 		lblatedata = new JFormattedTextField(DeAte);
+		lblatedata.setBackground(Color.BLACK);
 		lblatedata.setColumns(10);
 		lblatedata.setBounds(64, 77, 72, 20);
 		panel_1.add(lblatedata);
@@ -572,16 +579,19 @@ public class VisualizaAulas extends Login{
 		panel.add(chQuintafeira);
 		
 		chSextafeira = new JCheckBox("Sexta-Feira");
+		chSextafeira.setBackground(Color.BLACK);
 		chSextafeira.setEnabled(false);
 		chSextafeira.setBounds(418, 43, 97, 23);
 		panel.add(chSextafeira);
 		
 		chSbado = new JCheckBox("S\u00E1bado");
+		chSbado.setBackground(Color.BLACK);
 		chSbado.setEnabled(false);
 		chSbado.setBounds(512, 43, 72, 23);
 		panel.add(chSbado);
 		
 		chDomingo = new JCheckBox("Domingo");
+		chDomingo.setBackground(Color.BLACK);
 		chDomingo.setEnabled(false);
 		chDomingo.setBounds(597, 43, 97, 23);
 		panel.add(chDomingo);
