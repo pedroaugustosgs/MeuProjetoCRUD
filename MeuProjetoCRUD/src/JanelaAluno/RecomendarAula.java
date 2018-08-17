@@ -332,11 +332,11 @@ public class RecomendarAula extends Login {
 		frame.getContentPane().add(rdbtnPeridico);
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnVoltar.setBounds(-12, 564, 156, 37);
+		btnVoltar.setBounds(9, 564, 156, 37);
 		frame.getContentPane().add(btnVoltar);
 		btnCriarAula.setForeground(Color.BLACK);
 		btnCriarAula.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnCriarAula.setBounds(803, 564, 156, 37);
+		btnCriarAula.setBounds(780, 564, 156, 37);
 		frame.getContentPane().add(btnCriarAula);
 		
 		tfLocal = new JTextField();
