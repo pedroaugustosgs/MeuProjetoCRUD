@@ -437,7 +437,7 @@ public class NovaAula extends Login {
 		frame.getContentPane().add(lblVagas);
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
-		btnVoltar.setBounds(0, 513, 156, 37);
+		btnVoltar.setBounds(10, 513, 156, 37);
 		frame.getContentPane().add(btnVoltar);
 		btnCriarAula.setForeground(Color.BLACK);
 		btnCriarAula.setFont(new Font("Arial Narrow", Font.BOLD, 20));
