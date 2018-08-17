@@ -56,12 +56,9 @@ public class LoginInstitu extends Principal2{
 	private JLabel lblNewLabel_3;
 	private JLabel lblNewLabel_5;
 	private JLabel lblNewLabel_4;
-	private JLabel lblNewLabel_6;
-	private JLabel lblNewLabel_7;
-	private JLabel lblNewLabel_8;
-	private JLabel lblNewLabel_9;
 	private JLabel lblNewLabel_10;
 	private JLabel lblNewLabel_11;
+	private JLabel lblNewLabel_6;
 	
 	
 	/**
@@ -105,9 +102,9 @@ public class LoginInstitu extends Principal2{
 			}
 		});
 		
-		lblNewLabel = new JLabel("New label");
+		lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\Approfe.png"));
-		lblNewLabel.setBounds(86, 321, 509, 96);
+		lblNewLabel.setBounds(84, 301, 509, 126);
 		frame.getContentPane().add(lblNewLabel);
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setFont(new Font("Arial Narrow", Font.PLAIN, 20));
@@ -131,7 +128,7 @@ public class LoginInstitu extends Principal2{
 			}
 		});
 		tfcnpj.setColumns(10);
-		tfcnpj.setBounds(225, 161, 270, 30);
+		tfcnpj.setBounds(267, 198, 222, 30);
 		frame.getContentPane().add(tfcnpj);
 		
 		pfSenha = new JPasswordField();
@@ -143,7 +140,7 @@ public class LoginInstitu extends Principal2{
 				}
 			}
 		});
-		pfSenha.setBounds(275, 523, 212, 30);
+		pfSenha.setBounds(258, 544, 212, 30);
 		frame.getContentPane().add(pfSenha);
 		
 		btnEntrar = new JButton("ENTRAR");
@@ -195,40 +192,20 @@ public class LoginInstitu extends Principal2{
 		lblNewLabel_1.setBounds(-14, 352, 373, 30);
 		frame.getContentPane().add(lblNewLabel_1);
 		
-		lblNewLabel_5 = new JLabel("New label");
+		lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\senha.jpg"));
-		lblNewLabel_5.setBounds(87, 478, 208, 121);
+		lblNewLabel_5.setBounds(82, 492, 208, 121);
 		frame.getContentPane().add(lblNewLabel_5);
 		
-		lblNewLabel_3 = new JLabel("New label");
+		lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\CCCC.jpg"));
-		lblNewLabel_3.setBounds(87, 98, 259, 156);
+		lblNewLabel_3.setBounds(116, 158, 259, 106);
 		frame.getContentPane().add(lblNewLabel_3);
 		
 		lblNewLabel_4 = new JLabel("New label");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\4e8ce731c4f5940854198b75c6166d1f.png"));
 		lblNewLabel_4.setBounds(0, 362, 612, 14);
 		frame.getContentPane().add(lblNewLabel_4);
-		
-		lblNewLabel_6 = new JLabel("New label");
-		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\1.png"));
-		lblNewLabel_6.setBounds(-57, -171, 642, 619);
-		frame.getContentPane().add(lblNewLabel_6);
-		
-		lblNewLabel_7 = new JLabel("New label");
-		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\1.png"));
-		lblNewLabel_7.setBounds(180, -157, 526, 666);
-		frame.getContentPane().add(lblNewLabel_7);
-		
-		lblNewLabel_8 = new JLabel("New label");
-		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\1.png"));
-		lblNewLabel_8.setBounds(-57, 326, 445, 397);
-		frame.getContentPane().add(lblNewLabel_8);
-		
-		lblNewLabel_9 = new JLabel("New label");
-		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\1.png"));
-		lblNewLabel_9.setBounds(359, 182, 320, 486);
-		frame.getContentPane().add(lblNewLabel_9);
 		
 		lblNewLabel_10 = new JLabel("New label");
 		lblNewLabel_10.setIcon(new ImageIcon("D:\\1.png"));
@@ -239,6 +216,11 @@ public class LoginInstitu extends Principal2{
 		lblNewLabel_11.setIcon(new ImageIcon("D:\\1.png"));
 		lblNewLabel_11.setBounds(420, 280, 259, 245);
 		frame.getContentPane().add(lblNewLabel_11);
+		
+		lblNewLabel_6 = new JLabel("New label");
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\fundo.png"));
+		lblNewLabel_6.setBounds(-61, -1, 806, 704);
+		frame.getContentPane().add(lblNewLabel_6);
 		ImageIcon logo = new ImageIcon("C:\\\\Users\\\\SENAI\\\\Desktop\\\\LoginSenhaDB\\\\fiemg3.png");
 		logo.setImage(logo.getImage().getScaledInstance(414, 89, 100));
 		//fim jlabel lblImagem
