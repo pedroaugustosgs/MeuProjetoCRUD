@@ -184,7 +184,7 @@ public class Login extends Principal2{
 		
 		lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		lblNewLabel.setBounds(39, 35, 532, 135);
+		lblNewLabel.setBounds(108, 38, 382, 135);
 		frame.getContentPane().add(lblNewLabel);
 		
 		lblNewLabel_1 = new JLabel("");
