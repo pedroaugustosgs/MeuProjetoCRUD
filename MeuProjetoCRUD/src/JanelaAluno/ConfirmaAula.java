@@ -312,12 +312,14 @@ public class ConfirmaAula extends Login{
 		panel.add(label_11);
 		
 		lbldemanha = new JLabel("");
+		lbldemanha.setBackground(Color.BLACK);
 		lbldemanha.setForeground(Color.WHITE);
 		lbldemanha.setVisible(false);
 		lbldemanha.setBounds(296, 66, 66, 23);
 		panel.add(lbldemanha);
 		
 		lbldetarde = new JLabel("");
+		lbldetarde.setBackground(Color.BLACK);
 		lbldetarde.setForeground(Color.WHITE);
 		lbldetarde.setVisible(false);
 		lbldetarde.setBounds(482, 70, 66, 20);
@@ -330,12 +332,14 @@ public class ConfirmaAula extends Login{
 		panel.add(lblDeNoite);
 		
 		lblatemanha = new JLabel("");
+		lblatemanha.setBackground(Color.BLACK);
 		lblatemanha.setForeground(Color.WHITE);
 		lblatemanha.setVisible(false);
 		lblatemanha.setBounds(296, 92, 72, 21);
 		panel.add(lblatemanha);
 		
 		lblatetarde = new JLabel("");
+		lblatetarde.setBackground(Color.BLACK);
 		lblatetarde.setForeground(Color.WHITE);
 		lblatetarde.setVisible(false);
 		lblatetarde.setBounds(484, 90, 73, 21);
