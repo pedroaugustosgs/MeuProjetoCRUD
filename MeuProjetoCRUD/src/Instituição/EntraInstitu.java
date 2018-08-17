@@ -85,7 +85,7 @@ public class EntraInstitu extends Principal2{
 		lblNewLabel_15.setBounds(343, 1, 125, 89);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_15);
 		btnCadastrar.setForeground(Color.BLACK);
-		btnCadastrar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnCadastrar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnCadastrar.setBounds(542, 288, 201, 33);
 		frmEntraInstitu.getContentPane().add(btnCadastrar);
 		
@@ -118,12 +118,12 @@ public class EntraInstitu extends Principal2{
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_4.setBounds(429, 515, 362, 30);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_4);
-		btnLogar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnLogar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnLogar.setForeground(Color.BLACK);
 		btnLogar.setBounds(57, 288, 201, 33);
 		frmEntraInstitu.getContentPane().add(btnLogar);
 		btnVoltar.setForeground(Color.BLACK);
-		btnVoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnVoltar.setBounds(590, 569, 201, 33);
 		frmEntraInstitu.getContentPane().add(btnVoltar);
 		

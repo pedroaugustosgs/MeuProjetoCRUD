@@ -82,6 +82,7 @@ public class AlteraAulas extends Login{
 	private JLabel lblNewLabel_7;
 	private JLabel lblNewLabel_8;
 	private JLabel lblNewLabel_9;
+	private JLabel lblNewLabel_10;
 	
 	/**
 	 * Launch the application.
@@ -667,6 +668,11 @@ public class AlteraAulas extends Login{
 		lblNewLabel_9 = new JLabel("");
 		lblNewLabel_9.setBounds(566, 45, 46, 14);
 		frame.getContentPane().add(lblNewLabel_9);
+		
+		lblNewLabel_10 = new JLabel("");
+		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\AtualizAulas.png"));
+		lblNewLabel_10.setBounds(302, 11, 437, 71);
+		frame.getContentPane().add(lblNewLabel_10);
 		
 		preencherTela();
 		

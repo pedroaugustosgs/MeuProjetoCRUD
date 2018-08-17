@@ -97,7 +97,7 @@ public class Login extends Principal2{
 			}
 		});
 		btnVoltar.setForeground(Color.BLACK);
-		btnVoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnVoltar.setBackground(Color.WHITE);
 		btnVoltar.setBounds(73, 313, 201, 40);
 		frame.getContentPane().add(btnVoltar);
@@ -178,13 +178,13 @@ public class Login extends Principal2{
 			}
 			}
 		});
-		btnEntrar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnEntrar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnEntrar.setBounds(308, 313, 201, 40);
 		frame.getContentPane().add(btnEntrar);
 		
 		lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		lblNewLabel.setBounds(108, 38, 382, 135);
+		lblNewLabel.setBounds(39, 33, 510, 135);
 		frame.getContentPane().add(lblNewLabel);
 		
 		lblNewLabel_1 = new JLabel("");

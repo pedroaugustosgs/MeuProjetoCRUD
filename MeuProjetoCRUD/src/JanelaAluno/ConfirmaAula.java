@@ -435,7 +435,7 @@ public class ConfirmaAula extends Login{
 		frame.getContentPane().add(lblvagas);
 		
 		JButton btnNewButton = new JButton("CONFIRMAR");
-		btnNewButton.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnNewButton.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				int vaga= 0;

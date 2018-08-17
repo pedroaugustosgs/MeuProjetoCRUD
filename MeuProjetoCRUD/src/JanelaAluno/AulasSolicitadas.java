@@ -145,7 +145,7 @@ public class AulasSolicitadas extends Login{
 		tfProcurar.setColumns(10);
 		
 		btnProcurar = new JButton("Procurar");
-		btnProcurar.setFont(new Font("Arial Narrow", Font.PLAIN, 25));
+		btnProcurar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnProcurar.setForeground(Color.BLACK);
 		btnProcurar.setBackground(SystemColor.textHighlightText);
 		btnProcurar.addActionListener(new ActionListener() {

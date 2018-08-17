@@ -89,7 +89,7 @@ public class Splash implements Runnable{
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		lblNewLabel.setBounds(101, 81, 391, 129);
+		lblNewLabel.setBounds(56, 79, 463, 129);
 		frame.getContentPane().add(lblNewLabel);
 		
 		JLabel lblNewLabel_5 = new JLabel("");
