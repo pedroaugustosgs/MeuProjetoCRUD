@@ -401,6 +401,7 @@ public class VisualizaAulaREC extends Login{
 						stmt.setString(2, idAula);
 						stmt.execute();
 						stmt.close();
+						
 						//******************pra baixo
 						
 						ResultSet dd=null;
