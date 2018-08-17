@@ -244,18 +244,18 @@ public class AulasSolicitadas extends Login{
 	
 	//responsavel por definir os parametros da tabela
 	public void criaTabela(ResultSet dados) {
-	String[] colunas = {"ID","Solicitante","Professor","Conteúdo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado","Domingo","Manhã","Tarde","Noite","Local","De Manhã",
-			"Até Manhã","De Tarde","Até tarde","De Noite","Até Noite","Dia Uma Vez","De Uma Vez","Até Uma Vez"};
+	String[] colunas = {"MATÉRIA","SOLICITANTE","CONTEÚDO","LOCAL"};
 		ArrayList linhas = new ArrayList<>();
 		
 		try {
 			while (dados.next()) {
 				linhas.add(new Object[] {
-						dados.getString("idSAula"),
-						NomeProf(Integer.parseInt(dados.getString("Solicitante"))),
+						//dados.getString("idSAula"),
 						Materia(dados.getString("materia")),
+						NomeProf(Integer.parseInt(dados.getString("Solicitante"))),
 						dados.getString("conteudo"),
-						dados.getInt("segunda")==0?Boolean.FALSE:Boolean.TRUE,
+						dados.getString("local"),
+						/*dados.getInt("segunda")==0?Boolean.FALSE:Boolean.TRUE,
 						dados.getInt("terca")==0?Boolean.FALSE:Boolean.TRUE,
 						dados.getInt("quarta")==0?Boolean.FALSE:Boolean.TRUE,
 						dados.getInt("quinta")==0?Boolean.FALSE:Boolean.TRUE,
@@ -265,7 +265,6 @@ public class AulasSolicitadas extends Login{
 						dados.getInt("manha")==0?Boolean.FALSE:Boolean.TRUE,
 						dados.getInt("tarde")==0?Boolean.FALSE:Boolean.TRUE,
 						dados.getInt("noite")==0?Boolean.FALSE:Boolean.TRUE,
-						dados.getString("local"),
 						dados.getString("DeManha"),
 						dados.getString("AteManha"),
 						dados.getString("DeTarde"),
@@ -274,7 +273,7 @@ public class AulasSolicitadas extends Login{
 						dados.getString("AteNoite"),
 						dados.getString("DiaUmaVez"),
 						dados.getString("DeUmaVez"),
-						dados.getString("AteUmaVez"),
+						dados.getString("AteUmaVez"),*/
 						});
 			}
 		} catch (SQLException e) {
@@ -291,25 +290,6 @@ public class AulasSolicitadas extends Login{
 		tabela.getColumnModel().getColumn(2).setPreferredWidth(100);
 		tabela.getColumnModel().getColumn(3).setPreferredWidth(100);
 		tabela.getColumnModel().getColumn(3).setResizable(false);
-		tabela.getColumnModel().getColumn(4).setPreferredWidth(100);
-		tabela.getColumnModel().getColumn(4).setResizable(false);
-		tabela.getColumnModel().getColumn(5).setPreferredWidth(100);
-		tabela.getColumnModel().getColumn(5).setResizable(false);
-		tabela.getColumnModel().getColumn(6).setPreferredWidth(100);
-		tabela.getColumnModel().getColumn(6).setResizable(false);
-		tabela.getColumnModel().getColumn(7).setPreferredWidth(100);
-		tabela.getColumnModel().getColumn(7).setResizable(false);
-		tabela.getColumnModel().getColumn(8).setPreferredWidth(100);
-		tabela.getColumnModel().getColumn(8).setResizable(false);
-		tabela.getColumnModel().getColumn(9).setPreferredWidth(100);
-		tabela.getColumnModel().getColumn(9).setResizable(false);
-		tabela.getColumnModel().getColumn(10).setPreferredWidth(100);
-		tabela.getColumnModel().getColumn(10).setResizable(false);
-		tabela.getColumnModel().getColumn(11).setPreferredWidth(100);
-		tabela.getColumnModel().getColumn(11).setResizable(false);
-		tabela.getColumnModel().getColumn(12).setPreferredWidth(100);
-		tabela.getColumnModel().getColumn(12).setResizable(false);
-		tabela.getColumnModel().getColumn(13).setPreferredWidth(100);
 		
 		
 		//*****************************************************************************   tabela nova = discpplina , vagas , inscritos na tabela aulas, professor e aluno inscrito
@@ -324,8 +304,6 @@ public class AulasSolicitadas extends Login{
 		tabela.getColumnModel().getColumn(0).setCellRenderer(centralizado);
 		tabela.getColumnModel().getColumn(1).setCellRenderer(centralizado);
 		tabela.getColumnModel().getColumn(3).setCellRenderer(centralizado);
-		tabela.getColumnModel().getColumn(14).setCellRenderer(centralizado);
-		tabela.getColumnModel().getColumn(15).setCellRenderer(centralizado);
 
 
 		
