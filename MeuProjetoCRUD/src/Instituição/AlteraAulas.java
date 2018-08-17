@@ -17,6 +17,7 @@ import com.toedter.calendar.JCalendar;
 
 import Banco.Conexao;
 import CRUD.CRUDAlunos;
+import CRUD.CRUDEmail;
 import JanelaAluno.Login;
 import JanelaAluno.ModeloDaTabela;
 
@@ -359,9 +360,9 @@ public class AlteraAulas extends Login{
 			public void actionPerformed(ActionEvent arg0) {
 				String sql="DELETE FROM aulas WHERE idAula=?";
 				
-				int res = JOptionPane.showConfirmDialog(null, "Você deseja mesmo remover esta aula?");
 				
-				if(res==0) {
+				String motivo = JOptionPane.showInputDialog("Insira o motivo da remoção da aula!");
+				
 					try {
 						PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
 						stmt.setString(1, idAula);
@@ -373,7 +374,46 @@ public class AlteraAulas extends Login{
 					} catch (SQLException e) {
 						e.printStackTrace();
 					}
-				}
+					
+					ResultSet dados2=null;
+					ResultSet dados =null;
+					String sql1 ="SELECT * FROM alunos INNNER J0IN aulas ON alunos.idaluno = aulas.professor WHERE idaula=?";
+					try {
+						PreparedStatement stmt = Conexao.conexao.prepareStatement(sql1);
+						stmt.setString(1, idAula);
+						dados = stmt.executeQuery();
+						stmt.execute();
+						stmt.close();
+						
+						
+						String sql2 = "SELECT * FROM aulas WHERE idAula=?";
+						PreparedStatement s = Conexao.conexao.prepareStatement(sql2);
+						s.setString(1, idAula);
+						dados2 = s.executeQuery();
+						s.execute();
+						s.close();
+						
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					String msg=null;
+					try {
+						 msg= "Sua aula sobre "+dados2.getString("conteudo")+" foi removida por sua escola! "
+								+ "Motivos:"+motivo;
+						 CRUDEmail d= new CRUDEmail();
+							d.EmailVisuAulas(dados.getString("email"), msg);
+							
+							System.out.println(msg);
+							System.out.println(dados.getString("email"));
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+					
+				
+				
 				return;
 			}
 		});
@@ -891,19 +931,25 @@ public class AlteraAulas extends Login{
 				lblDeNoite.setText(dados.getString("deNoite"));
 				lblatenoite.setText(dados.getString("ateNoite"));
 				
-				if(panels==0) {
-					lbldata.setText(dados.getString("DiaUmaVez"));
-					Date data = new Date();
-					String dataS= dados.getString("DiaUmaVez");
-					SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
-					try {
-						data = s.parse(dataS);
-					} catch (ParseException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					
-					calendario.setDate(data);
+				if(Integer.parseInt(dados.getString("periodico"))==0) {
+						try {
+							lbldata.setText(dados.getString("DiaUmaVez"));
+							Date data = new Date();
+							String dataS= dados.getString("DiaUmaVez");
+							SimpleDateFormat s = new SimpleDateFormat("yyyy-MM-dd");
+							try {
+								data = s.parse(dataS);
+							} catch (ParseException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+								
+							calendario.setDate(data);
+						} catch (Exception e1) {
+							lbldata.setText("0000-00-00");
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
 				}
 				lbldedata.setText(dados.getString("DeUmaVez"));
 				lblatedata.setText(dados.getString("AteUmaVez"));
