@@ -113,7 +113,7 @@ public class Principal2 {
 			}
 		});
 		btnSair.setFont(new Font("DialogInput", Font.BOLD, 25));
-		btnSair.setBounds(710, 388, 140, 39);
+		btnSair.setBounds(710, 390, 140, 39);
 		frmMeuProjetoCrud.getContentPane().add(btnSair);
 		
 		JLabel lblNewLabel_4 = new JLabel("");

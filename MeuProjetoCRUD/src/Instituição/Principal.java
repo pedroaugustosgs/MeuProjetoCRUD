@@ -99,7 +99,7 @@ public class Principal {
 		btnAulas.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnAulas.setBounds(548, 197, 211, 47);
 		frame.getContentPane().add(btnAulas);
-		btnNewButton_1.setBounds(364, 443, 211, 40);
+		btnNewButton_1.setBounds(331, 443, 211, 40);
 		frame.getContentPane().add(btnNewButton_1);
 		
 		JButton btnVisualizarAlunos = new JButton("Visualizar Usu\u00E1rios");
