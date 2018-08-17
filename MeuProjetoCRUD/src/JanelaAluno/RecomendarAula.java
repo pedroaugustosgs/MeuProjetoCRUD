@@ -331,11 +331,11 @@ public class RecomendarAula extends Login {
 		rdbtnPeridico.setBounds(8, 180, 109, 23);
 		frame.getContentPane().add(rdbtnPeridico);
 		btnVoltar.setForeground(Color.BLACK);
-		btnVoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnVoltar.setBounds(-12, 564, 156, 37);
 		frame.getContentPane().add(btnVoltar);
 		btnCriarAula.setForeground(Color.BLACK);
-		btnCriarAula.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnCriarAula.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnCriarAula.setBounds(803, 564, 156, 37);
 		frame.getContentPane().add(btnCriarAula);
 		

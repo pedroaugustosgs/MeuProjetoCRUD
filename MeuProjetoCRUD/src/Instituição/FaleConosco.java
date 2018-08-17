@@ -58,7 +58,7 @@ public class FaleConosco {
 		
 		JButton btnNewButton = new JButton("Enviar");
 		btnNewButton.setForeground(Color.BLACK);
-		btnNewButton.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnNewButton.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNewButton.setBounds(404, 549, 136, 33);
 		frame.getContentPane().add(btnNewButton);
 		
@@ -126,7 +126,7 @@ public class FaleConosco {
 		
 		JLabel lblNewLabel_8 = new JLabel("");
 		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\fale conosco.png"));
-		lblNewLabel_8.setBounds(10, 156, 363, 178);
+		lblNewLabel_8.setBounds(10, 233, 363, 178);
 		frame.getContentPane().add(lblNewLabel_8);
 		
 		JLabel lblNewLabel_11 = new JLabel("");

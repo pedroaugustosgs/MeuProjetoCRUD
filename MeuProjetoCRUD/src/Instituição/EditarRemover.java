@@ -135,7 +135,7 @@ public class EditarRemover {
 		JButton btnEditar = new JButton("Editar");
 		btnEditar.setForeground(Color.BLACK);
 		btnEditar.setBackground(SystemColor.control);
-		btnEditar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnEditar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnEditar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
@@ -184,7 +184,7 @@ public class EditarRemover {
 		});
 		
 		
-		btnRemover.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnRemover.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnRemover.setBounds(407, 651, 118, 33);
 		frame.getContentPane().add(btnRemover);
 		
@@ -198,7 +198,7 @@ public class EditarRemover {
 				frame.dispose();
 			}
 		});
-		btnCancelar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnCancelar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnCancelar.setBounds(715, 651, 131, 33);
 		frame.getContentPane().add(btnCancelar);
 		

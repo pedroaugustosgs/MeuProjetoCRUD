@@ -60,6 +60,7 @@ public class EntraAluno extends Principal2{
 		frmEntraInstitu.setLocationRelativeTo(null);
 		
 		JButton btnVoltar = new JButton("VOLTAR");
+		btnVoltar.setBackground(Color.LIGHT_GRAY);
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmEntraInstitu.setVisible(false);
@@ -79,7 +80,7 @@ public class EntraAluno extends Principal2{
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Bot\u00E3o png.png"));
 		lblNewLabel_5.setBounds(107, 260, 185, 190);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_5);
-		btnLogar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnLogar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnLogar.setForeground(Color.BLACK);
 		btnLogar.setBounds(107, 331, 201, 33);
 		frmEntraInstitu.getContentPane().add(btnLogar);
@@ -109,7 +110,7 @@ public class EntraAluno extends Principal2{
 		lblNewLabel_7.setBounds(-39, 530, 347, 47);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_7);
 		btnVoltar.setForeground(Color.BLACK);
-		btnVoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnVoltar.setBounds(296, 616, 201, 33);
 		frmEntraInstitu.getContentPane().add(btnVoltar);
 		
@@ -122,7 +123,7 @@ public class EntraAluno extends Principal2{
 			}
 		});
 		btnCadastrar.setForeground(Color.BLACK);
-		btnCadastrar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnCadastrar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnCadastrar.setBounds(511, 331, 201, 33);
 		frmEntraInstitu.getContentPane().add(btnCadastrar);
 		

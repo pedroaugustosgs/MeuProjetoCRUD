@@ -274,13 +274,7 @@ public class TerAula extends Login{
 				java.util.Date data = new java.util.Date();
 				java.util.Date hoje = new java.util.Date();
 				
-				try {
-					data = dados.getDate("DiaUmaVez");
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					continuar=true;
-					//e.printStackTrace();
-				}
+				data = dados.getDate("DiaUmaVez");
 				
 				if(Integer.parseInt(dados.getString("vagas"))<=0 ) {
 					continue;
@@ -292,7 +286,7 @@ public class TerAula extends Login{
 					continue;
 				}
 				
-				if(data.before(hoje) && continuar==false) {
+				if(data.before(hoje) && Integer.parseInt(dados.getString("periodico"))==0) {
 					continue;
 				}
 				
