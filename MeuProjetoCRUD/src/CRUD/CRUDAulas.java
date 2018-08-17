@@ -11,11 +11,11 @@ import Banco.Conexao;
 public class CRUDAulas {
 	
 	public boolean novaAula(String m,String c,int s,int t,int q,int Qui,int sex,int sab,int dom, int cedo,int tar,int noi,String local,int prof,int vagas,
-			String DeManha,String ateManha, String DeTarde,String AteTarde, String DeNoite, String AteNoite,Date date, String DeUmaVez, String AteUmaVez) {
+			String DeManha,String ateManha, String DeTarde,String AteTarde, String DeNoite, String AteNoite,Date date, String DeUmaVez, String AteUmaVez,int peri) {
 		
 		String sql="INSERT INTO aulas (materia,conteudo,segunda,terca,quarta,quinta,sexta,sabado,domingo,cedo,tarde,noite,local,professor,vagas,DeManha,AteManha,"
-				+ "DeTarde,AteTarde,DeNoite,AteNoite,DiaUmaVez,DeUmaVez,AteUmaVez)"
-				+" VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+				+ "DeTarde,AteTarde,DeNoite,AteNoite,DiaUmaVez,DeUmaVez,AteUmaVez,periodico)"
+				+" VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		try {
 			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
 			stmt.setString(1, m);
@@ -51,6 +51,7 @@ public class CRUDAulas {
 			
 			stmt.setString(23, DeUmaVez);
 			stmt.setString(24, AteUmaVez);
+			stmt.setInt(25, peri);
 			stmt.execute();
 			stmt.close();
 			return true;
