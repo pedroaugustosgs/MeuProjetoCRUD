@@ -174,13 +174,13 @@ public class PlaAluno {
 		frmMeuCrud.getContentPane().add(lblNewLabel_6);
 		
 		scrollPaneREC = new JScrollPane(tabelaREC);
-		scrollPaneREC.setBounds(724, 167, 350, 331);
+		scrollPaneREC.setBounds(730, 181, 350, 331);
 		frmMeuCrud.getContentPane().add(scrollPaneREC);
 		
 		JLabel lblAulasQueVai_1 = new JLabel("AULAS COMO ALUNO");
 		lblAulasQueVai_1.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		lblAulasQueVai_1.setForeground(Color.WHITE);
-		lblAulasQueVai_1.setBounds(792, 123, 256, 33);
+		lblAulasQueVai_1.setBounds(798, 155, 256, 33);
 		frmMeuCrud.getContentPane().add(lblAulasQueVai_1);
 		
 		tabela = new JTable();
@@ -210,13 +210,13 @@ public class PlaAluno {
 		});
 		
 		scrollPane = new JScrollPane(tabela);
-		scrollPane.setBounds(10, 167, 321, 331);
+		scrollPane.setBounds(4, 181, 321, 331);
 		frmMeuCrud.getContentPane().add(scrollPane);
 		
 		JLabel lblAulasQueVai = new JLabel("AULAS COMO PROFESSOR");
 		lblAulasQueVai.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		lblAulasQueVai.setForeground(Color.WHITE);
-		lblAulasQueVai.setBounds(51, 123, 303, 33);
+		lblAulasQueVai.setBounds(27, 155, 303, 33);
 		frmMeuCrud.getContentPane().add(lblAulasQueVai);
 		btnNovaAula.setForeground(Color.BLACK);
 		btnNovaAula.setFont(new Font("Arial Narrow", Font.BOLD, 20));

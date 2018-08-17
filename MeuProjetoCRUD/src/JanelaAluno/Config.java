@@ -213,7 +213,7 @@ public class Config extends Login {
 		tfIdade.setColumns(10);
 		btnNewButton.setForeground(Color.BLACK);
 		btnNewButton.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnNewButton.setBounds(231, 484, 250, 26);
+		btnNewButton.setBounds(249, 483, 250, 26);
 		frmMeuCrud.getContentPane().add(btnNewButton);
 		
 		try {

@@ -438,12 +438,30 @@ public class ConfirmaAula extends Login{
 		btnNewButton.setFont(new Font("Arial Narrow", Font.BOLD, 20));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				int vaga= 0;
+				ResultSet dado=null;
+				String sql1 = "SELECT * FROM aulas WHERE idAula =?";
+				try {
+					PreparedStatement stmt1 = Conexao.conexao.prepareStatement(sql1);
+					stmt1.setString(1, idAula);
+					dado = stmt1.executeQuery();
+					stmt1.execute();
+					stmt1.close();
+					
+					if(dado.next()) {
+						vaga = Integer.parseInt(dado.getString("vagas"))-1;
+					}
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
 				boolean res = false;
 				String sql ="INSERT INTO alunosconfirmados (idAluno ,idConfirmar) VALUES (?,?)";
 				try {
 					PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
 					stmt.setString(1, PlaAluno.idaluno);
-					stmt.setString(2, idAula);
+					stmt.setString(2, idAula);					
 					stmt.execute();					
 					stmt.close();
 					res = true;
@@ -452,13 +470,31 @@ public class ConfirmaAula extends Login{
 					e.printStackTrace();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 				}
 				if(res) {
+					String sql2 = "UPDATE aulas SET vagas =? WHERE idAula =?";
+					try {
+						PreparedStatement stmt2 = Conexao.conexao.prepareStatement(sql2);
+						stmt2.setInt(1, vaga);
+						stmt2.setString(2, idAula);
+						stmt2.execute();
+						stmt2.close();
+						System.out.println(vaga);
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 					JOptionPane.showMessageDialog(null, "Nova Aula Confirmada com Sucesso!");
+					
 					PlaAluno.main(null);
 					frame.dispose();
 					
 				}else {
 					JOptionPane.showMessageDialog(null, "Erro ao confirmar nova aula!");
 				}
+				
+			}
+
+			private void ResultSet(ResultSet dados) {
+				// TODO Auto-generated method stub
 				
 			}
 		});

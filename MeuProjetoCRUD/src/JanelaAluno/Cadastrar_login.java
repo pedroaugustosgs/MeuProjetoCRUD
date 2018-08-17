@@ -534,7 +534,7 @@ public class Cadastrar_login extends LoginInstitu{
 		
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Cadastro.png"));
-		lblNewLabel_1.setBounds(214, -29, 518, 439);
+		lblNewLabel_1.setBounds(372, -167, 518, 439);
 		frame.getContentPane().add(lblNewLabel_1);
 	}
 

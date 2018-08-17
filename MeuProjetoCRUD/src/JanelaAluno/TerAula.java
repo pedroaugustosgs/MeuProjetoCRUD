@@ -282,6 +282,10 @@ public class TerAula extends Login{
 					//e.printStackTrace();
 				}
 				
+				if(Integer.parseInt(dados.getString("vagas"))<=0 ) {
+					continue;
+				}
+				
 				//SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
 				//***************************************************************************CHAMA O TEO************************************//
 				if(dados.getString("professor")==PlaAluno.idaluno) {

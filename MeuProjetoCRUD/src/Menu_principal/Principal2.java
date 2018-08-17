@@ -113,7 +113,7 @@ public class Principal2 {
 			}
 		});
 		btnSair.setFont(new Font("DialogInput", Font.BOLD, 25));
-		btnSair.setBounds(710, 388, 140, 39);
+		btnSair.setBounds(710, 390, 140, 39);
 		frmMeuProjetoCrud.getContentPane().add(btnSair);
 		
 		JLabel lblNewLabel_4 = new JLabel("");
@@ -141,7 +141,7 @@ public class Principal2 {
 		
 		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega em p\u00E9.jpg"));
-		lblNewLabel_3.setBounds(493, 114, 27, 82);
+		lblNewLabel_3.setBounds(493, 111, 27, 85);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_7 = new JLabel("");
@@ -195,7 +195,7 @@ public class Principal2 {
 		
 		JLabel lblNewLabel_16 = new JLabel("");
 		lblNewLabel_16.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		lblNewLabel_16.setBounds(250, 0, 472, 118);
+		lblNewLabel_16.setBounds(318, 0, 390, 118);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_16);
 	}
 }

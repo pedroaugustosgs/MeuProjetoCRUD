@@ -459,8 +459,8 @@ public class NovaAula extends Login {
 		frame.getContentPane().add(lblNewLabel_6);
 		
 		lblNewLabel_5 = new JLabel("");
-		lblNewLabel_5.setIcon(new ImageIcon("D:\\Crimson (2).png"));
-		lblNewLabel_5.setBounds(343, 0, 338, 55);
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Money.png"));
+		lblNewLabel_5.setBounds(250, 3, 510, 48);
 		frame.getContentPane().add(lblNewLabel_5);
 		
 		panel_1 = new JPanel();
