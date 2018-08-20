@@ -50,7 +50,6 @@ public class LoginInstitu extends Principal2{
 	protected java.sql.Statement stmt; //afirmação componente usado para passar os comandos SQL
 	protected ResultSet tabela; //variável para armazenar o resultado do select
 	private JButton btnVoltar;
-	private JLabel lblNewLabel_4;
 	private JLabel lblNewLabel_1;
 	private JLabel lblNewLabel_2;
 	private JLabel lblNewLabel_3;
@@ -125,7 +124,7 @@ public class LoginInstitu extends Principal2{
 		
 		lblNewLabel_3 = new JLabel("New label");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		lblNewLabel_3.setBounds(110, 11, 385, 148);
+		lblNewLabel_3.setBounds(110, 11, 430, 148);
 		frame.getContentPane().add(lblNewLabel_3);
 		
 		lblNewLabel_1 = new JLabel("New label");
@@ -212,11 +211,6 @@ public class LoginInstitu extends Principal2{
 		btnEntrar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnEntrar.setBounds(308, 316, 201, 40);
 		frame.getContentPane().add(btnEntrar);
-		
-		lblNewLabel_4 = new JLabel("New label");
-		lblNewLabel_4.setIcon(new ImageIcon("D:\\4e8ce731c4f5940854198b75c6166d1f.png"));
-		lblNewLabel_4.setBounds(0, 362, 612, 14);
-		frame.getContentPane().add(lblNewLabel_4);
 		ImageIcon logo = new ImageIcon("C:\\\\Users\\\\SENAI\\\\Desktop\\\\LoginSenhaDB\\\\fiemg3.png");
 		logo.setImage(logo.getImage().getScaledInstance(414, 89, 100));
 		
