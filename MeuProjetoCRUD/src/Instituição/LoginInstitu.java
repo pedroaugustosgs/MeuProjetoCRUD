@@ -210,7 +210,7 @@ public class LoginInstitu extends Principal2{
 		}
 	});
 		btnEntrar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnEntrar.setBounds(295, 316, 201, 40);
+		btnEntrar.setBounds(308, 316, 201, 40);
 		frame.getContentPane().add(btnEntrar);
 		
 		lblNewLabel_4 = new JLabel("New label");
