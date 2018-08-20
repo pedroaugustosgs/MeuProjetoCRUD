@@ -56,7 +56,7 @@ public class Principal {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JButton btnNewButton_1 = new JButton("Sair");
+		JButton btnNewButton_1 = new JButton("SAIR");
 		btnNewButton_1.setBackground(Color.LIGHT_GRAY);
 		btnNewButton_1.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNewButton_1.setForeground(Color.BLACK);
@@ -81,7 +81,7 @@ public class Principal {
 			}
 			});
 		
-		JButton btnAulas = new JButton("Visualizar Aulas");
+		JButton btnAulas = new JButton("VISUALIZAR AULAS");
 		btnAulas.setBackground(Color.LIGHT_GRAY);
 		btnAulas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -101,7 +101,7 @@ public class Principal {
 		btnNewButton_1.setBounds(331, 443, 211, 40);
 		frame.getContentPane().add(btnNewButton_1);
 		
-		JButton btnVisualizarAlunos = new JButton("Visualizar Usu\u00E1rios");
+		JButton btnVisualizarAlunos = new JButton("VISUALIZAR USU\u00C1RIOS");
 		btnVisualizarAlunos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				frame.setVisible(false);
@@ -111,7 +111,7 @@ public class Principal {
 		btnVisualizarAlunos.setForeground(Color.BLACK);
 		btnVisualizarAlunos.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnVisualizarAlunos.setBackground(Color.LIGHT_GRAY);
-		btnVisualizarAlunos.setBounds(24, 204, 281, 40);
+		btnVisualizarAlunos.setBounds(24, 204, 281, 39);
 		frame.getContentPane().add(btnVisualizarAlunos);
 		
 		JLabel lblNewLabel = new JLabel("");

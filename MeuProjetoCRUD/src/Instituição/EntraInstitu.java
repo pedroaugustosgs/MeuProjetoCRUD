@@ -82,16 +82,16 @@ public class EntraInstitu extends Principal2{
 		
 		JLabel lblNewLabel_15 = new JLabel("");
 		lblNewLabel_15.setIcon(new ImageIcon("D:\\Imagem\\img\\Chapeu azul.png"));
-		lblNewLabel_15.setBounds(351, -7, 125, 89);
+		lblNewLabel_15.setBounds(343, -7, 125, 89);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_15);
 		btnCadastrar.setForeground(Color.BLACK);
 		btnCadastrar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnCadastrar.setBounds(542, 288, 201, 33);
+		btnCadastrar.setBounds(542, 288, 164, 39);
 		frmEntraInstitu.getContentPane().add(btnCadastrar);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Bot\u00E3o png.png"));
-		lblNewLabel_2.setBounds(552, 213, 276, 200);
+		lblNewLabel_2.setBounds(527, 219, 276, 200);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
@@ -120,16 +120,16 @@ public class EntraInstitu extends Principal2{
 		frmEntraInstitu.getContentPane().add(lblNewLabel_4);
 		btnLogar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnLogar.setForeground(Color.BLACK);
-		btnLogar.setBounds(57, 288, 201, 33);
+		btnLogar.setBounds(57, 288, 164, 39);
 		frmEntraInstitu.getContentPane().add(btnLogar);
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnVoltar.setBounds(299, 556, 201, 33);
+		btnVoltar.setBounds(331, 563, 164, 39);
 		frmEntraInstitu.getContentPane().add(btnVoltar);
 		
 		JLabel lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Bot\u00E3o png.png"));
-		lblNewLabel_5.setBounds(57, 213, 276, 200);
+		lblNewLabel_5.setBounds(45, 220, 276, 200);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_5);
 		
 		JLabel lblNewLabel = new JLabel("");

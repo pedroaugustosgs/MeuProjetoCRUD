@@ -210,15 +210,15 @@ public class VerAulas extends LoginInstitu{
 			frmMeuCrud.getContentPane().add(lblNewLabel);
 		
 			JScrollPane scrollPane = new JScrollPane(tabela);
-			scrollPane.setBounds(200, 195, 399, 185);
+			scrollPane.setBounds(240, 197, 399, 185);
 			frmMeuCrud.getContentPane().add(scrollPane);
 		tfProcurar.setForeground(Color.LIGHT_GRAY);
 		tfProcurar.setText("Entre com o nome a ser procurado");
-		tfProcurar.setBounds(48, 147, 604, 26);
+		tfProcurar.setBounds(89, 150, 604, 26);
 		frmMeuCrud.getContentPane().add(tfProcurar);
 		tfProcurar.setColumns(10);
 		
-		btnProcurar = new JButton("Procurar");
+		btnProcurar = new JButton("PROCURAR");
 		btnProcurar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnProcurar.setForeground(Color.BLACK);
 		btnProcurar.setBackground(Color.LIGHT_GRAY);
@@ -231,10 +231,10 @@ public class VerAulas extends LoginInstitu{
 				}
 			}
 		});
-		btnProcurar.setBounds(703, 145, 157, 28);
+		btnProcurar.setBounds(703, 148, 157, 28);
 		frmMeuCrud.getContentPane().add(btnProcurar);
 		
-		JButton btnVoltar = new JButton("Voltar");
+		JButton btnVoltar = new JButton("VOLTAR");
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setBackground(Color.LIGHT_GRAY);
 		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
@@ -244,7 +244,7 @@ public class VerAulas extends LoginInstitu{
 				Principal.main(null);
 			}
 		});
-		btnVoltar.setBounds(10, 454, 122, 39);
+		btnVoltar.setBounds(-3, 458, 122, 39);
 		frmMeuCrud.getContentPane().add(btnVoltar);
 		
 		lblNewLabel_1 = new JLabel("");

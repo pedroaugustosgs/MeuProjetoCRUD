@@ -281,6 +281,7 @@ public class NovaAula extends Login {
 				int peri;
 				if(rdbtnPeridico.isSelected()) {
 					peri=1;
+			
 				}else {
 					peri=0;
 				}

@@ -103,7 +103,7 @@ public class LoginInstitu extends Principal2{
 		lblNewLabel_7 = new JLabel("Senha:");
 		lblNewLabel_7.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		lblNewLabel_7.setForeground(Color.WHITE);
-		lblNewLabel_7.setBounds(128, 254, 64, 24);
+		lblNewLabel_7.setBounds(128, 256, 64, 24);
 		frame.getContentPane().add(lblNewLabel_7);
 		
 		lblNewLabel_5 = new JLabel("New label");
@@ -114,7 +114,7 @@ public class LoginInstitu extends Principal2{
 		lblNewLabel = new JLabel("CNPJ:");
 		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		lblNewLabel.setForeground(Color.WHITE);
-		lblNewLabel.setBounds(128, 217, 64, 26);
+		lblNewLabel.setBounds(128, 219, 64, 26);
 		frame.getContentPane().add(lblNewLabel);
 		
 		lblNewLabel_6 = new JLabel("New label");
@@ -139,7 +139,7 @@ public class LoginInstitu extends Principal2{
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnVoltar.setBackground(Color.LIGHT_GRAY);
-		btnVoltar.setBounds(66, 316, 201, 40);
+		btnVoltar.setBounds(79, 315, 164, 39);
 		frame.getContentPane().add(btnVoltar);
 		
 		try {
@@ -209,7 +209,7 @@ public class LoginInstitu extends Principal2{
 		}
 	});
 		btnEntrar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnEntrar.setBounds(308, 316, 201, 40);
+		btnEntrar.setBounds(328, 317, 164, 39);
 		frame.getContentPane().add(btnEntrar);
 		ImageIcon logo = new ImageIcon("C:\\\\Users\\\\SENAI\\\\Desktop\\\\LoginSenhaDB\\\\fiemg3.png");
 		logo.setImage(logo.getImage().getScaledInstance(414, 89, 100));

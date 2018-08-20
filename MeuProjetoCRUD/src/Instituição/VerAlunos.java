@@ -198,7 +198,7 @@ public class VerAlunos extends LoginInstitu{
 		frmMeuCrud.getContentPane().add(tfProcurar);
 		tfProcurar.setColumns(10);
 		
-		btnProcurar = new JButton("Procurar");
+		btnProcurar = new JButton("PROCURAR");
 		btnProcurar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnProcurar.setForeground(Color.BLACK);
 		btnProcurar.setBackground(Color.LIGHT_GRAY);
@@ -214,7 +214,7 @@ public class VerAlunos extends LoginInstitu{
 		btnProcurar.setBounds(633, 109, 157, 28);
 		frmMeuCrud.getContentPane().add(btnProcurar);
 		
-		JButton btnVoltar = new JButton("Voltar");
+		JButton btnVoltar = new JButton("VOLTAR");
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setBackground(Color.LIGHT_GRAY);
 		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
@@ -224,7 +224,7 @@ public class VerAlunos extends LoginInstitu{
 				Principal.main(null);
 			}
 		});
-		btnVoltar.setBounds(6, 405, 122, 39);
+		btnVoltar.setBounds(-4, 408, 122, 39);
 		frmMeuCrud.getContentPane().add(btnVoltar);
 		
 		lblNewLabel = new JLabel("");
