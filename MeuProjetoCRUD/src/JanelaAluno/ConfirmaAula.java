@@ -74,6 +74,9 @@ public class ConfirmaAula extends Login{
 	private JLabel lblNewLabel_7;
 	private JLabel lblNewLabel_8;
 	private JLabel lblNewLabel_9;
+	private JLabel lblNewLabel_10;
+	private JLabel lblNewLabel_11;
+	private JLabel lblNewLabel_12;
 
 	
 	/**
@@ -566,6 +569,21 @@ public class ConfirmaAula extends Login{
 		lblatedata.setForeground(Color.WHITE);
 		lblatedata.setBounds(64, 59, 86, 19);
 		panel_1.add(lblatedata);
+		
+		lblNewLabel_10 = new JLabel("");
+		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
+		lblNewLabel_10.setBounds(0, 274, 307, 14);
+		frame.getContentPane().add(lblNewLabel_10);
+		
+		lblNewLabel_11 = new JLabel("");
+		lblNewLabel_11.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
+		lblNewLabel_11.setBounds(303, 274, 488, 14);
+		frame.getContentPane().add(lblNewLabel_11);
+		
+		lblNewLabel_12 = new JLabel("");
+		lblNewLabel_12.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
+		lblNewLabel_12.setBounds(759, 274, 280, 14);
+		frame.getContentPane().add(lblNewLabel_12);
 		
 		preencherTela();
 		
