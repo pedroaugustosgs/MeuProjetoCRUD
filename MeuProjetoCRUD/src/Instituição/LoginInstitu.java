@@ -124,7 +124,7 @@ public class LoginInstitu extends Principal2{
 		
 		lblNewLabel_3 = new JLabel("New label");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		lblNewLabel_3.setBounds(110, 11, 430, 148);
+		lblNewLabel_3.setBounds(53, 22, 478, 148);
 		frame.getContentPane().add(lblNewLabel_3);
 		
 		lblNewLabel_1 = new JLabel("New label");
