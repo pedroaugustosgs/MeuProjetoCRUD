@@ -388,7 +388,8 @@ public class VisualizaAulaREC extends Login{
 		frame.getContentPane().add(lblvagas);
 		
 		JButton btnNewButton = new JButton("Sair Da Aula");
-		btnNewButton.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnNewButton.setBackground(Color.LIGHT_GRAY);
+		btnNewButton.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
@@ -449,11 +450,12 @@ public class VisualizaAulaREC extends Login{
 				
 			}
 		});
-		btnNewButton.setBounds(0, 576, 153, 44);
+		btnNewButton.setBounds(0, 576, 260, 44);
 		frame.getContentPane().add(btnNewButton);
 		
 		JButton btnNovoltar = new JButton("Voltar");
-		btnNovoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnNovoltar.setBackground(Color.LIGHT_GRAY);
+		btnNovoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNovoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TerAula.main(null);

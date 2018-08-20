@@ -52,14 +52,13 @@ public class Principal {
 	private void initialize() {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(Color.BLACK);
-		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(Principal.class.getResource("/47 - Copia.png")));
 		frame.setBounds(100, 100, 826, 522);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnNewButton_1 = new JButton("Sair");
-		btnNewButton_1.setBackground(Color.WHITE);
-		btnNewButton_1.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnNewButton_1.setBackground(Color.LIGHT_GRAY);
+		btnNewButton_1.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNewButton_1.setForeground(Color.BLACK);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -83,7 +82,7 @@ public class Principal {
 			});
 		
 		JButton btnAulas = new JButton("Visualizar Aulas");
-		btnAulas.setBackground(Color.WHITE);
+		btnAulas.setBackground(Color.LIGHT_GRAY);
 		btnAulas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				VerAulas.main(null);
@@ -96,8 +95,8 @@ public class Principal {
 		lblNewLabel_10.setBounds(379, 11, 113, 116);
 		frame.getContentPane().add(lblNewLabel_10);
 		btnAulas.setForeground(Color.BLACK);
-		btnAulas.setFont(new Font("Arial Narrow", Font.BOLD, 20));
-		btnAulas.setBounds(548, 197, 211, 47);
+		btnAulas.setFont(new Font("DialogInput", Font.BOLD, 20));
+		btnAulas.setBounds(513, 201, 281, 47);
 		frame.getContentPane().add(btnAulas);
 		btnNewButton_1.setBounds(331, 443, 211, 40);
 		frame.getContentPane().add(btnNewButton_1);
@@ -110,9 +109,9 @@ public class Principal {
 			}
 		});
 		btnVisualizarAlunos.setForeground(Color.BLACK);
-		btnVisualizarAlunos.setFont(new Font("Arial Narrow", Font.BOLD, 20));
-		btnVisualizarAlunos.setBackground(Color.WHITE);
-		btnVisualizarAlunos.setBounds(81, 200, 211, 40);
+		btnVisualizarAlunos.setFont(new Font("DialogInput", Font.BOLD, 20));
+		btnVisualizarAlunos.setBackground(Color.LIGHT_GRAY);
+		btnVisualizarAlunos.setBounds(24, 204, 294, 40);
 		frame.getContentPane().add(btnVisualizarAlunos);
 		
 		JLabel lblNewLabel = new JLabel("");

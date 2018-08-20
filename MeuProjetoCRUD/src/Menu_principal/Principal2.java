@@ -195,7 +195,7 @@ public class Principal2 {
 		
 		JLabel lblNewLabel_16 = new JLabel("");
 		lblNewLabel_16.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		lblNewLabel_16.setBounds(318, 0, 390, 118);
+		lblNewLabel_16.setBounds(250, 0, 455, 118);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_16);
 	}
 }

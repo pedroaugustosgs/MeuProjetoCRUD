@@ -134,7 +134,7 @@ public class EditarRemover {
 		*/
 		JButton btnEditar = new JButton("Editar");
 		btnEditar.setForeground(Color.BLACK);
-		btnEditar.setBackground(SystemColor.control);
+		btnEditar.setBackground(Color.LIGHT_GRAY);
 		btnEditar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnEditar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -160,7 +160,7 @@ public class EditarRemover {
 		frame.getContentPane().add(btnEditar);
 		
 		JButton btnRemover = new JButton("Remover");
-		btnRemover.setBackground(SystemColor.control);
+		btnRemover.setBackground(Color.LIGHT_GRAY);
 		btnRemover.setForeground(Color.BLACK);
 		btnRemover.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -185,12 +185,12 @@ public class EditarRemover {
 		
 		
 		btnRemover.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnRemover.setBounds(407, 651, 118, 33);
+		btnRemover.setBounds(370, 651, 118, 33);
 		frame.getContentPane().add(btnRemover);
 		
 		JButton btnCancelar = new JButton("Voltar");
 		btnCancelar.setForeground(Color.BLACK);
-		btnCancelar.setBackground(SystemColor.control);
+		btnCancelar.setBackground(Color.LIGHT_GRAY);
 		btnCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				

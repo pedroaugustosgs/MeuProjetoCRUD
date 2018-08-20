@@ -199,9 +199,9 @@ public class VerAlunos extends LoginInstitu{
 		tfProcurar.setColumns(10);
 		
 		btnProcurar = new JButton("Procurar");
-		btnProcurar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnProcurar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnProcurar.setForeground(Color.BLACK);
-		btnProcurar.setBackground(SystemColor.textHighlightText);
+		btnProcurar.setBackground(Color.LIGHT_GRAY);
 		btnProcurar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(tfProcurar.getText().equals("Entre com o nome a ser procurado")) {
@@ -216,8 +216,8 @@ public class VerAlunos extends LoginInstitu{
 		
 		JButton btnVoltar = new JButton("Voltar");
 		btnVoltar.setForeground(Color.BLACK);
-		btnVoltar.setBackground(SystemColor.textHighlightText);
-		btnVoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnVoltar.setBackground(Color.LIGHT_GRAY);
+		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				frmMeuCrud.dispose();
