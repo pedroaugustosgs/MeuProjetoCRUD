@@ -190,15 +190,15 @@ public class VerAlunos extends LoginInstitu{
 			frmMeuCrud.getContentPane().add(lblNewLabel_3);
 		
 			JScrollPane scrollPane = new JScrollPane(tabela);
-			scrollPane.setBounds(26, 143, 671, 203);
+			scrollPane.setBounds(55, 150, 671, 203);
 			frmMeuCrud.getContentPane().add(scrollPane);
 		tfProcurar.setForeground(Color.LIGHT_GRAY);
 		tfProcurar.setText("Entre com o nome a ser procurado");
-		tfProcurar.setBounds(21, 110, 591, 26);
+		tfProcurar.setBounds(55, 109, 562, 26);
 		frmMeuCrud.getContentPane().add(tfProcurar);
 		tfProcurar.setColumns(10);
 		
-		btnProcurar = new JButton("Procurar");
+		btnProcurar = new JButton("PROCURAR");
 		btnProcurar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnProcurar.setForeground(Color.BLACK);
 		btnProcurar.setBackground(Color.LIGHT_GRAY);
@@ -211,10 +211,10 @@ public class VerAlunos extends LoginInstitu{
 				}
 			}
 		});
-		btnProcurar.setBounds(618, 106, 157, 28);
+		btnProcurar.setBounds(633, 109, 157, 28);
 		frmMeuCrud.getContentPane().add(btnProcurar);
 		
-		JButton btnVoltar = new JButton("Voltar");
+		JButton btnVoltar = new JButton("VOLTAR");
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setBackground(Color.LIGHT_GRAY);
 		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
@@ -224,7 +224,7 @@ public class VerAlunos extends LoginInstitu{
 				Principal.main(null);
 			}
 		});
-		btnVoltar.setBounds(-4, 411, 122, 39);
+		btnVoltar.setBounds(-4, 408, 122, 39);
 		frmMeuCrud.getContentPane().add(btnVoltar);
 		
 		lblNewLabel = new JLabel("");
@@ -244,7 +244,7 @@ public class VerAlunos extends LoginInstitu{
 		
 		lblNewLabel_5 = new JLabel("New label");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\visualiza\u00E7\u00E3o.png"));
-		lblNewLabel_5.setBounds(299, 11, 354, 55);
+		lblNewLabel_5.setBounds(214, 15, 354, 55);
 		frmMeuCrud.getContentPane().add(lblNewLabel_5);
 		ResultSet alunos=null;
 		String sql1 ="SELECT * FROM alunos WHERE escola=?";
