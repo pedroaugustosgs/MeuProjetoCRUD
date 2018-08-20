@@ -184,7 +184,7 @@ public class Login extends Principal2{
 		
 		lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		lblNewLabel.setBounds(39, 33, 510, 135);
+		lblNewLabel.setBounds(105, 39, 385, 135);
 		frame.getContentPane().add(lblNewLabel);
 		
 		lblNewLabel_1 = new JLabel("");
@@ -199,12 +199,12 @@ public class Login extends Principal2{
 		
 		lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_3.setBounds(-11, 3, 385, 28);
+		lblNewLabel_3.setBounds(0, 0, 385, 28);
 		frame.getContentPane().add(lblNewLabel_3);
 		
 		lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_4.setBounds(366, 3, 215, 28);
+		lblNewLabel_4.setBounds(366, 0, 215, 28);
 		frame.getContentPane().add(lblNewLabel_4);
 		ImageIcon logo = new ImageIcon("C:\\\\Users\\\\SENAI\\\\Desktop\\\\LoginSenhaDB\\\\fiemg3.png");
 		logo.setImage(logo.getImage().getScaledInstance(414, 89, 100));

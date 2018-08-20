@@ -40,7 +40,7 @@ public class Splash implements Runnable{
 	}
 
 	/**
-	 * Create the application.
+	 * Create trhe application.
 	 */
 	public Splash() {
 		initialize();
