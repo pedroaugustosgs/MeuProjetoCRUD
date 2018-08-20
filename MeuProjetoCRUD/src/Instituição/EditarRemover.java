@@ -76,7 +76,7 @@ public class EditarRemover {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(Color.BLACK);
 		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(EditarRemover.class.getResource("/47 - Copia.png")));
-		frame.setBounds(100, 100, 852, 712);
+		frame.setBounds(100, 100, 784, 494);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setResizable(false);
