@@ -157,7 +157,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 				tfCSenha.setText(null);
 			}
 		});
-		btnLimpar.setFont(new Font("Arial Narrow", Font.BOLD, 25));
+		btnLimpar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnLimpar.setBounds(852, 580, 167, 40);
 		frame.getContentPane().add(btnLimpar);
 		
@@ -274,7 +274,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 				frame.dispose();
 			}
 		});
-		btnVoltar.setFont(new Font("Arial Narrow", Font.BOLD, 25));
+		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnVoltar.setBounds(0, 580, 212, 40);
 		frame.getContentPane().add(btnVoltar);
 		
@@ -350,7 +350,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 				}
 			}
 		});
-		btnSalvar.setFont(new Font("Arial Narrow", Font.BOLD, 25));
+		btnSalvar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnSalvar.setBounds(442, 580, 172, 40);
 		frame.getContentPane().add(btnSalvar);
 		

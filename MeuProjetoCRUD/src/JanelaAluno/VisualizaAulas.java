@@ -347,11 +347,7 @@ public class VisualizaAulas extends Login{
 					
 					
 					JOptionPane.showMessageDialog(null, "Aula atualizada com sucesso!");
-					
-					
-					
-					//*****************************   FAZER O ENVIAR EMAIL E COLOCAR AQUI *******************//
-					
+										
 					ResultSet dados=null;
 					String sql1="SELECT * FROM aulas WHERE idaula=?";
 					PreparedStatement stmt1 = Conexao.conexao.prepareStatement(sql1);
@@ -414,20 +410,57 @@ public class VisualizaAulas extends Login{
 			public void actionPerformed(ActionEvent arg0) {
 				String sql="DELETE FROM aulas WHERE idAula=?";
 				
+				ResultSet dados2=null;
+				ResultSet dados =null;
+				
 				int res = JOptionPane.showConfirmDialog(null, "Você deseja mesmo remover esta aula?");
 				
 				if(res==0) {
 					try {
-						PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
+						//pega os emails;
+						String sql1 ="SELECT * FROM alunos INNNER J0IN alunosconfirmados ON alunos.idaluno = alunosconfirmados.idaluno "
+							+ "WHERE idconfirmar=?"; 
+						PreparedStatement stmt = Conexao.conexao.prepareStatement(sql1);
 						stmt.setString(1, idAula);
+						dados = stmt.executeQuery();
 						stmt.execute();
 						stmt.close();
+						
+						
+						String sql2 = "SELECT * FROM aulas WHERE idAula=?";
+						PreparedStatement s = Conexao.conexao.prepareStatement(sql2);  // pega dados da aula
+						s.setString(1, idAula);
+						dados2 = s.executeQuery();
+						s.execute();
+						s.close();
+						
+					
+						String msg=null;
+					
+						 msg= "Sua aula de "+Materia(dados.getString("materia"))+" sobre "+dados.getString("conteudo")+" com o professor "+NomeProf(idAula)+" foi "
+						 		+ "removida";
+						 
+						 CRUDEmail d= new CRUDEmail();
+						 d.EmailVisuAulas(dados.getString("email"), msg);
+							
+						System.out.println(msg);
+						System.out.println(dados.getString("email"));
+						
+						PreparedStatement stmt3 = Conexao.conexao.prepareStatement(sql);
+						stmt3.setString(1, idAula);
+						stmt3.execute();
+						stmt3.close();
+					
 						JOptionPane.showMessageDialog(null, "Aula removida com sucesso!");
 						frame.dispose();
 						PlaAluno.main(null);
+						
 					} catch (SQLException e) {
+						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
+					
+
 				}
 				return;
 			}
@@ -436,6 +469,7 @@ public class VisualizaAulas extends Login{
 		frame.getContentPane().add(btnRemover);
 		
 		lbllocal = new JTextField();
+		lbllocal.setBackground(Color.BLACK);
 		lbllocal.setForeground(Color.WHITE);
 		lbllocal.setBounds(71, 200, 153, 20);
 		frame.getContentPane().add(lbllocal);

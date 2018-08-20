@@ -140,10 +140,10 @@ public class TerAula extends Login{
 		frmMeuCrud.getContentPane().add(tfProcurar);
 		tfProcurar.setColumns(10);
 		
-		btnProcurar = new JButton("PROCURAR ");
-		btnProcurar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnProcurar = new JButton("Procurar");
+		btnProcurar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnProcurar.setForeground(Color.BLACK);
-		btnProcurar.setBackground(SystemColor.textHighlightText);
+		btnProcurar.setBackground(Color.LIGHT_GRAY);
 		btnProcurar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(tfProcurar.getText().equals("Entre com a matéria a ser procurada")) {
@@ -166,7 +166,7 @@ public class TerAula extends Login{
 				}
 			}
 		});
-		btnProcurar.setBounds(841, 127, 157, 28);
+		btnProcurar.setBounds(796, 122, 157, 28);
 		frmMeuCrud.getContentPane().add(btnProcurar);
 		
 		tabela = new JTable();
@@ -203,8 +203,8 @@ public class TerAula extends Login{
 		
 		JButton btnVoltar = new JButton("Voltar");
 		btnVoltar.setForeground(Color.BLACK);
-		btnVoltar.setBackground(SystemColor.textHighlightText);
-		btnVoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnVoltar.setBackground(Color.LIGHT_GRAY);
+		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				PlaAluno.main(null);
@@ -222,7 +222,7 @@ public class TerAula extends Login{
 			}
 		});
 		btnRecomendarAula.setForeground(Color.BLACK);
-		btnRecomendarAula.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnRecomendarAula.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnRecomendarAula.setBackground(Color.WHITE);
 		btnRecomendarAula.setBounds(852, 433, 219, 39);
 		frmMeuCrud.getContentPane().add(btnRecomendarAula);

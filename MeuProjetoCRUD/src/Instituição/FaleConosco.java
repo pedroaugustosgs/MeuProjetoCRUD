@@ -53,10 +53,11 @@ public class FaleConosco {
 		
 		JLabel lblNewLabel_9 = new JLabel("");
 		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\Chapeu azul.png"));
-		lblNewLabel_9.setBounds(392, 281, 164, 125);
+		lblNewLabel_9.setBounds(404, 284, 164, 125);
 		frame.getContentPane().add(lblNewLabel_9);
 		
 		JButton btnNewButton = new JButton("Enviar");
+		btnNewButton.setBackground(Color.GRAY);
 		btnNewButton.setForeground(Color.BLACK);
 		btnNewButton.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNewButton.setBounds(404, 549, 136, 33);

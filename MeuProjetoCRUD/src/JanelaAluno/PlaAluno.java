@@ -144,18 +144,18 @@ public class PlaAluno {
 		
 		JLabel label = new JLabel("");
 		label.setIcon(new ImageIcon("D:\\Imagem\\img\\Bot\u00E3o png.png"));
-		label.setBounds(406, 306, 246, 200);
+		label.setBounds(406, 312, 246, 200);
 		frmMeuCrud.getContentPane().add(label);
 		btnteraula.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnteraula.setForeground(Color.BLACK);
-		btnteraula.setBackground(SystemColor.textHighlightText);
+		btnteraula.setBackground(Color.LIGHT_GRAY);
 		
 		btnteraula.setBounds(396, 369, 256, 33);
 		frmMeuCrud.getContentPane().add(btnteraula);
 		
 		JLabel lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Bot\u00E3o png.png"));
-		lblNewLabel_5.setBounds(416, 136, 200, 201);
+		lblNewLabel_5.setBounds(424, 136, 200, 201);
 		frmMeuCrud.getContentPane().add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
@@ -220,13 +220,13 @@ public class PlaAluno {
 		frmMeuCrud.getContentPane().add(lblAulasQueVai);
 		btnNovaAula.setForeground(Color.BLACK);
 		btnNovaAula.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnNovaAula.setBackground(Color.WHITE);
+		btnNovaAula.setBackground(Color.LIGHT_GRAY);
 		btnNovaAula.setBounds(441, 220, 168, 33);
 		frmMeuCrud.getContentPane().add(btnNovaAula);
 		
 		JButton btnconfig = new JButton("Editar Perfil");
 		btnconfig.setForeground(Color.BLACK);
-		btnconfig.setBackground(SystemColor.textHighlightText);
+		btnconfig.setBackground(Color.LIGHT_GRAY);
 		btnconfig.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnconfig.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -235,7 +235,7 @@ public class PlaAluno {
 				Config.main(null);
 			}
 		});
-		btnconfig.setBounds(36, 569, 268, 33);
+		btnconfig.setBounds(0, 580, 268, 33);
 		frmMeuCrud.getContentPane().add(btnconfig);
 		
 		JButton btnSair = new JButton("Sair");
@@ -259,8 +259,8 @@ public class PlaAluno {
 		});
 		btnSair.setForeground(Color.BLACK);
 		btnSair.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnSair.setBackground(Color.WHITE);
-		btnSair.setBounds(942, 569, 106, 32);
+		btnSair.setBackground(Color.LIGHT_GRAY);
+		btnSair.setBounds(978, 580, 106, 32);
 		frmMeuCrud.getContentPane().add(btnSair);
 		
 		JLabel lblNewLabel = new JLabel("");

@@ -420,8 +420,8 @@ public class NovaAula extends Login {
 		rdbtnPeridico.setBounds(37, 147, 109, 23);
 		frame.getContentPane().add(rdbtnPeridico);
 		btnRecomendaesDeAulas.setForeground(Color.BLACK);
-		btnRecomendaesDeAulas.setFont(new Font("Arial Narrow", Font.BOLD, 20));
-		btnRecomendaesDeAulas.setBounds(352, 513, 254, 37);
+		btnRecomendaesDeAulas.setFont(new Font("DialogInput", Font.BOLD, 20));
+		btnRecomendaesDeAulas.setBounds(320, 513, 348, 37);
 		frame.getContentPane().add(btnRecomendaesDeAulas);
 		
 		tfVagas = new JTextField();
@@ -436,11 +436,11 @@ public class NovaAula extends Login {
 		lblVagas.setBounds(10, 427, 61, 19);
 		frame.getContentPane().add(lblVagas);
 		btnVoltar.setForeground(Color.BLACK);
-		btnVoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnVoltar.setBounds(10, 513, 156, 37);
 		frame.getContentPane().add(btnVoltar);
 		btnCriarAula.setForeground(Color.BLACK);
-		btnCriarAula.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnCriarAula.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnCriarAula.setBounds(793, 513, 156, 37);
 		frame.getContentPane().add(btnCriarAula);
 		
@@ -525,7 +525,7 @@ public class NovaAula extends Login {
 		
 		lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Money.png"));
-		lblNewLabel_5.setBounds(-51, 0, 510, 48);
+		lblNewLabel_5.setBounds(243, 0, 510, 61);
 		frame.getContentPane().add(lblNewLabel_5);
 		
 		panel = new JPanel();
