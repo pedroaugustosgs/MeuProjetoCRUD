@@ -368,7 +368,7 @@ public class ConfirmaAula extends Login{
 		
 		lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_2.setBounds(-33, 504, 488, 52);
+		lblNewLabel_2.setBounds(-34, 513, 488, 52);
 		frame.getContentPane().add(lblNewLabel_2);
 		
 		Label label = new Label("Mat\u00E9ria:");
@@ -490,34 +490,34 @@ public class ConfirmaAula extends Login{
 				
 			}
 		});
-		btnNewButton.setBounds(13, 550, 153, 34);
+		btnNewButton.setBounds(1, 556, 164, 39);
 		frame.getContentPane().add(btnNewButton);
 		
 		JButton btnNovoltar = new JButton("VOLTAR");
-		btnNovoltar.setFont(new Font("Arial Narrow", Font.BOLD, 20));
+		btnNovoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNovoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TerAula.main(null);
 				frame.dispose();
 			}
 		});
-		btnNovoltar.setBounds(871, 551, 153, 34);
+		btnNovoltar.setBounds(874, 556, 164, 39);
 		frame.getContentPane().add(btnNovoltar);
 		
 		tabela = new JTable();
 		
 		JScrollPane scrollPane = new JScrollPane(tabela);
-		scrollPane.setBounds(231, 299, 498, 213);
+		scrollPane.setBounds(258, 310, 498, 213);
 		frame.getContentPane().add(scrollPane);
 		
 		lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_3.setBounds(435, 504, 488, 52);
+		lblNewLabel_3.setBounds(435, 513, 488, 52);
 		frame.getContentPane().add(lblNewLabel_3);
 		
 		lblNewLabel_4 = new JLabel("New label");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_4.setBounds(910, 504, 129, 52);
+		lblNewLabel_4.setBounds(915, 513, 129, 52);
 		frame.getContentPane().add(lblNewLabel_4);
 		
 		lblNewLabel_7 = new JLabel("");
@@ -572,17 +572,17 @@ public class ConfirmaAula extends Login{
 		
 		lblNewLabel_10 = new JLabel("");
 		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
-		lblNewLabel_10.setBounds(0, 274, 307, 14);
+		lblNewLabel_10.setBounds(10, 288, 307, 14);
 		frame.getContentPane().add(lblNewLabel_10);
 		
 		lblNewLabel_11 = new JLabel("");
 		lblNewLabel_11.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
-		lblNewLabel_11.setBounds(303, 274, 488, 14);
+		lblNewLabel_11.setBounds(302, 288, 488, 14);
 		frame.getContentPane().add(lblNewLabel_11);
 		
 		lblNewLabel_12 = new JLabel("");
 		lblNewLabel_12.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
-		lblNewLabel_12.setBounds(759, 274, 280, 14);
+		lblNewLabel_12.setBounds(749, 288, 280, 14);
 		frame.getContentPane().add(lblNewLabel_12);
 		
 		preencherTela();
