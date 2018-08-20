@@ -105,7 +105,7 @@ public class Config extends Login {
 		frmMeuCrud.setResizable(false);
 		frmMeuCrud.setLocationRelativeTo(null);
 		
-		JButton btnSalvar = new JButton("Salvar");
+		JButton btnSalvar = new JButton("SALVAR");
 		btnSalvar.setBackground(Color.LIGHT_GRAY);
 		btnSalvar.setForeground(Color.BLACK);
 		btnSalvar.setFont(new Font("DialogInput", Font.BOLD, 20));
@@ -185,7 +185,7 @@ public class Config extends Login {
 			}
 		});
 		
-		JButton btnNewButton = new JButton("Redefinir Senha");
+		JButton btnNewButton = new JButton("REDEFINIR SENHA");
 		btnNewButton.setBackground(Color.LIGHT_GRAY);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -210,7 +210,7 @@ public class Config extends Login {
 		lblFotoPerfil = new JLabel("");
 		lblFotoPerfil.setForeground(Color.WHITE);
 		lblFotoPerfil.setBackground(Color.WHITE);
-		lblFotoPerfil.setBounds(510, 142, 258, 198);
+		lblFotoPerfil.setBounds(509, 152, 258, 198);
 		frmMeuCrud.getContentPane().add(lblFotoPerfil);
 		
 		tfIdade = new JTextField();
@@ -219,7 +219,7 @@ public class Config extends Login {
 		tfIdade.setColumns(10);
 		btnNewButton.setForeground(Color.BLACK);
 		btnNewButton.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnNewButton.setBounds(0, 433, 250, 35);
+		btnNewButton.setBounds(1, 428, 237, 39);
 		frmMeuCrud.getContentPane().add(btnNewButton);
 		
 		try {
@@ -238,7 +238,7 @@ public class Config extends Login {
 		lblTelefone.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblTelefone.setBounds(23, 339, 86, 21);
 		frmMeuCrud.getContentPane().add(lblTelefone);
-		btnSalvar.setBounds(376, 433, 140, 35);
+		btnSalvar.setBounds(355, 428, 164, 39);
 		frmMeuCrud.getContentPane().add(btnSalvar);
 		
 		JLabel lblSenha = new JLabel("Idade:");
@@ -263,7 +263,7 @@ public class Config extends Login {
 		frmMeuCrud.getContentPane().add(tfNome);
 		tfNome.setColumns(10);
 		
-		JButton btnVoltar = new JButton("Voltar");
+		JButton btnVoltar = new JButton("VOLTAR");
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 					
@@ -274,7 +274,7 @@ public class Config extends Login {
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnVoltar.setBackground(Color.LIGHT_GRAY);
-		btnVoltar.setBounds(652, 433, 126, 35);
+		btnVoltar.setBounds(612, 428, 164, 39);
 		frmMeuCrud.getContentPane().add(btnVoltar);
 		
 		JLabel lblNomeCtfnoompleto = DefaultComponentFactory.getInstance().createTitle("Nome:");
@@ -283,7 +283,7 @@ public class Config extends Login {
 		lblNomeCtfnoompleto.setBounds(24, 180, 70, 30);
 		frmMeuCrud.getContentPane().add(lblNomeCtfnoompleto);
 		
-		JButton btnTrocarFoto = new JButton("Alterar Foto");
+		JButton btnTrocarFoto = new JButton("ALTERAR FOTO");
 		btnTrocarFoto.setBackground(Color.LIGHT_GRAY);
 		btnTrocarFoto.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnTrocarFoto.addActionListener(new ActionListener() {
@@ -301,7 +301,7 @@ public class Config extends Login {
 				 }
 			}
 		});
-		btnTrocarFoto.setBounds(582, 350, 196, 35);
+		btnTrocarFoto.setBounds(565, 357, 211, 39);
 		frmMeuCrud.getContentPane().add(btnTrocarFoto);
 		
 		JLabel lblNewLabel_7 = new JLabel("");
@@ -310,7 +310,7 @@ public class Config extends Login {
 		
 		JLabel lblNewLabel_3 = new JLabel("New label");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Chapeu azul.png"));
-		lblNewLabel_3.setBounds(477, 46, 152, 71);
+		lblNewLabel_3.setBounds(446, 53, 152, 71);
 		frmMeuCrud.getContentPane().add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_6 = new JLabel("");

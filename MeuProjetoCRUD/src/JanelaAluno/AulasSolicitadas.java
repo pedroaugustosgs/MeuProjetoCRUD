@@ -47,15 +47,14 @@ public class AulasSolicitadas extends Login{
 	public String Dias[];
 	private JLabel lblNewLabel_1;
 	private JLabel lblNewLabel_2;
-	private JLabel lblNewLabel_3;
 	private JLabel lblNewLabel_4;
 	private JLabel lblNewLabel_5;
 	private JLabel lblNewLabel_6;
 	private JLabel lblNewLabel_7;
 	private JLabel lblNewLabel_8;
-	private JLabel lblNewLabel_9;
 	private JLabel lblNewLabel;
 	private JLabel lblNewLabel_10;
+	private JLabel lblNewLabel_3;
 	
 	
 	/**
@@ -124,11 +123,6 @@ public class AulasSolicitadas extends Login{
 			}
 		});
 		
-		lblNewLabel_9 = new JLabel("");
-		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\pesquisa.png"));
-		lblNewLabel_9.setBounds(789, 474, 246, 156);
-		frmMeuCrud.getContentPane().add(lblNewLabel_9);
-		
 		lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_1.setBounds(-9, 494, 491, 26);
@@ -144,7 +138,7 @@ public class AulasSolicitadas extends Login{
 		frmMeuCrud.getContentPane().add(tfProcurar);
 		tfProcurar.setColumns(10);
 		
-		btnProcurar = new JButton("Procurar");
+		btnProcurar = new JButton("PROCURAR");
 		btnProcurar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnProcurar.setForeground(Color.BLACK);
 		btnProcurar.setBackground(SystemColor.textHighlightText);
@@ -170,31 +164,26 @@ public class AulasSolicitadas extends Login{
 				}
 			}
 		});
-		btnProcurar.setBounds(841, 170, 166, 29);
+		btnProcurar.setBounds(841, 170, 164, 39);
 		frmMeuCrud.getContentPane().add(btnProcurar);
 		
-		JButton btnVoltar = new JButton("Voltar");
+		JButton btnVoltar = new JButton("VOLTAR");
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setBackground(SystemColor.textHighlightText);
-		btnVoltar.setFont(new Font("Arial Narrow", Font.PLAIN, 25));
+		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 25));
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				PlaAluno.main(null);
 				frmMeuCrud.dispose();
 			}
 		});
-		btnVoltar.setBounds(0, 573, 157, 39);
+		btnVoltar.setBounds(1, 572, 164, 39);
 		frmMeuCrud.getContentPane().add(btnVoltar);
 		
 		lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_2.setBounds(701, 494, 264, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_2);
-		
-		lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
-		lblNewLabel_3.setBounds(961, 494, 74, 26);
-		frmMeuCrud.getContentPane().add(lblNewLabel_3);
 		
 		lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
@@ -238,6 +227,11 @@ public class AulasSolicitadas extends Login{
 			lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\Money.png"));
 			lblNewLabel_10.setBounds(283, 25, 520, 84);
 			frmMeuCrud.getContentPane().add(lblNewLabel_10);
+			
+			lblNewLabel_3 = new JLabel("New label");
+			lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+			lblNewLabel_3.setBounds(961, 494, 74, 26);
+			frmMeuCrud.getContentPane().add(lblNewLabel_3);
 		
 		criaTabela(pegaAulaSolicitada());
 	}// fim do método inicialize
