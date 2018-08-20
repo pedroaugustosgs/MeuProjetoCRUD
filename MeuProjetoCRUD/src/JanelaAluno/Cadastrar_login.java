@@ -101,6 +101,7 @@ public class Cadastrar_login extends LoginInstitu{
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnLimpar = new JButton("Limpar");
+		btnLimpar.setBackground(Color.LIGHT_GRAY);
 		btnLimpar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				tfUsuario.setText(null);
@@ -132,14 +133,14 @@ public class Cadastrar_login extends LoginInstitu{
 
 		
 		
-		SpIdade.setBounds(73, 187, 80, 20);
+		SpIdade.setBounds(76, 229, 80, 20);
 		frame.getContentPane().add(SpIdade);
 		
 		JLabel label_4 = new JLabel("*");
 		label_4.setHorizontalAlignment(SwingConstants.CENTER);
 		label_4.setForeground(Color.RED);
 		label_4.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		label_4.setBounds(261, 253, 12, 14);
+		label_4.setBounds(261, 303, 12, 14);
 		frame.getContentPane().add(label_4);
 		
 		JLabel label_2 = new JLabel("*");
@@ -153,27 +154,27 @@ public class Cadastrar_login extends LoginInstitu{
 		label_3.setHorizontalAlignment(SwingConstants.CENTER);
 		label_3.setForeground(Color.RED);
 		label_3.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		label_3.setBounds(261, 126, 12, 14);
+		label_3.setBounds(261, 199, 12, 14);
 		frame.getContentPane().add(label_3);
 		
 		JLabel label_1 = new JLabel("*");
 		label_1.setHorizontalAlignment(SwingConstants.CENTER);
 		label_1.setForeground(Color.RED);
 		label_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		label_1.setBounds(261, 351, 12, 14);
+		label_1.setBounds(261, 399, 12, 14);
 		frame.getContentPane().add(label_1);
 		
 		JLabel label = new JLabel("*");
 		label.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		label.setHorizontalAlignment(SwingConstants.CENTER);
 		label.setForeground(Color.RED);
-		label.setBounds(261, 294, 12, 14);
+		label.setBounds(261, 354, 12, 14);
 		frame.getContentPane().add(label);
 		
 		JLabel lblInstituio = new JLabel("Institui\u00E7\u00E3o:");
 		lblInstituio.setForeground(Color.WHITE);
 		lblInstituio.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblInstituio.setBounds(488, 139, 107, 24);
+		lblInstituio.setBounds(478, 146, 107, 24);
 		frame.getContentPane().add(lblInstituio);
 		
 		cbEscola = new JComboBox<String>();
@@ -201,7 +202,7 @@ public class Cadastrar_login extends LoginInstitu{
 			// TODO Auto-generated catch block
 			e2.printStackTrace();
 		}
-		btnLimpar.setFont(new Font("Arial Narrow", Font.PLAIN, 20));
+		btnLimpar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnLimpar.setBounds(621, 551, 155, 45);
 		frame.getContentPane().add(btnLimpar);
 		
@@ -216,13 +217,13 @@ public class Cadastrar_login extends LoginInstitu{
 		tfUsuario.setForeground(Color.BLACK);
 		tfUsuario.setHorizontalAlignment(SwingConstants.LEFT);
 		tfUsuario.setColumns(10);
-		tfUsuario.setBounds(73, 125, 177, 20);
+		tfUsuario.setBounds(74, 155, 177, 20);
 		frame.getContentPane().add(tfUsuario);
 		
 		JLabel lblUsurio = new JLabel("Usu\u00E1rio:");
 		lblUsurio.setForeground(Color.WHITE);
 		lblUsurio.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblUsurio.setBounds(1, 120, 85, 24);
+		lblUsurio.setBounds(1, 150, 85, 24);
 		frame.getContentPane().add(lblUsurio);
 		
 		tfnome = new JTextField();
@@ -236,7 +237,7 @@ public class Cadastrar_login extends LoginInstitu{
 		tfnome.setForeground(Color.BLACK);
 		tfnome.setHorizontalAlignment(SwingConstants.LEFT);
 		tfnome.setColumns(10);
-		tfnome.setBounds(74, 156, 177, 20);
+		tfnome.setBounds(73, 198, 177, 20);
 		frame.getContentPane().add(tfnome);
 		
 		try {
@@ -254,7 +255,7 @@ public class Cadastrar_login extends LoginInstitu{
 			}
 		});
 		tel.setColumns(10);
-		tel.setBounds(74, 293, 177, 20);
+		tel.setBounds(85, 353, 177, 20);
 		frame.getContentPane().add(tel);
 		
 		tfemail = new JTextField();
@@ -265,7 +266,7 @@ public class Cadastrar_login extends LoginInstitu{
 			}
 		});
 		tfemail.setColumns(10);
-		tfemail.setBounds(73, 252, 177, 20);
+		tfemail.setBounds(73, 302, 177, 20);
 		frame.getContentPane().add(tfemail);
 		
 		pfCsenha = new JPasswordField();
@@ -275,7 +276,7 @@ public class Cadastrar_login extends LoginInstitu{
 				pfCsenha.setBackground(Color.WHITE);
 			}
 		});
-		pfCsenha.setBounds(150, 396, 177, 20);
+		pfCsenha.setBounds(150, 442, 177, 20);
 		frame.getContentPane().add(pfCsenha);
 		
 		pfsenha = new JPasswordField();
@@ -286,65 +287,66 @@ public class Cadastrar_login extends LoginInstitu{
 
 			}
 		});
-		pfsenha.setBounds(73, 350, 177, 20);
+		pfsenha.setBounds(73, 398, 177, 20);
 		frame.getContentPane().add(pfsenha);
 		
 		mas = new JRadioButton("Masculino");
 		mas.setBackground(Color.BLACK);
 		mas.setForeground(Color.WHITE);
 		mas.setSelected(true);
-		mas.setBounds(167, 222, 109, 23);
+		mas.setBounds(164, 256, 109, 23);
 		frame.getContentPane().add(mas);
 		
 		fem = new JRadioButton("Feminino");
 		fem.setBackground(Color.BLACK);
 		fem.setForeground(Color.WHITE);
-		fem.setBounds(73, 222, 109, 23);
+		fem.setBounds(73, 256, 109, 23);
 		frame.getContentPane().add(fem);
 		
 		JLabel lblTelefone = new JLabel("Telefone:");
 		lblTelefone.setForeground(Color.WHITE);
 		lblTelefone.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblTelefone.setBounds(-2, 288, 107, 24);
+		lblTelefone.setBounds(1, 348, 107, 24);
 		frame.getContentPane().add(lblTelefone);
 		
 		JLabel email = new JLabel("Email:");
 		email.setForeground(Color.WHITE);
 		email.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		email.setBounds(1, 253, 53, 24);
+		email.setBounds(10, 297, 53, 24);
 		frame.getContentPane().add(email);
 		
 		JLabel lblSexo = new JLabel("Sexo:");
 		lblSexo.setForeground(Color.WHITE);
 		lblSexo.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblSexo.setBounds(10, 218, 95, 24);
+		lblSexo.setBounds(13, 252, 95, 24);
 		frame.getContentPane().add(lblSexo);
 		
 		JLabel lblIdade = new JLabel("Idade:");
 		lblIdade.setForeground(Color.WHITE);
 		lblIdade.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblIdade.setBounds(10, 182, 95, 24);
+		lblIdade.setBounds(1, 225, 95, 24);
 		frame.getContentPane().add(lblIdade);
 		
 		JLabel lblnome = new JLabel("Nome:");
 		lblnome.setForeground(Color.WHITE);
 		lblnome.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblnome.setBounds(11, 154, 85, 24);
+		lblnome.setBounds(1, 194, 85, 24);
 		frame.getContentPane().add(lblnome);
 		
 		JLabel lblSenha = new JLabel("Senha:");
 		lblSenha.setForeground(Color.WHITE);
 		lblSenha.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblSenha.setBounds(1, 346, 95, 24);
+		lblSenha.setBounds(10, 393, 95, 24);
 		frame.getContentPane().add(lblSenha);
 		
 		JLabel lblConfirmarSenha = new JLabel("Confirmar Senha:");
 		lblConfirmarSenha.setForeground(Color.WHITE);
 		lblConfirmarSenha.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblConfirmarSenha.setBounds(1, 391, 155, 24);
+		lblConfirmarSenha.setBounds(1, 437, 155, 24);
 		frame.getContentPane().add(lblConfirmarSenha);
 		
 		JButton btnSalvar = new JButton("Salvar");
+		btnSalvar.setBackground(Color.LIGHT_GRAY);
 		btnSalvar.addActionListener(new ActionListener() {
 			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e) {
@@ -480,18 +482,19 @@ public class Cadastrar_login extends LoginInstitu{
 				}
 			}
 				});
-		btnSalvar.setFont(new Font("Arial Narrow", Font.PLAIN, 20));
+		btnSalvar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnSalvar.setBounds(1, 551, 155, 45);
 		frame.getContentPane().add(btnSalvar);
 		
 		JButton btnVoltar = new JButton("Voltar");
+		btnVoltar.setBackground(Color.LIGHT_GRAY);
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				frame.dispose();
 				EntraAluno.main(null);
 			}
 		});
-		btnVoltar.setFont(new Font("Arial Narrow", Font.PLAIN, 20));
+		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnVoltar.setBounds(337, 551, 155, 45);
 		frame.getContentPane().add(btnVoltar);
 		frame.setResizable(false);//impede a tela de ser redimensionada
@@ -519,7 +522,7 @@ public class Cadastrar_login extends LoginInstitu{
 		label_5.setHorizontalAlignment(SwingConstants.CENTER);
 		label_5.setForeground(Color.RED);
 		label_5.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		label_5.setBounds(337, 396, 12, 14);
+		label_5.setBounds(337, 443, 12, 14);
 		frame.getContentPane().add(label_5);
 		
 		JLabel lblNewLabel_6 = new JLabel("New label");
@@ -529,12 +532,12 @@ public class Cadastrar_login extends LoginInstitu{
 		
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Cadastro.png"));
-		lblNewLabel_1.setBounds(278, -162, 518, 439);
+		lblNewLabel_1.setBounds(297, -160, 518, 439);
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_8 = new JLabel("");
 		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\professores peq.png"));
-		lblNewLabel_8.setBounds(478, 231, 241, 212);
+		lblNewLabel_8.setBounds(481, 250, 241, 212);
 		frame.getContentPane().add(lblNewLabel_8);
 	}
 
