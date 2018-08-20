@@ -92,11 +92,11 @@ public class Principal {
 		
 		JLabel lblNewLabel_10 = new JLabel("");
 		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\Chapeu azul.png"));
-		lblNewLabel_10.setBounds(379, 11, 113, 116);
+		lblNewLabel_10.setBounds(379, -22, 113, 116);
 		frame.getContentPane().add(lblNewLabel_10);
 		btnAulas.setForeground(Color.BLACK);
 		btnAulas.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnAulas.setBounds(513, 201, 281, 47);
+		btnAulas.setBounds(495, 204, 281, 40);
 		frame.getContentPane().add(btnAulas);
 		btnNewButton_1.setBounds(331, 443, 211, 40);
 		frame.getContentPane().add(btnNewButton_1);
@@ -111,7 +111,7 @@ public class Principal {
 		btnVisualizarAlunos.setForeground(Color.BLACK);
 		btnVisualizarAlunos.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnVisualizarAlunos.setBackground(Color.LIGHT_GRAY);
-		btnVisualizarAlunos.setBounds(24, 204, 294, 40);
+		btnVisualizarAlunos.setBounds(24, 204, 281, 40);
 		frame.getContentPane().add(btnVisualizarAlunos);
 		
 		JLabel lblNewLabel = new JLabel("");
@@ -126,17 +126,17 @@ public class Principal {
 		
 		JLabel lblNewLabel_8 = new JLabel("");
 		lblNewLabel_8.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
-		lblNewLabel_8.setBounds(0, 48, 414, 35);
+		lblNewLabel_8.setBounds(0, 59, 414, 35);
 		frame.getContentPane().add(lblNewLabel_8);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_2.setBounds(0, 48, 492, 35);
+		lblNewLabel_2.setBounds(0, 59, 492, 35);
 		frame.getContentPane().add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_3.setBounds(478, 48, 342, 35);
+		lblNewLabel_3.setBounds(478, 59, 342, 35);
 		frame.getContentPane().add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_5 = new JLabel("");
