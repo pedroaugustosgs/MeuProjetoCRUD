@@ -220,7 +220,7 @@ public class Config extends Login {
 		
 		JLabel lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_5.setBounds(460, 4, 333, 25);
+		lblNewLabel_5.setBounds(454, 4, 339, 25);
 		frmMeuCrud.getContentPane().add(lblNewLabel_5);
 		
 		tfIdade = new JTextField();
