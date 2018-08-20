@@ -55,6 +55,7 @@ public class VerAulas extends LoginInstitu{
 	 private JLabel lblNewLabel_4;
 	 private JLabel lblNewLabel_5;
 	 private JLabel lblNewLabel_7;
+	 private JLabel lblNewLabel_6;
 	/**
 	 * Launch the application.
 	 */
@@ -210,7 +211,7 @@ public class VerAulas extends LoginInstitu{
 			frmMeuCrud.getContentPane().add(lblNewLabel);
 		
 			JScrollPane scrollPane = new JScrollPane(tabela);
-			scrollPane.setBounds(240, 197, 399, 185);
+			scrollPane.setBounds(226, 198, 398, 185);
 			frmMeuCrud.getContentPane().add(scrollPane);
 		tfProcurar.setForeground(Color.LIGHT_GRAY);
 		tfProcurar.setText("Entre com o nome a ser procurado");
@@ -270,6 +271,11 @@ public class VerAulas extends LoginInstitu{
 		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\Lupa.png"));
 		lblNewLabel_7.setBounds(729, 210, 146, 175);
 		frmMeuCrud.getContentPane().add(lblNewLabel_7);
+		
+		lblNewLabel_6 = new JLabel("");
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\VisualizarAula.png"));
+		lblNewLabel_6.setBounds(263, 38, 425, 40);
+		frmMeuCrud.getContentPane().add(lblNewLabel_6);
 		
 		
 		
