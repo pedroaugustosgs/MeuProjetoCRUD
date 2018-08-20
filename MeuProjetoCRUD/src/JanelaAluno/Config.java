@@ -330,7 +330,7 @@ public class Config extends Login {
 		
 		JLabel lblNewLabel_3 = new JLabel("New label");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Chapeu azul.png"));
-		lblNewLabel_3.setBounds(437, 32, 190, 71);
+		lblNewLabel_3.setBounds(437, 32, 152, 71);
 		frmMeuCrud.getContentPane().add(lblNewLabel_3);
 		//System.out.println(EntraAluno.volt);
 		if(EntraAluno.volt==0) {
