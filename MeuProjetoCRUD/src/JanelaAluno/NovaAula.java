@@ -443,7 +443,7 @@ public class NovaAula extends Login {
 		tfVagas = new JTextField();
 		
 		tfVagas.setColumns(10);
-		tfVagas.setBounds(80, 428, 86, 20);
+		tfVagas.setBounds(81, 428, 86, 20);
 		frame.getContentPane().add(tfVagas);
 		
 		JLabel lblVagas = new JLabel("VAGAS:");
