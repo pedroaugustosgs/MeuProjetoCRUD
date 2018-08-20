@@ -98,8 +98,8 @@ public class Login extends Principal2{
 		});
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnVoltar.setBackground(Color.WHITE);
-		btnVoltar.setBounds(73, 313, 201, 40);
+		btnVoltar.setBackground(Color.LIGHT_GRAY);
+		btnVoltar.setBounds(73, 313, 164, 39);
 		frame.getContentPane().add(btnVoltar);
 		
 		JLabel lblUsuario = new JLabel("Usu\u00E1rio:");
@@ -143,7 +143,7 @@ public class Login extends Principal2{
 		frame.getContentPane().add(pfSenha);
 		
 		btnEntrar = new JButton("ENTRAR");
-		btnEntrar.setBackground(SystemColor.textHighlightText);
+		btnEntrar.setBackground(Color.LIGHT_GRAY);
 		btnEntrar.setForeground(Color.BLACK);
 		btnEntrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -179,12 +179,12 @@ public class Login extends Principal2{
 			}
 		});
 		btnEntrar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnEntrar.setBounds(308, 313, 201, 40);
+		btnEntrar.setBounds(308, 313, 164, 39);
 		frame.getContentPane().add(btnEntrar);
 		
 		lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		lblNewLabel.setBounds(43, 39, 447, 135);
+		lblNewLabel.setBounds(114, 39, 447, 135);
 		frame.getContentPane().add(lblNewLabel);
 		
 		lblNewLabel_1 = new JLabel("");

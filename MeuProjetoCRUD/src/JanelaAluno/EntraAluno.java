@@ -67,6 +67,15 @@ public class EntraAluno extends Principal2{
 				Principal2.main(null);
 			}
 		});
+		
+		JButton btnCadastrar = new JButton("CADASTRAR");
+		btnCadastrar.setBackground(Color.LIGHT_GRAY);
+		btnCadastrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frmEntraInstitu.setVisible(false);
+				Cadastrar_login.main(null);
+			}
+		});
 		JButton btnLogar = new JButton("LOGAR");
 		btnLogar.setBackground(Color.LIGHT_GRAY);
 		btnLogar.addActionListener(new ActionListener() {
@@ -75,19 +84,23 @@ public class EntraAluno extends Principal2{
 				frmEntraInstitu.dispose();
 			}
 		});
+		btnLogar.setFont(new Font("DialogInput", Font.BOLD, 20));
+		btnLogar.setForeground(Color.BLACK);
+		btnLogar.setBounds(107, 331, 164, 39);
+		frmEntraInstitu.getContentPane().add(btnLogar);
+		btnCadastrar.setForeground(Color.BLACK);
+		btnCadastrar.setFont(new Font("DialogInput", Font.BOLD, 20));
+		btnCadastrar.setBounds(511, 331, 164, 39);
+		frmEntraInstitu.getContentPane().add(btnCadastrar);
 		
 		JLabel lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Bot\u00E3o png.png"));
-		lblNewLabel_5.setBounds(107, 260, 185, 190);
+		lblNewLabel_5.setBounds(96, 267, 185, 190);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_5);
-		btnLogar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnLogar.setForeground(Color.BLACK);
-		btnLogar.setBounds(107, 331, 201, 33);
-		frmEntraInstitu.getContentPane().add(btnLogar);
 		
 		JLabel lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Bot\u00E3o png.png"));
-		lblNewLabel_6.setBounds(511, 236, 185, 239);
+		lblNewLabel_6.setBounds(498, 242, 185, 239);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_6);
 		
 		JLabel lblNewLabel = new JLabel("");
@@ -111,21 +124,8 @@ public class EntraAluno extends Principal2{
 		frmEntraInstitu.getContentPane().add(lblNewLabel_7);
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnVoltar.setBounds(296, 616, 201, 33);
+		btnVoltar.setBounds(309, 616, 164, 39);
 		frmEntraInstitu.getContentPane().add(btnVoltar);
-		
-		JButton btnCadastrar = new JButton("CADASTRAR");
-		btnCadastrar.setBackground(Color.LIGHT_GRAY);
-		btnCadastrar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				frmEntraInstitu.setVisible(false);
-				Cadastrar_login.main(null);
-			}
-		});
-		btnCadastrar.setForeground(Color.BLACK);
-		btnCadastrar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnCadastrar.setBounds(511, 331, 201, 33);
-		frmEntraInstitu.getContentPane().add(btnCadastrar);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
@@ -165,7 +165,7 @@ public class EntraAluno extends Principal2{
 		
 		JLabel lblNewLabel_9 = new JLabel("");
 		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		lblNewLabel_9.setBounds(139, 7, 495, 113);
+		lblNewLabel_9.setBounds(209, -7, 495, 113);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_9);
 	}
 }

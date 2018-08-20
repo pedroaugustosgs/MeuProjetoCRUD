@@ -69,7 +69,6 @@ public class VisualizaAulaREC extends Login{
 	private JLabel lblNewLabel_4;
 	private JLabel lblNewLabel_5;
 	private JLabel lblNewLabel_6;
-	private JLabel lblNewLabel_7;
 
 	
 	/**
@@ -387,7 +386,7 @@ public class VisualizaAulaREC extends Login{
 		lblvagas.setBounds(65, 183, 153, 19);
 		frame.getContentPane().add(lblvagas);
 		
-		JButton btnNewButton = new JButton("Sair Da Aula");
+		JButton btnNewButton = new JButton("SAIR DA AULA");
 		btnNewButton.setBackground(Color.LIGHT_GRAY);
 		btnNewButton.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNewButton.addActionListener(new ActionListener() {
@@ -450,10 +449,10 @@ public class VisualizaAulaREC extends Login{
 				
 			}
 		});
-		btnNewButton.setBounds(0, 576, 260, 44);
+		btnNewButton.setBounds(1, 575, 260, 44);
 		frame.getContentPane().add(btnNewButton);
 		
-		JButton btnNovoltar = new JButton("Voltar");
+		JButton btnNovoltar = new JButton("VOLTAR");
 		btnNovoltar.setBackground(Color.LIGHT_GRAY);
 		btnNovoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNovoltar.addActionListener(new ActionListener() {
@@ -462,7 +461,7 @@ public class VisualizaAulaREC extends Login{
 				frame.dispose();
 			}
 		});
-		btnNovoltar.setBounds(796, 576, 160, 44);
+		btnNovoltar.setBounds(795, 575, 160, 44);
 		frame.getContentPane().add(btnNovoltar);
 		
 		tabela = new JTable();
@@ -485,11 +484,6 @@ public class VisualizaAulaREC extends Login{
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_4.setBounds(762, 535, 194, 31);
 		frame.getContentPane().add(lblNewLabel_4);
-		
-		lblNewLabel_7 = new JLabel("");
-		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\VisualizarAula.png"));
-		lblNewLabel_7.setBounds(312, 11, 461, 87);
-		frame.getContentPane().add(lblNewLabel_7);
 		
 		preencherTela();
 		

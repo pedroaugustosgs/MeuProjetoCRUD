@@ -102,13 +102,6 @@ public class PlaAluno {
 		
 		
 		EntraAluno.vtt=2;
-		JButton btnNovaAula = new JButton("Dar Aula");
-		btnNovaAula.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				NovaAula.main(null);
-				frmMeuCrud.dispose();
-			}
-		});
 		
 		tabelaREC = new JTable(); 
 		tabelaREC.addMouseListener(new MouseAdapter() {
@@ -133,29 +126,41 @@ public class PlaAluno {
 			}
 			
 		});
+		JButton btnNovaAula = new JButton("DAR AULA");
+		btnNovaAula.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				NovaAula.main(null);
+				frmMeuCrud.dispose();
+			}
+		});
 		
-		btnteraula = new JButton("Solicitar Aula");
+		btnteraula = new JButton("SOLICITAR AULA");
 		btnteraula.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TerAula.main(null);
 				frmMeuCrud.dispose();
 			}
 		});
-		
-		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon("D:\\Imagem\\img\\Bot\u00E3o png.png"));
-		label.setBounds(406, 312, 246, 200);
-		frmMeuCrud.getContentPane().add(label);
 		btnteraula.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnteraula.setForeground(Color.BLACK);
 		btnteraula.setBackground(Color.LIGHT_GRAY);
 		
-		btnteraula.setBounds(396, 369, 256, 33);
+		btnteraula.setBounds(396, 369, 246, 39);
 		frmMeuCrud.getContentPane().add(btnteraula);
+		btnNovaAula.setForeground(Color.BLACK);
+		btnNovaAula.setFont(new Font("DialogInput", Font.BOLD, 20));
+		btnNovaAula.setBackground(Color.LIGHT_GRAY);
+		btnNovaAula.setBounds(433, 219, 164, 39);
+		frmMeuCrud.getContentPane().add(btnNovaAula);
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon("D:\\Imagem\\img\\Bot\u00E3o png.png"));
+		label.setBounds(406, 302, 246, 200);
+		frmMeuCrud.getContentPane().add(label);
 		
 		JLabel lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Bot\u00E3o png.png"));
-		lblNewLabel_5.setBounds(424, 136, 200, 201);
+		lblNewLabel_5.setBounds(426, 152, 200, 201);
 		frmMeuCrud.getContentPane().add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
@@ -218,13 +223,8 @@ public class PlaAluno {
 		lblAulasQueVai.setForeground(Color.WHITE);
 		lblAulasQueVai.setBounds(27, 155, 303, 33);
 		frmMeuCrud.getContentPane().add(lblAulasQueVai);
-		btnNovaAula.setForeground(Color.BLACK);
-		btnNovaAula.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnNovaAula.setBackground(Color.LIGHT_GRAY);
-		btnNovaAula.setBounds(441, 220, 168, 33);
-		frmMeuCrud.getContentPane().add(btnNovaAula);
 		
-		JButton btnconfig = new JButton("Editar Perfil");
+		JButton btnconfig = new JButton("EDITAR PERFIL");
 		btnconfig.setForeground(Color.BLACK);
 		btnconfig.setBackground(Color.LIGHT_GRAY);
 		btnconfig.setFont(new Font("DialogInput", Font.BOLD, 20));
@@ -235,10 +235,10 @@ public class PlaAluno {
 				Config.main(null);
 			}
 		});
-		btnconfig.setBounds(0, 580, 268, 33);
+		btnconfig.setBounds(1, 573, 237, 39);
 		frmMeuCrud.getContentPane().add(btnconfig);
 		
-		JButton btnSair = new JButton("Sair");
+		JButton btnSair = new JButton("SAIR");
 		btnSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
@@ -260,7 +260,7 @@ public class PlaAluno {
 		btnSair.setForeground(Color.BLACK);
 		btnSair.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnSair.setBackground(Color.LIGHT_GRAY);
-		btnSair.setBounds(978, 580, 106, 32);
+		btnSair.setBounds(919, 574, 164, 39);
 		frmMeuCrud.getContentPane().add(btnSair);
 		
 		JLabel lblNewLabel = new JLabel("");
