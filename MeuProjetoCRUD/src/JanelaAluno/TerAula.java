@@ -59,6 +59,7 @@ public class TerAula extends Login{
 	public String ids[]= new String[100];
 	int cont=0;
 	private JLabel lblNewLabel_7;
+	private JLabel lblNewLabel_8;
 	/**
 	 * Launch the application.-
 	 */
@@ -257,6 +258,11 @@ public class TerAula extends Login{
 		lblNewLabel_7.setForeground(Color.WHITE);
 		lblNewLabel_7.setBounds(363, 185, 278, 20);
 		frmMeuCrud.getContentPane().add(lblNewLabel_7);
+		
+		lblNewLabel_8 = new JLabel("");
+		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\Lupa.png"));
+		lblNewLabel_8.setBounds(852, 194, 219, 228);
+		frmMeuCrud.getContentPane().add(lblNewLabel_8);
 		
 		dadostabela = new CRUDAulas().pegaAula();
 		criaTabela(dadostabela);
