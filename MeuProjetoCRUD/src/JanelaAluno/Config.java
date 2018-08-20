@@ -202,6 +202,10 @@ public class Config extends Login {
 				}
 		});
 		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setBounds(153, 44, 293, 161);
+		frmMeuCrud.getContentPane().add(lblNewLabel);
+		
 		JLabel lblNewLabel_2 = new JLabel("New label");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_2.setBounds(479, 96, 299, 38);
@@ -322,11 +326,6 @@ public class Config extends Login {
 		JLabel lblNewLabel_7 = new JLabel("");
 		lblNewLabel_7.setBounds(623, 396, 46, 14);
 		frmMeuCrud.getContentPane().add(lblNewLabel_7);
-		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\A.png"));
-		lblNewLabel.setBounds(153, 44, 293, 161);
-		frmMeuCrud.getContentPane().add(lblNewLabel);
 		
 		JLabel lblNewLabel_3 = new JLabel("New label");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Chapeu azul.png"));

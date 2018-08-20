@@ -100,31 +100,31 @@ public class EditarRemover {
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_6.setBounds(0, 146, 492, 23);
 		frame.getContentPane().add(lblNewLabel_6);
-		SpinerSprend.setBounds(99, 314, 88, 20);
+		SpinerSprend.setBounds(75, 302, 88, 20);
 		frame.getContentPane().add(SpinerSprend);
 		
 		JLabel lblNome = new JLabel("Nome:");
 		lblNome.setForeground(Color.WHITE);
-		lblNome.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		lblNome.setBounds(15, 238, 64, 15);
+		lblNome.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		lblNome.setBounds(15, 211, 64, 15);
 		frame.getContentPane().add(lblNome);
 		
 		lblIdade = new JLabel("Idade:");
 		lblIdade.setForeground(Color.WHITE);
-		lblIdade.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		lblIdade.setBounds(15, 315, 64, 15);
+		lblIdade.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		lblIdade.setBounds(15, 302, 64, 15);
 		frame.getContentPane().add(lblIdade);
 		
 		JLabel lblEmail = new JLabel("E-Mail:");
 		lblEmail.setForeground(Color.WHITE);
-		lblEmail.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		lblEmail.setBounds(15, 280, 88, 15);
+		lblEmail.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		lblEmail.setBounds(0, 260, 88, 15);
 		frame.getContentPane().add(lblEmail);
 		
 		JLabel lblTelefone = new JLabel("Telefone:");
 		lblTelefone.setForeground(Color.WHITE);
-		lblTelefone.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		lblTelefone.setBounds(13, 351, 88, 15);
+		lblTelefone.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		lblTelefone.setBounds(0, 348, 88, 15);
 		frame.getContentPane().add(lblTelefone);
 		
 		/*ButtonGroup grupo = new ButtonGroup();
@@ -156,7 +156,7 @@ public class EditarRemover {
 				frame.dispose();
 			}
 		});
-		btnEditar.setBounds(324, 426, 131, 33);
+		btnEditar.setBounds(319, 433, 131, 33);
 		frame.getContentPane().add(btnEditar);
 		
 		JButton btnRemover = new JButton("Remover");
@@ -185,7 +185,7 @@ public class EditarRemover {
 		
 		
 		btnRemover.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnRemover.setBounds(21, 425, 118, 33);
+		btnRemover.setBounds(0, 433, 118, 33);
 		frame.getContentPane().add(btnRemover);
 		
 		JButton btnCancelar = new JButton("Voltar");
@@ -199,21 +199,21 @@ public class EditarRemover {
 			}
 		});
 		btnCancelar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnCancelar.setBounds(625, 426, 131, 33);
+		btnCancelar.setBounds(647, 433, 131, 33);
 		frame.getContentPane().add(btnCancelar);
 		
 		tfNome = new JTextField();
-		tfNome.setBounds(97, 238, 290, 20);
+		tfNome.setBounds(75, 211, 290, 20);
 		frame.getContentPane().add(tfNome);
 		tfNome.setColumns(10);
 		
 		tfEmail = new JTextField();
-		tfEmail.setBounds(97, 276, 291, 20);
+		tfEmail.setBounds(75, 260, 291, 20);
 		frame.getContentPane().add(tfEmail);
 		tfEmail.setColumns(10);
 		
 		tfTelefone = new JTextField();
-		tfTelefone.setBounds(99, 348, 168, 20);
+		tfTelefone.setBounds(75, 348, 168, 20);
 		frame.getContentPane().add(tfTelefone);
 		tfTelefone.setColumns(10);
 		
@@ -246,11 +246,6 @@ public class EditarRemover {
 		lblNewLabel_8.setBounds(461, 211, 46, 14);
 		frame.getContentPane().add(lblNewLabel_8);
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("D:\\BARRA ofcial.png"));
-		lblNewLabel.setBounds(482, 314, 364, 14);
-		frame.getContentPane().add(lblNewLabel);
-		
 		JLabel lblNewLabel_9 = new JLabel("");
 		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_9.setBounds(479, 146, 367, 23);
@@ -275,6 +270,11 @@ public class EditarRemover {
 		lblNewLabel_13.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_13.setBounds(459, 583, 421, 33);
 		frame.getContentPane().add(lblNewLabel_13);
+		
+		JLabel lblNewLabel_10 = new JLabel("");
+		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\verde.png"));
+		lblNewLabel_10.setBounds(630, 227, 138, 145);
+		frame.getContentPane().add(lblNewLabel_10);
 		
 		
 		
