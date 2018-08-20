@@ -75,16 +75,6 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(false);
 		
-		JLabel lblNewLabel_4 = new JLabel("New label");
-		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_4.setBounds(449, 62, 293, 31);
-		frame.getContentPane().add(lblNewLabel_4);
-		
-		JLabel lblNewLabel_3 = new JLabel("New label");
-		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_3.setBounds(656, 62, 363, 31);
-		frame.getContentPane().add(lblNewLabel_3);
-		
 		JLabel label_8 = new JLabel("*");
 		label_8.setHorizontalAlignment(SwingConstants.CENTER);
 		label_8.setForeground(Color.RED);
@@ -142,7 +132,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		
 		JLabel lblConfirmarSenha = new JLabel("Confirmar Senha:");
 		lblConfirmarSenha.setForeground(Color.WHITE);
-		lblConfirmarSenha.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblConfirmarSenha.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblConfirmarSenha.setBounds(15, 293, 164, 39);
 		frame.getContentPane().add(lblConfirmarSenha);
 		JButton btnLimpar = new JButton("LIMPAR");
@@ -163,31 +153,31 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		
 		JLabel lblE = new JLabel("Institui\u00E7\u00E3o:");
 		lblE.setForeground(Color.WHITE);
-		lblE.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblE.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblE.setBounds(16, 144, 100, 23);
 		frame.getContentPane().add(lblE);
 		
 		JLabel lblCnpj = new JLabel("CNPJ:");
 		lblCnpj.setForeground(Color.WHITE);
-		lblCnpj.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblCnpj.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblCnpj.setBounds(15, 182, 62, 23);
 		frame.getContentPane().add(lblCnpj);
 		
 		JLabel lblEmail = new JLabel("E-Mail:");
 		lblEmail.setForeground(Color.WHITE);
-		lblEmail.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblEmail.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblEmail.setBounds(16, 222, 100, 23);
 		frame.getContentPane().add(lblEmail);
 		
 		JLabel lblTelefone = new JLabel("Telefone:");
 		lblTelefone.setForeground(Color.WHITE);
-		lblTelefone.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblTelefone.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblTelefone.setBounds(16, 336, 84, 23);
 		frame.getContentPane().add(lblTelefone);
 		
 		JLabel lblSenha = new JLabel("Senha:");
 		lblSenha.setForeground(Color.WHITE);
-		lblSenha.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblSenha.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblSenha.setBounds(16, 260, 74, 23);
 		frame.getContentPane().add(lblSenha);
 		
@@ -358,11 +348,6 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		lblNewLabel_1.setBounds(865, 151, 46, 14);
 		frame.getContentPane().add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_2.setBounds(-11, 66, 674, 23);
-		frame.getContentPane().add(lblNewLabel_2);
-		
 		JLabel lblNewLabel_5 = new JLabel("New label");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_5.setBounds(0, 407, 493, 31);
@@ -380,8 +365,28 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\Crimson (3).png"));
-		lblNewLabel.setBounds(247, -9, 261, 97);
+		lblNewLabel.setBounds(291, 0, 261, 97);
 		frame.getContentPane().add(lblNewLabel);
+		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_2.setBounds(0, 78, 286, 23);
+		frame.getContentPane().add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_3.setBounds(257, 78, 485, 23);
+		frame.getContentPane().add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_4.setBounds(725, 78, 100, 23);
+		frame.getContentPane().add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_8 = new JLabel("");
+		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\form.png"));
+		lblNewLabel_8.setBounds(503, 113, 530, 310);
+		frame.getContentPane().add(lblNewLabel_8);
 		
 		
 

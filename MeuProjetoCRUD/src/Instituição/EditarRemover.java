@@ -105,25 +105,25 @@ public class EditarRemover {
 		
 		JLabel lblNome = new JLabel("Nome:");
 		lblNome.setForeground(Color.WHITE);
-		lblNome.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblNome.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblNome.setBounds(15, 211, 64, 15);
 		frame.getContentPane().add(lblNome);
 		
 		lblIdade = new JLabel("Idade:");
 		lblIdade.setForeground(Color.WHITE);
-		lblIdade.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblIdade.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblIdade.setBounds(15, 302, 64, 15);
 		frame.getContentPane().add(lblIdade);
 		
 		JLabel lblEmail = new JLabel("E-Mail:");
 		lblEmail.setForeground(Color.WHITE);
-		lblEmail.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblEmail.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblEmail.setBounds(15, 260, 88, 15);
 		frame.getContentPane().add(lblEmail);
 		
 		JLabel lblTelefone = new JLabel("Telefone:");
 		lblTelefone.setForeground(Color.WHITE);
-		lblTelefone.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblTelefone.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblTelefone.setBounds(8, 348, 88, 20);
 		frame.getContentPane().add(lblTelefone);
 		
@@ -271,10 +271,10 @@ public class EditarRemover {
 		lblNewLabel_13.setBounds(459, 583, 421, 33);
 		frame.getContentPane().add(lblNewLabel_13);
 		
-		JLabel lblNewLabel_10 = new JLabel("");
-		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\verde.png"));
-		lblNewLabel_10.setBounds(630, 227, 138, 145);
-		frame.getContentPane().add(lblNewLabel_10);
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\form.png"));
+		lblNewLabel.setBounds(545, 149, 301, 253);
+		frame.getContentPane().add(lblNewLabel);
 		
 		
 		

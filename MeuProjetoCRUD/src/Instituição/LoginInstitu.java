@@ -101,7 +101,7 @@ public class LoginInstitu extends Principal2{
 		});
 		
 		lblNewLabel_7 = new JLabel("Senha:");
-		lblNewLabel_7.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblNewLabel_7.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblNewLabel_7.setForeground(Color.WHITE);
 		lblNewLabel_7.setBounds(128, 256, 64, 24);
 		frame.getContentPane().add(lblNewLabel_7);
@@ -112,7 +112,7 @@ public class LoginInstitu extends Principal2{
 		frame.getContentPane().add(lblNewLabel_5);
 		
 		lblNewLabel = new JLabel("CNPJ:");
-		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setBounds(128, 219, 64, 26);
 		frame.getContentPane().add(lblNewLabel);
