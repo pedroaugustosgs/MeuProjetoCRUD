@@ -100,7 +100,7 @@ public class EditarRemover {
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_6.setBounds(-8, 185, 492, 23);
 		frame.getContentPane().add(lblNewLabel_6);
-		SpinerSprend.setBounds(68, 357, 88, 20);
+		SpinerSprend.setBounds(89, 357, 88, 20);
 		frame.getContentPane().add(SpinerSprend);
 		
 		JLabel lblNome = new JLabel("Nome:");
@@ -239,7 +239,7 @@ public class EditarRemover {
 		
 		JLabel lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		lblNewLabel_5.setBounds(173, 0, 585, 214);
+		lblNewLabel_5.setBounds(146, 0, 585, 214);
 		frame.getContentPane().add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_8 = new JLabel("");
