@@ -86,7 +86,6 @@ public class NovaAula extends Login {
 	private JLabel lblNewLabel_2;
 	private JLabel lblNewLabel_3;
 	private JLabel lblNewLabel_4;
-	private JLabel lblNewLabel_6;
 	private JLabel label_4;
 	private JLabel label_5;
 	private JLabel lblNewLabel_5;
@@ -132,7 +131,7 @@ public class NovaAula extends Login {
 			e1.printStackTrace();
 		}
 		
-		JButton btnCriarAula = new JButton("Criar Aula");
+		JButton btnCriarAula = new JButton("CRIAR AULA");
 		btnCriarAula.setBackground(Color.LIGHT_GRAY);
 		btnCriarAula.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -320,7 +319,7 @@ public class NovaAula extends Login {
 			
 		});
 		
-		JButton btnVoltar = new JButton("Voltar");
+		JButton btnVoltar = new JButton("VOLTAR");
 		btnVoltar.setBackground(Color.LIGHT_GRAY);
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -329,7 +328,7 @@ public class NovaAula extends Login {
 			}
 		});
 		
-		JButton btnRecomendaesDeAulas = new JButton("Recomenda\u00E7\u00F5es De Aulas");
+		JButton btnRecomendaesDeAulas = new JButton("RECOMENDA\u00C7\u00D5ES DE AULA");
 		btnRecomendaesDeAulas.setBackground(Color.LIGHT_GRAY);
 		btnRecomendaesDeAulas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -521,11 +520,6 @@ public class NovaAula extends Login {
 		lblNewLabel_4.setBounds(470, 99, 479, 28);
 		frame.getContentPane().add(lblNewLabel_4);
 		
-		lblNewLabel_6 = new JLabel("");
-		lblNewLabel_6.setIcon(new ImageIcon("D:\\img\\Coluna grega.jpg"));
-		lblNewLabel_6.setBounds(782, 50, 181, 28);
-		frame.getContentPane().add(lblNewLabel_6);
-		
 		panel = new JPanel();
 		panel.setBackground(Color.BLACK);
 		panel.setBounds(10, 243, 929, 197);
@@ -694,7 +688,7 @@ public class NovaAula extends Login {
 		label_5.setBounds(659, 7, 74, 19);
 		panel.add(label_5);
 		
-		lblNewLabel_5 = new JLabel("New label");
+		lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\nova.png"));
 		lblNewLabel_5.setBounds(295, 16, 456, 85);
 		frame.getContentPane().add(lblNewLabel_5);

@@ -170,7 +170,7 @@ public class AulasSolicitadas extends Login{
 		JButton btnVoltar = new JButton("VOLTAR");
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setBackground(Color.LIGHT_GRAY);
-		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 25));
+		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				PlaAluno.main(null);
@@ -230,7 +230,7 @@ public class AulasSolicitadas extends Login{
 			
 			lblNewLabel_9 = new JLabel("New label");
 			lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\Solicite Uma Nova Aula.jpg"));
-			lblNewLabel_9.setBounds(138, 29, 793, 78);
+			lblNewLabel_9.setBounds(138, 28, 793, 78);
 			frmMeuCrud.getContentPane().add(lblNewLabel_9);
 		
 		criaTabela(pegaAulaSolicitada());

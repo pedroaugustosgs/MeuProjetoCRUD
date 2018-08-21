@@ -204,7 +204,7 @@ public class Config extends Login {
 		
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_1.setBounds(-27, 118, 463, 35);
+		lblNewLabel_1.setBounds(-27, 101, 463, 35);
 		frmMeuCrud.getContentPane().add(lblNewLabel_1);
 		
 		lblFotoPerfil = new JLabel("");
@@ -284,6 +284,7 @@ public class Config extends Login {
 		frmMeuCrud.getContentPane().add(lblNomeCtfnoompleto);
 		
 		JButton btnTrocarFoto = new JButton("ALTERAR FOTO");
+		btnTrocarFoto.setForeground(Color.BLACK);
 		btnTrocarFoto.setBackground(Color.LIGHT_GRAY);
 		btnTrocarFoto.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnTrocarFoto.addActionListener(new ActionListener() {
@@ -308,9 +309,9 @@ public class Config extends Login {
 		lblNewLabel_7.setBounds(623, 396, 46, 14);
 		frmMeuCrud.getContentPane().add(lblNewLabel_7);
 		
-		JLabel lblNewLabel_3 = new JLabel("New label");
+		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Chapeu azul.png"));
-		lblNewLabel_3.setBounds(446, 53, 152, 71);
+		lblNewLabel_3.setBounds(425, 42, 152, 71);
 		frmMeuCrud.getContentPane().add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_6 = new JLabel("");
@@ -325,22 +326,22 @@ public class Config extends Login {
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel.setBounds(-12, 0, 453, 35);
+		lblNewLabel.setBounds(-12, -4, 453, 35);
 		frmMeuCrud.getContentPane().add(lblNewLabel);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_2.setBounds(433, 0, 389, 35);
+		lblNewLabel_2.setBounds(433, -4, 389, 35);
 		frmMeuCrud.getContentPane().add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_4.setBounds(428, 119, 394, 33);
+		lblNewLabel_4.setBounds(428, 102, 394, 33);
 		frmMeuCrud.getContentPane().add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\A.png"));
-		lblNewLabel_5.setBounds(155, 48, 406, 209);
+		lblNewLabel_5.setBounds(147, 30, 406, 209);
 		frmMeuCrud.getContentPane().add(lblNewLabel_5);
 		//System.out.println(EntraAluno.volt);
 		if(EntraAluno.volt==0) {

@@ -390,7 +390,7 @@ public class RecomendarAula extends Login {
 		
 		panel = new JPanel();
 		panel.setBackground(Color.BLACK);
-		panel.setBounds(2, 202, 929, 245);
+		panel.setBounds(2, 208, 929, 245);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
@@ -584,7 +584,7 @@ public class RecomendarAula extends Login {
 		frame.getContentPane().add(lblNewLabel_4);
 		
 		panel_1 = new JPanel();
-		panel_1.setBounds(1, 197, 929, 197);
+		panel_1.setBounds(1, 207, 929, 197);
 		frame.getContentPane().add(panel_1);
 		panel_1.setBackground(Color.BLACK);
 		panel_1.setVisible(false);
