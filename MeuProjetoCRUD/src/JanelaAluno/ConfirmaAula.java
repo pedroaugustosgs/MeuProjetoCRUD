@@ -520,7 +520,7 @@ public class ConfirmaAula extends Login{
 				}
 				JOptionPane.showMessageDialog(null, "Nova Aula Confirmada com Sucesso!");
 				
-				PlaAluno.main(null);
+				PlaAluno.main(null);       
 				frame.dispose();
 			}
 		});
