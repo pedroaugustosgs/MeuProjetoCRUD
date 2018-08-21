@@ -483,10 +483,6 @@ public class ConfirmaAula extends Login{
 					JOptionPane.showMessageDialog(null, "Erro ao confirmar nova aula!");
 				}
 				
-			}
-
-			private void ResultSet(ResultSet dados) {
-				// TODO Auto-generated method stub
 				
 			}
 		});
