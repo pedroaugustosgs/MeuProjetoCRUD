@@ -135,7 +135,7 @@ public class AulasSolicitadas extends Login{
 		frmMeuCrud.getContentPane().add(lblNewLabel_8);
 		tfProcurar.setForeground(Color.WHITE);
 		tfProcurar.setText("Entre com a mat\u00E9ria a ser procurada");
-		tfProcurar.setBounds(10, 176, 821, 26);
+		tfProcurar.setBounds(268, 188, 467, 26);
 		frmMeuCrud.getContentPane().add(tfProcurar);
 		tfProcurar.setColumns(10);
 		
@@ -165,7 +165,7 @@ public class AulasSolicitadas extends Login{
 				}
 			}
 		});
-		btnProcurar.setBounds(841, 170, 164, 39);
+		btnProcurar.setBounds(755, 181, 164, 39);
 		frmMeuCrud.getContentPane().add(btnProcurar);
 		
 		JButton btnVoltar = new JButton("VOLTAR");
@@ -217,7 +217,7 @@ public class AulasSolicitadas extends Login{
 		});
 		
 			JScrollPane scrollPane = new JScrollPane(tabela);
-			scrollPane.setBounds(10, 235, 1000, 222);
+			scrollPane.setBounds(268, 261, 499, 222);
 			frmMeuCrud.getContentPane().add(scrollPane);
 			
 			lblNewLabel = new JLabel("");
@@ -231,7 +231,7 @@ public class AulasSolicitadas extends Login{
 			
 			lblNewLabel_9 = new JLabel("New label");
 			lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\Solicite Uma Nova Aula.jpg"));
-			lblNewLabel_9.setBounds(138, 28, 793, 78);
+			lblNewLabel_9.setBounds(138, 23, 793, 78);
 			frmMeuCrud.getContentPane().add(lblNewLabel_9);
 		
 		criaTabela(pegaAulaSolicitada());
