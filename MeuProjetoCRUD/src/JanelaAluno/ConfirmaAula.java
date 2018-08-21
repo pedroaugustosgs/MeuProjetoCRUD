@@ -16,6 +16,7 @@ import com.toedter.calendar.JCalendar;
 
 import Banco.Conexao;
 import CRUD.CRUDAlunos;
+import CRUD.CRUDEmail;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -474,16 +475,53 @@ public class ConfirmaAula extends Login{
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					JOptionPane.showMessageDialog(null, "Nova Aula Confirmada com Sucesso!");
 					
-					PlaAluno.main(null);
-					frame.dispose();
 					
 				}else {
 					JOptionPane.showMessageDialog(null, "Erro ao confirmar nova aula!");
 				}
+				ResultSet prof=null;
+				ResultSet alu=null;
+				ResultSet aula=null;
 				
+				String sqk="SELECT * FROM alunos INNER JOIN Aulas ON Alunos.idaluno=aulas.professor where idaula = ?";
+				String sqkj = "SELECT * FROM alunos WHERE idaluno= ? ";
+				String sq = "SELECT * FROM aulas WHERE idaula=?";
+				try {
+					PreparedStatement stm = Conexao.conexao.prepareStatement(sqk);
+					stm.setString(1, idAula);
+					prof = stm.executeQuery();
+					stm.execute();
+					stm.close();
+					
+					
+					PreparedStatement slot = Conexao.conexao.prepareStatement(sqkj);
+					slot.setString(1, PlaAluno.idaluno);
+					alu = slot.executeQuery();
+					slot.execute();
+					slot.close();
+					
+					PreparedStatement jda = Conexao.conexao.prepareStatement(sq);
+					jda.setString(1, idAula);
+					aula = jda.executeQuery();
+					jda.execute();
+					jda.close();
+					prof.first();
+					alu.first();
+					aula.first();
+					String msg = "O(a) aluno(a) "+alu.getString("nome")+" foi cadastrado(a) em sua aula de "+Materia(aula.getString("materia"))+" sobre "
+							+ ""+aula.getString("conteudo");
+					
+					CRUDEmail a = new CRUDEmail();
+					a.EmailVisuAulas(prof.getString("email"), msg);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				JOptionPane.showMessageDialog(null, "Nova Aula Confirmada com Sucesso!");
 				
+				PlaAluno.main(null);
+				frame.dispose();
 			}
 		});
 		btnNewButton.setBounds(1, 556, 164, 39);
@@ -843,5 +881,49 @@ public class ConfirmaAula extends Login{
 			e.printStackTrace();
 		}
 		return alunos;
+	}
+	public String Materia(String m){
+		String materia=null;
+		
+		if(m.equals("RED")) {
+			materia="REDAÇÃO";
+		}
+		if(m.equals("MAT")) {
+			materia="MATEMÁTICA";
+		}
+		if(m.equals("QUI")) {
+			materia="QUÍMICA";
+		}
+		if(m.equals("FIS")) {
+			materia="FÍSICA";
+		}
+		if(m.equals("BIO")) {
+			materia="BIOLOGIA";
+		}
+		if(m.equals("HIS")) {
+			materia="HISTÓRIA";
+		}
+		if(m.equals("GEO")) {
+			materia="GEOGRAFIA";
+		}
+		if(m.equals("PORT")) {
+			materia="PORTUGUÊS";
+		}
+		if(m.equals("FILOS")) {
+			materia="FILOSOFIA";
+		}
+		if(m.equals("ING")) {
+			materia="INGLÊS";
+		}
+		if(m.equals("ESP")) {
+			materia="ESPANHOL";
+		}
+		if(m.equals("LIT")) {
+			materia="LITERATURA";
+		}
+		if(m.equals("SOCIO")) {
+			materia="SOCIOLOGIA";
+		}
+		return materia;
 	}
 }
