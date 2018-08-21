@@ -114,11 +114,13 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		label_3.setHorizontalAlignment(SwingConstants.CENTER);
 		label_3.setForeground(Color.RED);
 		label_3.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		label_3.setBounds(291, 220, 12, 14);
+		label_3.setBounds(304, 219, 12, 14);
 		frame.getContentPane().add(label_3);
 
 
 		tfCSenha = new JPasswordField();
+		tfCSenha.setBackground(Color.BLACK);
+		tfCSenha.setForeground(Color.WHITE);
 		tfCSenha.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
@@ -133,7 +135,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		JLabel lblConfirmarSenha = new JLabel("Confirmar Senha:");
 		lblConfirmarSenha.setForeground(Color.WHITE);
 		lblConfirmarSenha.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblConfirmarSenha.setBounds(15, 293, 164, 39);
+		lblConfirmarSenha.setBounds(15, 293, 150, 39);
 		frame.getContentPane().add(lblConfirmarSenha);
 		JButton btnLimpar = new JButton("LIMPAR");
 		btnLimpar.setBackground(Color.LIGHT_GRAY);
@@ -148,7 +150,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 			}
 		});
 		btnLimpar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnLimpar.setBounds(642, 461, 167, 40);
+		btnLimpar.setBounds(641, 460, 167, 40);
 		frame.getContentPane().add(btnLimpar);
 		
 		JLabel lblE = new JLabel("Institui\u00E7\u00E3o:");
@@ -166,13 +168,13 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		JLabel lblEmail = new JLabel("E-Mail:");
 		lblEmail.setForeground(Color.WHITE);
 		lblEmail.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblEmail.setBounds(16, 222, 100, 23);
+		lblEmail.setBounds(16, 222, 84, 23);
 		frame.getContentPane().add(lblEmail);
 		
 		JLabel lblTelefone = new JLabel("Telefone:");
 		lblTelefone.setForeground(Color.WHITE);
 		lblTelefone.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblTelefone.setBounds(16, 336, 84, 23);
+		lblTelefone.setBounds(10, 336, 90, 23);
 		frame.getContentPane().add(lblTelefone);
 		
 		JLabel lblSenha = new JLabel("Senha:");
@@ -189,6 +191,8 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		}
 		
 		tfCnpj = new JFormattedTextField(mascaraCNPJ);
+		tfCnpj.setForeground(Color.WHITE);
+		tfCnpj.setBackground(Color.BLACK);
 		tfCnpj.addFocusListener(new FocusAdapter() {
 			
 			@Override
@@ -202,6 +206,8 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		tfCnpj.setColumns(10);
 		
 		tfInstitu = new JTextField();
+		tfInstitu.setForeground(Color.WHITE);
+		tfInstitu.setBackground(Color.BLACK);
 		tfInstitu.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
@@ -214,6 +220,8 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		tfInstitu.setColumns(10);
 		
 		tfEmail = new JTextField();
+		tfEmail.setBackground(Color.BLACK);
+		tfEmail.setForeground(Color.WHITE);
 		tfEmail.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
@@ -222,7 +230,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 			}
 		});
 		tfEmail.setColumns(10);
-		tfEmail.setBounds(83, 220, 204, 23);
+		tfEmail.setBounds(97, 220, 204, 23);
 		frame.getContentPane().add(tfEmail);
 		
 		try {
@@ -232,6 +240,8 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 			e1.printStackTrace();
 		}
 		tfTelefone = new JFormattedTextField(mascaraFone);
+		tfTelefone.setForeground(Color.WHITE);
+		tfTelefone.setBackground(Color.BLACK);
 		tfTelefone.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
@@ -240,11 +250,13 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 			}
 		});
 		tfTelefone.setColumns(10);
-		tfTelefone.setBounds(102, 337, 167, 22);
+		tfTelefone.setBounds(103, 337, 167, 22);
 		frame.getContentPane().add(tfTelefone);
 		
 
 		tfSenha = new JPasswordField();
+		tfSenha.setForeground(Color.WHITE);
+		tfSenha.setBackground(Color.BLACK);
 		tfSenha.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
@@ -265,7 +277,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 			}
 		});
 		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnVoltar.setBounds(0, 462,164, 39);
+		btnVoltar.setBounds(1, 461,164, 39);
 		frame.getContentPane().add(btnVoltar);
 		
 		JButton btnSalvar = new JButton("SALVAR");
@@ -341,7 +353,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 			}
 		});
 		btnSalvar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnSalvar.setBounds(325, 461, 172, 40);
+		btnSalvar.setBounds(325, 460, 172, 40);
 		frame.getContentPane().add(btnSalvar);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
@@ -382,11 +394,6 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_4.setBounds(725, 78, 100, 23);
 		frame.getContentPane().add(lblNewLabel_4);
-		
-		JLabel lblNewLabel_8 = new JLabel("");
-		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\form.png"));
-		lblNewLabel_8.setBounds(503, 113, 530, 310);
-		frame.getContentPane().add(lblNewLabel_8);
 		
 		
 

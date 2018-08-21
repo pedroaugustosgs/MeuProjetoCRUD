@@ -58,6 +58,7 @@ public class EntraInstitu extends Principal2{
 		frmEntraInstitu.setLocationRelativeTo(null);
 		
 		JButton btnVoltar = new JButton("VOLTAR");
+		btnVoltar.setBackground(Color.LIGHT_GRAY);
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmEntraInstitu.setVisible(false);
@@ -65,6 +66,7 @@ public class EntraInstitu extends Principal2{
 			}
 		});
 		JButton btnLogar = new JButton("LOGAR");
+		btnLogar.setBackground(Color.LIGHT_GRAY);
 		btnLogar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				LoginInstitu.main(null);
@@ -73,6 +75,7 @@ public class EntraInstitu extends Principal2{
 		});
 		
 		JButton btnCadastrar = new JButton("CADASTRAR");
+		btnCadastrar.setBackground(Color.LIGHT_GRAY);
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Cadastro_Institu.main(null);

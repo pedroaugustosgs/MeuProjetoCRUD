@@ -117,6 +117,8 @@ public class Cadastrar_login extends LoginInstitu{
 		});
 		
 		SpIdade = new JSpinner();
+		SpIdade.setForeground(Color.WHITE);
+		SpIdade.setBackground(Color.BLACK);
 		
 		SpinnerModel model = new SpinnerNumberModel(1, 1, 100, 1);
 		
@@ -179,6 +181,8 @@ public class Cadastrar_login extends LoginInstitu{
 		frame.getContentPane().add(lblInstituio);
 		
 		cbEscola = new JComboBox<String>();
+		cbEscola.setForeground(Color.WHITE);
+		cbEscola.setBackground(Color.BLACK);
 		cbEscola.setBounds(104, 448, 233, 20);
 		frame.getContentPane().add(cbEscola);
 		
@@ -208,6 +212,7 @@ public class Cadastrar_login extends LoginInstitu{
 		frame.getContentPane().add(btnLimpar);
 		
 		tfUsuario = new JTextField();
+		tfUsuario.setBackground(Color.BLACK);
 		tfUsuario.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
@@ -215,10 +220,10 @@ public class Cadastrar_login extends LoginInstitu{
 			}
 		});
 		tfUsuario.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		tfUsuario.setForeground(Color.BLACK);
+		tfUsuario.setForeground(Color.WHITE);
 		tfUsuario.setHorizontalAlignment(SwingConstants.LEFT);
 		tfUsuario.setColumns(10);
-		tfUsuario.setBounds(77, 155, 177, 20);
+		tfUsuario.setBounds(79, 155, 177, 20);
 		frame.getContentPane().add(tfUsuario);
 		
 		JLabel lblUsurio = new JLabel("Usu\u00E1rio:");
@@ -228,6 +233,7 @@ public class Cadastrar_login extends LoginInstitu{
 		frame.getContentPane().add(lblUsurio);
 		
 		tfnome = new JTextField();
+		tfnome.setBackground(Color.BLACK);
 		tfnome.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
@@ -235,7 +241,7 @@ public class Cadastrar_login extends LoginInstitu{
 
 			}
 		});
-		tfnome.setForeground(Color.BLACK);
+		tfnome.setForeground(Color.WHITE);
 		tfnome.setHorizontalAlignment(SwingConstants.LEFT);
 		tfnome.setColumns(10);
 		tfnome.setBounds(74, 193, 177, 20);
@@ -248,6 +254,8 @@ public class Cadastrar_login extends LoginInstitu{
 			e1.printStackTrace();
 		}
 		tel = new JFormattedTextField(mascaraFone);
+		tel.setForeground(Color.WHITE);
+		tel.setBackground(Color.BLACK);
 		tel.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
@@ -260,6 +268,8 @@ public class Cadastrar_login extends LoginInstitu{
 		frame.getContentPane().add(tel);
 		
 		tfemail = new JTextField();
+		tfemail.setForeground(Color.WHITE);
+		tfemail.setBackground(Color.BLACK);
 		tfemail.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
@@ -271,6 +281,8 @@ public class Cadastrar_login extends LoginInstitu{
 		frame.getContentPane().add(tfemail);
 		
 		pfCsenha = new JPasswordField();
+		pfCsenha.setForeground(Color.WHITE);
+		pfCsenha.setBackground(Color.BLACK);
 		pfCsenha.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
@@ -281,6 +293,8 @@ public class Cadastrar_login extends LoginInstitu{
 		frame.getContentPane().add(pfCsenha);
 		
 		pfsenha = new JPasswordField();
+		pfsenha.setForeground(Color.WHITE);
+		pfsenha.setBackground(Color.BLACK);
 		pfsenha.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {

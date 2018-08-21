@@ -149,6 +149,8 @@ public class LoginInstitu extends Principal2{
 			e.printStackTrace();
 		}
 		tfcnpj = new JFormattedTextField(tcnpj);
+		tfcnpj.setForeground(Color.WHITE);
+		tfcnpj.setBackground(Color.BLACK);
 		tfcnpj.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent arg0) {
@@ -162,6 +164,8 @@ public class LoginInstitu extends Principal2{
 		frame.getContentPane().add(tfcnpj);
 		
 		pfSenha = new JPasswordField();
+		pfSenha.setForeground(Color.WHITE);
+		pfSenha.setBackground(Color.BLACK);
 		pfSenha.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {

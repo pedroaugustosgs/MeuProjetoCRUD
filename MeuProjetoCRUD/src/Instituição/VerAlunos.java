@@ -90,6 +90,7 @@ public class VerAlunos extends LoginInstitu{
 		frmMeuCrud.setLocationRelativeTo(null);
 		
 		tfProcurar = new JTextField();
+		tfProcurar.setBackground(Color.BLACK);
 		
 		tfProcurar.addKeyListener(new KeyAdapter() {
 			@Override
@@ -192,7 +193,7 @@ public class VerAlunos extends LoginInstitu{
 			JScrollPane scrollPane = new JScrollPane(tabela);
 			scrollPane.setBounds(55, 150, 671, 203);
 			frmMeuCrud.getContentPane().add(scrollPane);
-		tfProcurar.setForeground(Color.LIGHT_GRAY);
+		tfProcurar.setForeground(Color.WHITE);
 		tfProcurar.setText("Entre com o nome a ser procurado");
 		tfProcurar.setBounds(55, 109, 562, 26);
 		frmMeuCrud.getContentPane().add(tfProcurar);

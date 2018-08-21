@@ -83,6 +83,8 @@ public class EditarRemover {
 		frame.setLocationRelativeTo(null);
 		
 		SpinerSprend = new JSpinner();
+		SpinerSprend.setBackground(Color.BLACK);
+		SpinerSprend.setForeground(Color.WHITE);
 		SpinerSprend.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent arg0) {
 				int valor = (int) SpinerSprend.getValue();
@@ -156,7 +158,7 @@ public class EditarRemover {
 				frame.dispose();
 			}
 		});
-		btnEditar.setBounds(318, 430, 164, 39);
+		btnEditar.setBounds(318, 427, 164, 39);
 		frame.getContentPane().add(btnEditar);
 		
 		JButton btnRemover = new JButton("REMOVER");
@@ -185,7 +187,7 @@ public class EditarRemover {
 		
 		
 		btnRemover.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnRemover.setBounds(0, 430, 164, 39);
+		btnRemover.setBounds(1, 427, 164, 39);
 		frame.getContentPane().add(btnRemover);
 		
 		JButton btnCancelar = new JButton("VOLTAR");
@@ -199,20 +201,26 @@ public class EditarRemover {
 			}
 		});
 		btnCancelar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnCancelar.setBounds(614, 430, 164, 39);
+		btnCancelar.setBounds(614, 426, 164, 39);
 		frame.getContentPane().add(btnCancelar);
 		
 		tfNome = new JTextField();
+		tfNome.setForeground(Color.WHITE);
+		tfNome.setBackground(Color.BLACK);
 		tfNome.setBounds(89, 211, 290, 20);
 		frame.getContentPane().add(tfNome);
 		tfNome.setColumns(10);
 		
 		tfEmail = new JTextField();
+		tfEmail.setForeground(Color.WHITE);
+		tfEmail.setBackground(Color.BLACK);
 		tfEmail.setBounds(90, 260, 291, 20);
 		frame.getContentPane().add(tfEmail);
 		tfEmail.setColumns(10);
 		
 		tfTelefone = new JTextField();
+		tfTelefone.setForeground(Color.WHITE);
+		tfTelefone.setBackground(Color.BLACK);
 		tfTelefone.setBounds(95, 350, 168, 20);
 		frame.getContentPane().add(tfTelefone);
 		tfTelefone.setColumns(10);
@@ -239,7 +247,7 @@ public class EditarRemover {
 		
 		JLabel lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		lblNewLabel_5.setBounds(191, -20, 451, 214);
+		lblNewLabel_5.setBounds(225, -14, 451, 214);
 		frame.getContentPane().add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_8 = new JLabel("");
@@ -270,11 +278,6 @@ public class EditarRemover {
 		lblNewLabel_13.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_13.setBounds(459, 583, 421, 33);
 		frame.getContentPane().add(lblNewLabel_13);
-		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\form.png"));
-		lblNewLabel.setBounds(545, 149, 301, 253);
-		frame.getContentPane().add(lblNewLabel);
 		
 		
 		

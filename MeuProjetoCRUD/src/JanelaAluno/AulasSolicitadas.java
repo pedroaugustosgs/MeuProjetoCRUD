@@ -97,6 +97,7 @@ public class AulasSolicitadas extends Login{
 		
 		
 		tfProcurar = new JTextField();
+		tfProcurar.setBackground(Color.BLACK);
 		tfProcurar.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent arg0) {
@@ -132,7 +133,7 @@ public class AulasSolicitadas extends Login{
 		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_8.setBounds(478, 494, 233, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_8);
-		tfProcurar.setForeground(Color.LIGHT_GRAY);
+		tfProcurar.setForeground(Color.WHITE);
 		tfProcurar.setText("Entre com a mat\u00E9ria a ser procurada");
 		tfProcurar.setBounds(10, 176, 821, 26);
 		frmMeuCrud.getContentPane().add(tfProcurar);

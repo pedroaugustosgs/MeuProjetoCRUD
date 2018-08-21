@@ -214,7 +214,9 @@ public class Config extends Login {
 		frmMeuCrud.getContentPane().add(lblFotoPerfil);
 		
 		tfIdade = new JTextField();
-		tfIdade.setBounds(79, 291, 86, 20);
+		tfIdade.setForeground(Color.WHITE);
+		tfIdade.setBackground(Color.BLACK);
+		tfIdade.setBounds(79, 290, 86, 20);
 		frmMeuCrud.getContentPane().add(tfIdade);
 		tfIdade.setColumns(10);
 		btnNewButton.setForeground(Color.BLACK);
@@ -229,6 +231,8 @@ public class Config extends Login {
 			e1.printStackTrace();
 		}
 		tftelefone = new JFormattedTextField(mascaraFone);
+		tftelefone.setForeground(Color.WHITE);
+		tftelefone.setBackground(Color.BLACK);
 		tftelefone.setColumns(10);
 		tftelefone.setBounds(103, 342, 135, 20);
 		frmMeuCrud.getContentPane().add(tftelefone);
@@ -248,6 +252,8 @@ public class Config extends Login {
 		frmMeuCrud.getContentPane().add(lblSenha);
 		
 		tfemail = new JTextField();
+		tfemail.setForeground(Color.WHITE);
+		tfemail.setBackground(Color.BLACK);
 		tfemail.setColumns(10);
 		tfemail.setBounds(92, 237, 229, 20);
 		frmMeuCrud.getContentPane().add(tfemail);
@@ -259,6 +265,8 @@ public class Config extends Login {
 		frmMeuCrud.getContentPane().add(lblEmail);
 		
 		tfNome = new JTextField();
+		tfNome.setForeground(Color.WHITE);
+		tfNome.setBackground(Color.BLACK);
 		tfNome.setBounds(92, 188, 229, 20);
 		frmMeuCrud.getContentPane().add(tfNome);
 		tfNome.setColumns(10);
