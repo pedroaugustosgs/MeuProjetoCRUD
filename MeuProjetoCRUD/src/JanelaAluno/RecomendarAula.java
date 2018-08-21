@@ -340,6 +340,8 @@ public class RecomendarAula extends Login {
 		frame.getContentPane().add(btnCriarAula);
 		
 		tfLocal = new JTextField();
+		tfLocal.setForeground(Color.WHITE);
+		tfLocal.setBackground(Color.BLACK);
 		tfLocal.setColumns(10);
 		tfLocal.setBounds(86, 466, 218, 20);
 		frame.getContentPane().add(tfLocal);
@@ -351,6 +353,8 @@ public class RecomendarAula extends Login {
 		frame.getContentPane().add(lblLocal);
 		
 		tfConteudo = new JTextField();
+		tfConteudo.setForeground(Color.WHITE);
+		tfConteudo.setBackground(Color.BLACK);
 		tfConteudo.setBounds(119, 152, 515, 20);
 		frame.getContentPane().add(tfConteudo);
 		tfConteudo.setColumns(10);

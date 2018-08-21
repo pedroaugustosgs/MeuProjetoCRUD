@@ -99,6 +99,7 @@ public class TerAula extends Login{
 		
 		
 		tfProcurar = new JTextField();
+		tfProcurar.setBackground(Color.BLACK);
 		tfProcurar.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent arg0) {
@@ -134,7 +135,7 @@ public class TerAula extends Login{
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_4.setBounds(407, 102, 496, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_4);
-		tfProcurar.setForeground(Color.LIGHT_GRAY);
+		tfProcurar.setForeground(Color.WHITE);
 		tfProcurar.setText("Entre com a mat\u00E9ria a ser procurada");
 		tfProcurar.setBounds(183, 181, 606, 26);
 		frmMeuCrud.getContentPane().add(tfProcurar);
