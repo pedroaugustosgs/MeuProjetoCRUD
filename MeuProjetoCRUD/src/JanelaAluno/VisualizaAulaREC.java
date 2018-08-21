@@ -166,7 +166,7 @@ public class VisualizaAulaREC extends Login{
 			}
 		});
 		chckbxNoite.setEnabled(false);
-		chckbxNoite.setBounds(246, 92, 51, 23);
+		chckbxNoite.setBounds(246, 92, 71, 23);
 		panel.add(chckbxNoite);
 		
 		Label label_6 = new Label("Data:");
@@ -184,7 +184,7 @@ public class VisualizaAulaREC extends Login{
 			}
 		});
 		chSegunda.setEnabled(false);
-		chSegunda.setBounds(7, 42, 104, 23);
+		chSegunda.setBounds(7, 42, 133, 23);
 		panel.add(chSegunda);
 		
 		chTerca = new JCheckBox("Ter\u00E7a-Feira");
@@ -527,7 +527,7 @@ public class VisualizaAulaREC extends Login{
 		lblNewLabel_4.setBounds(762, 535, 194, 31);
 		frame.getContentPane().add(lblNewLabel_4);
 		
-		lblNewLabel_7 = new JLabel("New label");
+		lblNewLabel_7 = new JLabel("");
 		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\Solicite Uma Nova Aula (4).jpg"));
 		lblNewLabel_7.setBounds(378, 10, 326, 77);
 		frame.getContentPane().add(lblNewLabel_7);

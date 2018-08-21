@@ -117,6 +117,7 @@ public class NovaAula extends Login {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setForeground(Color.WHITE);
 		frame.getContentPane().setBackground(Color.BLACK);
 		frame.setBounds(100, 100, 957, 635);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -365,6 +366,8 @@ public class NovaAula extends Login {
 		lblDe_1.setFont(new Font("Times New Roman", Font.BOLD, 16));
 		
 		tfDeUmaVez = new JFormattedTextField(DeAte);
+		tfDeUmaVez.setForeground(Color.WHITE);
+		tfDeUmaVez.setBackground(Color.BLACK);
 		tfDeUmaVez.setBounds(48, 14, 125, 20);
 		panel_1.add(tfDeUmaVez);
 		tfDeUmaVez.setColumns(10);
@@ -376,6 +379,8 @@ public class NovaAula extends Login {
 		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD, 16));
 		
 		tfAteUmaVez = new JFormattedTextField(DeAte);
+		tfAteUmaVez.setBackground(Color.BLACK);
+		tfAteUmaVez.setForeground(Color.WHITE);
 		tfAteUmaVez.setBounds(48, 47, 124, 20);
 		panel_1.add(tfAteUmaVez);
 		tfAteUmaVez.setColumns(10);
@@ -427,6 +432,8 @@ public class NovaAula extends Login {
 		frame.getContentPane().add(btnRecomendaesDeAulas);
 		
 		tfVagas = new JTextField();
+		tfVagas.setBackground(Color.BLACK);
+		tfVagas.setForeground(Color.WHITE);
 		
 		tfVagas.setColumns(10);
 		tfVagas.setBounds(81, 482, 86, 20);
@@ -447,6 +454,8 @@ public class NovaAula extends Login {
 		frame.getContentPane().add(btnCriarAula);
 		
 		tfLocal = new JTextField();
+		tfLocal.setForeground(Color.WHITE);
+		tfLocal.setBackground(Color.BLACK);
 		tfLocal.setColumns(10);
 		tfLocal.setBounds(81, 451, 306, 20);
 		frame.getContentPane().add(tfLocal);
@@ -458,6 +467,8 @@ public class NovaAula extends Login {
 		frame.getContentPane().add(lblLocal);
 		
 		tfConteudo = new JTextField();
+		tfConteudo.setForeground(Color.WHITE);
+		tfConteudo.setBackground(Color.BLACK);
 		tfConteudo.setBounds(117, 180, 257, 20);
 		frame.getContentPane().add(tfConteudo);
 		tfConteudo.setColumns(10);
