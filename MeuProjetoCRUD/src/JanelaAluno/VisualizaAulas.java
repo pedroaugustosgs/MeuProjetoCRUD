@@ -518,7 +518,7 @@ public class VisualizaAulas extends Login{
 		label_7.setBounds(299, 12, 51, 23);
 		panel.add(label_7);
 		label_7.setForeground(Color.WHITE);
-		label_7.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
+		label_7.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		
 		chckbxManh = new JCheckBox("Manh\u00E3");
 		chckbxManh.setBackground(Color.BLACK);
@@ -698,14 +698,14 @@ public class VisualizaAulas extends Login{
 		
 		label_5 = new Label("Turno:");
 		label_5.setForeground(Color.WHITE);
-		label_5.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
+		label_5.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		label_5.setBackground(Color.BLACK);
 		label_5.setBounds(414, 12, 51, 23);
 		panel.add(label_5);
 		
 		label_10 = new Label("Turno:");
 		label_10.setForeground(Color.WHITE);
-		label_10.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
+		label_10.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		label_10.setBackground(Color.BLACK);
 		label_10.setBounds(566, 12, 51, 23);
 		panel.add(label_10);

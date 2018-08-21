@@ -58,7 +58,6 @@ public class TerAula extends Login{
 	public String ids[]= new String[100];
 	int cont=0;
 	private JLabel lblNewLabel_7;
-	private JLabel lblNewLabel_6;
 	private JLabel lblNewLabel_8;
 	/**
 	 * Launch the application.-
@@ -128,12 +127,12 @@ public class TerAula extends Login{
 		
 		lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_2.setBounds(0, 112, 432, 26);
+		lblNewLabel_2.setBounds(-4, 102, 432, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_2);
 		
 		lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_4.setBounds(407, 112, 496, 26);
+		lblNewLabel_4.setBounds(407, 102, 496, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_4);
 		tfProcurar.setForeground(Color.LIGHT_GRAY);
 		tfProcurar.setText("Entre com a mat\u00E9ria a ser procurada");
@@ -245,7 +244,7 @@ public class TerAula extends Login{
 		
 		lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_5.setBounds(827, 112, 244, 26);
+		lblNewLabel_5.setBounds(827, 102, 244, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_5);
 		
 		lblNewLabel_7 = new JLabel("AULAS J\u00C1 DISPON\u00CDVEIS");
@@ -254,13 +253,9 @@ public class TerAula extends Login{
 		lblNewLabel_7.setBounds(366, 238, 278, 20);
 		frmMeuCrud.getContentPane().add(lblNewLabel_7);
 		
-		lblNewLabel_6 = new JLabel("New label");
-		lblNewLabel_6.setBounds(485, 56, 46, 14);
-		frmMeuCrud.getContentPane().add(lblNewLabel_6);
-		
 		lblNewLabel_8 = new JLabel("");
 		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\nova.png"));
-		lblNewLabel_8.setBounds(313, 26, 452, 75);
+		lblNewLabel_8.setBounds(313, 28, 452, 75);
 		frmMeuCrud.getContentPane().add(lblNewLabel_8);
 		
 		dadostabela = new CRUDAulas().pegaAula();

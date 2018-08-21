@@ -101,6 +101,7 @@ public class Cadastrar_login extends LoginInstitu{
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnLimpar = new JButton("LIMPAR");
+		btnLimpar.setForeground(Color.BLACK);
 		btnLimpar.setBackground(Color.LIGHT_GRAY);
 		btnLimpar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -203,7 +204,7 @@ public class Cadastrar_login extends LoginInstitu{
 			e2.printStackTrace();
 		}
 		btnLimpar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnLimpar.setBounds(612, 556, 164, 39);
+		btnLimpar.setBounds(610, 556, 164, 39);
 		frame.getContentPane().add(btnLimpar);
 		
 		tfUsuario = new JTextField();
@@ -346,6 +347,7 @@ public class Cadastrar_login extends LoginInstitu{
 		frame.getContentPane().add(lblConfirmarSenha);
 		
 		JButton btnSalvar = new JButton("SALVAR");
+		btnSalvar.setForeground(Color.BLACK);
 		btnSalvar.setBackground(Color.LIGHT_GRAY);
 		btnSalvar.addActionListener(new ActionListener() {
 			@SuppressWarnings("deprecation")
@@ -488,6 +490,7 @@ public class Cadastrar_login extends LoginInstitu{
 		frame.getContentPane().add(btnSalvar);
 		
 		JButton btnVoltar = new JButton("VOLTAR");
+		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setBackground(Color.LIGHT_GRAY);
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -504,10 +507,6 @@ public class Cadastrar_login extends LoginInstitu{
 		ButtonGroup bg = new ButtonGroup();
 		bg.add(fem);
 		bg.add(mas);
-		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(621, 68, 46, 14);
-		frame.getContentPane().add(lblNewLabel);
 		
 		JLabel lblNewLabel_2 = new JLabel("New label");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
