@@ -126,54 +126,54 @@ public class AlteraAulas extends Login{
 		Label label = new Label("Mat\u00E9ria:");
 		label.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
 		label.setForeground(Color.WHITE);
-		label.setBounds(10, 382, 58, 22);
+		label.setBounds(10, 131, 58, 22);
 		frame.getContentPane().add(label);
 		
 		Label label_1 = new Label("Professor:");
 		label_1.setForeground(Color.WHITE);
 		label_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_1.setBounds(2, 410, 66, 22);
+		label_1.setBounds(10, 159, 66, 22);
 		frame.getContentPane().add(label_1);
 		
 		Label label_2 = new Label("Conte\u00FAdo:");
 		label_2.setForeground(Color.WHITE);
 		label_2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_2.setBounds(2, 437, 66, 22);
+		label_2.setBounds(10, 187, 66, 22);
 		frame.getContentPane().add(label_2);
 		
 		Label label_3 = new Label("Local:");
 		label_3.setForeground(Color.WHITE);
 		label_3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_3.setBounds(10, 465, 49, 22);
+		label_3.setBounds(10, 215, 49, 22);
 		frame.getContentPane().add(label_3);
 		
 		Label label_4 = new Label("Vagas:");
 		label_4.setForeground(Color.WHITE);
 		label_4.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_4.setBounds(10, 493, 49, 22);
+		label_4.setBounds(10, 247, 49, 22);
 		frame.getContentPane().add(label_4);
 		
 		lblmateria = new JLabel("");
 		lblmateria.setForeground(Color.WHITE);
-		lblmateria.setBounds(74, 382, 140, 22);
+		lblmateria.setBounds(74, 131, 140, 22);
 		frame.getContentPane().add(lblmateria);
 		
 		lblprofessor = new JLabel("");
 		lblprofessor.setForeground(Color.WHITE);
-		lblprofessor.setBounds(74, 410, 130, 22);
+		lblprofessor.setBounds(82, 159, 130, 22);
 		frame.getContentPane().add(lblprofessor);
 		
 		lblconteudo = new JLabel("");
 		lblconteudo.setForeground(Color.WHITE);
-		lblconteudo.setBounds(69, 437, 153, 22);
+		lblconteudo.setBounds(82, 187, 140, 22);
 		frame.getContentPane().add(lblconteudo);
 		
 		lblvagas = new JLabel("");
 		lblvagas.setForeground(Color.WHITE);
-		lblvagas.setBounds(69, 496, 153, 19);
+		lblvagas.setBounds(61, 250, 161, 19);
 		frame.getContentPane().add(lblvagas);
 		
-		JButton btnNewButton = new JButton("Salvar");
+		JButton btnNewButton = new JButton("SALVAR");
 		btnNewButton.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -362,10 +362,10 @@ public class AlteraAulas extends Login{
 				
 			}
 		});
-		btnNewButton.setBounds(0, 568, 140, 33);
+		btnNewButton.setBounds(2, 561, 164, 39);
 		frame.getContentPane().add(btnNewButton);
 		
-		JButton btnNovoltar = new JButton("Voltar");
+		JButton btnNovoltar = new JButton("VOLTAR");
 		btnNovoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNovoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -373,16 +373,16 @@ public class AlteraAulas extends Login{
 				frame.dispose();
 			}
 		});
-		btnNovoltar.setBounds(864, 568, 146, 33);
+		btnNovoltar.setBounds(845, 561, 164, 39);
 		frame.getContentPane().add(btnNovoltar);
 		
 		tabela = new JTable();
 		
 		JScrollPane scrollPane = new JScrollPane(tabela);
-		scrollPane.setBounds(232, 306, 502, 213);
+		scrollPane.setBounds(189, 315, 502, 213);
 		frame.getContentPane().add(scrollPane);
 		
-		JButton btnRemover = new JButton("Remover");
+		JButton btnRemover = new JButton("REMOVER");
 		btnRemover.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnRemover.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -445,12 +445,13 @@ public class AlteraAulas extends Login{
 				return;
 			}
 		});
-		btnRemover.setBounds(425, 568, 146, 33);
+		btnRemover.setBounds(425, 561, 164, 39);
 		frame.getContentPane().add(btnRemover);
 		
 		lbllocal = new JTextField();
+		lbllocal.setBackground(Color.BLACK);
 		lbllocal.setForeground(Color.WHITE);
-		lbllocal.setBounds(57, 467, 165, 20);
+		lbllocal.setBounds(65, 215, 165, 20);
 		frame.getContentPane().add(lbllocal);
 		lbllocal.setColumns(10);
 		
@@ -464,173 +465,185 @@ public class AlteraAulas extends Login{
 		panel = new JPanel();
 		panel.setBackground(Color.BLACK);
 		panel.setVisible(false);
-		panel.setBounds(232, 112, 700, 189);
+		panel.setBounds(232, 113, 700, 189);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
 		Label label_7 = new Label("Turno:");
-		label_7.setBounds(8, 72, 51, 23);
+		label_7.setBounds(277, 10, 66, 23);
 		panel.add(label_7);
 		label_7.setForeground(Color.WHITE);
-		label_7.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
+		label_7.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		
 		chckbxManh = new JCheckBox("Manh\u00E3");
 		chckbxManh.setBackground(Color.BLACK);
 		chckbxManh.setForeground(Color.WHITE);
 		chckbxManh.setEnabled(false);
-		chckbxManh.setBounds(8, 101, 66, 23);
+		chckbxManh.setBounds(277, 43, 66, 23);
 		panel.add(chckbxManh);
 		
 		chckbxTarde = new JCheckBox("Tarde");
 		chckbxTarde.setBackground(Color.BLACK);
 		chckbxTarde.setForeground(Color.WHITE);
 		chckbxTarde.setEnabled(false);
-		chckbxTarde.setBounds(8, 127, 58, 23);
+		chckbxTarde.setBounds(277, 69, 58, 23);
 		panel.add(chckbxTarde);
 		
 		chckbxNoite = new JCheckBox("Noite");
 		chckbxNoite.setBackground(Color.BLACK);
 		chckbxNoite.setForeground(Color.WHITE);
 		chckbxNoite.setEnabled(false);
-		chckbxNoite.setBounds(8, 153, 51, 23);
+		chckbxNoite.setBounds(277, 95, 51, 23);
 		panel.add(chckbxNoite);
 		
 		Label label_6 = new Label("Data:");
 		label_6.setBounds(10, 10, 49, 24);
 		panel.add(label_6);
 		label_6.setForeground(Color.WHITE);
-		label_6.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
+		label_6.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		
 		chSegunda = new JCheckBox("Segunda-Feira");
 		chSegunda.setBackground(Color.BLACK);
 		chSegunda.setForeground(Color.WHITE);
 		chSegunda.setEnabled(false);
-		chSegunda.setBounds(7, 43, 104, 23);
+		chSegunda.setBounds(7, 43, 119, 23);
 		panel.add(chSegunda);
 		
 		chTerca = new JCheckBox("Ter\u00E7a-Feira");
 		chTerca.setBackground(Color.BLACK);
 		chTerca.setForeground(Color.WHITE);
 		chTerca.setEnabled(false);
-		chTerca.setBounds(129, 43, 86, 23);
+		chTerca.setBounds(7, 72, 86, 23);
 		panel.add(chTerca);
 		
 		chQuartafeira = new JCheckBox("Quarta-Feira");
 		chQuartafeira.setBackground(Color.BLACK);
 		chQuartafeira.setForeground(Color.WHITE);
 		chQuartafeira.setEnabled(false);
-		chQuartafeira.setBounds(220, 43, 97, 23);
+		chQuartafeira.setBounds(8, 101, 97, 23);
 		panel.add(chQuartafeira);
 		
 		chQuintafeira = new JCheckBox("Quinta-Feira");
 		chQuintafeira.setBackground(Color.BLACK);
 		chQuintafeira.setForeground(Color.WHITE);
 		chQuintafeira.setEnabled(false);
-		chQuintafeira.setBounds(319, 43, 97, 23);
+		chQuintafeira.setBounds(10, 127, 97, 23);
 		panel.add(chQuintafeira);
 		
 		chSextafeira = new JCheckBox("Sexta-Feira");
 		chSextafeira.setBackground(Color.BLACK);
 		chSextafeira.setForeground(Color.WHITE);
 		chSextafeira.setEnabled(false);
-		chSextafeira.setBounds(418, 43, 97, 23);
+		chSextafeira.setBounds(10, 153, 97, 23);
 		panel.add(chSextafeira);
 		
 		chSbado = new JCheckBox("S\u00E1bado");
 		chSbado.setBackground(Color.BLACK);
 		chSbado.setForeground(Color.WHITE);
 		chSbado.setEnabled(false);
-		chSbado.setBounds(512, 43, 72, 23);
+		chSbado.setBounds(128, 43, 86, 23);
 		panel.add(chSbado);
 		
 		chDomingo = new JCheckBox("Domingo");
 		chDomingo.setForeground(Color.WHITE);
 		chDomingo.setBackground(Color.BLACK);
 		chDomingo.setEnabled(false);
-		chDomingo.setBounds(597, 43, 97, 23);
+		chDomingo.setBounds(128, 72, 97, 23);
 		panel.add(chDomingo);
 		
 		JLabel lblNewLabel = new JLabel("DE:");
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setVisible(false);
 		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		lblNewLabel.setBounds(80, 101, 40, 23);
+		lblNewLabel.setBounds(354, 43, 40, 23);
 		panel.add(lblNewLabel);
 		
 		JLabel lblAt = new JLabel("AT\u00C9:");
 		lblAt.setForeground(Color.WHITE);
 		lblAt.setVisible(false);
 		lblAt.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		lblAt.setBounds(186, 101, 40, 23);
+		lblAt.setBounds(484, 43, 40, 23);
 		panel.add(lblAt);
 		
 		JLabel label_8 = new JLabel("DE:");
 		label_8.setForeground(Color.WHITE);
 		label_8.setVisible(false);
 		label_8.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_8.setBounds(72, 127, 40, 23);
+		label_8.setBounds(354, 69, 40, 23);
 		panel.add(label_8);
 		
 		JLabel label_9 = new JLabel("AT\u00C9:");
 		label_9.setForeground(Color.WHITE);
 		label_9.setVisible(false);
 		label_9.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_9.setBounds(186, 127, 40, 23);
+		label_9.setBounds(484, 69, 40, 23);
 		panel.add(label_9);
 		
 		JLabel lbldenoite = new JLabel("DE:");
 		lbldenoite.setForeground(Color.WHITE);
 		lbldenoite.setVisible(false);
 		lbldenoite.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		lbldenoite.setBounds(71, 153, 40, 23);
+		lbldenoite.setBounds(354, 95, 40, 23);
 		panel.add(lbldenoite);
 		
 		JLabel label_11 = new JLabel("AT\u00C9:");
 		label_11.setForeground(Color.WHITE);
 		label_11.setVisible(false);
 		label_11.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_11.setBounds(186, 153, 40, 23);
+		label_11.setBounds(484, 95, 40, 23);
 		panel.add(label_11);
 		
 		lbldemanha = new JFormattedTextField(DeAte);
+		lbldemanha.setForeground(Color.WHITE);
+		lbldemanha.setBackground(Color.BLACK);
 		lbldemanha.setVisible(false);
-		lbldemanha.setBounds(107, 102, 72, 20);
+		lbldemanha.setBounds(393, 44, 72, 20);
 		panel.add(lbldemanha);
 		lbldemanha.setColumns(10);
 		
 		lbldetarde = new JFormattedTextField(DeAte);
+		lbldetarde.setBackground(Color.BLACK);
+		lbldetarde.setForeground(Color.WHITE);
 		lbldetarde.setVisible(false);
 		lbldetarde.setColumns(10);
-		lbldetarde.setBounds(107, 128, 72, 20);
+		lbldetarde.setBounds(393, 70, 72, 20);
 		panel.add(lbldetarde);
 		
 		lblDeNoite = new JFormattedTextField(DeAte);
+		lblDeNoite.setBackground(Color.BLACK);
+		lblDeNoite.setForeground(Color.WHITE);
 		lblDeNoite.setVisible(false);
 		lblDeNoite.setColumns(10);
-		lblDeNoite.setBounds(94, 154, 72, 20);
+		lblDeNoite.setBounds(393, 96, 72, 20);
 		panel.add(lblDeNoite);
 		
 		lblatemanha = new JFormattedTextField(DeAte);
+		lblatemanha.setForeground(Color.WHITE);
+		lblatemanha.setBackground(Color.BLACK);
 		lblatemanha.setVisible(false);
 		lblatemanha.setColumns(10);
-		lblatemanha.setBounds(221, 102, 72, 20);
+		lblatemanha.setBounds(523, 44, 72, 20);
 		panel.add(lblatemanha);
 		
 		lblatetarde = new JFormattedTextField(DeAte);
+		lblatetarde.setBackground(Color.BLACK);
+		lblatetarde.setForeground(Color.WHITE);
 		lblatetarde.setVisible(false);
 		lblatetarde.setColumns(10);
-		lblatetarde.setBounds(220, 128, 72, 20);
+		lblatetarde.setBounds(523, 70, 72, 20);
 		panel.add(lblatetarde);
 		
 		lblatenoite = new JFormattedTextField(DeAte);
+		lblatenoite.setForeground(Color.WHITE);
+		lblatenoite.setBackground(Color.BLACK);
 		lblatenoite.setVisible(false);
 		lblatenoite.setColumns(10);
-		lblatenoite.setBounds(221, 154, 72, 20);
+		lblatenoite.setBounds(523, 96, 72, 20);
 		panel.add(lblatenoite);
 		
 		lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Lupa.png"));
-		lblNewLabel_5.setBounds(771, 306, 233, 168);
+		lblNewLabel_5.setBounds(859, 360, 233, 168);
 		frame.getContentPane().add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
@@ -645,16 +658,42 @@ public class AlteraAulas extends Login{
 		
 		lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_4.setBounds(936, 531, 78, 25);
+		lblNewLabel_4.setBounds(936, 530, 78, 25);
 		frame.getContentPane().add(lblNewLabel_4);
 		
+		lblNewLabel_6 = new JLabel("");
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_6.setBounds(0, 82, 320, 25);
+		frame.getContentPane().add(lblNewLabel_6);
+		
+		lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_7.setBounds(302, 82, 495, 24);
+		frame.getContentPane().add(lblNewLabel_7);
+		
+		lblNewLabel_8 = new JLabel("");
+		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_8.setBounds(784, 82, 229, 25);
+		frame.getContentPane().add(lblNewLabel_8);
+		
+		lblNewLabel_9 = new JLabel("");
+		lblNewLabel_9.setBounds(566, 45, 46, 14);
+		frame.getContentPane().add(lblNewLabel_9);
+		
+		lblNewLabel_10 = new JLabel("");
+		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\alt.jpg"));
+		lblNewLabel_10.setBounds(259, 11, 509, 71);
+		frame.getContentPane().add(lblNewLabel_10);
+		
 		panel_1 = new JPanel();
-		panel_1.setBounds(230, 112, 422, 192);
+		panel_1.setBounds(240, 119, 422, 192);
 		frame.getContentPane().add(panel_1);
+		panel_1.setBackground(Color.BLACK);
 		panel_1.setVisible(false);
 		panel_1.setLayout(null);
 		
 		JLabel lblNewLabel_1 = new JLabel("Data:");
+		lblNewLabel_1.setForeground(Color.WHITE);
 		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		lblNewLabel_1.setBounds(10, 11, 56, 19);
 		panel_1.add(lblNewLabel_1);
@@ -664,21 +703,27 @@ public class AlteraAulas extends Login{
 		panel_1.add(lbldata);
 		
 		JLabel lblDe = new JLabel("DE:");
+		lblDe.setForeground(Color.WHITE);
 		lblDe.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		lblDe.setBounds(10, 39, 56, 19);
 		panel_1.add(lblDe);
 		
 		JLabel lblAt_1 = new JLabel("AT\u00C9:");
+		lblAt_1.setForeground(Color.WHITE);
 		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		lblAt_1.setBounds(10, 76, 56, 19);
 		panel_1.add(lblAt_1);
 		
 		lbldedata = new JFormattedTextField(DeAte);
+		lbldedata.setBackground(Color.BLACK);
+		lbldedata.setForeground(Color.WHITE);
 		lbldedata.setColumns(10);
 		lbldedata.setBounds(64, 41, 72, 20);
 		panel_1.add(lbldedata);
 		
 		lblatedata = new JFormattedTextField(DeAte);
+		lblatedata.setBackground(Color.BLACK);
+		lblatedata.setForeground(Color.WHITE);
 		lblatedata.setColumns(10);
 		lblatedata.setBounds(64, 77, 72, 20);
 		panel_1.add(lblatedata);
@@ -717,30 +762,6 @@ public class AlteraAulas extends Login{
 		calendario.setVisible(false);
 		calendario.setBounds(226, 11, 191, 153);
 		panel_1.add(calendario);
-		
-		lblNewLabel_6 = new JLabel("");
-		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_6.setBounds(-7, 77, 320, 25);
-		frame.getContentPane().add(lblNewLabel_6);
-		
-		lblNewLabel_7 = new JLabel("");
-		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_7.setBounds(302, 77, 495, 24);
-		frame.getContentPane().add(lblNewLabel_7);
-		
-		lblNewLabel_8 = new JLabel("");
-		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_8.setBounds(784, 77, 229, 25);
-		frame.getContentPane().add(lblNewLabel_8);
-		
-		lblNewLabel_9 = new JLabel("");
-		lblNewLabel_9.setBounds(566, 45, 46, 14);
-		frame.getContentPane().add(lblNewLabel_9);
-		
-		lblNewLabel_10 = new JLabel("");
-		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\AtualizAulas.png"));
-		lblNewLabel_10.setBounds(302, 11, 437, 71);
-		frame.getContentPane().add(lblNewLabel_10);
 		
 		preencherTela();
 		

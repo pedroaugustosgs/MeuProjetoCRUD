@@ -117,6 +117,8 @@ public class Login extends Principal2{
 	
 		
 		tfUsuario = new JTextField();
+		tfUsuario.setForeground(Color.WHITE);
+		tfUsuario.setBackground(Color.BLACK);
 		tfUsuario.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent arg0) {
@@ -131,6 +133,8 @@ public class Login extends Principal2{
 		frame.getContentPane().add(tfUsuario);
 		
 		pfSenha = new JPasswordField();
+		pfSenha.setForeground(Color.WHITE);
+		pfSenha.setBackground(Color.BLACK);
 		pfSenha.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
