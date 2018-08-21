@@ -53,8 +53,8 @@ public class AulasSolicitadas extends Login{
 	private JLabel lblNewLabel_7;
 	private JLabel lblNewLabel_8;
 	private JLabel lblNewLabel;
-	private JLabel lblNewLabel_10;
 	private JLabel lblNewLabel_3;
+	private JLabel lblNewLabel_9;
 	
 	
 	/**
@@ -141,7 +141,7 @@ public class AulasSolicitadas extends Login{
 		btnProcurar = new JButton("PROCURAR");
 		btnProcurar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnProcurar.setForeground(Color.BLACK);
-		btnProcurar.setBackground(SystemColor.textHighlightText);
+		btnProcurar.setBackground(Color.LIGHT_GRAY);
 		btnProcurar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(tfProcurar.getText().equals("Entre com a matéria a ser procurada")) {
@@ -169,7 +169,7 @@ public class AulasSolicitadas extends Login{
 		
 		JButton btnVoltar = new JButton("VOLTAR");
 		btnVoltar.setForeground(Color.BLACK);
-		btnVoltar.setBackground(SystemColor.textHighlightText);
+		btnVoltar.setBackground(Color.LIGHT_GRAY);
 		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 25));
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -187,17 +187,17 @@ public class AulasSolicitadas extends Login{
 		
 		lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_4.setBounds(0, 120, 448, 26);
+		lblNewLabel_4.setBounds(0, 109, 448, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_4);
 		
 		lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_5.setBounds(444, 120, 491, 26);
+		lblNewLabel_5.setBounds(440, 109, 491, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_5);
 		
 		lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_6.setBounds(927, 120, 124, 26);
+		lblNewLabel_6.setBounds(925, 109, 124, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_6);
 		
 		lblNewLabel_7 = new JLabel("New label");
@@ -220,18 +220,18 @@ public class AulasSolicitadas extends Login{
 			frmMeuCrud.getContentPane().add(scrollPane);
 			
 			lblNewLabel = new JLabel("");
-			lblNewLabel.setBounds(478, 50, 46, 14);
+			lblNewLabel.setBounds(422, 188, 46, 14);
 			frmMeuCrud.getContentPane().add(lblNewLabel);
-			
-			lblNewLabel_10 = new JLabel("");
-			lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\Money.png"));
-			lblNewLabel_10.setBounds(283, 25, 520, 84);
-			frmMeuCrud.getContentPane().add(lblNewLabel_10);
 			
 			lblNewLabel_3 = new JLabel("New label");
 			lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 			lblNewLabel_3.setBounds(961, 494, 74, 26);
 			frmMeuCrud.getContentPane().add(lblNewLabel_3);
+			
+			lblNewLabel_9 = new JLabel("New label");
+			lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\Solicite Uma Nova Aula.jpg"));
+			lblNewLabel_9.setBounds(138, 29, 793, 78);
+			frmMeuCrud.getContentPane().add(lblNewLabel_9);
 		
 		criaTabela(pegaAulaSolicitada());
 	}// fim do método inicialize

@@ -278,11 +278,6 @@ public class PlaAluno {
 		lblNewLabel_3.setBounds(816, 509, 268, 33);
 		frmMeuCrud.getContentPane().add(lblNewLabel_3);
 		
-		JLabel lblNewLabel_7 = new JLabel("");
-		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\Money.png"));
-		lblNewLabel_7.setBounds(317, 24, 475, 61);
-		frmMeuCrud.getContentPane().add(lblNewLabel_7);
-		
 		JLabel lblNewLabel_9 = new JLabel("");
 		lblNewLabel_9.setIcon(new ImageIcon("D:\\1.png"));
 		lblNewLabel_9.setBounds(-16, 123, 347, 45);
@@ -312,6 +307,11 @@ public class PlaAluno {
 		lblNewLabel_13.setIcon(new ImageIcon("D:\\Imagem\\img\\1.png"));
 		lblNewLabel_13.setBounds(682, 115, 402, 249);
 		frmMeuCrud.getContentPane().add(lblNewLabel_13);
+		
+		JLabel lblNewLabel_7 = new JLabel("New label");
+		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\suap.png"));
+		lblNewLabel_7.setBounds(252, 21, 550, 64);
+		frmMeuCrud.getContentPane().add(lblNewLabel_7);
 		
 		criaTabela(dadosTabela());
 		criaTabelaREC(dadosTabelaREC());

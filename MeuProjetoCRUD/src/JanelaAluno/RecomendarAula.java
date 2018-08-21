@@ -84,9 +84,9 @@ public class RecomendarAula extends Login {
 	private JLabel lblNewLabel_1;
 	private JLabel lblNewLabel_2;
 	private JLabel lblNewLabel_3;
-	private JLabel lblNewLabel_6;
 	private JLabel label_4;
 	private JLabel label_5;
+	private JLabel lblNewLabel_5;
 	/**
 	 * Launch the application.
 	 */
@@ -570,28 +570,18 @@ public class RecomendarAula extends Login {
 		
 		lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_2.setBounds(0, 74, 452, 23);
+		lblNewLabel_2.setBounds(0, 87, 469, 23);
 		frame.getContentPane().add(lblNewLabel_2);
 		
 		lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_3.setBounds(444, 74, 469, 23);
+		lblNewLabel_3.setBounds(462, 87, 502, 23);
 		frame.getContentPane().add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_4.setBounds(860, 515, 89, 27);
 		frame.getContentPane().add(lblNewLabel_4);
-		
-		JLabel lblNewLabel_5 = new JLabel("");
-		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_5.setBounds(903, 74, 46, 23);
-		frame.getContentPane().add(lblNewLabel_5);
-		
-		lblNewLabel_6 = new JLabel("");
-		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\RecomendaAula.png"));
-		lblNewLabel_6.setBounds(287, 11, 515, 59);
-		frame.getContentPane().add(lblNewLabel_6);
 		
 		panel_1 = new JPanel();
 		panel_1.setBounds(1, 197, 929, 197);
@@ -646,6 +636,11 @@ public class RecomendarAula extends Login {
 		lblData_1.setFont(new Font("Times New Roman", Font.BOLD, 16));
 		lblData_1.setBounds(215, 20, 70, 20);
 		panel_1.add(lblData_1);
+		
+		lblNewLabel_5 = new JLabel("New label");
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\ggggggggg.jpg"));
+		lblNewLabel_5.setBounds(15, 11, 906, 77);
+		frame.getContentPane().add(lblNewLabel_5);
 		chTarde.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(chTarde.isSelected()) {
