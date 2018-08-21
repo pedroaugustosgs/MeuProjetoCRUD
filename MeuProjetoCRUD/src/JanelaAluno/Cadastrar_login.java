@@ -203,7 +203,7 @@ public class Cadastrar_login extends LoginInstitu{
 			e2.printStackTrace();
 		}
 		btnLimpar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnLimpar.setBounds(613, 556, 164, 39);
+		btnLimpar.setBounds(612, 556, 164, 39);
 		frame.getContentPane().add(btnLimpar);
 		
 		tfUsuario = new JTextField();
@@ -496,7 +496,7 @@ public class Cadastrar_login extends LoginInstitu{
 			}
 		});
 		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnVoltar.setBounds(337, 556, 164, 39);
+		btnVoltar.setBounds(313, 556, 164, 39);
 		frame.getContentPane().add(btnVoltar);
 		frame.setResizable(false);//impede a tela de ser redimensionada
 		frame.setLocationRelativeTo(null);//faz com que a tela apareça no centro
@@ -531,14 +531,15 @@ public class Cadastrar_login extends LoginInstitu{
 		lblNewLabel_6.setBounds(393, 505, 383, 24);
 		frame.getContentPane().add(lblNewLabel_6);
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Cadastro.png"));
-		lblNewLabel_1.setBounds(297, -160, 518, 439);
-		frame.getContentPane().add(lblNewLabel_1);
-		
-		JLabel lblNewLabel_4 = new JLabel("New label");
-		lblNewLabel_4.setBounds(393, 198, 345, 229);
+		JLabel lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\professores peq.png"));
+		lblNewLabel_4.setBounds(486, 198, 263, 229);
 		frame.getContentPane().add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_1 = new JLabel("New label");
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Solicite Uma Nova Aula (2).jpg"));
+		lblNewLabel_1.setBounds(189, 13, 383, 69);
+		frame.getContentPane().add(lblNewLabel_1);
 	}
 
 	private void JSpinner(SpinnerModel spIdade2) {
