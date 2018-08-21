@@ -300,21 +300,10 @@ public class NovaAula extends Login {
 				}else {
 					JOptionPane.showMessageDialog(null, "Erro ao cadastrar nova aula!");
 				}
-				chSegunda.setSelected(false);
-				chTarde.setSelected(false);
-				chTerca.setSelected(false);
-				chQuarta.setSelected(false);
-				chQuinta.setSelected(false);
-				chSexta.setSelected(false);
-				chSabado.setSelected(false);
-				chDomingo.setSelected(false);
-				chManha.setSelected(false);
-				chNoite.setSelected(false);
-				tfConteudo.setText(null);
-				tfLocal.setText(null);
-				tfVagas.setText(null);
-				tfDeUmaVez.setText(null);
-				tfAteUmaVez.setText(null);
+				
+				PlaAluno.main(null);
+				frame.dispose();
+				
 			}
 		
 			
