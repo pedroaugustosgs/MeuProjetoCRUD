@@ -40,6 +40,8 @@ import javax.swing.text.MaskFormatter;
 import javax.swing.JTextField;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeEvent;
+import java.awt.event.ContainerAdapter;
+import java.awt.event.ContainerEvent;
 
 public class VisualizaAulas extends Login{
 
@@ -381,16 +383,20 @@ public class VisualizaAulas extends Login{
 					dado = stmt2.executeQuery();
 					stmt2.execute();
 					stmt2.close();
+					
 					dados.first();
 					String msg="Sua aula com o professor "+NomeProf(idAula)+" de "+Materia(dados.getString("materia"))+" sobre "+dados.getString("conteudo")
 							+ " sofreu uma alteração! "
 							+ "Acesse o Approfe para mais informações!";
 					
+					
 					if(dado !=null) {
 						CRUDEmail enviar = new CRUDEmail();
-						if(dados.next() && dado.next()) {
+						while(dado.next()) {
 							enviar.EmailVisuAulas(dado.getString("email"),msg);
 						}
+					}else {
+						System.out.println("nao a alunos cadastrados");
 					}
 					PlaAluno.main(null);
 					frame.dispose();
@@ -647,6 +653,9 @@ public class VisualizaAulas extends Login{
 		panel.add(lbldemanha);
 		lbldemanha.setColumns(10);
 		
+		lbldemanha.setFocusable(true);
+		lbldemanha.setFocusable(false);
+		
 		lbldetarde = new JFormattedTextField(DeAte);
 		lbldetarde.setForeground(Color.WHITE);
 		lbldetarde.setBackground(Color.BLACK);
@@ -746,6 +755,7 @@ public class VisualizaAulas extends Login{
 		lbldedata.setColumns(10);
 		lbldedata.setBounds(64, 41, 72, 20);
 		panel_1.add(lbldedata);
+
 		
 		lblatedata = new JFormattedTextField(DeAte);
 		lblatedata.setForeground(Color.WHITE);
