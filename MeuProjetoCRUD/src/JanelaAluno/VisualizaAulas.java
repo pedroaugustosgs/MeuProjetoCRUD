@@ -40,6 +40,8 @@ import javax.swing.text.MaskFormatter;
 import javax.swing.JTextField;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeEvent;
+import java.awt.event.ContainerAdapter;
+import java.awt.event.ContainerEvent;
 
 public class VisualizaAulas extends Login{
 
@@ -651,6 +653,9 @@ public class VisualizaAulas extends Login{
 		panel.add(lbldemanha);
 		lbldemanha.setColumns(10);
 		
+		lbldemanha.setFocusable(true);
+		lbldemanha.setFocusable(false);
+		
 		lbldetarde = new JFormattedTextField(DeAte);
 		lbldetarde.setForeground(Color.WHITE);
 		lbldetarde.setBackground(Color.BLACK);
@@ -750,6 +755,7 @@ public class VisualizaAulas extends Login{
 		lbldedata.setColumns(10);
 		lbldedata.setBounds(64, 41, 72, 20);
 		panel_1.add(lbldedata);
+
 		
 		lblatedata = new JFormattedTextField(DeAte);
 		lblatedata.setForeground(Color.WHITE);
