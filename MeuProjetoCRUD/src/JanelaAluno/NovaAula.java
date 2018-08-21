@@ -90,11 +90,6 @@ public class NovaAula extends Login {
 	private JLabel lblNewLabel_5;
 	private JLabel label_4;
 	private JLabel label_5;
-	private JLabel lblNewLabel_7;
-	private JLabel label_6;
-	private JLabel lblNewLabel_8;
-	private JLabel lblNewLabel_9;
-	private JLabel label_7;
 	/**
 	 * Launch the application.
 	 */
@@ -273,23 +268,25 @@ public class NovaAula extends Login {
 				}
 				if(chTarde.isSelected()) {
 					DeTarde = tfDeTarde.getText();
-				}
-				if(chTarde.isSelected()) {
 					AteTarde = tfAteTarde.getText();
 				}
 				if(chNoite.isSelected()) {
 					DeNoite = tfDeNoite.getText();
-				}
-				if(chNoite.isSelected()) {
 					AteNoite = tfAteNoite.getText();
-				} 
+
+				}
+				String deuma=null;
+				String ateuma=null;
 				int peri;
 				if(rdbtnPeridico.isSelected()) {
 					peri=1;
-			
+					
 				}else {
 					peri=0;
+					deuma = tfDeUmaVez.getText();
+					ateuma=tfAteUmaVez.getText();
 				}
+				
 				//SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
 				//String umaVez = s.format(calendario.getDate());
 				Date data = null;
@@ -298,7 +295,7 @@ public class NovaAula extends Login {
 				}
 				System.out.println(data);
 				if(novaAula.novaAula(disciplina, conteudo, segunda, terca, quarta, quinta, sexta, sabado, domingo, manha, tarde, noite, local, prof,vagas,DeManha,AteManha,
-						DeTarde,AteTarde,DeNoite,AteNoite,data,tfDeUmaVez.getText(),tfAteUmaVez.getText(),peri)) {
+						DeTarde,AteTarde,DeNoite,AteNoite,data,deuma,ateuma,peri)) {
 					JOptionPane.showMessageDialog(null, "Nova aula cadastrada com sucesso!");
 				}else {
 					JOptionPane.showMessageDialog(null, "Erro ao cadastrar nova aula!");
@@ -355,11 +352,6 @@ public class NovaAula extends Login {
 			}
 		});
 		
-		label_7 = new JLabel("");
-		label_7.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
-		label_7.setBounds(464, 166, 485, 6);
-		frame.getContentPane().add(label_7);
-		
 		panel_1 = new JPanel();
 		panel_1.setBounds(5, 166, 929, 197);
 		frame.getContentPane().add(panel_1);
@@ -413,12 +405,7 @@ public class NovaAula extends Login {
 		lblData_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		lblData_1.setBounds(200, 11, 70, 20);
 		panel_1.add(lblData_1);
-		
-		lblNewLabel_9 = new JLabel("");
-		lblNewLabel_9.setBounds(-12, 0, 492, 6);
-		panel_1.add(lblNewLabel_9);
-		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
-		rdbtnUmaVez.setBounds(167, 116, 109, 23);
+		rdbtnUmaVez.setBounds(186, 147, 109, 23);
 		frame.getContentPane().add(rdbtnUmaVez);
 		
 		rdbtnPeridico = new JRadioButton("Peri\u00F3dico");
@@ -433,7 +420,7 @@ public class NovaAula extends Login {
 			}
 		});
 		rdbtnPeridico.setSelected(true);
-		rdbtnPeridico.setBounds(34, 116, 109, 23);
+		rdbtnPeridico.setBounds(37, 147, 109, 23);
 		frame.getContentPane().add(rdbtnPeridico);
 		btnRecomendaesDeAulas.setForeground(Color.BLACK);
 		btnRecomendaesDeAulas.setFont(new Font("DialogInput", Font.BOLD, 20));
@@ -443,7 +430,7 @@ public class NovaAula extends Login {
 		tfVagas = new JTextField();
 		
 		tfVagas.setColumns(10);
-		tfVagas.setBounds(81, 428, 86, 20);
+		tfVagas.setBounds(80, 428, 86, 20);
 		frame.getContentPane().add(tfVagas);
 		
 		JLabel lblVagas = new JLabel("VAGAS:");
@@ -472,14 +459,14 @@ public class NovaAula extends Login {
 		frame.getContentPane().add(lblLocal);
 		
 		tfConteudo = new JTextField();
-		tfConteudo.setBounds(456, 89, 257, 20);
+		tfConteudo.setBounds(119, 120, 257, 20);
 		frame.getContentPane().add(tfConteudo);
 		tfConteudo.setColumns(10);
 		
 		JLabel lblContedo = new JLabel("CONTE\u00DADO:");
 		lblContedo.setForeground(Color.WHITE);
 		lblContedo.setFont(new Font("Times New Roman", Font.BOLD, 16));
-		lblContedo.setBounds(339, 88, 107, 19);
+		lblContedo.setBounds(10, 121, 107, 19);
 		frame.getContentPane().add(lblContedo);
 		
 		cbMaterias = new JComboBox<String>();
@@ -549,11 +536,6 @@ public class NovaAula extends Login {
 		panel.setBounds(1, 171, 929, 197);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
-		
-		lblNewLabel_7 = new JLabel("");
-		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
-		lblNewLabel_7.setBounds(4, 183, 492, 14);
-		panel.add(lblNewLabel_7);
 		
 		lblData = new JLabel("DATA:");
 		lblData.setForeground(Color.WHITE);
@@ -716,16 +698,6 @@ public class NovaAula extends Login {
 		label_5.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		label_5.setBounds(659, 7, 74, 19);
 		panel.add(label_5);
-		
-		label_6 = new JLabel("");
-		label_6.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
-		label_6.setBounds(484, 183, 467, 14);
-		panel.add(label_6);
-		
-		lblNewLabel_8 = new JLabel("");
-		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
-		lblNewLabel_8.setBounds(919, 354, 46, 14);
-		frame.getContentPane().add(lblNewLabel_8);
 		chTarde.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(chTarde.isSelected()) {

@@ -199,11 +199,29 @@ public class VisualizaAulas extends Login{
 		lblvagas.setBounds(71, 231, 153, 19);
 		frame.getContentPane().add(lblvagas);
 		
-		JButton btnNewButton = new JButton("SALVAR");
+		JButton btnNewButton = new JButton("Salvar");
 		btnNewButton.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-			
+				ResultSet dados123=null;
+				String periodico = null;
+				String sql123 ="SELECT * FROM aulas WHERE idaula=?";
+				PreparedStatement stmtqwe;
+				try {
+					stmtqwe = Conexao.conexao.prepareStatement(sql123);
+					stmtqwe.setString(1, idAula);
+					dados123 = stmtqwe.executeQuery();
+					stmtqwe.execute();
+					stmtqwe.close();
+					
+					dados123.first();
+					 periodico = dados123.getString("periodico");
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+				
 				if(!(chSegunda.isSelected() || chTerca.isSelected() || chQuartafeira.isSelected() || chQuintafeira.isSelected() || chSextafeira.isSelected()
 						|| chSbado.isSelected() || chDomingo.isSelected()) && panels==0) {
 					JOptionPane.showMessageDialog(null, "Marque algum dia da semana para dar a aula!");
@@ -262,52 +280,52 @@ public class VisualizaAulas extends Login{
 				}
 				String loc = lbllocal.getText().toString();
 				
-				if((lblatetarde.isVisible()==false || lblatetarde.getText().isEmpty()) && panels==0) {
-					JOptionPane.showMessageDialog(null, "Entre com o horario de termino da aula");
+				/*if((lblatetarde.isVisible()==false && periodico.equals("1")) || (lblatetarde.getText().isEmpty() && periodico.equals("1"))) {
+					JOptionPane.showMessageDialog(null, "Entre com o horario de termino da aula a tarde");
 					return;
-				}
+				}*/
 				String aTarde = lblatetarde.getText().toString();
 				
-				if((lbldemanha.isVisible()==false || lbldemanha.getText().isEmpty()) && panels==0) {
-					JOptionPane.showMessageDialog(null, "Entre com o horario de inicio da aula");
+				/*if((lbldemanha.isVisible()==false || lbldemanha.getText().isEmpty()) && periodico.equals("1")) {
+					JOptionPane.showMessageDialog(null, "Entre com o horario de inicio da aula de manha");
 					return;
-				}
+				}*/
 				String dMAnha = lbldemanha.getText().toString();
 				
-				if((lblatemanha.isVisible()==false || lblatemanha.getText().isEmpty()) && panels==0) {
+				/*if((lblatemanha.isVisible()==false || lblatemanha.getText().isEmpty()) && periodico.equals("1")) {
 					JOptionPane.showMessageDialog(null, "Entre com o horario de termino da aula");
 					return;
-				}
+				}*/
 				String aManha = lblatemanha.getText().toString();
 				
-				if((lblDeNoite.isVisible()==false || lblDeNoite.getText().isEmpty()) && panels==0) {
+				/*if((lblDeNoite.isVisible()==false || lblDeNoite.getText().isEmpty()) && periodico.equals("1")) {
 					JOptionPane.showMessageDialog(null, "Entre com o horario de inicio da aula");
 					return;
-				}
+				}*/
 				String dNoite = lblDeNoite.getText().toString();
 				
-				if((lblatenoite.isVisible()==false || lblatenoite.getText().isEmpty()) && panels==0) {
+				/*if((lblatenoite.isVisible()==false || lblatenoite.getText().isEmpty()) && periodico.equals("1")) {
 					JOptionPane.showMessageDialog(null, "Entre com o horario de termino da aula");
 					return;
-				}
+				}*/
 				String aNoite = lblatenoite.getText().toString();
 				
-				if((lbldetarde.isVisible()==false || lbldetarde.getText().isEmpty() )&& panels==0) {
+				/*if((lbldetarde.isVisible()==false || lbldetarde.getText().isEmpty() )&& periodico.equals("1")) {
 					JOptionPane.showMessageDialog(null, "Entre com o horario de inicio da aula");
 					return;
-				}
+				}*/
 				String dTarde = lbldetarde.getText().toString();
 				
-				if(lbldedata.getText().equals("  :  ") && panels==1) {
+				/*if(lbldedata.getText().isEmpty() && periodico.equals("0")) {
 					JOptionPane.showMessageDialog(null, "Entre com o horario de inicio da aula!");
 					return;
-				}
+				}*/
 				String dData = lbldedata.getText().toString();
 				
-				if(lblatedata.getText().equals("  :  ") && panels==1) {
+				/*if(lblatedata.getText().isEmpty() && periodico.equals("0")) {
 					JOptionPane.showMessageDialog(null, "Entre com o horario de termino da aula!");
 					return;
-				}
+				}*/
 				
 				Date data = calendario.getDate();
 				SimpleDateFormat s= new SimpleDateFormat("yyyy-MM-dd");
@@ -349,7 +367,7 @@ public class VisualizaAulas extends Login{
 					JOptionPane.showMessageDialog(null, "Aula atualizada com sucesso!");
 										
 					ResultSet dados=null;
-					String sql1="SELECT * FROM aulas WHERE idaula=?";
+					String sql1="SELECT * FROM aulas WHERE idaula=?";  //pega dados da aula
 					PreparedStatement stmt1 = Conexao.conexao.prepareStatement(sql1);
 					stmt1.setString(1, idAula);
 					dados = stmt1.executeQuery();
@@ -359,11 +377,11 @@ public class VisualizaAulas extends Login{
 					ResultSet dado = null;
 					String sql2="SELECT * FROM alunos INNER JOIN alunosconfirmados ON Alunos.idAluno = alunosconfirmados.idaluno WHERE idconfirmar=?";
 					PreparedStatement stmt2 = Conexao.conexao.prepareStatement(sql2);
-					stmt2.setString(1, idAula);
+					stmt2.setString(1, idAula);   // pega dados do aluno
 					dado = stmt2.executeQuery();
 					stmt2.execute();
 					stmt2.close();
-					
+					dados.first();
 					String msg="Sua aula com o professor "+NomeProf(idAula)+" de "+Materia(dados.getString("materia"))+" sobre "+dados.getString("conteudo")
 							+ " sofreu uma alteração! "
 							+ "Acesse o Approfe para mais informações!";
@@ -384,10 +402,10 @@ public class VisualizaAulas extends Login{
 				
 			}
 		});
-		btnNewButton.setBounds(1, 542, 139, 44);
+		btnNewButton.setBounds(10, 543, 139, 44);
 		frame.getContentPane().add(btnNewButton);
 		
-		JButton btnNovoltar = new JButton("VOLTAR");
+		JButton btnNovoltar = new JButton("Voltar");
 		btnNovoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNovoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -395,7 +413,7 @@ public class VisualizaAulas extends Login{
 				frame.dispose();
 			}
 		});
-		btnNovoltar.setBounds(801, 541, 140, 45);
+		btnNovoltar.setBounds(781, 545, 151, 41);
 		frame.getContentPane().add(btnNovoltar);
 		
 		tabela = new JTable();
@@ -404,12 +422,12 @@ public class VisualizaAulas extends Login{
 		scrollPane.setBounds(198, 297, 502, 201);
 		frame.getContentPane().add(scrollPane);
 		
-		JButton btnRemover = new JButton("REMOVER");
+		JButton btnRemover = new JButton("Remover");
 		btnRemover.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnRemover.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String sql="DELETE FROM aulas WHERE idAula=?";
-				
+		
 				ResultSet dados2=null;
 				ResultSet dados =null;
 				
@@ -417,15 +435,14 @@ public class VisualizaAulas extends Login{
 				
 				if(res==0) {
 					try {
-						//pega os emails;
-						String sql1 ="SELECT * FROM alunos INNNER J0IN alunosconfirmados ON alunos.idaluno = alunosconfirmados.idaluno "
+						//pega os emails
+						String sql1 ="SELECT * FROM alunos INNER JOIN alunosconfirmados ON alunos.idaluno = alunosconfirmados.idaluno "
 							+ "WHERE idconfirmar=?"; 
-						PreparedStatement stmt = Conexao.conexao.prepareStatement(sql1);
+						PreparedStatement stmt = Conexao.conexao.prepareStatement(sql1);   
 						stmt.setString(1, idAula);
 						dados = stmt.executeQuery();
 						stmt.execute();
 						stmt.close();
-						
 						
 						String sql2 = "SELECT * FROM aulas WHERE idAula=?";
 						PreparedStatement s = Conexao.conexao.prepareStatement(sql2);  // pega dados da aula
@@ -434,18 +451,19 @@ public class VisualizaAulas extends Login{
 						s.execute();
 						s.close();
 						
-					
+						dados2.first();
 						String msg=null;
-					
-						 msg= "Sua aula de "+Materia(dados.getString("materia"))+" sobre "+dados.getString("conteudo")+" com o professor "+NomeProf(idAula)+" foi "
+						 msg= "Sua aula de "+Materia(dados2.getString("materia"))+" sobre "+dados2.getString("conteudo")+" com o professor "+NomeProf(idAula)+" foi "
 						 		+ "removida";
 						 
+						 
 						 CRUDEmail d= new CRUDEmail();
-						 d.EmailVisuAulas(dados.getString("email"), msg);
-							
-						System.out.println(msg);
-						System.out.println(dados.getString("email"));
 						
+					
+							while(dados.next()) {
+								d.EmailVisuAulas(dados.getString("email"), msg);
+							}
+							
 						PreparedStatement stmt3 = Conexao.conexao.prepareStatement(sql);
 						stmt3.setString(1, idAula);
 						stmt3.execute();
@@ -465,7 +483,7 @@ public class VisualizaAulas extends Login{
 				return;
 			}
 		});
-		btnRemover.setBounds(421, 542, 140, 44);
+		btnRemover.setBounds(394, 543, 169, 45);
 		frame.getContentPane().add(btnRemover);
 		
 		lbllocal = new JTextField();
@@ -781,17 +799,6 @@ public class VisualizaAulas extends Login{
 		
 		
 		NomeProf(idAula);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		preencherTela();
 		
 		if(panels==0) {
@@ -915,7 +922,6 @@ public class VisualizaAulas extends Login{
 	
 	public void preencherTela() {
 		String sql ="SELECT * FROM aulas WHERE idaula=?";
-		System.out.println(idAula);
 		ResultSet dados=null;
 		try {
 			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);

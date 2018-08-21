@@ -59,13 +59,6 @@ public class TerAula extends Login{
 	public String ids[]= new String[100];
 	int cont=0;
 	private JLabel lblNewLabel_7;
-	private JLabel lblNewLabel_8;
-	private JLabel lblNewLabel_9;
-	private JLabel lblNewLabel_10;
-	private JLabel lblNewLabel_11;
-	private JLabel lblNewLabel_12;
-	private JLabel lblNewLabel_13;
-	private JLabel lblNewLabel_14;
 	/**
 	 * Launch the application.-
 	 */
@@ -265,41 +258,6 @@ public class TerAula extends Login{
 		lblNewLabel_7.setBounds(363, 185, 278, 20);
 		frmMeuCrud.getContentPane().add(lblNewLabel_7);
 		
-		lblNewLabel_8 = new JLabel("");
-		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\Lupa.png"));
-		lblNewLabel_8.setBounds(852, 185, 219, 228);
-		frmMeuCrud.getContentPane().add(lblNewLabel_8);
-		
-		lblNewLabel_9 = new JLabel("");
-		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
-		lblNewLabel_9.setBounds(0, 416, 438, 14);
-		frmMeuCrud.getContentPane().add(lblNewLabel_9);
-		
-		lblNewLabel_10 = new JLabel("");
-		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
-		lblNewLabel_10.setBounds(431, 416, 476, 14);
-		frmMeuCrud.getContentPane().add(lblNewLabel_10);
-		
-		lblNewLabel_11 = new JLabel("");
-		lblNewLabel_11.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
-		lblNewLabel_11.setBounds(850, 416, 221, 14);
-		frmMeuCrud.getContentPane().add(lblNewLabel_11);
-		
-		lblNewLabel_12 = new JLabel("");
-		lblNewLabel_12.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
-		lblNewLabel_12.setBounds(0, 157, 400, 14);
-		frmMeuCrud.getContentPane().add(lblNewLabel_12);
-		
-		lblNewLabel_13 = new JLabel("");
-		lblNewLabel_13.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
-		lblNewLabel_13.setBounds(376, 157, 476, 14);
-		frmMeuCrud.getContentPane().add(lblNewLabel_13);
-		
-		lblNewLabel_14 = new JLabel("");
-		lblNewLabel_14.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
-		lblNewLabel_14.setBounds(806, 157, 278, 14);
-		frmMeuCrud.getContentPane().add(lblNewLabel_14);
-		
 		dadostabela = new CRUDAulas().pegaAula();
 		criaTabela(dadostabela);
 	}// fim do método inicialize
@@ -321,7 +279,7 @@ public class TerAula extends Login{
 				if(Integer.parseInt(dados.getString("vagas"))<=0 ) {
 					continue;
 				}
-				
+				System.out.println(dados.getString("professor"));
 				//SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
 				//***************************************************************************CHAMA O TEO************************************//
 				if(dados.getString("professor")==PlaAluno.idaluno) {

@@ -323,6 +323,34 @@ public class AlteraAulas extends Login{
 					JOptionPane.showMessageDialog(null, "Aula atualizada com sucesso!");
 					
 					//*****************************   FAZER O ENVIAR EMAIL E COLOCAR AQUI *******************//
+				 
+					ResultSet dados=null;
+					String sql1="SELECT * FROM aulas WHERE idaula=?";  //pega dados da aula
+					PreparedStatement stmt1 = Conexao.conexao.prepareStatement(sql1);
+					stmt1.setString(1, idAula);
+					dados = stmt1.executeQuery();
+					stmt1.execute();
+					stmt1.close();
+					
+					ResultSet dado = null;
+					String sql2="SELECT * FROM alunos INNER JOIN alunosconfirmados ON Alunos.idAluno = alunosconfirmados.idaluno WHERE idconfirmar=?";
+					PreparedStatement stmt2 = Conexao.conexao.prepareStatement(sql2);
+					stmt2.setString(1, idAula);   // pega dados do aluno
+					dado = stmt2.executeQuery();
+					stmt2.execute();
+					stmt2.close();
+					
+					String msg="Sua aula com o professor "+NomeProf(idAula)+" de "+Materia(dados.getString("materia"))+" sobre "+dados.getString("conteudo")
+							+ " sofreu uma alteração! "
+							+ "Acesse o Approfe para mais informações!";
+					
+					if(dado !=null) {
+						CRUDEmail enviar = new CRUDEmail();
+						if(dados.next() && dado.next()) {
+							enviar.EmailVisuAulas(dado.getString("email"),msg);
+						}
+					}
+					
 					
 					VerAulas.main(null);
 					frame.dispose();
@@ -1013,5 +1041,49 @@ public class AlteraAulas extends Login{
 			e.printStackTrace();
 		}
 		return alunos;
+	}
+	public String Materia(String m){
+		String materia=null;
+		
+		if(m.equals("RED")) {
+			materia="REDAÇÃO";
+		}
+		if(m.equals("MAT")) {
+			materia="MATEMÁTICA";
+		}
+		if(m.equals("QUI")) {
+			materia="QUÍMICA";
+		}
+		if(m.equals("FIS")) {
+			materia="FÍSICA";
+		}
+		if(m.equals("BIO")) {
+			materia="BIOLOGIA";
+		}
+		if(m.equals("HIS")) {
+			materia="HISTÓRIA";
+		}
+		if(m.equals("GEO")) {
+			materia="GEOGRAFIA";
+		}
+		if(m.equals("PORT")) {
+			materia="PORTUGUÊS";
+		}
+		if(m.equals("FILOS")) {
+			materia="FILOSOFIA";
+		}
+		if(m.equals("ING")) {
+			materia="INGLÊS";
+		}
+		if(m.equals("ESP")) {
+			materia="ESPANHOL";
+		}
+		if(m.equals("LIT")) {
+			materia="LITERATURA";
+		}
+		if(m.equals("SOCIO")) {
+			materia="SOCIOLOGIA";
+		}
+		return materia;
 	}
 }

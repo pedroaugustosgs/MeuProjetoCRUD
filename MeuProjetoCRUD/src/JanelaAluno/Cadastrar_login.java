@@ -535,10 +535,9 @@ public class Cadastrar_login extends LoginInstitu{
 		lblNewLabel_1.setBounds(297, -160, 518, 439);
 		frame.getContentPane().add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_8 = new JLabel("");
-		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\professores.png"));
-		lblNewLabel_8.setBounds(457, 204, 265, 258);
-		frame.getContentPane().add(lblNewLabel_8);
+		JLabel lblNewLabel_4 = new JLabel("New label");
+		lblNewLabel_4.setBounds(393, 198, 345, 229);
+		frame.getContentPane().add(lblNewLabel_4);
 	}
 
 	private void JSpinner(SpinnerModel spIdade2) {
