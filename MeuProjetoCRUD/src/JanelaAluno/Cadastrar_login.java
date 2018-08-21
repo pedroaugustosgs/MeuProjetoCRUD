@@ -464,8 +464,9 @@ public class Cadastrar_login extends LoginInstitu{
 						
 						if(dd.last()) {
 							idC = dd.getString("idaluno");
-							System.out.println(idC);
+							
 							PlaAluno.main(new String[] {String.valueOf(idC)});
+							System.out.println(idC);
 							EntraAluno.vtt=0;
 							frame.dispose();
 						}
