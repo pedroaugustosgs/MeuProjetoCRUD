@@ -211,7 +211,7 @@ public class Config extends Login {
 		lblFotoPerfil = new JLabel("");
 		lblFotoPerfil.setForeground(Color.WHITE);
 		lblFotoPerfil.setBackground(Color.WHITE);
-		lblFotoPerfil.setBounds(509, 152, 258, 198);
+		lblFotoPerfil.setBounds(577, 146, 190, 189);
 		frmMeuCrud.getContentPane().add(lblFotoPerfil);
 		lblFotoPerfil.setBorder(BorderFactory.createLineBorder(Color.GRAY,2));
 		
@@ -313,7 +313,7 @@ public class Config extends Login {
 				 }
 			}
 		});
-		btnTrocarFoto.setBounds(565, 357, 211, 39);
+		btnTrocarFoto.setBounds(577, 346, 190, 39);
 		frmMeuCrud.getContentPane().add(btnTrocarFoto);
 		
 		JLabel lblNewLabel_7 = new JLabel("");
@@ -352,7 +352,7 @@ public class Config extends Login {
 		
 		JLabel lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\A.png"));
-		lblNewLabel_5.setBounds(147, 30, 406, 209);
+		lblNewLabel_5.setBounds(147, 30, 406, 189);
 		frmMeuCrud.getContentPane().add(lblNewLabel_5);
 		//System.out.println(EntraAluno.volt);
 		if(EntraAluno.volt==0) {
