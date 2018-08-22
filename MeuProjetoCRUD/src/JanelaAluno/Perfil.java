@@ -11,6 +11,7 @@ import javax.swing.text.MaskFormatter;
 import Banco.Conexao;
 import CRUD.Aluno;
 import CRUD.CRUDAlunos;
+import CRUD.CRUDEmail;
 
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -70,13 +71,20 @@ public class Perfil extends Login {
 	private JLabel tfIdade;
 	private JLabel tfemail;
 	private JLabel tfNome;
+	
 	public static String  idAluno=null;
+	public static String  idAula=null;
+	private JTextArea taMsg;
+
 	/**
 	 * Launch the application.
+	 * @param idAula 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args, String idAulas) {
 		
 		idAluno = args[0];
+		idAula = idAulas;
+		PlaAluno.voltaPerfil=1;
 		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -117,77 +125,37 @@ public class Perfil extends Login {
 		btnSalvar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnSalvar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
-				if(tfNome.getText().isEmpty()) {
-					JOptionPane.showMessageDialog(null, "Informe um nome valido!");
-					tfNome.requestFocus();
+				ResultSet aula=null;
+				String sql ="SELECT * FROM aulas WHERE idAula=?";
+				String msg=null;
+
+				String mensagem=taMsg.getText().toString(); 
+				if(mensagem.isEmpty() || mensagem.equals(" ")) {
+					JOptionPane.showMessageDialog(null, "Entre com a mensagem a ser enviada!");
 					return;
 				}
-				String nome = tfNome.getText().toString();
-				
-				if(!(tfemail.getText().contains("@") && tfemail.getText().contains("."))) {
-					JOptionPane.showMessageDialog(null, "E-mail invalido!");
-					tfemail.requestFocus();
-					return;
-				}
-				String email = tfemail.getText().toString();
-				
-				if(tftelefone.getText().isEmpty()) {
-					JOptionPane.showMessageDialog(null, "Informe um telefone!");
-					tftelefone.requestFocus();
-					return;		
-				}
-				String fone = tftelefone.getText().toString();
-				
-				if(tfIdade.getText().toString().isEmpty()) {
-					JOptionPane.showMessageDialog(null, "Informe uma idade Válida!");
-					tfIdade.requestFocus();
-					return;
-				}
-				String idade = tfIdade.getText().toString();
-				
-				if(caminho != null) {
-					file = new File(caminho);
-					try {
-						fis = new FileInputStream(file);
-					} catch (FileNotFoundException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				}
-				///***********************************************************************
-				String sql = "UPDATE alunos "
-						+ "SET nome=?, idade=?,email=?,fone=?,foto=? "
-						+ "WHERE idaluno = ?";
 				try {
 					PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
-					stmt.setString(1, nome);
-					stmt.setString(2, idade);
-					stmt.setString(3, email);
-					stmt.setString(4, fone);
-					if(caminho==null) {
-						stmt.setBinaryStream(5, fis, 0);
-					}else {
-						stmt.setBinaryStream(5, fis,file.length());
-					}
-					stmt.setString(6, id);
+					stmt.setString(1, idAula);
+					aula = stmt.executeQuery();
 					stmt.execute();
 					stmt.close();
-					JOptionPane.showMessageDialog(null, "Aluno alterado com sucesso!");
-					PlaAluno.main(null);
-					frmMeuCrud.dispose();
-				} catch (SQLException e1) {
+					
+					aula.first();
+					
+					msg="O professor da sua aula de "+Materia(aula.getString("materia"))+" sobre "+aula.getString("conteudo")+" lhe enviou a "
+							+ "seguinte mensagem: "+mensagem;
+							
+				} catch (SQLException e) {
 					// TODO Auto-generated catch block
-					e1.printStackTrace();
-					JOptionPane.showMessageDialog(null, "Erro ao alterar o aluno!");
+					e.printStackTrace();
 				}
-				/*CRUDAlunos alterar = new CRUDAlunos();
-				if(alterar.alterarAluno(nome, idade, email, fone, id)) {
-					JOptionPane.showMessageDialog(null, "Aluno alterado com sucesso!");
-				}else {
-					JOptionPane.showMessageDialog(null, "Erro ao alterar o aluno!");
-				}*/
 				
+				String email = tfemail.getText().toString();
+				
+				CRUDEmail d = new CRUDEmail();
+				d.EmailVisuAulas(email, msg);
+				JOptionPane.showMessageDialog(null, "Mensagem enviada com sucesso!");
 			}
 		});
 		
@@ -316,12 +284,12 @@ public class Perfil extends Login {
 		lblMensagem.setBounds(18, 284, 102, 21);
 		frmMeuCrud.getContentPane().add(lblMensagem);
 		
-		JTextArea textArea = new JTextArea();
-		textArea.setForeground(Color.WHITE);
-		textArea.setBackground(Color.BLACK);
-		textArea.setLineWrap(true);
-		textArea.setBounds(18, 316, 501, 109);
-		frmMeuCrud.getContentPane().add(textArea);
+		taMsg = new JTextArea();
+		taMsg.setForeground(Color.WHITE);
+		taMsg.setBackground(Color.BLACK);
+		taMsg.setLineWrap(true);
+		taMsg.setBounds(18, 316, 501, 109);
+		frmMeuCrud.getContentPane().add(taMsg);
 		//System.out.println(EntraAluno.volt);
 		if(EntraAluno.volt==0) {
 			PreencheTelaC();
@@ -425,5 +393,49 @@ public class Perfil extends Login {
 			 icone.setImage(icone.getImage().getScaledInstance(168, 138, 100));
 			 lblFotoPerfil.setIcon(icone);	
 	}
+	}
+	public String Materia(String m){
+		String materia=null;
+		
+		if(m.equals("RED")) {
+			materia="REDAÇÃO";
+		}
+		if(m.equals("MAT")) {
+			materia="MATEMÁTICA";
+		}
+		if(m.equals("QUI")) {
+			materia="QUÍMICA";
+		}
+		if(m.equals("FIS")) {
+			materia="FÍSICA";
+		}
+		if(m.equals("BIO")) {
+			materia="BIOLOGIA";
+		}
+		if(m.equals("HIS")) {
+			materia="HISTÓRIA";
+		}
+		if(m.equals("GEO")) {
+			materia="GEOGRAFIA";
+		}
+		if(m.equals("PORT")) {
+			materia="PORTUGUÊS";
+		}
+		if(m.equals("FILOS")) {
+			materia="FILOSOFIA";
+		}
+		if(m.equals("ING")) {
+			materia="INGLÊS";
+		}
+		if(m.equals("ESP")) {
+			materia="ESPANHOL";
+		}
+		if(m.equals("LIT")) {
+			materia="LITERATURA";
+		}
+		if(m.equals("SOCIO")) {
+			materia="SOCIOLOGIA";
+		}
+		return materia;
 	}
 }

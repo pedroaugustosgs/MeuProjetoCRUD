@@ -100,7 +100,10 @@ public class VisualizaAulas extends Login{
 	 */
 	public static void main(String[] args) {
 		
-		idAula = args[0];
+		if(PlaAluno.voltaPerfil==0) {
+			idAula = args[0];
+		}
+		
 		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -438,7 +441,8 @@ public class VisualizaAulas extends Login{
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				
-				Perfil.main(new String[] {ids[tabela.getSelectedRow()]});
+				Perfil.main(new String[] {ids[tabela.getSelectedRow()]},idAula);
+				frame.dispose();
 			}
 		});
 		

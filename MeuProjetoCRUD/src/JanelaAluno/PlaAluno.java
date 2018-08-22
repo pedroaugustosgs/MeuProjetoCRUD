@@ -55,7 +55,9 @@ public class PlaAluno {
 	int cont=0;
 	private JScrollPane scrollPane;
 	private JScrollPane scrollPaneREC;
-
+	
+	public static int voltaPerfil=0;
+	
 	/**
 	 * Launch the application.
 	 */
