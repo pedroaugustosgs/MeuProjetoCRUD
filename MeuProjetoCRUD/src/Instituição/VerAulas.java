@@ -233,7 +233,7 @@ public class VerAulas extends LoginInstitu{
 				}
 			}
 		});
-		btnProcurar.setBounds(703, 148, 157, 28);
+		btnProcurar.setBounds(703, 144, 164, 39);
 		frmMeuCrud.getContentPane().add(btnProcurar);
 		
 		JButton btnVoltar = new JButton("VOLTAR");
@@ -246,7 +246,7 @@ public class VerAulas extends LoginInstitu{
 				Principal.main(null);
 			}
 		});
-		btnVoltar.setBounds(-3, 458, 122, 39);
+		btnVoltar.setBounds(2, 456, 164, 39);
 		frmMeuCrud.getContentPane().add(btnVoltar);
 		
 		lblNewLabel_1 = new JLabel("");
@@ -274,8 +274,8 @@ public class VerAulas extends LoginInstitu{
 		frmMeuCrud.getContentPane().add(lblNewLabel_7);
 		
 		lblNewLabel_6 = new JLabel("");
-		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\VisualizarAula.png"));
-		lblNewLabel_6.setBounds(263, 38, 425, 40);
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Solicite Uma Nova Aula (4).jpg"));
+		lblNewLabel_6.setBounds(309, 23, 255, 67);
 		frmMeuCrud.getContentPane().add(lblNewLabel_6);
 		
 		

@@ -127,7 +127,7 @@ public class EntraInstitu extends Principal2{
 		frmEntraInstitu.getContentPane().add(btnLogar);
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnVoltar.setBounds(331, 563, 164, 39);
+		btnVoltar.setBounds(331, 561, 164, 39);
 		frmEntraInstitu.getContentPane().add(btnVoltar);
 		
 		JLabel lblNewLabel_5 = new JLabel("");

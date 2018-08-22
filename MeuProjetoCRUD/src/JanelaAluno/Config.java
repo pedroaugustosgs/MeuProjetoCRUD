@@ -100,7 +100,7 @@ public class Config extends Login {
 		frmMeuCrud.getContentPane().setBackground(Color.BLACK);
 		frmMeuCrud.setIconImage(Toolkit.getDefaultToolkit().getImage(Config.class.getResource("/47 - Copia.png")));
 		frmMeuCrud.setTitle("MEU CRUD - Alunos Cadastrados");
-		frmMeuCrud.setBounds(100, 100, 783, 496);
+		frmMeuCrud.setBounds(100, 100, 787, 535);
 		frmMeuCrud.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frmMeuCrud.getContentPane().setLayout(null);
 		frmMeuCrud.setResizable(false);
@@ -186,8 +186,8 @@ public class Config extends Login {
 			}
 		});
 		
-		JButton btnNewButton = new JButton("REDEFINIR SENHA");
-		btnNewButton.setBackground(Color.LIGHT_GRAY);
+		JButton btnNewButton = new JButton("MUDAR SENHA");
+		btnNewButton.setBackground(Color.BLACK);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String senha1 = JOptionPane.showInputDialog("Escreva sua nova Senha");
@@ -222,9 +222,9 @@ public class Config extends Login {
 		tfIdade.setBounds(79, 290, 86, 20);
 		frmMeuCrud.getContentPane().add(tfIdade);
 		tfIdade.setColumns(10);
-		btnNewButton.setForeground(Color.BLACK);
+		btnNewButton.setForeground(Color.WHITE);
 		btnNewButton.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnNewButton.setBounds(1, 428, 237, 39);
+		btnNewButton.setBounds(10, 398, 169, 27);
 		frmMeuCrud.getContentPane().add(btnNewButton);
 		
 		try {
@@ -245,7 +245,7 @@ public class Config extends Login {
 		lblTelefone.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblTelefone.setBounds(23, 339, 86, 21);
 		frmMeuCrud.getContentPane().add(lblTelefone);
-		btnSalvar.setBounds(355, 428, 164, 39);
+		btnSalvar.setBounds(1, 467, 164, 39);
 		frmMeuCrud.getContentPane().add(btnSalvar);
 		
 		JLabel lblSenha = new JLabel("Idade:");
@@ -285,7 +285,7 @@ public class Config extends Login {
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnVoltar.setBackground(Color.LIGHT_GRAY);
-		btnVoltar.setBounds(612, 428, 164, 39);
+		btnVoltar.setBounds(617, 467, 164, 39);
 		frmMeuCrud.getContentPane().add(btnVoltar);
 		
 		JLabel lblNomeCtfnoompleto = DefaultComponentFactory.getInstance().createTitle("Nome:");
@@ -297,7 +297,7 @@ public class Config extends Login {
 		JButton btnTrocarFoto = new JButton("ALTERAR FOTO");
 		btnTrocarFoto.setForeground(Color.BLACK);
 		btnTrocarFoto.setBackground(Color.LIGHT_GRAY);
-		btnTrocarFoto.setFont(new Font("DialogInput", Font.BOLD, 20));
+		btnTrocarFoto.setFont(new Font("DialogInput", Font.BOLD, 12));
 		btnTrocarFoto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				 FileNameExtensionFilter filter = new FileNameExtensionFilter("JPG & GIF IMAGENS","jpg","gif","png");
@@ -313,7 +313,7 @@ public class Config extends Login {
 				 }
 			}
 		});
-		btnTrocarFoto.setBounds(577, 346, 190, 39);
+		btnTrocarFoto.setBounds(721, 346, 46, 19);
 		frmMeuCrud.getContentPane().add(btnTrocarFoto);
 		
 		JLabel lblNewLabel_7 = new JLabel("");
@@ -327,12 +327,12 @@ public class Config extends Login {
 		
 		JLabel lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_6.setBounds(0, 396, 389, 26);
+		lblNewLabel_6.setBounds(1, 436, 389, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_8 = new JLabel("");
 		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_8.setBounds(376, 396, 402, 26);
+		lblNewLabel_8.setBounds(379, 436, 402, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_8);
 		
 		JLabel lblNewLabel = new JLabel("");
