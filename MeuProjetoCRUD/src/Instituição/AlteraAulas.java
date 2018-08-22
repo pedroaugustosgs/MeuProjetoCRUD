@@ -42,6 +42,8 @@ import javax.swing.text.MaskFormatter;
 import javax.swing.JTextField;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeEvent;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 
 public class AlteraAulas extends Login{
 
@@ -560,6 +562,22 @@ public class AlteraAulas extends Login{
 		panel_1.add(lblAt_1);
 		
 		lbldedata = new JFormattedTextField(DeAte);
+		lbldedata.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				String  deumavez = lbldedata.getText().toString();
+				String hora[] = new String[2];
+				hora = deumavez.split(":");
+				int h = Integer.parseInt(hora[0]);
+				int m = Integer.parseInt(hora[1]);
+				if(h>23 || m>59) {
+					JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+					lbldedata.requestFocus();
+					lbldedata.selectAll();
+					
+				}
+			}
+		});
 		lbldedata.setBackground(Color.BLACK);
 		lbldedata.setForeground(Color.WHITE);
 		lbldedata.setColumns(10);
@@ -567,6 +585,22 @@ public class AlteraAulas extends Login{
 		panel_1.add(lbldedata);
 		
 		lblatedata = new JFormattedTextField(DeAte);
+		lblatedata.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				String  deumavez = lblatedata.getText().toString();
+				String hora[] = new String[2];
+				hora = deumavez.split(":");
+				int h = Integer.parseInt(hora[0]);
+				int m = Integer.parseInt(hora[1]);
+				if(h>23 || m>59) {
+					JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+					lblatedata.requestFocus();
+					lblatedata.selectAll();
+					
+				}
+			}
+		});
 		lblatedata.setBackground(Color.BLACK);
 		lblatedata.setForeground(Color.WHITE);
 		lblatedata.setColumns(10);
@@ -740,6 +774,22 @@ public class AlteraAulas extends Login{
 		panel.add(label_11);
 		
 		lbldemanha = new JFormattedTextField(DeAte);
+		lbldemanha.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				String  deumavez = lbldemanha.getText().toString();
+				String hora[] = new String[2];
+				hora = deumavez.split(":");
+				int h = Integer.parseInt(hora[0]);
+				int m = Integer.parseInt(hora[1]);
+				if(h>23 || m>59) {
+					JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+					lbldemanha.requestFocus();
+					lbldemanha.selectAll();
+					
+				}
+			}
+		});
 		lbldemanha.setForeground(Color.WHITE);
 		lbldemanha.setBackground(Color.BLACK);
 		lbldemanha.setVisible(false);
@@ -748,6 +798,22 @@ public class AlteraAulas extends Login{
 		lbldemanha.setColumns(10);
 		
 		lbldetarde = new JFormattedTextField(DeAte);
+		lbldetarde.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				String  deumavez = lbldetarde.getText().toString();
+				String hora[] = new String[2];
+				hora = deumavez.split(":");
+				int h = Integer.parseInt(hora[0]);
+				int m = Integer.parseInt(hora[1]);
+				if(h>23 || m>59) {
+					JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+					lbldetarde.requestFocus();
+					lbldetarde.selectAll();
+					
+				}
+			}
+		});
 		lbldetarde.setBackground(Color.BLACK);
 		lbldetarde.setForeground(Color.WHITE);
 		lbldetarde.setVisible(false);
@@ -756,6 +822,22 @@ public class AlteraAulas extends Login{
 		panel.add(lbldetarde);
 		
 		lblDeNoite = new JFormattedTextField(DeAte);
+		lblDeNoite.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				String  deumavez = lblDeNoite.getText().toString();
+				String hora[] = new String[2];
+				hora = deumavez.split(":");
+				int h = Integer.parseInt(hora[0]);
+				int m = Integer.parseInt(hora[1]);
+				if(h>23 || m>59) {
+					JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+					lblDeNoite.requestFocus();
+					lblDeNoite.selectAll();
+					
+				}
+			}
+		});
 		lblDeNoite.setBackground(Color.BLACK);
 		lblDeNoite.setForeground(Color.WHITE);
 		lblDeNoite.setVisible(false);
@@ -764,6 +846,22 @@ public class AlteraAulas extends Login{
 		panel.add(lblDeNoite);
 		
 		lblatemanha = new JFormattedTextField(DeAte);
+		lblatemanha.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				String  deumavez = lblatemanha.getText().toString();
+				String hora[] = new String[2];
+				hora = deumavez.split(":");
+				int h = Integer.parseInt(hora[0]);
+				int m = Integer.parseInt(hora[1]);
+				if(h>23 || m>59) {
+					JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+					lblatemanha.requestFocus();
+					lblatemanha.selectAll();
+					
+				}
+			}
+		});
 		lblatemanha.setForeground(Color.WHITE);
 		lblatemanha.setBackground(Color.BLACK);
 		lblatemanha.setVisible(false);
@@ -772,6 +870,22 @@ public class AlteraAulas extends Login{
 		panel.add(lblatemanha);
 		
 		lblatetarde = new JFormattedTextField(DeAte);
+		lblatetarde.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				String  deumavez = lblatetarde.getText().toString();
+				String hora[] = new String[2];
+				hora = deumavez.split(":");
+				int h = Integer.parseInt(hora[0]);
+				int m = Integer.parseInt(hora[1]);
+				if(h>23 || m>59) {
+					JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+					lblatetarde.requestFocus();
+					lblatetarde.selectAll();
+					
+				}
+			}
+		});
 		lblatetarde.setBackground(Color.BLACK);
 		lblatetarde.setForeground(Color.WHITE);
 		lblatetarde.setVisible(false);
@@ -780,6 +894,22 @@ public class AlteraAulas extends Login{
 		panel.add(lblatetarde);
 		
 		lblatenoite = new JFormattedTextField(DeAte);
+		lblatenoite.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				String  deumavez = lblatenoite.getText().toString();
+				String hora[] = new String[2];
+				hora = deumavez.split(":");
+				int h = Integer.parseInt(hora[0]);
+				int m = Integer.parseInt(hora[1]);
+				if(h>23 || m>59) {
+					JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+					lblatenoite.requestFocus();
+					lblatenoite.selectAll();
+					
+				}
+			}
+		});
 		lblatenoite.setForeground(Color.WHITE);
 		lblatenoite.setBackground(Color.BLACK);
 		lblatenoite.setVisible(false);
