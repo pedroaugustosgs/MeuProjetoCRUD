@@ -308,7 +308,7 @@ public class Config extends Login {
 					 caminho = explorer.getSelectedFile().getAbsolutePath();
 					 
 					 ImageIcon icone = new ImageIcon(caminho);
-					 icone.setImage(icone.getImage().getScaledInstance(168, 138, 100));
+					 icone.setImage(icone.getImage().getScaledInstance(lblFotoPerfil.getWidth(),lblFotoPerfil.getHeight(), 100));
 					 lblFotoPerfil.setIcon(icone);
 				 }
 			}

@@ -38,6 +38,8 @@ import Banco.Conexao;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeEvent;
 import java.awt.Color;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 
 public class NovaAula extends Login {
 
@@ -355,6 +357,23 @@ public class NovaAula extends Login {
 		lblDe_1.setFont(new Font("Times New Roman", Font.BOLD, 16));
 		
 		tfDeUmaVez = new JFormattedTextField(DeAte);
+		tfDeUmaVez.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent arg0) {
+				String  deumavez = tfDeUmaVez.getText().toString();
+				String hora[] = new String[2];
+				hora = deumavez.split(":");
+				int h = Integer.parseInt(hora[0]);
+				int m = Integer.parseInt(hora[1]);
+				if(h>23 || m>59) {
+					JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+					tfDeUmaVez.requestFocus();
+					tfDeUmaVez.selectAll();
+					
+				}
+				
+			}
+		});
 		tfDeUmaVez.setForeground(Color.WHITE);
 		tfDeUmaVez.setBackground(Color.BLACK);
 		tfDeUmaVez.setBounds(48, 14, 125, 20);
