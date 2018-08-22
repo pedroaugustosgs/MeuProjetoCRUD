@@ -33,7 +33,7 @@ import java.awt.Color;
 
 public class EditarRemover {
 
-	public JFrame frame;
+	public JFrame frmApprofe;
 	private JTextField tfNome;
 	private JTextField tfEmail;
 	private JTextField tfTelefone;
@@ -54,7 +54,7 @@ public class EditarRemover {
 			public void run() {
 				try {
 					EditarRemover window = new EditarRemover();
-					window.frame.setVisible(true);
+					window.frmApprofe.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -73,14 +73,15 @@ public class EditarRemover {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.getContentPane().setBackground(Color.BLACK);
-		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(EditarRemover.class.getResource("/47 - Copia.png")));
-		frame.setBounds(100, 100, 784, 494);
-		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
-		frame.setResizable(false);
-		frame.setLocationRelativeTo(null);
+		frmApprofe = new JFrame();
+		frmApprofe.setTitle("Approfe");
+		frmApprofe.getContentPane().setBackground(Color.BLACK);
+		frmApprofe.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Imagem\\img\\students-cap.png"));
+		frmApprofe.setBounds(100, 100, 784, 494);
+		frmApprofe.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frmApprofe.getContentPane().setLayout(null);
+		frmApprofe.setResizable(false);
+		frmApprofe.setLocationRelativeTo(null);
 		
 		SpinerSprend = new JSpinner();
 		SpinerSprend.setBackground(Color.BLACK);
@@ -101,43 +102,43 @@ public class EditarRemover {
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel.setBounds(0, 379, 379, 23);
-		frame.getContentPane().add(lblNewLabel);
+		frmApprofe.getContentPane().add(lblNewLabel);
 		
 		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_3.setBounds(367, 379, 410, 23);
-		frame.getContentPane().add(lblNewLabel_3);
+		frmApprofe.getContentPane().add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_6 = new JLabel("New label");
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_6.setBounds(0, 146, 492, 23);
-		frame.getContentPane().add(lblNewLabel_6);
+		frmApprofe.getContentPane().add(lblNewLabel_6);
 		SpinerSprend.setBounds(92, 302, 88, 20);
-		frame.getContentPane().add(SpinerSprend);
+		frmApprofe.getContentPane().add(SpinerSprend);
 		
 		JLabel lblNome = new JLabel("Nome:");
 		lblNome.setForeground(Color.WHITE);
 		lblNome.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblNome.setBounds(15, 213, 64, 15);
-		frame.getContentPane().add(lblNome);
+		frmApprofe.getContentPane().add(lblNome);
 		
 		lblIdade = new JLabel("Idade:");
 		lblIdade.setForeground(Color.WHITE);
 		lblIdade.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblIdade.setBounds(15, 304, 64, 15);
-		frame.getContentPane().add(lblIdade);
+		frmApprofe.getContentPane().add(lblIdade);
 		
 		JLabel lblEmail = new JLabel("E-Mail:");
 		lblEmail.setForeground(Color.WHITE);
 		lblEmail.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblEmail.setBounds(15, 260, 88, 15);
-		frame.getContentPane().add(lblEmail);
+		frmApprofe.getContentPane().add(lblEmail);
 		
 		JLabel lblTelefone = new JLabel("Telefone:");
 		lblTelefone.setForeground(Color.WHITE);
 		lblTelefone.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblTelefone.setBounds(11, 348, 88, 20);
-		frame.getContentPane().add(lblTelefone);
+		frmApprofe.getContentPane().add(lblTelefone);
 		
 		/*ButtonGroup grupo = new ButtonGroup();
 		grupo.add(rbFeminino);
@@ -165,11 +166,11 @@ public class EditarRemover {
 					JOptionPane.showMessageDialog(null, "Erro ao atualizar os dados do aluno");
 				}
 				VerAlunos.main(null);
-				frame.dispose();
+				frmApprofe.dispose();
 			}
 		});
 		btnEditar.setBounds(318, 426, 164, 39);
-		frame.getContentPane().add(btnEditar);
+		frmApprofe.getContentPane().add(btnEditar);
 		
 		JButton btnRemover = new JButton("REMOVER");
 		btnRemover.setBackground(Color.LIGHT_GRAY);
@@ -191,14 +192,14 @@ public class EditarRemover {
 					return;
 				}
 					VerAlunos.main(null);
-					frame.dispose();
+					frmApprofe.dispose();
 			}
 		});
 		
 		
 		btnRemover.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnRemover.setBounds(1, 425, 164, 39);
-		frame.getContentPane().add(btnRemover);
+		frmApprofe.getContentPane().add(btnRemover);
 		
 		JButton btnCancelar = new JButton("VOLTAR");
 		btnCancelar.setForeground(Color.BLACK);
@@ -207,77 +208,77 @@ public class EditarRemover {
 			public void actionPerformed(ActionEvent arg0) {
 				
 				VerAlunos.main(null);
-				frame.dispose();
+				frmApprofe.dispose();
 			}
 		});
 		btnCancelar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnCancelar.setBounds(613, 425, 164, 39);
-		frame.getContentPane().add(btnCancelar);
+		frmApprofe.getContentPane().add(btnCancelar);
 		
 		tfNome = new JTextField();
 		tfNome.setForeground(Color.WHITE);
 		tfNome.setBackground(Color.BLACK);
 		tfNome.setBounds(89, 211, 290, 20);
-		frame.getContentPane().add(tfNome);
+		frmApprofe.getContentPane().add(tfNome);
 		tfNome.setColumns(10);
 		
 		tfEmail = new JTextField();
 		tfEmail.setForeground(Color.WHITE);
 		tfEmail.setBackground(Color.BLACK);
 		tfEmail.setBounds(90, 260, 291, 20);
-		frame.getContentPane().add(tfEmail);
+		frmApprofe.getContentPane().add(tfEmail);
 		tfEmail.setColumns(10);
 		
 		tfTelefone = new JTextField();
 		tfTelefone.setForeground(Color.WHITE);
 		tfTelefone.setBackground(Color.BLACK);
 		tfTelefone.setBounds(95, 350, 168, 20);
-		frame.getContentPane().add(tfTelefone);
+		frmApprofe.getContentPane().add(tfTelefone);
 		tfTelefone.setColumns(10);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
 		lblNewLabel_1.setBounds(-8, 468, 492, 14);
-		frame.getContentPane().add(lblNewLabel_1);
+		frmApprofe.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
 		lblNewLabel_2.setBounds(446, 468, 421, 14);
-		frame.getContentPane().add(lblNewLabel_2);
+		frmApprofe.getContentPane().add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
 		lblNewLabel_5.setBounds(225, -23, 451, 214);
-		frame.getContentPane().add(lblNewLabel_5);
+		frmApprofe.getContentPane().add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_8 = new JLabel("");
 		lblNewLabel_8.setBounds(461, 211, 46, 14);
-		frame.getContentPane().add(lblNewLabel_8);
+		frmApprofe.getContentPane().add(lblNewLabel_8);
 		
 		JLabel lblNewLabel_9 = new JLabel("");
 		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_9.setBounds(479, 146, 367, 23);
-		frame.getContentPane().add(lblNewLabel_9);
+		frmApprofe.getContentPane().add(lblNewLabel_9);
 		
 		JLabel lblNewLabel_7 = new JLabel("");
 		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_7.setBounds(-9, 0, 478, 33);
-		frame.getContentPane().add(lblNewLabel_7);
+		frmApprofe.getContentPane().add(lblNewLabel_7);
 		
 		JLabel lblNewLabel_12 = new JLabel("");
 		lblNewLabel_12.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_12.setBounds(462, 0, 384, 33);
-		frame.getContentPane().add(lblNewLabel_12);
+		frmApprofe.getContentPane().add(lblNewLabel_12);
 		
 		JLabel lblNewLabel_11 = new JLabel("");
 		lblNewLabel_11.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_11.setBounds(-8, 583, 477, 33);
-		frame.getContentPane().add(lblNewLabel_11);
+		frmApprofe.getContentPane().add(lblNewLabel_11);
 		
 		JLabel lblNewLabel_13 = new JLabel("");
 		lblNewLabel_13.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_13.setBounds(459, 583, 421, 33);
-		frame.getContentPane().add(lblNewLabel_13);
+		frmApprofe.getContentPane().add(lblNewLabel_13);
 		
 		
 		

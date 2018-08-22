@@ -276,7 +276,7 @@ public class VerAulas extends LoginInstitu{
 		btnHistricoDeAulas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				VerHistorico.main(null);
-				frame.dispose();
+				frmMeuCrud.dispose();
 			}
 		});
 		btnHistricoDeAulas.setForeground(Color.BLACK);

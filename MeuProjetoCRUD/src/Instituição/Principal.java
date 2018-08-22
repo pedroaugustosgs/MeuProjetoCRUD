@@ -21,7 +21,7 @@ import java.awt.Toolkit;
 
 public class Principal {
 
-	public JFrame frame;
+	public JFrame frmApprofe;
 
 	/**
 	 * Launch the application.
@@ -31,7 +31,7 @@ public class Principal {
 			public void run() {
 				try {
 					Principal window = new Principal();
-					window.frame.setVisible(true);
+					window.frmApprofe.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -50,11 +50,13 @@ public class Principal {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.getContentPane().setBackground(Color.BLACK);
-		frame.setBounds(100, 100, 826, 522);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		frmApprofe = new JFrame();
+		frmApprofe.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Imagem\\img\\students-cap.png"));
+		frmApprofe.setTitle("Approfe");
+		frmApprofe.getContentPane().setBackground(Color.BLACK);
+		frmApprofe.setBounds(100, 100, 826, 522);
+		frmApprofe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmApprofe.getContentPane().setLayout(null);
 		
 		JButton btnNewButton_1 = new JButton("SAIR");
 		btnNewButton_1.setBackground(Color.LIGHT_GRAY);
@@ -69,7 +71,7 @@ public class Principal {
 				
 				
 				if (resposta == JOptionPane.YES_OPTION) {
-				frame.setVisible(false);
+				frmApprofe.setVisible(false);
 				Principal2.main(null);
 
 				}
@@ -86,25 +88,25 @@ public class Principal {
 		btnAulas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				VerAulas.main(null);
-				frame.dispose();
+				frmApprofe.dispose();
 			}
 		});
 		
 		JLabel lblNewLabel_10 = new JLabel("");
 		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\Chapeu azul.png"));
 		lblNewLabel_10.setBounds(379, -22, 113, 116);
-		frame.getContentPane().add(lblNewLabel_10);
+		frmApprofe.getContentPane().add(lblNewLabel_10);
 		btnAulas.setForeground(Color.BLACK);
 		btnAulas.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnAulas.setBounds(495, 204, 281, 40);
-		frame.getContentPane().add(btnAulas);
+		frmApprofe.getContentPane().add(btnAulas);
 		btnNewButton_1.setBounds(331, 443, 211, 40);
-		frame.getContentPane().add(btnNewButton_1);
+		frmApprofe.getContentPane().add(btnNewButton_1);
 		
 		JButton btnVisualizarAlunos = new JButton("VISUALIZAR USU\u00C1RIOS");
 		btnVisualizarAlunos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				frame.setVisible(false);
+				frmApprofe.setVisible(false);
 				VerAlunos.main(null);
 			}
 		});
@@ -112,59 +114,59 @@ public class Principal {
 		btnVisualizarAlunos.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnVisualizarAlunos.setBackground(Color.LIGHT_GRAY);
 		btnVisualizarAlunos.setBounds(24, 204, 281, 39);
-		frame.getContentPane().add(btnVisualizarAlunos);
+		frmApprofe.getContentPane().add(btnVisualizarAlunos);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel.setBounds(0, 395, 470, 24);
-		frame.getContentPane().add(lblNewLabel);
+		frmApprofe.getContentPane().add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_1.setBounds(463, 395, 357, 24);
-		frame.getContentPane().add(lblNewLabel_1);
+		frmApprofe.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_8 = new JLabel("");
 		lblNewLabel_8.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
 		lblNewLabel_8.setBounds(0, 59, 414, 35);
-		frame.getContentPane().add(lblNewLabel_8);
+		frmApprofe.getContentPane().add(lblNewLabel_8);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_2.setBounds(0, 59, 492, 35);
-		frame.getContentPane().add(lblNewLabel_2);
+		frmApprofe.getContentPane().add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_3.setBounds(478, 59, 342, 35);
-		frame.getContentPane().add(lblNewLabel_3);
+		frmApprofe.getContentPane().add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega em p\u00E9.jpg"));
 		lblNewLabel_5.setBounds(424, 75, 61, 321);
-		frame.getContentPane().add(lblNewLabel_5);
+		frmApprofe.getContentPane().add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Bot\u00E3o png.png"));
 		lblNewLabel_6.setBounds(67, 133, 251, 202);
-		frame.getContentPane().add(lblNewLabel_6);
+		frmApprofe.getContentPane().add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\1.png"));
 		lblNewLabel_4.setBounds(-51, 75, 478, 332);
-		frame.getContentPane().add(lblNewLabel_4);
+		frmApprofe.getContentPane().add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_9 = new JLabel("");
 		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\Bot\u00E3o png.png"));
 		lblNewLabel_9.setBounds(533, 94, 330, 289);
-		frame.getContentPane().add(lblNewLabel_9);
+		frmApprofe.getContentPane().add(lblNewLabel_9);
 		
 		JLabel lblNewLabel_7 = new JLabel("");
 		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\1.png"));
 		lblNewLabel_7.setBounds(385, 75, 478, 321);
-		frame.getContentPane().add(lblNewLabel_7);
+		frmApprofe.getContentPane().add(lblNewLabel_7);
 		
-		frame.setResizable(false);//impede a tela de ser redimensionada
-		frame.setLocationRelativeTo(null);//faz com que a tela apareça no centro
+		frmApprofe.setResizable(false);//impede a tela de ser redimensionada
+		frmApprofe.setLocationRelativeTo(null);//faz com que a tela apareça no centro
 	}
 }

@@ -15,6 +15,7 @@ import javax.swing.JLabel;
 import Instituição.Cadastro_Institu;
 import Instituição.LoginInstitu;
 import Menu_principal.Principal2;
+import java.awt.Toolkit;
 
 
 
@@ -50,6 +51,8 @@ public class EntraInstitu extends Principal2{
 	 */
 	private void initialize() {
 		frmEntraInstitu = new JFrame();
+		frmEntraInstitu.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Imagem\\img\\students-cap.png"));
+		frmEntraInstitu.setTitle("Approfe");
 		frmEntraInstitu.getContentPane().setBackground(Color.BLACK);
 		frmEntraInstitu.setBounds(100, 100, 797, 630);
 		frmEntraInstitu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
