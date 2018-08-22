@@ -44,6 +44,8 @@ import java.awt.event.ContainerAdapter;
 import java.awt.event.ContainerEvent;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class VisualizaAulas extends Login{
 
@@ -89,6 +91,9 @@ public class VisualizaAulas extends Login{
 	private Label label_5;
 	private Label label_10;
 	private JLabel lblNewLabel_10;
+	
+	public String ids[]= new String[100];
+	int cont=0;
 	
 	/**
 	 * Launch the application.
@@ -429,6 +434,13 @@ public class VisualizaAulas extends Login{
 		frame.getContentPane().add(btnNovoltar);
 		
 		tabela = new JTable();
+		tabela.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				
+				Perfil.main(new String[] {ids[tabela.getSelectedRow()]});
+			}
+		});
 		
 		JScrollPane scrollPane = new JScrollPane(tabela);
 		scrollPane.setBounds(200, 332, 502, 201);
@@ -1000,6 +1012,9 @@ public class VisualizaAulas extends Login{
 					stmt7.execute();
 					stmt7.close();
 					escola.first();*/
+					
+					ids[cont++]=dados.getString("idaluno");
+
 					
 					linhas.add(new Object[] {
 							dados.getString("nome"),

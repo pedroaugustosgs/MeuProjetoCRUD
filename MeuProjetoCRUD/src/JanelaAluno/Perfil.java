@@ -47,13 +47,10 @@ import javax.swing.JFormattedTextField;
 import javax.swing.SwingConstants;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.UIManager;
+import javax.swing.JTextPane;
+import javax.swing.JTextArea;
 public class Perfil extends Login {
-	
-	
-	
-	
-	
-	
+
 	int ee;
 	public JFrame frmMeuCrud;
 	public String anterior = "";
@@ -73,11 +70,14 @@ public class Perfil extends Login {
 	private JLabel tfIdade;
 	private JLabel tfemail;
 	private JLabel tfNome;
-
+	public static String  idAluno=null;
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		
+		idAluno = args[0];
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -111,7 +111,7 @@ public class Perfil extends Login {
 		frmMeuCrud.setResizable(false);
 		frmMeuCrud.setLocationRelativeTo(null);
 		
-		JButton btnSalvar = new JButton("SALVAR");
+		JButton btnSalvar = new JButton("ENVIAR MENSAGEM");
 		btnSalvar.setBackground(Color.LIGHT_GRAY);
 		btnSalvar.setForeground(Color.BLACK);
 		btnSalvar.setFont(new Font("DialogInput", Font.BOLD, 20));
@@ -213,28 +213,28 @@ public class Perfil extends Login {
 		JLabel lblTelefone = new JLabel("Telefone:");
 		lblTelefone.setForeground(Color.WHITE);
 		lblTelefone.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblTelefone.setBounds(18, 339, 86, 21);
+		lblTelefone.setBounds(18, 252, 86, 21);
 		frmMeuCrud.getContentPane().add(lblTelefone);
-		btnSalvar.setBounds(1, 467, 164, 39);
+		btnSalvar.setBounds(1, 467, 242, 39);
 		frmMeuCrud.getContentPane().add(btnSalvar);
 		
 		JLabel lblSenha = new JLabel("Idade:");
 		lblSenha.setForeground(Color.WHITE);
 		lblSenha.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblSenha.setBounds(20, 287, 60, 21);
+		lblSenha.setBounds(18, 220, 60, 21);
 		frmMeuCrud.getContentPane().add(lblSenha);
 		
 		JLabel lblEmail = new JLabel("E-mail:");
 		lblEmail.setForeground(Color.WHITE);
 		lblEmail.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblEmail.setBounds(20, 234, 74, 21);
+		lblEmail.setBounds(18, 188, 74, 21);
 		frmMeuCrud.getContentPane().add(lblEmail);
 		
 		JButton btnVoltar = new JButton("VOLTAR");
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 					
-					PlaAluno.main(null);
+					VisualizaAulas.main(null);
 					frmMeuCrud.dispose();
 			}
 		});
@@ -247,7 +247,7 @@ public class Perfil extends Login {
 		JLabel lblNomeCtfnoompleto = DefaultComponentFactory.getInstance().createTitle("Nome:");
 		lblNomeCtfnoompleto.setForeground(Color.WHITE);
 		lblNomeCtfnoompleto.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblNomeCtfnoompleto.setBounds(21, 180, 70, 30);
+		lblNomeCtfnoompleto.setBounds(18, 147, 70, 30);
 		frmMeuCrud.getContentPane().add(lblNomeCtfnoompleto);
 		
 		JLabel lblNewLabel_7 = new JLabel("");
@@ -286,24 +286,42 @@ public class Perfil extends Login {
 		
 		JLabel lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\A.png"));
-		lblNewLabel_5.setBounds(147, 30, 406, 189);
+		lblNewLabel_5.setBounds(123, 42, 406, 96);
 		frmMeuCrud.getContentPane().add(lblNewLabel_5);
 		
 		tfNome = new JLabel("New label");
-		tfNome.setBounds(88, 187, 221, 21);
+		tfNome.setForeground(Color.WHITE);
+		tfNome.setBounds(84, 155, 221, 21);
 		frmMeuCrud.getContentPane().add(tfNome);
 		
 		tfemail = new JLabel("New label");
-		tfemail.setBounds(96, 236, 187, 20);
+		tfemail.setForeground(Color.WHITE);
+		tfemail.setBounds(94, 191, 187, 20);
 		frmMeuCrud.getContentPane().add(tfemail);
 		
 		tfIdade = new JLabel("New label");
-		tfIdade.setBounds(84, 286, 89, 23);
+		tfIdade.setForeground(Color.WHITE);
+		tfIdade.setBounds(88, 222, 89, 23);
 		frmMeuCrud.getContentPane().add(tfIdade);
 		
 		tftelefone = new JLabel("New label");
-		tftelefone.setBounds(106, 340, 225, 22);
+		tftelefone.setBackground(Color.BLACK);
+		tftelefone.setForeground(Color.WHITE);
+		tftelefone.setBounds(98, 254, 225, 22);
 		frmMeuCrud.getContentPane().add(tftelefone);
+		
+		JLabel lblMensagem = new JLabel("Mensagem:");
+		lblMensagem.setForeground(Color.WHITE);
+		lblMensagem.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		lblMensagem.setBounds(18, 284, 102, 21);
+		frmMeuCrud.getContentPane().add(lblMensagem);
+		
+		JTextArea textArea = new JTextArea();
+		textArea.setForeground(Color.WHITE);
+		textArea.setBackground(Color.BLACK);
+		textArea.setLineWrap(true);
+		textArea.setBounds(18, 316, 501, 109);
+		frmMeuCrud.getContentPane().add(textArea);
 		//System.out.println(EntraAluno.volt);
 		if(EntraAluno.volt==0) {
 			PreencheTelaC();
@@ -318,7 +336,7 @@ public class Perfil extends Login {
 		PreparedStatement stmt;
 		try {
 			stmt = Conexao.conexao.prepareStatement(sql);
-			stmt.setString(1, id);
+			stmt.setString(1, idAluno);
 			dados = stmt.executeQuery();
 			stmt.execute();
 			stmt.close();

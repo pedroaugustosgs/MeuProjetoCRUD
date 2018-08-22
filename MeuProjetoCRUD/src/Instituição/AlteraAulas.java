@@ -370,7 +370,7 @@ public class AlteraAulas extends Login{
 		btnNewButton.setBounds(2, 561, 164, 39);
 		frame.getContentPane().add(btnNewButton);
 		
-		JButton btnNovoltar = new JButton("VOLTAR");
+		JButton btnNovoltar = new JButton("VOLTAR"); 
 		btnNovoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNovoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
