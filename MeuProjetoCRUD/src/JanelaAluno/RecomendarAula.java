@@ -394,6 +394,26 @@ public class RecomendarAula extends Login {
 		gripo.add(rdbtnPeridico);
 		gripo.add(rdbtnUmaVez);
 		
+		lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_2.setBounds(0, 87, 469, 23);
+		frame.getContentPane().add(lblNewLabel_2);
+		
+		lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_3.setBounds(462, 87, 502, 23);
+		frame.getContentPane().add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_4.setBounds(860, 515, 89, 27);
+		frame.getContentPane().add(lblNewLabel_4);
+		
+		lblNewLabel_5 = new JLabel("New label");
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\ggggggggg.jpg"));
+		lblNewLabel_5.setBounds(15, 11, 906, 77);
+		frame.getContentPane().add(lblNewLabel_5);
+		
 		panel = new JPanel();
 		panel.setBackground(Color.BLACK);
 		panel.setBounds(2, 208, 929, 245);
@@ -505,6 +525,27 @@ public class RecomendarAula extends Login {
 		lblDe.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		
 		tfAteManha = new JFormattedTextField(DeAte);
+		tfAteManha.addFocusListener(new FocusAdapter() {
+		
+		
+				public void focusLost(FocusEvent e) {
+					String  deumavez = tfAteManha.getText().toString();
+					String hora[] = new String[2];
+					hora = deumavez.split(":");
+					int h = Integer.parseInt(hora[0]);
+					int m = Integer.parseInt(hora[1]);
+					if(h>23 || m>59) {
+						JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+						tfAteManha.requestFocus();
+						tfAteManha.selectAll();
+				}
+				
+					
+				
+				
+				
+			}
+		});
 		tfAteManha.setForeground(Color.WHITE);
 		tfAteManha.setBackground(Color.BLACK);
 		tfAteManha.setVisible(false);
@@ -527,6 +568,22 @@ public class RecomendarAula extends Login {
 		label.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		
 		tfDeNoite = new JFormattedTextField(DeAte);
+		tfDeNoite.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+					String  deumavez = tfDeNoite.getText().toString();
+					String hora[] = new String[2];
+					hora = deumavez.split(":");
+					int h = Integer.parseInt(hora[0]);
+					int m = Integer.parseInt(hora[1]);
+					if(h>23 || m>59) {
+						JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+						tfDeNoite.requestFocus();
+						tfDeNoite.selectAll();
+					}
+					
+			}
+		});
 		tfDeNoite.setForeground(Color.WHITE);
 		tfDeNoite.setBackground(Color.BLACK);
 		tfDeNoite.setVisible(false);
@@ -542,6 +599,23 @@ public class RecomendarAula extends Login {
 		label_3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		
 		tfAteNoite = new JFormattedTextField(DeAte);
+		tfAteNoite.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				
+					String  deumavez = tfAteNoite.getText().toString();
+					String hora[] = new String[2];
+					hora = deumavez.split(":");
+					int h = Integer.parseInt(hora[0]);
+					int m = Integer.parseInt(hora[1]);
+					if(h>23 || m>59) {
+						JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+						tfAteNoite.requestFocus();
+						tfAteNoite.selectAll();
+					
+					}
+			}
+		});
 		tfAteNoite.setBackground(Color.BLACK);
 		tfAteNoite.setForeground(Color.WHITE);
 		tfAteNoite.setVisible(false);
@@ -557,6 +631,24 @@ public class RecomendarAula extends Login {
 		label_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		
 		tfDeTarde = new JFormattedTextField(DeAte);
+		tfDeTarde.addFocusListener(new FocusAdapter() {
+			
+				public void focusLost(FocusEvent e) {
+					String  deumavez = tfDeTarde.getText().toString();
+					String hora[] = new String[2];
+					hora = deumavez.split(":");
+					int h = Integer.parseInt(hora[0]);
+					int m = Integer.parseInt(hora[1]);
+					if(h>23 || m>59) {
+						JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+						tfDeTarde.requestFocus();
+						tfDeTarde.selectAll();
+				}
+				
+					
+				
+			}
+		});
 		tfDeTarde.setForeground(Color.WHITE);
 		tfDeTarde.setBackground(Color.BLACK);
 		tfDeTarde.setVisible(false);
@@ -572,6 +664,21 @@ public class RecomendarAula extends Login {
 		label_2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		
 		tfAteTarde = new JFormattedTextField(DeAte);
+		tfAteTarde.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				String  deumavez = tfAteTarde.getText().toString();
+				String hora[] = new String[2];
+				hora = deumavez.split(":");
+				int h = Integer.parseInt(hora[0]);
+				int m = Integer.parseInt(hora[1]);
+				if(h>23 || m>59) {
+					JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+					tfAteTarde.requestFocus();
+					tfAteTarde.selectAll();
+				}
+				}
+		});
 		tfAteTarde.setBackground(Color.BLACK);
 		tfAteTarde.setForeground(Color.WHITE);
 		tfAteTarde.setVisible(false);
@@ -591,21 +698,6 @@ public class RecomendarAula extends Login {
 		label_5.setBounds(713, 13, 74, 19);
 		panel.add(label_5);
 		
-		lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_2.setBounds(0, 87, 469, 23);
-		frame.getContentPane().add(lblNewLabel_2);
-		
-		lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_3.setBounds(462, 87, 502, 23);
-		frame.getContentPane().add(lblNewLabel_3);
-		
-		JLabel lblNewLabel_4 = new JLabel("");
-		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_4.setBounds(860, 515, 89, 27);
-		frame.getContentPane().add(lblNewLabel_4);
-		
 		panel_1 = new JPanel();
 		panel_1.setBounds(1, 207, 929, 197);
 		frame.getContentPane().add(panel_1);
@@ -620,6 +712,24 @@ public class RecomendarAula extends Login {
 		lblDe_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		
 		tfDeUmaVez = new JFormattedTextField(DeAte);
+		tfDeUmaVez.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+					String  deumavez = tfDeUmaVez.getText().toString();
+					String hora[] = new String[2];
+					hora = deumavez.split(":");
+					int h = Integer.parseInt(hora[0]);
+					int m = Integer.parseInt(hora[1]);
+					if(h>23 || m>59) {
+						JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+						tfDeUmaVez.requestFocus();
+						tfDeUmaVez.selectAll();
+					
+					}
+			}
+		});
+		tfDeUmaVez.setForeground(Color.WHITE);
+		tfDeUmaVez.setBackground(Color.BLACK);
 		tfDeUmaVez.setBounds(43, 23, 143, 20);
 		panel_1.add(tfDeUmaVez);
 		tfDeUmaVez.setColumns(10);
@@ -631,6 +741,24 @@ public class RecomendarAula extends Login {
 		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		
 		tfAteUmaVez = new JFormattedTextField(DeAte);
+		tfAteUmaVez.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+					String  deumavez = tfAteUmaVez.getText().toString();
+					String hora[] = new String[2];
+					hora = deumavez.split(":");
+					int h = Integer.parseInt(hora[0]);
+					int m = Integer.parseInt(hora[1]);
+					if(h>23 || m>59) {
+						JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+						tfAteUmaVez.requestFocus();
+						tfAteUmaVez.selectAll();
+					
+					}
+			}
+		});
+		tfAteUmaVez.setForeground(Color.WHITE);
+		tfAteUmaVez.setBackground(Color.BLACK);
 		tfAteUmaVez.setBounds(44, 53, 143, 20);
 		panel_1.add(tfAteUmaVez);
 		tfAteUmaVez.setColumns(10);
@@ -659,11 +787,6 @@ public class RecomendarAula extends Login {
 		lblData_1.setFont(new Font("Times New Roman", Font.BOLD, 16));
 		lblData_1.setBounds(215, 20, 70, 20);
 		panel_1.add(lblData_1);
-		
-		lblNewLabel_5 = new JLabel("New label");
-		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\ggggggggg.jpg"));
-		lblNewLabel_5.setBounds(15, 11, 906, 77);
-		frame.getContentPane().add(lblNewLabel_5);
 		chTarde.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(chTarde.isSelected()) {
