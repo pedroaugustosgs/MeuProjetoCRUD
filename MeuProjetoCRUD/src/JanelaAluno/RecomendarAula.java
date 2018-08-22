@@ -38,6 +38,8 @@ import Banco.Conexao;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeEvent;
 import java.awt.Color;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 
 public class RecomendarAula extends Login {
 
@@ -471,6 +473,23 @@ public class RecomendarAula extends Login {
 		panel.add(chTarde);
 		
 		tfDeManha = new JFormattedTextField(DeAte);
+		tfDeManha.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				String  deumavez = tfDeManha.getText().toString();
+				String hora[] = new String[2];
+				hora = deumavez.split(":");
+				int h = Integer.parseInt(hora[0]);
+				int m = Integer.parseInt(hora[1]);
+				if(h>23 || m>59) {
+					JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+					tfDeManha.requestFocus();
+					tfDeManha.selectAll();
+			}
+			
+				
+			}
+		});
 		tfDeManha.setForeground(Color.WHITE);
 		tfDeManha.setBackground(Color.BLACK);
 		tfDeManha.setVisible(false);

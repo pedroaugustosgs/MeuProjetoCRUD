@@ -108,13 +108,13 @@ public class EditarRemover {
 		JLabel lblNome = new JLabel("Nome:");
 		lblNome.setForeground(Color.WHITE);
 		lblNome.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblNome.setBounds(15, 211, 64, 15);
+		lblNome.setBounds(15, 213, 64, 15);
 		frame.getContentPane().add(lblNome);
 		
 		lblIdade = new JLabel("Idade:");
 		lblIdade.setForeground(Color.WHITE);
 		lblIdade.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblIdade.setBounds(15, 302, 64, 15);
+		lblIdade.setBounds(15, 304, 64, 15);
 		frame.getContentPane().add(lblIdade);
 		
 		JLabel lblEmail = new JLabel("E-Mail:");
@@ -126,7 +126,7 @@ public class EditarRemover {
 		JLabel lblTelefone = new JLabel("Telefone:");
 		lblTelefone.setForeground(Color.WHITE);
 		lblTelefone.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblTelefone.setBounds(8, 348, 88, 20);
+		lblTelefone.setBounds(11, 348, 88, 20);
 		frame.getContentPane().add(lblTelefone);
 		
 		/*ButtonGroup grupo = new ButtonGroup();

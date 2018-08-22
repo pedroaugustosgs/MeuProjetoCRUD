@@ -126,6 +126,11 @@ public class PlaAluno {
 			}
 			
 		});
+		
+		scrollPaneREC = new JScrollPane(tabelaREC);
+		scrollPaneREC.setBounds(730, 180, 350, 331);
+		frmMeuCrud.getContentPane().add(scrollPaneREC);
+		
 		JButton btnNovaAula = new JButton("DAR AULA");
 		btnNovaAula.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -178,9 +183,7 @@ public class PlaAluno {
 		lblNewLabel_6.setBounds(837, 81, 237, 44);
 		frmMeuCrud.getContentPane().add(lblNewLabel_6);
 		
-		scrollPaneREC = new JScrollPane(tabelaREC);
-		scrollPaneREC.setBounds(730, 181, 350, 331);
-		frmMeuCrud.getContentPane().add(scrollPaneREC);
+		
 		
 		JLabel lblAulasQueVai_1 = new JLabel("AULAS COMO ALUNO");
 		lblAulasQueVai_1.setFont(new Font("Times New Roman", Font.BOLD, 20));
