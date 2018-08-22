@@ -216,7 +216,7 @@ public class Cadastrar_login extends LoginInstitu{
 		tfUsuario.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				tfUsuario.setBackground(Color.WHITE);
+				tfUsuario.setBackground(Color.BLACK);
 			}
 		});
 		tfUsuario.setFont(new Font("Tahoma", Font.PLAIN, 11));
@@ -237,7 +237,7 @@ public class Cadastrar_login extends LoginInstitu{
 		tfnome.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				tfnome.setBackground(Color.WHITE);
+				tfnome.setBackground(Color.BLACK);
 
 			}
 		});
@@ -259,7 +259,7 @@ public class Cadastrar_login extends LoginInstitu{
 		tel.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				tel.setBackground(Color.WHITE);
+				tel.setBackground(Color.BLACK);
 
 			}
 		});
@@ -273,7 +273,7 @@ public class Cadastrar_login extends LoginInstitu{
 		tfemail.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				tfemail.setBackground(Color.WHITE);
+				tfemail.setBackground(Color.BLACK);
 			}
 		});
 		tfemail.setColumns(10);
@@ -286,7 +286,7 @@ public class Cadastrar_login extends LoginInstitu{
 		pfCsenha.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				pfCsenha.setBackground(Color.WHITE);
+				pfCsenha.setBackground(Color.BLACK);
 			}
 		});
 		pfCsenha.setBounds(151, 408, 177, 20);
@@ -298,7 +298,7 @@ public class Cadastrar_login extends LoginInstitu{
 		pfsenha.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				pfsenha.setBackground(Color.WHITE);
+				pfsenha.setBackground(Color.BLACK);
 
 			}
 		});

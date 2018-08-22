@@ -167,7 +167,7 @@ public class ConfirmaAula extends Login{
 			}
 		});
 		chckbxTarde.setEnabled(false);
-		chckbxTarde.setBounds(482, 40, 58, 23);
+		chckbxTarde.setBounds(482, 38, 58, 23);
 		panel.add(chckbxTarde);
 		
 		chckbxNoite = new JCheckBox("Noite");
@@ -179,7 +179,7 @@ public class ConfirmaAula extends Login{
 			}
 		});
 		chckbxNoite.setEnabled(false);
-		chckbxNoite.setBounds(687, 40, 74, 23);
+		chckbxNoite.setBounds(670, 40, 74, 23);
 		panel.add(chckbxNoite);
 		
 		Label label_6 = new Label("Data:");
@@ -277,35 +277,35 @@ public class ConfirmaAula extends Login{
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setVisible(false);
 		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblNewLabel.setBounds(251, 64, 40, 23);
+		lblNewLabel.setBounds(248, 65, 40, 23);
 		panel.add(lblNewLabel);
 		
 		JLabel lblAt = new JLabel("AT\u00C9:");
 		lblAt.setForeground(Color.WHITE);
 		lblAt.setVisible(false);
 		lblAt.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblAt.setBounds(241, 89, 40, 23);
+		lblAt.setBounds(241, 91, 40, 23);
 		panel.add(lblAt);
 		
 		JLabel label_8 = new JLabel("DE:");
 		label_8.setForeground(Color.WHITE);
 		label_8.setVisible(false);
 		label_8.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		label_8.setBounds(442, 70, 40, 23);
+		label_8.setBounds(442, 64, 40, 23);
 		panel.add(label_8);
 		
 		JLabel label_9 = new JLabel("AT\u00C9:");
 		label_9.setForeground(Color.WHITE);
 		label_9.setVisible(false);
 		label_9.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		label_9.setBounds(429, 93, 40, 23);
+		label_9.setBounds(433, 89, 40, 23);
 		panel.add(label_9);
 		
 		JLabel lbldenoite = new JLabel("DE:");
 		lbldenoite.setForeground(Color.WHITE);
 		lbldenoite.setVisible(false);
 		lbldenoite.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lbldenoite.setBounds(648, 70, 40, 23);
+		lbldenoite.setBounds(648, 63, 40, 23);
 		panel.add(lbldenoite);
 		
 		JLabel label_11 = new JLabel("AT\u00C9:");
@@ -332,7 +332,7 @@ public class ConfirmaAula extends Login{
 		lblDeNoite = new JLabel("");
 		lblDeNoite.setForeground(Color.WHITE);
 		lblDeNoite.setVisible(false);
-		lblDeNoite.setBounds(687, 69, 66, 20);
+		lblDeNoite.setBounds(687, 64, 66, 20);
 		panel.add(lblDeNoite);
 		
 		lblatemanha = new JLabel("");
@@ -352,7 +352,7 @@ public class ConfirmaAula extends Login{
 		lblatenoite = new JLabel("");
 		lblatenoite.setForeground(Color.WHITE);
 		lblatenoite.setVisible(false);
-		lblatenoite.setBounds(687, 92, 74, 23);
+		lblatenoite.setBounds(687, 91, 74, 23);
 		panel.add(lblatenoite);
 		
 		Label label_5 = new Label("Turno:");
@@ -404,7 +404,7 @@ public class ConfirmaAula extends Login{
 		
 		lblmateria = new JLabel("");
 		lblmateria.setForeground(Color.WHITE);
-		lblmateria.setBounds(75, 113, 114, 22);
+		lblmateria.setBounds(75, 113, 146, 22);
 		frame.getContentPane().add(lblmateria);
 		
 		lblprofessor = new JLabel("");
@@ -428,6 +428,8 @@ public class ConfirmaAula extends Login{
 		frame.getContentPane().add(lblvagas);
 		
 		JButton btnNewButton = new JButton("CONFIRMAR");
+		btnNewButton.setForeground(Color.BLACK);
+		btnNewButton.setBackground(Color.LIGHT_GRAY);
 		btnNewButton.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -528,6 +530,8 @@ public class ConfirmaAula extends Login{
 		frame.getContentPane().add(btnNewButton);
 		
 		JButton btnNovoltar = new JButton("VOLTAR");
+		btnNovoltar.setForeground(Color.BLACK);
+		btnNovoltar.setBackground(Color.LIGHT_GRAY);
 		btnNovoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNovoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
