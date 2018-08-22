@@ -49,7 +49,7 @@ import java.beans.PropertyChangeEvent;
 
 public class Cadastrar_login extends LoginInstitu{
 
-	private JFrame frame;
+	private JFrame frmCadastro;
 	private JPasswordField pfsenha;
 	private JPasswordField pfCsenha;
 	private JTextField tfemail;
@@ -73,7 +73,7 @@ public class Cadastrar_login extends LoginInstitu{
 			public void run() {
 				try {
 					Cadastrar_login window = new Cadastrar_login();
-					window.frame.setVisible(true);
+					window.frmCadastro.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -92,13 +92,14 @@ public class Cadastrar_login extends LoginInstitu{
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.getContentPane().setBackground(Color.BLACK);
-		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(Cadastrar_login.class.getResource("/47 - Copia.png")));
-		frame.setBounds(100, 100, 782, 624);
-		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frmCadastro = new JFrame();
+		frmCadastro.setTitle("Cadastro");
+		frmCadastro.getContentPane().setBackground(Color.BLACK);
+		frmCadastro.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Imagem\\img\\students-cap.png"));
+		frmCadastro.setBounds(100, 100, 782, 624);
+		frmCadastro.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
-		frame.getContentPane().setLayout(null);
+		frmCadastro.getContentPane().setLayout(null);
 		
 		JButton btnLimpar = new JButton("LIMPAR");
 		btnLimpar.setForeground(Color.BLACK);
@@ -125,66 +126,66 @@ public class Cadastrar_login extends LoginInstitu{
 		JLabel lblNewLabel_5 = new JLabel("New label");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_5.setBounds(1, 505, 290, 24);
-		frame.getContentPane().add(lblNewLabel_5);
+		frmCadastro.getContentPane().add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_7 = new JLabel("New label");
 		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_7.setBounds(278, 505, 128, 24);
-		frame.getContentPane().add(lblNewLabel_7);
+		frmCadastro.getContentPane().add(lblNewLabel_7);
 		SpIdade.setModel(model);
 		SpIdade.setEditor(new JSpinner.NumberEditor(SpIdade, "#"));
 
 		
 		
 		SpIdade.setBounds(76, 229, 80, 20);
-		frame.getContentPane().add(SpIdade);
+		frmCadastro.getContentPane().add(SpIdade);
 		
 		JLabel label_4 = new JLabel("*");
 		label_4.setHorizontalAlignment(SwingConstants.CENTER);
 		label_4.setForeground(Color.RED);
 		label_4.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		label_4.setBounds(261, 303, 12, 14);
-		frame.getContentPane().add(label_4);
+		frmCadastro.getContentPane().add(label_4);
 		
 		JLabel label_2 = new JLabel("*");
 		label_2.setHorizontalAlignment(SwingConstants.CENTER);
 		label_2.setForeground(Color.RED);
 		label_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		label_2.setBounds(261, 156, 12, 14);
-		frame.getContentPane().add(label_2);
+		frmCadastro.getContentPane().add(label_2);
 		
 		JLabel label_3 = new JLabel("*");
 		label_3.setHorizontalAlignment(SwingConstants.CENTER);
 		label_3.setForeground(Color.RED);
 		label_3.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		label_3.setBounds(261, 199, 12, 14);
-		frame.getContentPane().add(label_3);
+		frmCadastro.getContentPane().add(label_3);
 		
 		JLabel label_1 = new JLabel("*");
 		label_1.setHorizontalAlignment(SwingConstants.CENTER);
 		label_1.setForeground(Color.RED);
 		label_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		label_1.setBounds(258, 372, 12, 14);
-		frame.getContentPane().add(label_1);
+		frmCadastro.getContentPane().add(label_1);
 		
 		JLabel label = new JLabel("*");
 		label.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		label.setHorizontalAlignment(SwingConstants.CENTER);
 		label.setForeground(Color.RED);
 		label.setBounds(271, 337, 12, 14);
-		frame.getContentPane().add(label);
+		frmCadastro.getContentPane().add(label);
 		
 		JLabel lblInstituio = new JLabel("Institui\u00E7\u00E3o:");
 		lblInstituio.setForeground(Color.WHITE);
 		lblInstituio.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblInstituio.setBounds(7, 443, 107, 24);
-		frame.getContentPane().add(lblInstituio);
+		frmCadastro.getContentPane().add(lblInstituio);
 		
 		cbEscola = new JComboBox<String>();
 		cbEscola.setForeground(Color.WHITE);
 		cbEscola.setBackground(Color.BLACK);
 		cbEscola.setBounds(104, 448, 233, 20);
-		frame.getContentPane().add(cbEscola);
+		frmCadastro.getContentPane().add(cbEscola);
 		
 		
 		ResultSet dados=null;
@@ -209,7 +210,7 @@ public class Cadastrar_login extends LoginInstitu{
 		}
 		btnLimpar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnLimpar.setBounds(610, 556, 164, 39);
-		frame.getContentPane().add(btnLimpar);
+		frmCadastro.getContentPane().add(btnLimpar);
 		
 		tfUsuario = new JTextField();
 		tfUsuario.setBackground(Color.BLACK);
@@ -224,13 +225,13 @@ public class Cadastrar_login extends LoginInstitu{
 		tfUsuario.setHorizontalAlignment(SwingConstants.LEFT);
 		tfUsuario.setColumns(10);
 		tfUsuario.setBounds(79, 155, 177, 20);
-		frame.getContentPane().add(tfUsuario);
+		frmCadastro.getContentPane().add(tfUsuario);
 		
 		JLabel lblUsurio = new JLabel("Usu\u00E1rio:");
 		lblUsurio.setForeground(Color.WHITE);
 		lblUsurio.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblUsurio.setBounds(5, 150, 85, 24);
-		frame.getContentPane().add(lblUsurio);
+		frmCadastro.getContentPane().add(lblUsurio);
 		
 		tfnome = new JTextField();
 		tfnome.setBackground(Color.BLACK);
@@ -245,7 +246,7 @@ public class Cadastrar_login extends LoginInstitu{
 		tfnome.setHorizontalAlignment(SwingConstants.LEFT);
 		tfnome.setColumns(10);
 		tfnome.setBounds(74, 193, 177, 20);
-		frame.getContentPane().add(tfnome);
+		frmCadastro.getContentPane().add(tfnome);
 		
 		try {
 			mascaraFone = new MaskFormatter("## #####-####");
@@ -265,7 +266,7 @@ public class Cadastrar_login extends LoginInstitu{
 		});
 		tel.setColumns(10);
 		tel.setBounds(86, 336, 177, 20);
-		frame.getContentPane().add(tel);
+		frmCadastro.getContentPane().add(tel);
 		
 		tfemail = new JTextField();
 		tfemail.setForeground(Color.WHITE);
@@ -278,7 +279,7 @@ public class Cadastrar_login extends LoginInstitu{
 		});
 		tfemail.setColumns(10);
 		tfemail.setBounds(73, 302, 177, 20);
-		frame.getContentPane().add(tfemail);
+		frmCadastro.getContentPane().add(tfemail);
 		
 		pfCsenha = new JPasswordField();
 		pfCsenha.setForeground(Color.WHITE);
@@ -290,7 +291,7 @@ public class Cadastrar_login extends LoginInstitu{
 			}
 		});
 		pfCsenha.setBounds(151, 408, 177, 20);
-		frame.getContentPane().add(pfCsenha);
+		frmCadastro.getContentPane().add(pfCsenha);
 		
 		pfsenha = new JPasswordField();
 		pfsenha.setForeground(Color.WHITE);
@@ -303,62 +304,62 @@ public class Cadastrar_login extends LoginInstitu{
 			}
 		});
 		pfsenha.setBounds(76, 371, 177, 20);
-		frame.getContentPane().add(pfsenha);
+		frmCadastro.getContentPane().add(pfsenha);
 		
 		mas = new JRadioButton("Masculino");
 		mas.setBackground(Color.BLACK);
 		mas.setForeground(Color.WHITE);
 		mas.setSelected(true);
 		mas.setBounds(164, 261, 109, 23);
-		frame.getContentPane().add(mas);
+		frmCadastro.getContentPane().add(mas);
 		
 		fem = new JRadioButton("Feminino");
 		fem.setBackground(Color.BLACK);
 		fem.setForeground(Color.WHITE);
 		fem.setBounds(73, 261, 89, 23);
-		frame.getContentPane().add(fem);
+		frmCadastro.getContentPane().add(fem);
 		
 		JLabel lblTelefone = new JLabel("Telefone:");
 		lblTelefone.setForeground(Color.WHITE);
 		lblTelefone.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblTelefone.setBounds(6, 333, 107, 24);
-		frame.getContentPane().add(lblTelefone);
+		frmCadastro.getContentPane().add(lblTelefone);
 		
 		JLabel email = new JLabel("Email:");
 		email.setForeground(Color.WHITE);
 		email.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		email.setBounds(10, 297, 53, 24);
-		frame.getContentPane().add(email);
+		frmCadastro.getContentPane().add(email);
 		
 		JLabel lblSexo = new JLabel("Sexo:");
 		lblSexo.setForeground(Color.WHITE);
 		lblSexo.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblSexo.setBounds(10, 259, 67, 24);
-		frame.getContentPane().add(lblSexo);
+		frmCadastro.getContentPane().add(lblSexo);
 		
 		JLabel lblIdade = new JLabel("Idade:");
 		lblIdade.setForeground(Color.WHITE);
 		lblIdade.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblIdade.setBounds(11, 224, 95, 24);
-		frame.getContentPane().add(lblIdade);
+		frmCadastro.getContentPane().add(lblIdade);
 		
 		JLabel lblnome = new JLabel("Nome:");
 		lblnome.setForeground(Color.WHITE);
 		lblnome.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblnome.setBounds(9, 190, 85, 24);
-		frame.getContentPane().add(lblnome);
+		frmCadastro.getContentPane().add(lblnome);
 		
 		JLabel lblSenha = new JLabel("Senha:");
 		lblSenha.setForeground(Color.WHITE);
 		lblSenha.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblSenha.setBounds(8, 367, 72, 24);
-		frame.getContentPane().add(lblSenha);
+		frmCadastro.getContentPane().add(lblSenha);
 		
 		JLabel lblConfirmarSenha = new JLabel("Confirmar Senha:");
 		lblConfirmarSenha.setForeground(Color.WHITE);
 		lblConfirmarSenha.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblConfirmarSenha.setBounds(7, 403, 155, 24);
-		frame.getContentPane().add(lblConfirmarSenha);
+		frmCadastro.getContentPane().add(lblConfirmarSenha);
 		
 		JButton btnSalvar = new JButton("SALVAR");
 		btnSalvar.setForeground(Color.BLACK);
@@ -484,7 +485,7 @@ public class Cadastrar_login extends LoginInstitu{
 							PlaAluno.main(new String[] {String.valueOf(idC)});
 							System.out.println(idC);
 							EntraAluno.vtt=0;
-							frame.dispose();
+							frmCadastro.dispose();
 						}
 					
 					} catch (SQLException e1) {
@@ -501,22 +502,22 @@ public class Cadastrar_login extends LoginInstitu{
 				});
 		btnSalvar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnSalvar.setBounds(2, 556, 164, 39);
-		frame.getContentPane().add(btnSalvar);
+		frmCadastro.getContentPane().add(btnSalvar);
 		
 		JButton btnVoltar = new JButton("VOLTAR");
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setBackground(Color.LIGHT_GRAY);
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				frame.dispose();
+				frmCadastro.dispose();
 				EntraAluno.main(null);
 			}
 		});
 		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnVoltar.setBounds(313, 556, 164, 39);
-		frame.getContentPane().add(btnVoltar);
-		frame.setResizable(false);//impede a tela de ser redimensionada
-		frame.setLocationRelativeTo(null);//faz com que a tela apareça no centro
+		frmCadastro.getContentPane().add(btnVoltar);
+		frmCadastro.setResizable(false);//impede a tela de ser redimensionada
+		frmCadastro.setLocationRelativeTo(null);//faz com que a tela apareça no centro
 		
 		ButtonGroup bg = new ButtonGroup();
 		bg.add(fem);
@@ -525,34 +526,34 @@ public class Cadastrar_login extends LoginInstitu{
 		JLabel lblNewLabel_2 = new JLabel("New label");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_2.setBounds(0, 82, 365, 32);
-		frame.getContentPane().add(lblNewLabel_2);
+		frmCadastro.getContentPane().add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("New label");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_3.setBounds(362, 87, 442, 23);
-		frame.getContentPane().add(lblNewLabel_3);
+		frmCadastro.getContentPane().add(lblNewLabel_3);
 		
 		JLabel label_5 = new JLabel("*");
 		label_5.setHorizontalAlignment(SwingConstants.CENTER);
 		label_5.setForeground(Color.RED);
 		label_5.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		label_5.setBounds(329, 409, 12, 14);
-		frame.getContentPane().add(label_5);
+		frmCadastro.getContentPane().add(label_5);
 		
 		JLabel lblNewLabel_6 = new JLabel("New label");
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_6.setBounds(393, 505, 383, 24);
-		frame.getContentPane().add(lblNewLabel_6);
+		frmCadastro.getContentPane().add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\professores peq.png"));
 		lblNewLabel_4.setBounds(486, 198, 263, 229);
-		frame.getContentPane().add(lblNewLabel_4);
+		frmCadastro.getContentPane().add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
 		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Solicite Uma Nova Aula (2).jpg"));
 		lblNewLabel_1.setBounds(189, 13, 383, 69);
-		frame.getContentPane().add(lblNewLabel_1);
+		frmCadastro.getContentPane().add(lblNewLabel_1);
 	}
 
 	private void JSpinner(SpinnerModel spIdade2) {

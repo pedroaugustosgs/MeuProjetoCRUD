@@ -40,10 +40,11 @@ import java.beans.PropertyChangeEvent;
 import java.awt.Color;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
+import java.awt.Toolkit;
 
 public class RecomendarAula extends Login {
 
-	private JFrame frame;
+	private JFrame frmRecomendeAula;
 	private JTextField tfConteudo;
 	private JTextField tfLocal;
 	private JComboBox<String> cbMaterias;
@@ -97,7 +98,7 @@ public class RecomendarAula extends Login {
 			public void run() {
 				try {
 					RecomendarAula window = new RecomendarAula();
-					window.frame.setVisible(true);
+					window.frmRecomendeAula.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -116,13 +117,15 @@ public class RecomendarAula extends Login {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.getContentPane().setBackground(Color.BLACK);
-		frame.setBounds(100, 100, 955, 629);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
-		frame.setResizable(false);
-		frame.setLocationRelativeTo(null);
+		frmRecomendeAula = new JFrame();
+		frmRecomendeAula.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Imagem\\img\\students-cap.png"));
+		frmRecomendeAula.setTitle("Recomende Aula");
+		frmRecomendeAula.getContentPane().setBackground(Color.BLACK);
+		frmRecomendeAula.setBounds(100, 100, 955, 629);
+		frmRecomendeAula.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmRecomendeAula.getContentPane().setLayout(null);
+		frmRecomendeAula.setResizable(false);
+		frmRecomendeAula.setLocationRelativeTo(null);
 		
 		try {
 			DeAte = new MaskFormatter("##:##");
@@ -290,7 +293,7 @@ public class RecomendarAula extends Login {
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TerAula.main(null);
-				frame.dispose();
+				frmRecomendeAula.dispose();
 			}
 		});
 		
@@ -309,14 +312,14 @@ public class RecomendarAula extends Login {
 		lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel.setBounds(-12, 515, 446, 27);
-		frame.getContentPane().add(lblNewLabel);
+		frmRecomendeAula.getContentPane().add(lblNewLabel);
 		
 		lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_1.setBounds(397, 515, 469, 27);
-		frame.getContentPane().add(lblNewLabel_1);
+		frmRecomendeAula.getContentPane().add(lblNewLabel_1);
 		rdbtnUmaVez.setBounds(119, 180, 109, 23);
-		frame.getContentPane().add(rdbtnUmaVez);
+		frmRecomendeAula.getContentPane().add(rdbtnUmaVez);
 		
 		rdbtnPeridico = new JRadioButton("Peri\u00F3dico");
 		rdbtnPeridico.setBackground(Color.BLACK);
@@ -331,45 +334,45 @@ public class RecomendarAula extends Login {
 		});
 		rdbtnPeridico.setSelected(true);
 		rdbtnPeridico.setBounds(8, 180, 109, 23);
-		frame.getContentPane().add(rdbtnPeridico);
+		frmRecomendeAula.getContentPane().add(rdbtnPeridico);
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnVoltar.setBounds(1, 563, 156, 37);
-		frame.getContentPane().add(btnVoltar);
+		frmRecomendeAula.getContentPane().add(btnVoltar);
 		btnCriarAula.setForeground(Color.BLACK);
 		btnCriarAula.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnCriarAula.setBounds(792, 563, 156, 37);
-		frame.getContentPane().add(btnCriarAula);
+		frmRecomendeAula.getContentPane().add(btnCriarAula);
 		
 		tfLocal = new JTextField();
 		tfLocal.setForeground(Color.WHITE);
 		tfLocal.setBackground(Color.BLACK);
 		tfLocal.setColumns(10);
 		tfLocal.setBounds(86, 466, 218, 20);
-		frame.getContentPane().add(tfLocal);
+		frmRecomendeAula.getContentPane().add(tfLocal);
 		
 		JLabel lblLocal = new JLabel("LOCAL:");
 		lblLocal.setForeground(Color.WHITE);
 		lblLocal.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		lblLocal.setBounds(10, 465, 61, 19);
-		frame.getContentPane().add(lblLocal);
+		frmRecomendeAula.getContentPane().add(lblLocal);
 		
 		tfConteudo = new JTextField();
 		tfConteudo.setForeground(Color.WHITE);
 		tfConteudo.setBackground(Color.BLACK);
 		tfConteudo.setBounds(119, 152, 515, 20);
-		frame.getContentPane().add(tfConteudo);
+		frmRecomendeAula.getContentPane().add(tfConteudo);
 		tfConteudo.setColumns(10);
 		
 		JLabel lblContedo = new JLabel("CONTE\u00DADO:");
 		lblContedo.setForeground(Color.WHITE);
 		lblContedo.setFont(new Font("Times New Roman", Font.BOLD, 16));
 		lblContedo.setBounds(10, 154, 107, 19);
-		frame.getContentPane().add(lblContedo);
+		frmRecomendeAula.getContentPane().add(lblContedo);
 		
 		cbMaterias = new JComboBox<String>();
 		cbMaterias.setBounds(115, 121, 136, 20);
-		frame.getContentPane().add(cbMaterias);
+		frmRecomendeAula.getContentPane().add(cbMaterias);
 		cbMaterias.addItem("Biologia");
 		cbMaterias.addItem("Matemática");  
 		cbMaterias.addItem("Física");
@@ -388,7 +391,7 @@ public class RecomendarAula extends Login {
 		lblMatria.setForeground(Color.WHITE);
 		lblMatria.setFont(new Font("Times New Roman", Font.BOLD, 16));
 		lblMatria.setBounds(10, 124, 89, 19);
-		frame.getContentPane().add(lblMatria);
+		frmRecomendeAula.getContentPane().add(lblMatria);
 		
 		ButtonGroup gripo = new ButtonGroup();
 		gripo.add(rdbtnPeridico);
@@ -397,27 +400,27 @@ public class RecomendarAula extends Login {
 		lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_2.setBounds(0, 87, 469, 23);
-		frame.getContentPane().add(lblNewLabel_2);
+		frmRecomendeAula.getContentPane().add(lblNewLabel_2);
 		
 		lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_3.setBounds(462, 87, 502, 23);
-		frame.getContentPane().add(lblNewLabel_3);
+		frmRecomendeAula.getContentPane().add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_4.setBounds(860, 515, 89, 27);
-		frame.getContentPane().add(lblNewLabel_4);
+		frmRecomendeAula.getContentPane().add(lblNewLabel_4);
 		
 		lblNewLabel_5 = new JLabel("New label");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\ggggggggg.jpg"));
 		lblNewLabel_5.setBounds(15, 11, 906, 77);
-		frame.getContentPane().add(lblNewLabel_5);
+		frmRecomendeAula.getContentPane().add(lblNewLabel_5);
 		
 		panel = new JPanel();
 		panel.setBackground(Color.BLACK);
 		panel.setBounds(2, 208, 929, 245);
-		frame.getContentPane().add(panel);
+		frmRecomendeAula.getContentPane().add(panel);
 		panel.setLayout(null);
 		
 		lblData = new JLabel("DATA:");
@@ -700,7 +703,7 @@ public class RecomendarAula extends Login {
 		
 		panel_1 = new JPanel();
 		panel_1.setBounds(1, 207, 929, 197);
-		frame.getContentPane().add(panel_1);
+		frmRecomendeAula.getContentPane().add(panel_1);
 		panel_1.setBackground(Color.BLACK);
 		panel_1.setVisible(false);
 		panel_1.setLayout(null);

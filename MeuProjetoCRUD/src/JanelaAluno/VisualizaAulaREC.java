@@ -31,10 +31,11 @@ import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
+import java.awt.Toolkit;
 
 public class VisualizaAulaREC extends Login{
 
-	private JFrame frame;
+	private JFrame frmVejaSuasAula;
 	private static String idAula;
 	private JLabel lblmateria;
 	private JLabel lblprofessor;
@@ -83,7 +84,7 @@ public class VisualizaAulaREC extends Login{
 			public void run() {
 				try {
 					VisualizaAulaREC window = new VisualizaAulaREC();
-					window.frame.setVisible(true);
+					window.frmVejaSuasAula.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -102,13 +103,15 @@ public class VisualizaAulaREC extends Login{
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.getContentPane().setBackground(Color.BLACK);
-		frame.setBounds(100, 100, 972, 658);
-		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
-		frame.setLocationRelativeTo(null);
-		frame.setResizable(true);
+		frmVejaSuasAula = new JFrame();
+		frmVejaSuasAula.setTitle("Aulas");
+		frmVejaSuasAula.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Imagem\\img\\students-cap.png"));
+		frmVejaSuasAula.getContentPane().setBackground(Color.BLACK);
+		frmVejaSuasAula.setBounds(100, 100, 972, 658);
+		frmVejaSuasAula.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frmVejaSuasAula.getContentPane().setLayout(null);
+		frmVejaSuasAula.setLocationRelativeTo(null);
+		frmVejaSuasAula.setResizable(true);
 		
 		panel = new JPanel();
 		panel.setBackground(Color.BLACK);
@@ -117,14 +120,14 @@ public class VisualizaAulaREC extends Login{
 		lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_5.setBounds(0, 88, 482, 22);
-		frame.getContentPane().add(lblNewLabel_5);
+		frmVejaSuasAula.getContentPane().add(lblNewLabel_5);
 		
 		lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_6.setBounds(467, 88, 489, 22);
-		frame.getContentPane().add(lblNewLabel_6);
+		frmVejaSuasAula.getContentPane().add(lblNewLabel_6);
 		panel.setBounds(290, 126, 656, 190);
-		frame.getContentPane().add(panel);
+		frmVejaSuasAula.getContentPane().add(panel);
 		panel.setLayout(null);
 		
 		Label label_7 = new Label("Turno:");
@@ -334,7 +337,7 @@ public class VisualizaAulaREC extends Login{
 		panel_1 = new JPanel();
 		panel_1.setBackground(Color.BLACK);
 		panel_1.setBounds(270, 128, 196, 109);
-		frame.getContentPane().add(panel_1);
+		frmVejaSuasAula.getContentPane().add(panel_1);
 		panel_1.setVisible(false);
 		panel_1.setLayout(null);
 		
@@ -375,56 +378,56 @@ public class VisualizaAulaREC extends Login{
 		label.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
 		label.setForeground(Color.WHITE);
 		label.setBounds(11, 141, 58, 22);
-		frame.getContentPane().add(label);
+		frmVejaSuasAula.getContentPane().add(label);
 		
 		Label label_1 = new Label("Professor:");
 		label_1.setForeground(Color.WHITE);
 		label_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
 		label_1.setBounds(9, 175, 66, 22);
-		frame.getContentPane().add(label_1);
+		frmVejaSuasAula.getContentPane().add(label_1);
 		
 		Label label_2 = new Label("Conte\u00FAdo:");
 		label_2.setForeground(Color.WHITE);
 		label_2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
 		label_2.setBounds(9, 204, 66, 22);
-		frame.getContentPane().add(label_2);
+		frmVejaSuasAula.getContentPane().add(label_2);
 		
 		Label label_3 = new Label("Local:");
 		label_3.setForeground(Color.WHITE);
 		label_3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
 		label_3.setBounds(10, 232, 49, 22);
-		frame.getContentPane().add(label_3);
+		frmVejaSuasAula.getContentPane().add(label_3);
 		
 		Label label_4 = new Label("Vagas:");
 		label_4.setForeground(Color.WHITE);
 		label_4.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
 		label_4.setBounds(8, 260, 49, 22);
-		frame.getContentPane().add(label_4);
+		frmVejaSuasAula.getContentPane().add(label_4);
 		
 		lblmateria = new JLabel("");
 		lblmateria.setForeground(Color.WHITE);
 		lblmateria.setBounds(86, 141, 177, 22);
-		frame.getContentPane().add(lblmateria);
+		frmVejaSuasAula.getContentPane().add(lblmateria);
 		
 		lblprofessor = new JLabel("");
 		lblprofessor.setForeground(Color.WHITE);
 		lblprofessor.setBounds(86, 174, 178, 22);
-		frame.getContentPane().add(lblprofessor);
+		frmVejaSuasAula.getContentPane().add(lblprofessor);
 		
 		lblconteudo = new JLabel("");
 		lblconteudo.setForeground(Color.WHITE);
 		lblconteudo.setBounds(82, 204, 181, 22);
-		frame.getContentPane().add(lblconteudo);
+		frmVejaSuasAula.getContentPane().add(lblconteudo);
 		
 		lbllocal = new JLabel("");
 		lbllocal.setForeground(Color.WHITE);
 		lbllocal.setBounds(65, 232, 195, 22);
-		frame.getContentPane().add(lbllocal);
+		frmVejaSuasAula.getContentPane().add(lbllocal);
 		
 		lblvagas = new JLabel("");
 		lblvagas.setForeground(Color.WHITE);
 		lblvagas.setBounds(65, 263, 170, 19);
-		frame.getContentPane().add(lblvagas);
+		frmVejaSuasAula.getContentPane().add(lblvagas);
 		
 		JButton btnNewButton = new JButton("SAIR DA AULA");
 		btnNewButton.setForeground(Color.BLACK);
@@ -480,7 +483,7 @@ public class VisualizaAulaREC extends Login{
 						
 						JOptionPane.showMessageDialog(null, "Você saiu desta aula!");
 						PlaAluno.main(null);
-						frame.dispose();
+						frmVejaSuasAula.dispose();
 					} catch (SQLException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -491,7 +494,7 @@ public class VisualizaAulaREC extends Login{
 			}
 		});
 		btnNewButton.setBounds(1, 575, 260, 44);
-		frame.getContentPane().add(btnNewButton);
+		frmVejaSuasAula.getContentPane().add(btnNewButton);
 		
 		JButton btnNovoltar = new JButton("VOLTAR");
 		btnNovoltar.setForeground(Color.BLACK);
@@ -500,37 +503,37 @@ public class VisualizaAulaREC extends Login{
 		btnNovoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TerAula.main(null);
-				frame.dispose();
+				frmVejaSuasAula.dispose();
 			}
 		});
 		btnNovoltar.setBounds(795, 575, 160, 44);
-		frame.getContentPane().add(btnNovoltar);
+		frmVejaSuasAula.getContentPane().add(btnNovoltar);
 		
 		tabela = new JTable();
 		
 		JScrollPane scrollPane = new JScrollPane(tabela);
 		scrollPane.setBounds(202, 323, 501, 213);
-		frame.getContentPane().add(scrollPane);
+		frmVejaSuasAula.getContentPane().add(scrollPane);
 		
 		lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_2.setBounds(-13, 535, 489, 30);
-		frame.getContentPane().add(lblNewLabel_2);
+		frmVejaSuasAula.getContentPane().add(lblNewLabel_2);
 		
 		lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_3.setBounds(467, 535, 306, 30);
-		frame.getContentPane().add(lblNewLabel_3);
+		frmVejaSuasAula.getContentPane().add(lblNewLabel_3);
 		
 		lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_4.setBounds(762, 535, 194, 31);
-		frame.getContentPane().add(lblNewLabel_4);
+		frmVejaSuasAula.getContentPane().add(lblNewLabel_4);
 		
 		lblNewLabel_7 = new JLabel("");
 		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\Solicite Uma Nova Aula (4).jpg"));
 		lblNewLabel_7.setBounds(378, 10, 326, 77);
-		frame.getContentPane().add(lblNewLabel_7);
+		frmVejaSuasAula.getContentPane().add(lblNewLabel_7);
 		
 		preencherTela();
 		

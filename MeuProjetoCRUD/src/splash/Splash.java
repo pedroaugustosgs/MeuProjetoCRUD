@@ -53,7 +53,7 @@ public class Splash implements Runnable{
 	private void initialize() {
 		frmSplash = new JFrame();
 		frmSplash.setResizable(false);
-		frmSplash.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Imagem\\img\\chavepreta.png"));
+		frmSplash.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Imagem\\students-cap.png"));
 		frmSplash.getContentPane().setBackground(Color.BLACK);
 		frmSplash.setBounds(100, 100, 584, 342);
 		frmSplash.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

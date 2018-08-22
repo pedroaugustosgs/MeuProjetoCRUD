@@ -98,8 +98,8 @@ public class Config extends Login {
 	private void initialize() {
 		frmMeuCrud = new JFrame();
 		frmMeuCrud.getContentPane().setBackground(Color.BLACK);
-		frmMeuCrud.setIconImage(Toolkit.getDefaultToolkit().getImage(Config.class.getResource("/47 - Copia.png")));
-		frmMeuCrud.setTitle("MEU CRUD - Alunos Cadastrados");
+		frmMeuCrud.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Imagem\\img\\students-cap.png"));
+		frmMeuCrud.setTitle("Meu perfil");
 		frmMeuCrud.setBounds(100, 100, 787, 535);
 		frmMeuCrud.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frmMeuCrud.getContentPane().setLayout(null);

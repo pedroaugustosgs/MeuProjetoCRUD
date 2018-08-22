@@ -87,8 +87,8 @@ public class AulasSolicitadas extends Login{
 		
 		frmMeuCrud = new JFrame();
 		frmMeuCrud.getContentPane().setBackground(Color.BLACK);
-		frmMeuCrud.setIconImage(Toolkit.getDefaultToolkit().getImage(AulasSolicitadas.class.getResource("/47 - Copia.png")));
-		frmMeuCrud.setTitle("MEU CRUD - Alunos Cadastrados");
+		frmMeuCrud.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Imagem\\img\\students-cap.png"));
+		frmMeuCrud.setTitle("Aulas solicitadas");
 		frmMeuCrud.setBounds(100, 100, 1041, 640);
 		frmMeuCrud.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frmMeuCrud.getContentPane().setLayout(null);

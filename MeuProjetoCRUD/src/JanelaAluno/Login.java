@@ -28,10 +28,11 @@ import Menu_principal.Principal2;
 
 import java.awt.SystemColor;
 import java.awt.Color;
+import java.awt.Toolkit;
 
 public class Login extends Principal2{
 	
-	public JFrame frame;
+	public JFrame frmLogin;
 	public static String id;
 	private JTextField tfUsuario;
 	private MaskFormatter tusuario;
@@ -64,7 +65,7 @@ public class Login extends Principal2{
 			public void run() {
 				try {
 					Login window = new Login();
-					window.frame.setVisible(true);
+					window.frmLogin.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -83,36 +84,38 @@ public class Login extends Principal2{
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.getContentPane().setBackground(Color.BLACK);
-		frame.setBounds(100, 100, 577, 395);
-		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		frmLogin = new JFrame();
+		frmLogin.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Imagem\\img\\students-cap.png"));
+		frmLogin.setTitle("Login");
+		frmLogin.getContentPane().setBackground(Color.BLACK);
+		frmLogin.setBounds(100, 100, 577, 395);
+		frmLogin.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frmLogin.getContentPane().setLayout(null);
 		
 		JButton btnVoltar = new JButton("VOLTAR");
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				Principal2.main(null);
-				frame.dispose();
+				frmLogin.dispose();
 			}
 		});
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnVoltar.setBackground(Color.LIGHT_GRAY);
 		btnVoltar.setBounds(73, 313, 164, 39);
-		frame.getContentPane().add(btnVoltar);
+		frmLogin.getContentPane().add(btnVoltar);
 		
 		JLabel lblUsuario = new JLabel("Usu\u00E1rio:");
 		lblUsuario.setForeground(Color.WHITE);
 		lblUsuario.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblUsuario.setBounds(126, 216, 95, 30);
-		frame.getContentPane().add(lblUsuario);
+		frmLogin.getContentPane().add(lblUsuario);
 		
 		JLabel lblSenha = new JLabel("Senha:");
 		lblSenha.setForeground(Color.WHITE);
 		lblSenha.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblSenha.setBounds(126, 257, 95, 30);
-		frame.getContentPane().add(lblSenha);
+		frmLogin.getContentPane().add(lblSenha);
 		
 	
 		
@@ -130,7 +133,7 @@ public class Login extends Principal2{
 		});
 		tfUsuario.setColumns(10);
 		tfUsuario.setBounds(231, 224, 188, 20);
-		frame.getContentPane().add(tfUsuario);
+		frmLogin.getContentPane().add(tfUsuario);
 		
 		pfSenha = new JPasswordField();
 		pfSenha.setForeground(Color.WHITE);
@@ -144,7 +147,7 @@ public class Login extends Principal2{
 			}
 		});
 		pfSenha.setBounds(231, 265, 188, 20);
-		frame.getContentPane().add(pfSenha);
+		frmLogin.getContentPane().add(pfSenha);
 		
 		btnEntrar = new JButton("ENTRAR");
 		btnEntrar.setBackground(Color.LIGHT_GRAY);
@@ -168,7 +171,7 @@ public class Login extends Principal2{
 								EntraAluno.volt = 1;
 								EntraAluno.vtt=1;
 								PlaAluno.main(new String[] {id});
-								frame.dispose();
+								frmLogin.dispose();
 								
 								
 			}else{
@@ -184,40 +187,40 @@ public class Login extends Principal2{
 		});
 		btnEntrar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnEntrar.setBounds(308, 313, 164, 39);
-		frame.getContentPane().add(btnEntrar);
+		frmLogin.getContentPane().add(btnEntrar);
 		
 		lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
 		lblNewLabel.setBounds(102, 32, 447, 135);
-		frame.getContentPane().add(lblNewLabel);
+		frmLogin.getContentPane().add(lblNewLabel);
 		
 		lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_1.setBounds(0, 166, 490, 28);
-		frame.getContentPane().add(lblNewLabel_1);
+		frmLogin.getContentPane().add(lblNewLabel_1);
 		
 		lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_2.setBounds(486, 166, 85, 28);
-		frame.getContentPane().add(lblNewLabel_2);
+		frmLogin.getContentPane().add(lblNewLabel_2);
 		
 		lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_3.setBounds(0, 0, 385, 28);
-		frame.getContentPane().add(lblNewLabel_3);
+		frmLogin.getContentPane().add(lblNewLabel_3);
 		
 		lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_4.setBounds(366, 0, 215, 28);
-		frame.getContentPane().add(lblNewLabel_4);
+		frmLogin.getContentPane().add(lblNewLabel_4);
 		ImageIcon logo = new ImageIcon("C:\\\\Users\\\\SENAI\\\\Desktop\\\\LoginSenhaDB\\\\fiemg3.png");
 		logo.setImage(logo.getImage().getScaledInstance(414, 89, 100));
 		//fim jlabel lblImagem
 		
 		
 		
-		frame.setResizable(false);//impede a tela de ser redimensionada
-		frame.setLocationRelativeTo(null);//faz com que a tela apareça no centro
+		frmLogin.setResizable(false);//impede a tela de ser redimensionada
+		frmLogin.setLocationRelativeTo(null);//faz com que a tela apareça no centro
 		
 		try {
 			conexao = DriverManager.getConnection("jdbc:mysql://localhost:3307/alunos","root","root");

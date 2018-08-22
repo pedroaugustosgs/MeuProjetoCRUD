@@ -92,8 +92,9 @@ public class PlaAluno {
 	 */
 	private void initialize() {
 		frmMeuCrud = new JFrame();
+		frmMeuCrud.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Imagem\\img\\students-cap.png"));
 		frmMeuCrud.getContentPane().setBackground(Color.BLACK);
-		frmMeuCrud.setTitle("MEU CRUD - Alunos Cadastrados");               
+		frmMeuCrud.setTitle("Sua plataforma");               
 		frmMeuCrud.setBounds(100, 100, 1090, 640);
 		frmMeuCrud.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frmMeuCrud.getContentPane().setLayout(null);
@@ -280,16 +281,6 @@ public class PlaAluno {
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_3.setBounds(816, 509, 268, 33);
 		frmMeuCrud.getContentPane().add(lblNewLabel_3);
-		
-		JLabel lblNewLabel_9 = new JLabel("");
-		lblNewLabel_9.setIcon(new ImageIcon("D:\\1.png"));
-		lblNewLabel_9.setBounds(-16, 123, 347, 45);
-		frmMeuCrud.getContentPane().add(lblNewLabel_9);
-		
-		JLabel lblNewLabel_10 = new JLabel("");
-		lblNewLabel_10.setIcon(new ImageIcon("D:\\1.png"));
-		lblNewLabel_10.setBounds(707, 123, 338, 45);
-		frmMeuCrud.getContentPane().add(lblNewLabel_10);
 		
 		JLabel lblNewLabel_11 = new JLabel("");
 		lblNewLabel_11.setIcon(new ImageIcon("D:\\Bot\u00E3o png.png"));

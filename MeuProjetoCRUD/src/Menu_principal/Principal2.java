@@ -61,8 +61,9 @@ public class Principal2 {
 	private void initialize() {
 		Conexao.getConexao();
 		frmMeuProjetoCrud = new JFrame();
+		frmMeuProjetoCrud.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Imagem\\img\\students-cap.png"));
 		frmMeuProjetoCrud.getContentPane().setBackground(Color.BLACK);
-		frmMeuProjetoCrud.setTitle("MEU PROJETO CRUD");
+		frmMeuProjetoCrud.setTitle("Principal");
 		frmMeuProjetoCrud.setBounds(100, 100, 1001, 606);
 		frmMeuProjetoCrud.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmMeuProjetoCrud.getContentPane().setLayout(null);
@@ -195,7 +196,7 @@ public class Principal2 {
 		
 		JLabel lblNewLabel_16 = new JLabel("");
 		lblNewLabel_16.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		lblNewLabel_16.setBounds(323, 0, 455, 118);
+		lblNewLabel_16.setBounds(323, 0, 461, 118);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_16);
 	}
 }

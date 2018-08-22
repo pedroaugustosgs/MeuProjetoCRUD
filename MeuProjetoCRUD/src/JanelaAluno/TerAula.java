@@ -89,8 +89,8 @@ public class TerAula extends Login{
 		
 		frmMeuCrud = new JFrame();
 		frmMeuCrud.getContentPane().setBackground(Color.BLACK);
-		frmMeuCrud.setIconImage(Toolkit.getDefaultToolkit().getImage(TerAula.class.getResource("/47 - Copia.png")));
-		frmMeuCrud.setTitle("MEU CRUD - Alunos Cadastrados");
+		frmMeuCrud.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Imagem\\img\\students-cap.png"));
+		frmMeuCrud.setTitle("Nova Aula");
 		frmMeuCrud.setBounds(100, 100, 1077, 500);
 		frmMeuCrud.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frmMeuCrud.getContentPane().setLayout(null);

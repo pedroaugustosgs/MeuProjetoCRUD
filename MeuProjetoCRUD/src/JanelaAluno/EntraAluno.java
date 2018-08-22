@@ -15,6 +15,7 @@ import javax.swing.JLabel;
 
 import Menu_principal.Principal2;
 import javax.swing.SwingConstants;
+import java.awt.Toolkit;
 
 
 
@@ -52,6 +53,8 @@ public class EntraAluno extends Principal2{
 	 */
 	private void initialize() {
 		frmEntraInstitu = new JFrame();
+		frmEntraInstitu.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Imagem\\img\\students-cap.png"));
+		frmEntraInstitu.setTitle("APPROFE");
 		frmEntraInstitu.getContentPane().setBackground(Color.BLACK);
 		frmEntraInstitu.setBounds(100, 100, 780, 699);
 		frmEntraInstitu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
