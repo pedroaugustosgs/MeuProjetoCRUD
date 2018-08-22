@@ -272,6 +272,19 @@ public class VerAulas extends LoginInstitu{
 		lblNewLabel_6.setBounds(310, 22, 255, 67);
 		frmMeuCrud.getContentPane().add(lblNewLabel_6);
 		
+		JButton btnHistricoDeAulas = new JButton("HSIT\u00D3RICO DE AULAS");
+		btnHistricoDeAulas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VerHistorico.main(null);
+				frame.dispose();
+			}
+		});
+		btnHistricoDeAulas.setForeground(Color.BLACK);
+		btnHistricoDeAulas.setFont(new Font("DialogInput", Font.BOLD, 20));
+		btnHistricoDeAulas.setBackground(Color.LIGHT_GRAY);
+		btnHistricoDeAulas.setBounds(607, 456, 272, 39);
+		frmMeuCrud.getContentPane().add(btnHistricoDeAulas);
+		
 		
 		
 		criaTabela(pegaAula());
