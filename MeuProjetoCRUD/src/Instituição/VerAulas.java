@@ -137,8 +137,8 @@ public class VerAulas extends LoginInstitu{
 				
 				
 				int linha = tabela.getSelectedRow();  
-				System.out.println(ids[tabela.getSelectedRow()]);
-				VisualizaAulas.main(new String[] {ids[tabela.getSelectedRow()]});
+				//System.out.println(ids[tabela.getSelectedRow()]);
+				AlteraAulas.main(new String[] {ids[tabela.getSelectedRow()]});
 				  //*****************************
 				frmMeuCrud.dispose();
 				
