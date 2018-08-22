@@ -15,10 +15,11 @@ import Menu_principal.Principal2;
 import java.awt.Font;
 import javax.swing.JProgressBar;
 import java.awt.Color;
+import java.awt.Toolkit;
 
 public class Splash implements Runnable{
 
-	private JFrame frame;
+	private JFrame frmSplash;
 	
 	Thread tarefa;
 	private JProgressBar barra;
@@ -31,7 +32,7 @@ public class Splash implements Runnable{
 			public void run() {
 				try {
 					Splash window = new Splash();
-					window.frame.setVisible(true);
+					window.frmSplash.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -50,47 +51,47 @@ public class Splash implements Runnable{
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.getContentPane().setBackground(Color.BLACK);
-		frame.setBounds(100, 100, 584, 342);
-		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		//desabilita o botao de maximizar e minimizar
-		frame.setResizable(false);
+		frmSplash = new JFrame();
+		frmSplash.setResizable(false);
+		frmSplash.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Imagem\\img\\chavepreta.png"));
+		frmSplash.getContentPane().setBackground(Color.BLACK);
+		frmSplash.setBounds(100, 100, 584, 342);
+		frmSplash.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		//sempre no centro do desktop
-		frame.setLocationRelativeTo(null);
-		frame.setTitle("Meu projeto CRUD");
-		frame.getContentPane().setLayout(null);
+		frmSplash.setLocationRelativeTo(null);
+		frmSplash.setTitle("SPLASH");
+		frmSplash.getContentPane().setLayout(null);
 		
 		barra = new JProgressBar();			
 		barra.setBounds(10, 272, 558, 14);
-		frame.getContentPane().add(barra);
+		frmSplash.getContentPane().add(barra);
 		barra.setBackground(Color.WHITE);
         barra.setForeground(Color.GRAY); 
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
 		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_1.setBounds(0, 219, 492, 32);
-		frame.getContentPane().add(lblNewLabel_1);
+		frmSplash.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("New label");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_2.setBounds(472, 219, 106, 32);
-		frame.getContentPane().add(lblNewLabel_2);
+		frmSplash.getContentPane().add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("New label");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_3.setBounds(0, 46, 368, 24);
-		frame.getContentPane().add(lblNewLabel_3);
+		frmSplash.getContentPane().add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("New label");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_4.setBounds(333, 46, 245, 24);
-		frame.getContentPane().add(lblNewLabel_4);
+		frmSplash.getContentPane().add(lblNewLabel_4);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
 		lblNewLabel.setBounds(105, 81, 463, 129);
-		frame.getContentPane().add(lblNewLabel);
+		frmSplash.getContentPane().add(lblNewLabel);
 		
 		
 		tarefa = new Thread(Splash.this);
@@ -115,7 +116,7 @@ public class Splash implements Runnable{
 			//apos os 2 segundos abre a janela principal
 		}
 		Principal2.main(null);
-		frame.dispose();
+		frmSplash.dispose();
 	}
 	
 }

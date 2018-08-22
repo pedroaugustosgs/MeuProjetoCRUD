@@ -117,11 +117,6 @@ public class EntraAluno extends Principal2{
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_2.setBounds(0, 101, 347, 33);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_2);
-		
-		JLabel lblNewLabel_7 = new JLabel("");
-		lblNewLabel_7.setIcon(new ImageIcon("D:\\1.png"));
-		lblNewLabel_7.setBounds(-39, 530, 347, 47);
-		frmEntraInstitu.getContentPane().add(lblNewLabel_7);
 		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnVoltar.setBounds(309, 616, 164, 39);
