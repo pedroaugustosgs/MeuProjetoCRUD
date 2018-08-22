@@ -37,6 +37,7 @@ import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.imageio.ImageIO;
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import java.awt.SystemColor;
 import com.jgoodies.forms.factories.DefaultComponentFactory;
@@ -212,6 +213,8 @@ public class Config extends Login {
 		lblFotoPerfil.setBackground(Color.WHITE);
 		lblFotoPerfil.setBounds(509, 152, 258, 198);
 		frmMeuCrud.getContentPane().add(lblFotoPerfil);
+		lblFotoPerfil.setBorder(BorderFactory.createLineBorder(Color.GRAY,2));
+		
 		
 		tfIdade = new JTextField();
 		tfIdade.setForeground(Color.WHITE);
