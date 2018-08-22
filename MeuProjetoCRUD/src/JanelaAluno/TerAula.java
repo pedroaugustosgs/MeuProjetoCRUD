@@ -112,14 +112,14 @@ public class TerAula extends Login{
 			@Override
 			public void focusGained(FocusEvent arg0) {
 				if(tfProcurar.getText().toString().equalsIgnoreCase("Entre com a matéria a ser procurada")) {
-					tfProcurar.setForeground(Color.BLACK);
+					tfProcurar.setForeground(Color.WHITE);
 					tfProcurar.setText(null);
 				}
 			}
 			@Override
 			public void focusLost(FocusEvent arg0) {
 				if(tfProcurar.getText().isEmpty()) {
-					tfProcurar.setForeground(Color.LIGHT_GRAY);
+					tfProcurar.setForeground(Color.WHITE);
 					tfProcurar.setText("Entre com a matéria a ser procurada");
 				}
 					

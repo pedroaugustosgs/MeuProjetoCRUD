@@ -275,7 +275,7 @@ public class VerAulas extends LoginInstitu{
 		
 		lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Solicite Uma Nova Aula (4).jpg"));
-		lblNewLabel_6.setBounds(309, 23, 255, 67);
+		lblNewLabel_6.setBounds(310, 22, 255, 67);
 		frmMeuCrud.getContentPane().add(lblNewLabel_6);
 		
 		

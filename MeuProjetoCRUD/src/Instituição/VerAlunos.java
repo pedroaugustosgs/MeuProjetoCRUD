@@ -182,12 +182,12 @@ public class VerAlunos extends LoginInstitu{
 			
 			lblNewLabel_2 = new JLabel("");
 			lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-			lblNewLabel_2.setBounds(-4, 71, 305, 28);
+			lblNewLabel_2.setBounds(1, 98, 305, 28);
 			frmMeuCrud.getContentPane().add(lblNewLabel_2);
 			
 			lblNewLabel_3 = new JLabel("");
 			lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-			lblNewLabel_3.setBounds(299, 71, 269, 28);
+			lblNewLabel_3.setBounds(298, 98, 269, 28);
 			frmMeuCrud.getContentPane().add(lblNewLabel_3);
 		
 			JScrollPane scrollPane = new JScrollPane(tabela);
@@ -240,12 +240,12 @@ public class VerAlunos extends LoginInstitu{
 		
 		lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_4.setBounds(565, 73, 250, 24);
+		lblNewLabel_4.setBounds(565, 102, 250, 24);
 		frmMeuCrud.getContentPane().add(lblNewLabel_4);
 		
 		lblNewLabel_5 = new JLabel("New label");
-		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\visualiza\u00E7\u00E3o.png"));
-		lblNewLabel_5.setBounds(214, 15, 354, 55);
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\usuaaaaa.jpg"));
+		lblNewLabel_5.setBounds(240, 11, 327, 88);
 		frmMeuCrud.getContentPane().add(lblNewLabel_5);
 		ResultSet alunos=null;
 		String sql1 ="SELECT * FROM alunos WHERE escola=?";

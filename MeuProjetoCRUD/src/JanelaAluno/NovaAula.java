@@ -539,6 +539,11 @@ public class NovaAula extends Login {
 		lblNewLabel_4.setBounds(470, 99, 479, 28);
 		frame.getContentPane().add(lblNewLabel_4);
 		
+		lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\nova.png"));
+		lblNewLabel_5.setBounds(295, 16, 456, 85);
+		frame.getContentPane().add(lblNewLabel_5);
+		
 		panel = new JPanel();
 		panel.setBackground(Color.BLACK);
 		panel.setBounds(10, 243, 929, 197);
@@ -618,6 +623,8 @@ public class NovaAula extends Login {
 		panel.add(chTarde);
 		
 		tfDeManha = new JFormattedTextField(DeAte);
+		tfDeManha.setForeground(Color.WHITE);
+		tfDeManha.setBackground(Color.BLACK);
 		tfDeManha.setVisible(false);
 		tfDeManha.setBounds(248, 53, 122, 20);
 		panel.add(tfDeManha);
@@ -631,6 +638,8 @@ public class NovaAula extends Login {
 		lblDe.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		
 		tfAteManha = new JFormattedTextField(DeAte);
+		tfAteManha.setForeground(Color.WHITE);
+		tfAteManha.setBackground(Color.BLACK);
 		tfAteManha.setVisible(false);
 		tfAteManha.setBounds(247, 77, 122, 20);
 		panel.add(tfAteManha);
@@ -651,6 +660,8 @@ public class NovaAula extends Login {
 		label.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		
 		tfDeNoite = new JFormattedTextField(DeAte);
+		tfDeNoite.setForeground(Color.WHITE);
+		tfDeNoite.setBackground(Color.BLACK);
 		tfDeNoite.setVisible(false);
 		tfDeNoite.setBounds(624, 51, 126, 20);
 		panel.add(tfDeNoite);
@@ -664,6 +675,8 @@ public class NovaAula extends Login {
 		label_3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		
 		tfAteNoite = new JFormattedTextField(DeAte);
+		tfAteNoite.setForeground(Color.WHITE);
+		tfAteNoite.setBackground(Color.BLACK);
 		tfAteNoite.setVisible(false);
 		tfAteNoite.setBounds(624, 77, 126, 20);
 		panel.add(tfAteNoite);
@@ -677,6 +690,8 @@ public class NovaAula extends Login {
 		label_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		
 		tfDeTarde = new JFormattedTextField(DeAte);
+		tfDeTarde.setForeground(Color.WHITE);
+		tfDeTarde.setBackground(Color.BLACK);
 		tfDeTarde.setVisible(false);
 		tfDeTarde.setBounds(438, 52, 126, 20);
 		panel.add(tfDeTarde);
@@ -690,6 +705,8 @@ public class NovaAula extends Login {
 		label_2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		
 		tfAteTarde = new JFormattedTextField(DeAte);
+		tfAteTarde.setForeground(Color.WHITE);
+		tfAteTarde.setBackground(Color.BLACK);
 		tfAteTarde.setVisible(false);
 		tfAteTarde.setBounds(439, 76, 125, 20);
 		panel.add(tfAteTarde);
@@ -706,11 +723,6 @@ public class NovaAula extends Login {
 		label_5.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		label_5.setBounds(659, 7, 74, 19);
 		panel.add(label_5);
-		
-		lblNewLabel_5 = new JLabel("");
-		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\nova.png"));
-		lblNewLabel_5.setBounds(295, 16, 456, 85);
-		frame.getContentPane().add(lblNewLabel_5);
 		chTarde.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(chTarde.isSelected()) {
