@@ -136,7 +136,7 @@ public class VerAulas extends LoginInstitu{
 			public void mouseClicked(MouseEvent arg0) {
 				
 				
-				int linha = tabela.getSelectedRow();
+				int linha = tabela.getSelectedRow();  
 				System.out.println(ids[tabela.getSelectedRow()]);
 				VisualizaAulas.main(new String[] {ids[tabela.getSelectedRow()]});
 				  //*****************************
