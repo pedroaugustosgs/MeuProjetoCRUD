@@ -124,7 +124,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		tfCSenha.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				tfCSenha.setBackground(Color.WHITE);
+				tfCSenha.setBackground(Color.BLACK);
 
 			}
 		});
@@ -138,6 +138,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		lblConfirmarSenha.setBounds(15, 293, 150, 39);
 		frame.getContentPane().add(lblConfirmarSenha);
 		JButton btnLimpar = new JButton("LIMPAR");
+		btnLimpar.setForeground(Color.BLACK);
 		btnLimpar.setBackground(Color.LIGHT_GRAY);
 		btnLimpar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -197,7 +198,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 			
 			@Override
 			public void focusGained(FocusEvent e) {
-				tfCnpj.setBackground(Color.WHITE);
+				tfCnpj.setBackground(Color.BLACK);
 
 			}
 		});
@@ -211,7 +212,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		tfInstitu.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				tfInstitu.setBackground(Color.WHITE);
+				tfInstitu.setBackground(Color.BLACK);
 
 			}
 		});
@@ -225,7 +226,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		tfEmail.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				tfEmail.setBackground(Color.WHITE);
+				tfEmail.setBackground(Color.BLACK);
 
 			}
 		});
@@ -245,7 +246,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		tfTelefone.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				tfTelefone.setBackground(Color.WHITE);
+				tfTelefone.setBackground(Color.BLACK);
 
 			}
 		});
@@ -260,7 +261,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		tfSenha.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				tfSenha.setBackground(Color.WHITE);
+				tfSenha.setBackground(Color.BLACK);
 
 			}
 		});
@@ -269,6 +270,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		frame.getContentPane().add(tfSenha);
 		
 		JButton btnVoltar = new JButton("VOLTAR");
+		btnVoltar.setForeground(Color.BLACK);
 		btnVoltar.setBackground(Color.LIGHT_GRAY);
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -281,6 +283,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		frame.getContentPane().add(btnVoltar);
 		
 		JButton btnSalvar = new JButton("SALVAR");
+		btnSalvar.setForeground(Color.BLACK);
 		btnSalvar.setBackground(Color.LIGHT_GRAY);
 		btnSalvar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {

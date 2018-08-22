@@ -201,7 +201,8 @@ public class VisualizaAulas extends Login{
 		lblvagas.setBounds(71, 231, 153, 19);
 		frame.getContentPane().add(lblvagas);
 		
-		JButton btnNewButton = new JButton("Salvar");
+		JButton btnNewButton = new JButton("SALVAR");
+		btnNewButton.setBackground(Color.LIGHT_GRAY);
 		btnNewButton.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -408,10 +409,11 @@ public class VisualizaAulas extends Login{
 				
 			}
 		});
-		btnNewButton.setBounds(10, 543, 139, 44);
+		btnNewButton.setBounds(1, 547, 164, 39);
 		frame.getContentPane().add(btnNewButton);
 		
-		JButton btnNovoltar = new JButton("Voltar");
+		JButton btnNovoltar = new JButton("VOLTAR");
+		btnNovoltar.setBackground(Color.LIGHT_GRAY);
 		btnNovoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNovoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -419,7 +421,7 @@ public class VisualizaAulas extends Login{
 				frame.dispose();
 			}
 		});
-		btnNovoltar.setBounds(781, 545, 151, 41);
+		btnNovoltar.setBounds(777, 547, 164, 39);
 		frame.getContentPane().add(btnNovoltar);
 		
 		tabela = new JTable();
@@ -428,7 +430,8 @@ public class VisualizaAulas extends Login{
 		scrollPane.setBounds(198, 297, 502, 201);
 		frame.getContentPane().add(scrollPane);
 		
-		JButton btnRemover = new JButton("Remover");
+		JButton btnRemover = new JButton("REMOVER");
+		btnRemover.setBackground(Color.LIGHT_GRAY);
 		btnRemover.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnRemover.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -489,7 +492,7 @@ public class VisualizaAulas extends Login{
 				return;
 			}
 		});
-		btnRemover.setBounds(394, 543, 169, 45);
+		btnRemover.setBounds(393, 546, 164, 39);
 		frame.getContentPane().add(btnRemover);
 		
 		lbllocal = new JTextField();
