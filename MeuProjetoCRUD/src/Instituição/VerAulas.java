@@ -15,6 +15,7 @@ import CRUD.Aluno;
 import CRUD.CRUDAlunos;
 import JanelaAluno.ConfirmaAula;
 import JanelaAluno.ModeloDaTabela;
+import JanelaAluno.VisualizaAulas;
 
 import javax.swing.JButton;
 import java.awt.Color;
@@ -24,6 +25,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -56,6 +58,9 @@ public class VerAulas extends LoginInstitu{
 	 private JLabel lblNewLabel_5;
 	 private JLabel lblNewLabel_7;
 	 private JLabel lblNewLabel_6;
+	 
+	 public String ids[]= new String[100];
+		int cont=0;
 	/**
 	 * Launch the application.
 	 */
@@ -132,20 +137,9 @@ public class VerAulas extends LoginInstitu{
 				
 				
 				int linha = tabela.getSelectedRow();
-				ResultSet dadostabela = pegaAula();
-				try {
-					dadostabela.absolute(linha+1);
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				
-				try {
-					AlteraAulas.main(new String[] {dadostabela.getString("idaula")});
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}  //*****************************
+				System.out.println(ids[tabela.getSelectedRow()]);
+				VisualizaAulas.main(new String[] {ids[tabela.getSelectedRow()]});
+				  //*****************************
 				frmMeuCrud.dispose();
 				
 				/*int linha = tabela.getSelectedRow();
@@ -292,14 +286,34 @@ public class VerAulas extends LoginInstitu{
 		try {
 			while (dados.next()) {
 								
-				/*String sql ="SELECT * FROM aulas WHERE professor=?";
-				PreparedStatement s = Conexao.conexao.prepareStatement(sql);
-				s.setString(1, alunos.getString("idaluno"));
-				aulas = s.executeQuery();
-				s.execute();
-				s.close();*/
+				boolean continuar=false;
+				Date data = new Date();
+				Date hoje = new Date();
+				
+				try {
+					data = dados.getDate("DiaUmaVez");
+					if(dados.getString("DiaUmaVez").equals("1969-12-31")) {
+						continuar = true;
+					}
+					
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					continuar=true;
+					//e.printStackTrace();
+				}
+				
+				//SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
+				
+				if(data.before(hoje) && continuar==false) {
+					continue;
+				}
+				
+				ids[cont++]=dados.getString("idaula");
+				
 				
 				linhas.add(new Object[] {
+						
+						
 						Materia(dados.getString("materia")),
 						dados.getString("conteudo"),
 						dados.getString("local"),

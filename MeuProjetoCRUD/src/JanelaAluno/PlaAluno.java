@@ -206,7 +206,7 @@ public class PlaAluno {
 				}*/
 				
 				
-					System.out.println(ids[tabela.getSelectedRow()]);
+					//System.out.println(ids[tabela.getSelectedRow()]);
 					VisualizaAulas.main(new String[] {ids[tabela.getSelectedRow()],idaluno});
 				
 				frmMeuCrud.dispose();
