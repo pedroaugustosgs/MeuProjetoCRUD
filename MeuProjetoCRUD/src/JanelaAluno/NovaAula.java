@@ -343,6 +343,327 @@ public class NovaAula extends Login {
 			}
 		});
 		
+		panel = new JPanel();
+		panel.setBackground(Color.BLACK);
+		panel.setBounds(10, 243, 929, 197);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		lblData = new JLabel("DATA:");
+		lblData.setForeground(Color.WHITE);
+		lblData.setBounds(65, 10, 61, 19);
+		panel.add(lblData);
+		lblData.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		
+		chSegunda = new JCheckBox("Segunda-feira");
+		chSegunda.setBackground(Color.BLACK);
+		chSegunda.setForeground(Color.WHITE);
+		chSegunda.setBounds(4, 46, 117, 23);
+		panel.add(chSegunda);
+		
+		chSabado = new JCheckBox("S\u00E1bado");
+		chSabado.setForeground(Color.WHITE);
+		chSabado.setBackground(Color.BLACK);
+		chSabado.setBounds(117, 47, 88, 23);
+		panel.add(chSabado);
+		
+		chTerca = new JCheckBox("Ter\u00E7a-feira");
+		chTerca.setForeground(Color.WHITE);
+		chTerca.setBackground(Color.BLACK);
+		chTerca.setBounds(4, 66, 97, 23);
+		panel.add(chTerca);
+		
+		chQuarta = new JCheckBox("Quarta-feira");
+		chQuarta.setBackground(Color.BLACK);
+		chQuarta.setForeground(Color.WHITE);
+		chQuarta.setBounds(4, 86, 97, 23);
+		panel.add(chQuarta);
+		
+		chDomingo = new JCheckBox("Domingo");
+		chDomingo.setBackground(Color.BLACK);
+		chDomingo.setForeground(Color.WHITE);
+		chDomingo.setBounds(117, 68, 78, 23);
+		panel.add(chDomingo);
+		
+		chQuinta = new JCheckBox("Quinta-feira");
+		chQuinta.setForeground(Color.WHITE);
+		chQuinta.setBackground(Color.BLACK);
+		chQuinta.setBounds(4, 106, 97, 23);
+		panel.add(chQuinta);
+		
+		chSexta = new JCheckBox("Sexta-feira");
+		chSexta.setBackground(Color.BLACK);
+		chSexta.setForeground(Color.WHITE);
+		chSexta.setBounds(4, 126, 97, 23);
+		panel.add(chSexta);
+		
+		lblTurno = new JLabel("TURNO:");
+		lblTurno.setForeground(Color.WHITE);
+		lblTurno.setBounds(277, 8, 74, 19);
+		panel.add(lblTurno);
+		lblTurno.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		
+		chNoite = new JCheckBox("Noite");
+		chNoite.setForeground(Color.WHITE);
+		chNoite.setBackground(Color.BLACK);
+		chNoite.setBounds(653, 27, 97, 23);
+		panel.add(chNoite);
+		
+		chManha = new JCheckBox("Manh\u00E3");
+		chManha.setForeground(Color.WHITE);
+		chManha.setBackground(Color.BLACK);
+		chManha.setBounds(266, 30, 97, 23);
+		panel.add(chManha);
+		
+		chTarde = new JCheckBox("Tarde");
+		chTarde.setBackground(Color.BLACK);
+		chTarde.setForeground(Color.WHITE);
+		chTarde.setBounds(463, 28, 97, 23);
+		panel.add(chTarde);
+		
+		tfDeManha = new JFormattedTextField(DeAte);
+		tfDeManha.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				String  deumavez = tfDeManha.getText().toString();
+				String hora[] = new String[2];
+				hora = deumavez.split(":");
+				int h = Integer.parseInt(hora[0]);
+				int m = Integer.parseInt(hora[1]);
+				if(h>23 || m>59) {
+					JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+					tfDeManha.requestFocus();
+					tfDeManha.selectAll();
+					
+				}
+			}
+		});
+		tfDeManha.setForeground(Color.WHITE);
+		tfDeManha.setBackground(Color.BLACK);
+		tfDeManha.setVisible(false);
+		tfDeManha.setBounds(248, 53, 122, 20);
+		panel.add(tfDeManha);
+		tfDeManha.setColumns(10);
+		
+		JLabel lblDe = new JLabel("DE:");
+		lblDe.setForeground(Color.WHITE);
+		lblDe.setVisible(false);
+		lblDe.setBounds(209, 53, 61, 19);
+		panel.add(lblDe);
+		lblDe.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		
+		tfAteManha = new JFormattedTextField(DeAte);
+		tfAteManha.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				String  deumavez = tfAteManha.getText().toString();
+				String hora[] = new String[2];
+				hora = deumavez.split(":");
+				int h = Integer.parseInt(hora[0]);
+				int m = Integer.parseInt(hora[1]);
+				if(h>23 || m>59) {
+					JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+					tfAteManha.requestFocus();
+					tfAteManha.selectAll();
+					
+				}
+			}
+		});
+		tfAteManha.setForeground(Color.WHITE);
+		tfAteManha.setBackground(Color.BLACK);
+		tfAteManha.setVisible(false);
+		tfAteManha.setBounds(247, 77, 122, 20);
+		panel.add(tfAteManha);
+		tfAteManha.setColumns(10);
+		
+		JLabel lblAt = new JLabel("AT\u00C9:");
+		lblAt.setForeground(Color.WHITE);
+		lblAt.setVisible(false);
+		lblAt.setBounds(201, 75, 61, 19);
+		panel.add(lblAt);
+		lblAt.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		
+		label = new JLabel("DE:");
+		label.setForeground(Color.WHITE);
+		label.setVisible(false);
+		label.setBounds(582, 52, 42, 19);
+		panel.add(label);
+		label.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		
+		tfDeNoite = new JFormattedTextField(DeAte);
+		tfDeNoite.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				String  deumavez = tfDeNoite.getText().toString();
+				String hora[] = new String[2];
+				hora = deumavez.split(":");
+				int h = Integer.parseInt(hora[0]);
+				int m = Integer.parseInt(hora[1]);
+				if(h>23 || m>59) {
+					JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+					tfDeNoite.requestFocus();
+					tfDeNoite.selectAll();
+					
+				}
+			}
+		});
+		tfDeNoite.setForeground(Color.WHITE);
+		tfDeNoite.setBackground(Color.BLACK);
+		tfDeNoite.setVisible(false);
+		tfDeNoite.setBounds(624, 51, 126, 20);
+		panel.add(tfDeNoite);
+		tfDeNoite.setColumns(10);
+		
+		label_3 = new JLabel("AT\u00C9:");
+		label_3.setForeground(Color.WHITE);
+		label_3.setVisible(false);
+		label_3.setBounds(575, 76, 42, 19);
+		panel.add(label_3);
+		label_3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		
+		tfAteNoite = new JFormattedTextField(DeAte);
+		tfAteNoite.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				String  deumavez = tfAteNoite.getText().toString();
+				String hora[] = new String[2];
+				hora = deumavez.split(":");
+				int h = Integer.parseInt(hora[0]);
+				int m = Integer.parseInt(hora[1]);
+				if(h>23 || m>59) {
+					JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+					tfAteNoite.requestFocus();
+					tfAteNoite.selectAll();
+					
+				}
+			}
+		});
+		tfAteNoite.setForeground(Color.WHITE);
+		tfAteNoite.setBackground(Color.BLACK);
+		tfAteNoite.setVisible(false);
+		tfAteNoite.setBounds(624, 77, 126, 20);
+		panel.add(tfAteNoite);
+		tfAteNoite.setColumns(10);
+		
+		JLabel label_1 = new JLabel("DE:");
+		label_1.setForeground(Color.WHITE);
+		label_1.setVisible(false);
+		label_1.setBounds(400, 52, 61, 19);
+		panel.add(label_1);
+		label_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		
+		tfDeTarde = new JFormattedTextField(DeAte);
+		tfDeTarde.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				String  deumavez = tfDeTarde.getText().toString();
+				String hora[] = new String[2];
+				hora = deumavez.split(":");
+				int h = Integer.parseInt(hora[0]);
+				int m = Integer.parseInt(hora[1]);
+				if(h>23 || m>59) {
+					JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+					tfDeTarde.requestFocus();
+					tfDeTarde.selectAll();
+					
+				}
+			}
+		});
+		tfDeTarde.setForeground(Color.WHITE);
+		tfDeTarde.setBackground(Color.BLACK);
+		tfDeTarde.setVisible(false);
+		tfDeTarde.setBounds(438, 52, 126, 20);
+		panel.add(tfDeTarde);
+		tfDeTarde.setColumns(10);
+		
+		JLabel label_2 = new JLabel("AT\u00C9:");
+		label_2.setForeground(Color.WHITE);
+		label_2.setVisible(false);
+		label_2.setBounds(390, 78, 53, 19);
+		panel.add(label_2);
+		label_2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		
+		tfAteTarde = new JFormattedTextField(DeAte);
+		tfAteTarde.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				String  deumavez = tfAteTarde.getText().toString();
+				String hora[] = new String[2];
+				hora = deumavez.split(":");
+				int h = Integer.parseInt(hora[0]);
+				int m = Integer.parseInt(hora[1]);
+				if(h>23 || m>59) {
+					JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+					tfAteTarde.requestFocus();
+					tfAteTarde.selectAll();
+					
+				}
+			}
+		});
+		tfAteTarde.setForeground(Color.WHITE);
+		tfAteTarde.setBackground(Color.BLACK);
+		tfAteTarde.setVisible(false);
+		tfAteTarde.setBounds(439, 76, 125, 20);
+		panel.add(tfAteTarde);
+		tfAteTarde.setColumns(10);
+		
+		label_4 = new JLabel("TURNO:");
+		label_4.setForeground(Color.WHITE);
+		label_4.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		label_4.setBounds(470, 8, 74, 19);
+		panel.add(label_4);
+		
+		label_5 = new JLabel("TURNO:");
+		label_5.setForeground(Color.WHITE);
+		label_5.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		label_5.setBounds(659, 7, 74, 19);
+		panel.add(label_5);
+		chTarde.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(chTarde.isSelected()) {
+					label_1.setVisible(true);
+					label_2.setVisible(true);
+					tfDeTarde.setVisible(true);
+					tfAteTarde.setVisible(true);
+				}else {
+					label_1.setVisible(false);
+					label_2.setVisible(false);
+					tfDeTarde.setVisible(false);
+					tfAteTarde.setVisible(false);
+				}
+			}
+		});
+		chManha.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if(chManha.isSelected()) {
+					lblDe.setVisible(true);
+					lblAt.setVisible(true);
+					tfDeManha.setVisible(true);
+					tfAteManha.setVisible(true);
+				}else {
+					lblDe.setVisible(false);
+					lblAt.setVisible(false);
+					tfDeManha.setVisible(false);
+					tfAteManha.setVisible(false);
+				}
+			}
+		});
+		chNoite.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(chNoite.isSelected()) {
+					label.setVisible(true);
+					label_3.setVisible(true);
+					tfDeNoite.setVisible(true);
+					tfAteNoite.setVisible(true);
+				}else {
+					label.setVisible(false);
+					label_3.setVisible(false);
+					tfDeNoite.setVisible(false);
+					tfAteNoite.setVisible(false);
+				}
+			}
+		});
+		
 		panel_1 = new JPanel();
 		panel_1.setBounds(20, 243, 929, 197);
 		frame.getContentPane().add(panel_1);
@@ -559,231 +880,6 @@ public class NovaAula extends Login {
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\nova.png"));
 		lblNewLabel_5.setBounds(295, 16, 456, 85);
 		frame.getContentPane().add(lblNewLabel_5);
-		
-		panel = new JPanel();
-		panel.setBackground(Color.BLACK);
-		panel.setBounds(10, 243, 929, 197);
-		frame.getContentPane().add(panel);
-		panel.setLayout(null);
-		
-		lblData = new JLabel("DATA:");
-		lblData.setForeground(Color.WHITE);
-		lblData.setBounds(65, 10, 61, 19);
-		panel.add(lblData);
-		lblData.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		
-		chSegunda = new JCheckBox("Segunda-feira");
-		chSegunda.setBackground(Color.BLACK);
-		chSegunda.setForeground(Color.WHITE);
-		chSegunda.setBounds(4, 46, 117, 23);
-		panel.add(chSegunda);
-		
-		chSabado = new JCheckBox("S\u00E1bado");
-		chSabado.setForeground(Color.WHITE);
-		chSabado.setBackground(Color.BLACK);
-		chSabado.setBounds(117, 47, 88, 23);
-		panel.add(chSabado);
-		
-		chTerca = new JCheckBox("Ter\u00E7a-feira");
-		chTerca.setForeground(Color.WHITE);
-		chTerca.setBackground(Color.BLACK);
-		chTerca.setBounds(4, 66, 97, 23);
-		panel.add(chTerca);
-		
-		chQuarta = new JCheckBox("Quarta-feira");
-		chQuarta.setBackground(Color.BLACK);
-		chQuarta.setForeground(Color.WHITE);
-		chQuarta.setBounds(4, 86, 97, 23);
-		panel.add(chQuarta);
-		
-		chDomingo = new JCheckBox("Domingo");
-		chDomingo.setBackground(Color.BLACK);
-		chDomingo.setForeground(Color.WHITE);
-		chDomingo.setBounds(117, 68, 78, 23);
-		panel.add(chDomingo);
-		
-		chQuinta = new JCheckBox("Quinta-feira");
-		chQuinta.setForeground(Color.WHITE);
-		chQuinta.setBackground(Color.BLACK);
-		chQuinta.setBounds(4, 106, 97, 23);
-		panel.add(chQuinta);
-		
-		chSexta = new JCheckBox("Sexta-feira");
-		chSexta.setBackground(Color.BLACK);
-		chSexta.setForeground(Color.WHITE);
-		chSexta.setBounds(4, 126, 97, 23);
-		panel.add(chSexta);
-		
-		lblTurno = new JLabel("TURNO:");
-		lblTurno.setForeground(Color.WHITE);
-		lblTurno.setBounds(277, 8, 74, 19);
-		panel.add(lblTurno);
-		lblTurno.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		
-		chNoite = new JCheckBox("Noite");
-		chNoite.setForeground(Color.WHITE);
-		chNoite.setBackground(Color.BLACK);
-		chNoite.setBounds(653, 27, 97, 23);
-		panel.add(chNoite);
-		
-		chManha = new JCheckBox("Manh\u00E3");
-		chManha.setForeground(Color.WHITE);
-		chManha.setBackground(Color.BLACK);
-		chManha.setBounds(266, 30, 97, 23);
-		panel.add(chManha);
-		
-		chTarde = new JCheckBox("Tarde");
-		chTarde.setBackground(Color.BLACK);
-		chTarde.setForeground(Color.WHITE);
-		chTarde.setBounds(463, 28, 97, 23);
-		panel.add(chTarde);
-		
-		tfDeManha = new JFormattedTextField(DeAte);
-		tfDeManha.setForeground(Color.WHITE);
-		tfDeManha.setBackground(Color.BLACK);
-		tfDeManha.setVisible(false);
-		tfDeManha.setBounds(248, 53, 122, 20);
-		panel.add(tfDeManha);
-		tfDeManha.setColumns(10);
-		
-		JLabel lblDe = new JLabel("DE:");
-		lblDe.setForeground(Color.WHITE);
-		lblDe.setVisible(false);
-		lblDe.setBounds(209, 53, 61, 19);
-		panel.add(lblDe);
-		lblDe.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		
-		tfAteManha = new JFormattedTextField(DeAte);
-		tfAteManha.setForeground(Color.WHITE);
-		tfAteManha.setBackground(Color.BLACK);
-		tfAteManha.setVisible(false);
-		tfAteManha.setBounds(247, 77, 122, 20);
-		panel.add(tfAteManha);
-		tfAteManha.setColumns(10);
-		
-		JLabel lblAt = new JLabel("AT\u00C9:");
-		lblAt.setForeground(Color.WHITE);
-		lblAt.setVisible(false);
-		lblAt.setBounds(201, 75, 61, 19);
-		panel.add(lblAt);
-		lblAt.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		
-		label = new JLabel("DE:");
-		label.setForeground(Color.WHITE);
-		label.setVisible(false);
-		label.setBounds(582, 52, 42, 19);
-		panel.add(label);
-		label.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		
-		tfDeNoite = new JFormattedTextField(DeAte);
-		tfDeNoite.setForeground(Color.WHITE);
-		tfDeNoite.setBackground(Color.BLACK);
-		tfDeNoite.setVisible(false);
-		tfDeNoite.setBounds(624, 51, 126, 20);
-		panel.add(tfDeNoite);
-		tfDeNoite.setColumns(10);
-		
-		label_3 = new JLabel("AT\u00C9:");
-		label_3.setForeground(Color.WHITE);
-		label_3.setVisible(false);
-		label_3.setBounds(575, 76, 42, 19);
-		panel.add(label_3);
-		label_3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		
-		tfAteNoite = new JFormattedTextField(DeAte);
-		tfAteNoite.setForeground(Color.WHITE);
-		tfAteNoite.setBackground(Color.BLACK);
-		tfAteNoite.setVisible(false);
-		tfAteNoite.setBounds(624, 77, 126, 20);
-		panel.add(tfAteNoite);
-		tfAteNoite.setColumns(10);
-		
-		JLabel label_1 = new JLabel("DE:");
-		label_1.setForeground(Color.WHITE);
-		label_1.setVisible(false);
-		label_1.setBounds(400, 52, 61, 19);
-		panel.add(label_1);
-		label_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		
-		tfDeTarde = new JFormattedTextField(DeAte);
-		tfDeTarde.setForeground(Color.WHITE);
-		tfDeTarde.setBackground(Color.BLACK);
-		tfDeTarde.setVisible(false);
-		tfDeTarde.setBounds(438, 52, 126, 20);
-		panel.add(tfDeTarde);
-		tfDeTarde.setColumns(10);
-		
-		JLabel label_2 = new JLabel("AT\u00C9:");
-		label_2.setForeground(Color.WHITE);
-		label_2.setVisible(false);
-		label_2.setBounds(390, 78, 53, 19);
-		panel.add(label_2);
-		label_2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		
-		tfAteTarde = new JFormattedTextField(DeAte);
-		tfAteTarde.setForeground(Color.WHITE);
-		tfAteTarde.setBackground(Color.BLACK);
-		tfAteTarde.setVisible(false);
-		tfAteTarde.setBounds(439, 76, 125, 20);
-		panel.add(tfAteTarde);
-		tfAteTarde.setColumns(10);
-		
-		label_4 = new JLabel("TURNO:");
-		label_4.setForeground(Color.WHITE);
-		label_4.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		label_4.setBounds(470, 8, 74, 19);
-		panel.add(label_4);
-		
-		label_5 = new JLabel("TURNO:");
-		label_5.setForeground(Color.WHITE);
-		label_5.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		label_5.setBounds(659, 7, 74, 19);
-		panel.add(label_5);
-		chTarde.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(chTarde.isSelected()) {
-					label_1.setVisible(true);
-					label_2.setVisible(true);
-					tfDeTarde.setVisible(true);
-					tfAteTarde.setVisible(true);
-				}else {
-					label_1.setVisible(false);
-					label_2.setVisible(false);
-					tfDeTarde.setVisible(false);
-					tfAteTarde.setVisible(false);
-				}
-			}
-		});
-		chManha.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				if(chManha.isSelected()) {
-					lblDe.setVisible(true);
-					lblAt.setVisible(true);
-					tfDeManha.setVisible(true);
-					tfAteManha.setVisible(true);
-				}else {
-					lblDe.setVisible(false);
-					lblAt.setVisible(false);
-					tfDeManha.setVisible(false);
-					tfAteManha.setVisible(false);
-				}
-			}
-		});
-		chNoite.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(chNoite.isSelected()) {
-					label.setVisible(true);
-					label_3.setVisible(true);
-					tfDeNoite.setVisible(true);
-					tfAteNoite.setVisible(true);
-				}else {
-					label.setVisible(false);
-					label_3.setVisible(false);
-					tfDeNoite.setVisible(false);
-					tfAteNoite.setVisible(false);
-				}
-			}
-		});
 	}
 }
 
