@@ -110,14 +110,14 @@ public class AulasSolicitadas extends Login{
 			@Override
 			public void focusGained(FocusEvent arg0) {
 				if(tfProcurar.getText().toString().equalsIgnoreCase("Entre com a matéria a ser procurada")) {
-					tfProcurar.setForeground(Color.BLACK);
+					tfProcurar.setForeground(Color.WHITE);
 					tfProcurar.setText(null);
 				}
 			}
 			@Override
 			public void focusLost(FocusEvent arg0) {
 				if(tfProcurar.getText().isEmpty()) {
-					tfProcurar.setForeground(Color.LIGHT_GRAY);
+					tfProcurar.setForeground(Color.WHITE);
 					tfProcurar.setText("Entre com a matéria a ser procurada");
 				}
 					
@@ -230,8 +230,8 @@ public class AulasSolicitadas extends Login{
 			frmMeuCrud.getContentPane().add(lblNewLabel_3);
 			
 			lblNewLabel_9 = new JLabel("New label");
-			lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\Solicite Uma Nova Aula.jpg"));
-			lblNewLabel_9.setBounds(138, 23, 793, 78);
+			lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\aulassss.jpg"));
+			lblNewLabel_9.setBounds(204, 40, 683, 69);
 			frmMeuCrud.getContentPane().add(lblNewLabel_9);
 		
 		criaTabela(pegaAulaSolicitada());

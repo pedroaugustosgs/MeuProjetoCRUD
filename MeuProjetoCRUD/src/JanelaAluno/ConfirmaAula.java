@@ -120,6 +120,21 @@ public class ConfirmaAula extends Login{
 		panel.setBackground(Color.BLACK);
 		panel.setVisible(false);
 		
+		lblNewLabel_12 = new JLabel("");
+		lblNewLabel_12.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
+		lblNewLabel_12.setBounds(759, 304, 280, 14);
+		frame.getContentPane().add(lblNewLabel_12);
+		
+		lblNewLabel_11 = new JLabel("");
+		lblNewLabel_11.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
+		lblNewLabel_11.setBounds(303, 304, 488, 14);
+		frame.getContentPane().add(lblNewLabel_11);
+		
+		lblNewLabel_10 = new JLabel("");
+		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
+		lblNewLabel_10.setBounds(10, 304, 307, 14);
+		frame.getContentPane().add(lblNewLabel_10);
+		
 		lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_5.setBounds(1, 88, 455, 34);
@@ -129,7 +144,7 @@ public class ConfirmaAula extends Login{
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_6.setBounds(435, 88, 470, 34);
 		frame.getContentPane().add(lblNewLabel_6);
-		panel.setBounds(274, 133, 770, 180);
+		panel.setBounds(274, 133, 770, 173);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
@@ -203,7 +218,7 @@ public class ConfirmaAula extends Login{
 			}
 		});
 		chTerca.setEnabled(false);
-		chTerca.setBounds(10, 66, 86, 23);
+		chTerca.setBounds(10, 66, 111, 23);
 		panel.add(chTerca);
 		
 		chQuartafeira = new JCheckBox("Quarta-Feira");
@@ -595,21 +610,6 @@ public class ConfirmaAula extends Login{
 		lblatedata.setForeground(Color.WHITE);
 		lblatedata.setBounds(64, 59, 86, 19);
 		panel_1.add(lblatedata);
-		
-		lblNewLabel_10 = new JLabel("");
-		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
-		lblNewLabel_10.setBounds(10, 304, 307, 14);
-		frame.getContentPane().add(lblNewLabel_10);
-		
-		lblNewLabel_11 = new JLabel("");
-		lblNewLabel_11.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
-		lblNewLabel_11.setBounds(303, 304, 488, 14);
-		frame.getContentPane().add(lblNewLabel_11);
-		
-		lblNewLabel_12 = new JLabel("");
-		lblNewLabel_12.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
-		lblNewLabel_12.setBounds(759, 304, 280, 14);
-		frame.getContentPane().add(lblNewLabel_12);
 		
 		JLabel lblNewLabel_9 = new JLabel("New label");
 		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\info.jpg"));
