@@ -158,7 +158,7 @@ public class EditarRemover {
 				frame.dispose();
 			}
 		});
-		btnEditar.setBounds(318, 427, 164, 39);
+		btnEditar.setBounds(318, 426, 164, 39);
 		frame.getContentPane().add(btnEditar);
 		
 		JButton btnRemover = new JButton("REMOVER");
@@ -187,7 +187,7 @@ public class EditarRemover {
 		
 		
 		btnRemover.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnRemover.setBounds(1, 427, 164, 39);
+		btnRemover.setBounds(1, 425, 164, 39);
 		frame.getContentPane().add(btnRemover);
 		
 		JButton btnCancelar = new JButton("VOLTAR");
@@ -201,7 +201,7 @@ public class EditarRemover {
 			}
 		});
 		btnCancelar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnCancelar.setBounds(614, 426, 164, 39);
+		btnCancelar.setBounds(613, 425, 164, 39);
 		frame.getContentPane().add(btnCancelar);
 		
 		tfNome = new JTextField();

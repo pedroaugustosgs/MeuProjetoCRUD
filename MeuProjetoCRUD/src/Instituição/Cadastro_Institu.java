@@ -151,7 +151,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 			}
 		});
 		btnLimpar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnLimpar.setBounds(641, 460, 167, 40);
+		btnLimpar.setBounds(640, 460, 167, 40);
 		frame.getContentPane().add(btnLimpar);
 		
 		JLabel lblE = new JLabel("Institui\u00E7\u00E3o:");
@@ -279,7 +279,7 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 			}
 		});
 		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnVoltar.setBounds(1, 461,164, 39);
+		btnVoltar.setBounds(2, 461,164, 39);
 		frame.getContentPane().add(btnVoltar);
 		
 		JButton btnSalvar = new JButton("SALVAR");

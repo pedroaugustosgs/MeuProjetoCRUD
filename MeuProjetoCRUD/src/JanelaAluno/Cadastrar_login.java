@@ -248,7 +248,7 @@ public class Cadastrar_login extends LoginInstitu{
 		frame.getContentPane().add(tfnome);
 		
 		try {
-			mascaraFone = new MaskFormatter("## ####-#####");
+			mascaraFone = new MaskFormatter("## #####-####");
 		} catch (ParseException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

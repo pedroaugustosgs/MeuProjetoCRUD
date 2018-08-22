@@ -83,7 +83,7 @@ public class VerAlunos extends LoginInstitu{
 		frmMeuCrud.getContentPane().setBackground(Color.BLACK);
 		frmMeuCrud.setIconImage(Toolkit.getDefaultToolkit().getImage(VerAlunos.class.getResource("/47 - Copia.png")));
 		frmMeuCrud.setTitle("MEU CRUD - Alunos Cadastrados");
-		frmMeuCrud.setBounds(100, 100, 799, 475);
+		frmMeuCrud.setBounds(100, 100, 821, 500);
 		frmMeuCrud.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frmMeuCrud.getContentPane().setLayout(null);
 		frmMeuCrud.setResizable(false);
@@ -191,11 +191,11 @@ public class VerAlunos extends LoginInstitu{
 			frmMeuCrud.getContentPane().add(lblNewLabel_3);
 		
 			JScrollPane scrollPane = new JScrollPane(tabela);
-			scrollPane.setBounds(55, 150, 671, 203);
+			scrollPane.setBounds(64, 178, 671, 203);
 			frmMeuCrud.getContentPane().add(scrollPane);
 		tfProcurar.setForeground(Color.WHITE);
 		tfProcurar.setText("Entre com o nome a ser procurado");
-		tfProcurar.setBounds(55, 109, 562, 26);
+		tfProcurar.setBounds(65, 137, 562, 26);
 		frmMeuCrud.getContentPane().add(tfProcurar);
 		tfProcurar.setColumns(10);
 		
@@ -212,7 +212,7 @@ public class VerAlunos extends LoginInstitu{
 				}
 			}
 		});
-		btnProcurar.setBounds(633, 109, 157, 28);
+		btnProcurar.setBounds(641, 128, 164, 39);
 		frmMeuCrud.getContentPane().add(btnProcurar);
 		
 		JButton btnVoltar = new JButton("VOLTAR");
@@ -225,22 +225,22 @@ public class VerAlunos extends LoginInstitu{
 				Principal.main(null);
 			}
 		});
-		btnVoltar.setBounds(-4, 408, 122, 39);
+		btnVoltar.setBounds(1, 432, 164, 39);
 		frmMeuCrud.getContentPane().add(btnVoltar);
 		
 		lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel.setBounds(-4, 357, 469, 29);
+		lblNewLabel.setBounds(-4, 392, 469, 29);
 		frmMeuCrud.getContentPane().add(lblNewLabel);
 		
 		lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_1.setBounds(452, 360, 344, 24);
+		lblNewLabel_1.setBounds(461, 394, 354, 24);
 		frmMeuCrud.getContentPane().add(lblNewLabel_1);
 		
 		lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_4.setBounds(565, 73, 231, 24);
+		lblNewLabel_4.setBounds(565, 73, 250, 24);
 		frmMeuCrud.getContentPane().add(lblNewLabel_4);
 		
 		lblNewLabel_5 = new JLabel("New label");

@@ -196,7 +196,7 @@ public class VisualizaAulaREC extends Login{
 			}
 		});
 		chTerca.setEnabled(false);
-		chTerca.setBounds(7, 66, 94, 23);
+		chTerca.setBounds(7, 66, 112, 23);
 		panel.add(chTerca);
 		
 		chQuartafeira = new JCheckBox("Quarta-Feira");
