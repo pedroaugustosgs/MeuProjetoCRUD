@@ -460,6 +460,7 @@ public class AlteraAulas extends Login{
 					}
 					
 					
+					
 					JOptionPane.showMessageDialog(null, "Aula removida com sucesso!");
 					frame.dispose();
 					VerAulas.main(null);
