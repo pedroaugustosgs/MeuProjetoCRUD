@@ -686,6 +686,7 @@ public class VisualizarHistorico {
 				System.out.println("Erro ao preencher a tabela");
 			}
 		//	ModeloDaTabela modelo = new ModeloDaTabela(colunas, linhas);
+			//
 			//tabela.setModel(modelo);
 			
 			

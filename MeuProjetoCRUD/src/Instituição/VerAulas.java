@@ -272,7 +272,7 @@ public class VerAulas extends LoginInstitu{
 		lblNewLabel_6.setBounds(310, 22, 255, 67);
 		frmMeuCrud.getContentPane().add(lblNewLabel_6);
 		
-		JButton btnHistricoDeAulas = new JButton("HSIT\u00D3RICO DE AULAS");
+		JButton btnHistricoDeAulas = new JButton("HIST\u00D3RICO DE AULAS");
 		btnHistricoDeAulas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				VerHistorico.main(null);

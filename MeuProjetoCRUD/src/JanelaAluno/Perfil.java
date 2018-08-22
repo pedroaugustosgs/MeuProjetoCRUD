@@ -49,6 +49,11 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.UIManager;
 public class Perfil extends Login {
 	
+	
+	
+	
+	
+	
 	int ee;
 	public JFrame frmMeuCrud;
 	public String anterior = "";

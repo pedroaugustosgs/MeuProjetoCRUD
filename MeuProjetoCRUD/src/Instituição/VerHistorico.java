@@ -42,6 +42,10 @@ import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 
 public class VerHistorico {
+	
+	
+	
+	
 
 	private JFrame frame;
 	private JTextField tfConteudo;
