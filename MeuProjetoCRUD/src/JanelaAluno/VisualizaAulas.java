@@ -512,6 +512,103 @@ public class VisualizaAulas extends Login{
 			e1.printStackTrace();
 		}
 		
+		lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setBounds(91, 234, 46, 14);
+		frame.getContentPane().add(lblNewLabel_7);
+		
+		lblNewLabel_8 = new JLabel("");
+		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\Lupa.png"));
+		lblNewLabel_8.setBounds(799, 399, 151, 141);
+		frame.getContentPane().add(lblNewLabel_8);
+		
+		panel_1 = new JPanel();
+		panel_1.setBounds(224, 127, 422, 190);
+		frame.getContentPane().add(panel_1);
+		panel_1.setBackground(Color.BLACK);
+		panel_1.setVisible(false);
+		panel_1.setLayout(null);
+		
+		JLabel lblNewLabel_1 = new JLabel("Data:");
+		lblNewLabel_1.setForeground(Color.WHITE);
+		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblNewLabel_1.setBounds(10, 11, 56, 19);
+		panel_1.add(lblNewLabel_1);
+		
+		JLabel lblDe = new JLabel("DE:");
+		lblDe.setForeground(Color.WHITE);
+		lblDe.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblDe.setBounds(10, 41, 56, 19);
+		panel_1.add(lblDe);
+		
+		JLabel lblAt_1 = new JLabel("AT\u00C9:");
+		lblAt_1.setForeground(Color.WHITE);
+		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblAt_1.setBounds(10, 76, 56, 19);
+		panel_1.add(lblAt_1);
+		
+		lbldedata = new JFormattedTextField(DeAte);
+		lbldedata.setForeground(Color.WHITE);
+		lbldedata.setBackground(Color.BLACK);
+		lbldedata.setColumns(10);
+		lbldedata.setBounds(64, 41, 72, 20);
+		panel_1.add(lbldedata);
+
+		
+		lblatedata = new JFormattedTextField(DeAte);
+		lblatedata.setForeground(Color.WHITE);
+		lblatedata.setBackground(Color.BLACK);
+		lblatedata.setColumns(10);
+		lblatedata.setBounds(64, 77, 72, 20);
+		panel_1.add(lblatedata);
+		
+		JButton btnNewButton_1 = new JButton("New button");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if(calendario.isVisible()) {
+					calendario.setVisible(false);
+				}else {
+					calendario.setVisible(true);
+				}
+			}
+		});
+		btnNewButton_1.setBounds(174, 11, 42, 23);
+		panel_1.add(btnNewButton_1);
+		
+		calendario = new JCalendar();
+		calendario.addPropertyChangeListener(new PropertyChangeListener() {
+			public void propertyChange(PropertyChangeEvent arg0) {
+				Date hoje = new Date();
+				
+				Date entrada = new Date();
+				entrada = calendario.getDate();
+				
+				System.out.println(entrada.toString());
+				
+				if(entrada.after(hoje) || entrada.getDate() == hoje.getDate() || entrada.toString().equals("0000-00-00")) {
+					SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
+					String umaVez = s.format(calendario.getDate());
+					lbldata.setText(umaVez);
+				}else {
+					JOptionPane.showMessageDialog(null, "A data escolhida deve ser superior ou igual a data de hoje!","Data Inválida",JOptionPane.ERROR_MESSAGE);
+					calendario.setDate(hoje);
+				}
+			}
+		});
+		calendario.setVisible(false);
+		calendario.setBounds(226, 11, 191, 153);
+		panel_1.add(calendario);
+		
+		lbldata = new JLabel("");
+		lbldata.setBackground(Color.BLACK);
+		lbldata.setForeground(Color.WHITE);
+		lbldata.setBounds(64, 11, 86, 19);
+		panel_1.add(lbldata);
+		
+		lblNewLabel_10 = new JLabel("New label");
+		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\info.jpg"));
+		lblNewLabel_10.setBounds(66, 4, 799, 94);
+		frame.getContentPane().add(lblNewLabel_10);
+		
 		panel = new JPanel();
 		panel.setBackground(Color.BLACK);
 		panel.setVisible(false);
@@ -715,103 +812,6 @@ public class VisualizaAulas extends Login{
 		label_10.setBackground(Color.BLACK);
 		label_10.setBounds(566, 12, 51, 23);
 		panel.add(label_10);
-		
-		lblNewLabel_7 = new JLabel("");
-		lblNewLabel_7.setBounds(91, 234, 46, 14);
-		frame.getContentPane().add(lblNewLabel_7);
-		
-		lblNewLabel_8 = new JLabel("");
-		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\Lupa.png"));
-		lblNewLabel_8.setBounds(799, 399, 151, 141);
-		frame.getContentPane().add(lblNewLabel_8);
-		
-		panel_1 = new JPanel();
-		panel_1.setBounds(224, 127, 422, 190);
-		frame.getContentPane().add(panel_1);
-		panel_1.setBackground(Color.BLACK);
-		panel_1.setVisible(false);
-		panel_1.setLayout(null);
-		
-		JLabel lblNewLabel_1 = new JLabel("Data:");
-		lblNewLabel_1.setForeground(Color.WHITE);
-		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblNewLabel_1.setBounds(10, 11, 56, 19);
-		panel_1.add(lblNewLabel_1);
-		
-		JLabel lblDe = new JLabel("DE:");
-		lblDe.setForeground(Color.WHITE);
-		lblDe.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblDe.setBounds(10, 41, 56, 19);
-		panel_1.add(lblDe);
-		
-		JLabel lblAt_1 = new JLabel("AT\u00C9:");
-		lblAt_1.setForeground(Color.WHITE);
-		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblAt_1.setBounds(10, 76, 56, 19);
-		panel_1.add(lblAt_1);
-		
-		lbldedata = new JFormattedTextField(DeAte);
-		lbldedata.setForeground(Color.WHITE);
-		lbldedata.setBackground(Color.BLACK);
-		lbldedata.setColumns(10);
-		lbldedata.setBounds(64, 41, 72, 20);
-		panel_1.add(lbldedata);
-
-		
-		lblatedata = new JFormattedTextField(DeAte);
-		lblatedata.setForeground(Color.WHITE);
-		lblatedata.setBackground(Color.BLACK);
-		lblatedata.setColumns(10);
-		lblatedata.setBounds(64, 77, 72, 20);
-		panel_1.add(lblatedata);
-		
-		JButton btnNewButton_1 = new JButton("New button");
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				if(calendario.isVisible()) {
-					calendario.setVisible(false);
-				}else {
-					calendario.setVisible(true);
-				}
-			}
-		});
-		btnNewButton_1.setBounds(174, 11, 42, 23);
-		panel_1.add(btnNewButton_1);
-		
-		calendario = new JCalendar();
-		calendario.addPropertyChangeListener(new PropertyChangeListener() {
-			public void propertyChange(PropertyChangeEvent arg0) {
-				Date hoje = new Date();
-				
-				Date entrada = new Date();
-				entrada = calendario.getDate();
-				
-				System.out.println(entrada.toString());
-				
-				if(entrada.after(hoje) || entrada.getDate() == hoje.getDate() || entrada.toString().equals("0000-00-00")) {
-					SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
-					String umaVez = s.format(calendario.getDate());
-					lbldata.setText(umaVez);
-				}else {
-					JOptionPane.showMessageDialog(null, "A data escolhida deve ser superior ou igual a data de hoje!","Data Inválida",JOptionPane.ERROR_MESSAGE);
-					calendario.setDate(hoje);
-				}
-			}
-		});
-		calendario.setVisible(false);
-		calendario.setBounds(226, 11, 191, 153);
-		panel_1.add(calendario);
-		
-		lbldata = new JLabel("");
-		lbldata.setBackground(Color.BLACK);
-		lbldata.setForeground(Color.WHITE);
-		lbldata.setBounds(64, 11, 86, 19);
-		panel_1.add(lbldata);
-		
-		lblNewLabel_10 = new JLabel("New label");
-		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\info.jpg"));
-		lblNewLabel_10.setBounds(66, 4, 799, 94);
-		frame.getContentPane().add(lblNewLabel_10);
 		
 		
 		NomeProf(idAula);

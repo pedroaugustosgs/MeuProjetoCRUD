@@ -387,6 +387,22 @@ public class NovaAula extends Login {
 		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD, 16));
 		
 		tfAteUmaVez = new JFormattedTextField(DeAte);
+		tfAteUmaVez.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent arg0) {
+				String  deumavez = tfAteUmaVez.getText().toString();
+				String hora[] = new String[2];
+				hora = deumavez.split(":");
+				int h = Integer.parseInt(hora[0]);
+				int m = Integer.parseInt(hora[1]);
+				if(h>23 || m>59) {
+					JOptionPane.showMessageDialog(null, "Entre com um horário válido");
+					tfAteUmaVez.requestFocus();
+					tfAteUmaVez.selectAll();
+					
+				}
+			}
+		});
 		tfAteUmaVez.setBackground(Color.BLACK);
 		tfAteUmaVez.setForeground(Color.WHITE);
 		tfAteUmaVez.setBounds(48, 47, 124, 20);
