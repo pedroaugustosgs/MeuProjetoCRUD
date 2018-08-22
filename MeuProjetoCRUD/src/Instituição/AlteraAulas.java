@@ -236,52 +236,52 @@ public class AlteraAulas extends Login{
 				}
 				String loc = lbllocal.getText().toString();
 				
-				if(lblatetarde.isVisible()==false || lblatetarde.getText().isEmpty() && panels==0) {
+				/*if(lblatetarde.isVisible()==false || lblatetarde.getText().isEmpty() && panels==0) {
 					JOptionPane.showMessageDialog(null, "Entre com o horario de termino da aula");
 					return;
-				}
+				}*/
 				String aTarde = lblatetarde.getText().toString();
 				
-				if(lbldemanha.isVisible()==false || lbldemanha.getText().isEmpty() && panels==0) {
+			/*	if(lbldemanha.isVisible()==false || lbldemanha.getText().isEmpty() && panels==0) {
 					JOptionPane.showMessageDialog(null, "Entre com o horario de inicio da aula");
 					return;
-				}
+				}*/
 				String dMAnha = lbldemanha.getText().toString();
 				
-				if(lblatemanha.isVisible()==false || lblatemanha.getText().isEmpty() && panels==0) {
+				/*if(lblatemanha.isVisible()==false || lblatemanha.getText().isEmpty() && panels==0) {
 					JOptionPane.showMessageDialog(null, "Entre com o horario de termino da aula");
 					return;
-				}
+				}*/
 				String aManha = lblatemanha.getText().toString();
 				
-				if(lblDeNoite.isVisible()==false || lblDeNoite.getText().isEmpty() && panels==0) {
+				/*if(lblDeNoite.isVisible()==false || lblDeNoite.getText().isEmpty() && panels==0) {
 					JOptionPane.showMessageDialog(null, "Entre com o horario de inicio da aula");
 					return;
-				}
+				}*/
 				String dNoite = lblDeNoite.getText().toString();
 				
-				if(lblatenoite.isVisible()==false || lblatenoite.getText().isEmpty() && panels==0) {
-					JOptionPane.showMessageDialog(null, "Entre com o horario de termino da aula");
+				/*if(lblatenoite.isVisible()==false || lblatenoite.getText().isEmpty() && panels==0) {
+				/	JOptionPane.showMessageDialog(null, "Entre com o horario de termino da aula");
 					return;
-				}
+				}*/
 				String aNoite = lblatenoite.getText().toString();
 				
-				if(lbldetarde.isVisible()==false || lbldetarde.getText().isEmpty() && panels==0) {
+				/*if(lbldetarde.isVisible()==false || lbldetarde.getText().isEmpty() && panels==0) {
 					JOptionPane.showMessageDialog(null, "Entre com o horario de inicio da aula");
 					return;
-				}
+				}*/
 				String dTarde = lbldetarde.getText().toString();
 				
-				if(lbldedata.getText().equals("  :  ") && panels==1) {
+				/*if(lbldedata.getText().equals("  :  ") && panels==1) {
 					JOptionPane.showMessageDialog(null, "Entre com o horario de inicio da aula!");
 					return;
-				}
+				}*/
 				String dData = lbldedata.getText().toString();
 				
-				if(lblatedata.getText().equals("  :  ") && panels==1) {
+				/*if(lblatedata.getText().equals("  :  ") && panels==1) {
 					JOptionPane.showMessageDialog(null, "Entre com o horario de termino da aula!");
 					return;
-				}
+				}*/
 				
 				Date data = calendario.getDate();
 				SimpleDateFormat s= new SimpleDateFormat("yyyy-MM-dd");
@@ -340,13 +340,16 @@ public class AlteraAulas extends Login{
 					stmt2.execute();
 					stmt2.close();
 					
+					dados.first();
+					
+					
 					String msg="Sua aula com o professor "+NomeProf(idAula)+" de "+Materia(dados.getString("materia"))+" sobre "+dados.getString("conteudo")
-							+ " sofreu uma alteração! "
+							+ " sofreu uma alteração pela sua intituição! "
 							+ "Acesse o Approfe para mais informações!";
 					
 					if(dado !=null) {
 						CRUDEmail enviar = new CRUDEmail();
-						if(dados.next() && dado.next()) {
+						while(dado.next()) {
 							enviar.EmailVisuAulas(dado.getString("email"),msg);
 						}
 					}
@@ -396,17 +399,25 @@ public class AlteraAulas extends Login{
 						stmt.setString(1, idAula);
 						stmt.execute();
 						stmt.close();
-						JOptionPane.showMessageDialog(null, "Aula removida com sucesso!");
-						frame.dispose();
-						VerAulas.main(null);
+						
 					} catch (SQLException e) {
 						e.printStackTrace();
 					}
 					
+					ResultSet dados3=null;
 					ResultSet dados2=null;
 					ResultSet dados =null;
+					
+					String sql3="SELECT * FROM alunos INNER JOIN alunosconfirmados ON Alunos.idAluno = alunosconfirmados.idaluno WHERE idconfirmar=?";
 					String sql1 ="SELECT * FROM alunos INNNER J0IN aulas ON alunos.idaluno = aulas.professor WHERE idaula=?";
 					try {
+						PreparedStatement stmt3 = Conexao.conexao.prepareStatement(sql3);
+						stmt3.setString(1, idAula);
+						dados3 = stmt3.executeQuery();
+						stmt3.execute();
+						stmt3.close();
+						
+						
 						PreparedStatement stmt = Conexao.conexao.prepareStatement(sql1);
 						stmt.setString(1, idAula);
 						dados = stmt.executeQuery();
@@ -425,22 +436,33 @@ public class AlteraAulas extends Login{
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					String msg=null;
+					String msgprof=null;
+					String msgalu=null;
 					try {
-						 msg= "Sua aula sobre "+dados2.getString("conteudo")+" foi removida por sua escola! "
+						 msgprof= "Sua aula de "+Materia(dados2.getString("materia"))+" sobre "+dados2.getString("conteudo")+" foi removida "
+						 		+ "por sua escola! "
 								+ "Motivos:"+motivo;
 						 CRUDEmail d= new CRUDEmail();
-							d.EmailVisuAulas(dados.getString("email"), msg);
+							d.EmailVisuAulas(dados.getString("email"), msgprof);
 							
-							System.out.println(msg);
-							System.out.println(dados.getString("email"));
+							
+						msgalu	= "Sua aula de "+Materia(dados2.getString("materia"))+" sobre "+dados2.getString("conteudo")+" com o "
+								+ "professor "+NomeProf(idAula)+" foi removida "
+						 		+ "pela escola dele! "
+								+ "Motivos:"+motivo;
+						
+						while(dados3.next()) {
+							d.EmailVisuAulas(dados3.getString("email"), msgalu);
+						}
 					} catch (SQLException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 					
 					
-				
+					JOptionPane.showMessageDialog(null, "Aula removida com sucesso!");
+					frame.dispose();
+					VerAulas.main(null);
 				
 				return;
 			}
@@ -461,6 +483,129 @@ public class AlteraAulas extends Login{
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
+		
+		lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Lupa.png"));
+		lblNewLabel_5.setBounds(859, 360, 233, 168);
+		frame.getContentPane().add(lblNewLabel_5);
+		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_2.setBounds(0, 527, 486, 30);
+		frame.getContentPane().add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_3.setBounds(480, 531, 486, 23);
+		frame.getContentPane().add(lblNewLabel_3);
+		
+		lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_4.setBounds(936, 530, 78, 25);
+		frame.getContentPane().add(lblNewLabel_4);
+		
+		lblNewLabel_6 = new JLabel("");
+		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_6.setBounds(0, 82, 320, 25);
+		frame.getContentPane().add(lblNewLabel_6);
+		
+		lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_7.setBounds(302, 82, 495, 24);
+		frame.getContentPane().add(lblNewLabel_7);
+		
+		lblNewLabel_8 = new JLabel("");
+		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
+		lblNewLabel_8.setBounds(784, 82, 229, 25);
+		frame.getContentPane().add(lblNewLabel_8);
+		
+		lblNewLabel_9 = new JLabel("");
+		lblNewLabel_9.setBounds(566, 45, 46, 14);
+		frame.getContentPane().add(lblNewLabel_9);
+		
+		lblNewLabel_10 = new JLabel("");
+		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\alt.jpg"));
+		lblNewLabel_10.setBounds(259, 11, 509, 71);
+		frame.getContentPane().add(lblNewLabel_10);
+		
+		panel_1 = new JPanel();
+		panel_1.setBounds(240, 119, 422, 192);
+		frame.getContentPane().add(panel_1);
+		panel_1.setBackground(Color.BLACK);
+		panel_1.setVisible(false);
+		panel_1.setLayout(null);
+		
+		JLabel lblNewLabel_1 = new JLabel("Data:");
+		lblNewLabel_1.setForeground(Color.WHITE);
+		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblNewLabel_1.setBounds(10, 11, 56, 19);
+		panel_1.add(lblNewLabel_1);
+		
+		lbldata = new JLabel("");
+		lbldata.setForeground(Color.WHITE);
+		lbldata.setBounds(78, 11, 86, 19);
+		panel_1.add(lbldata);
+		
+		JLabel lblDe = new JLabel("DE:");
+		lblDe.setForeground(Color.WHITE);
+		lblDe.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblDe.setBounds(10, 39, 56, 19);
+		panel_1.add(lblDe);
+		
+		JLabel lblAt_1 = new JLabel("AT\u00C9:");
+		lblAt_1.setForeground(Color.WHITE);
+		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblAt_1.setBounds(10, 76, 56, 19);
+		panel_1.add(lblAt_1);
+		
+		lbldedata = new JFormattedTextField(DeAte);
+		lbldedata.setBackground(Color.BLACK);
+		lbldedata.setForeground(Color.WHITE);
+		lbldedata.setColumns(10);
+		lbldedata.setBounds(64, 41, 72, 20);
+		panel_1.add(lbldedata);
+		
+		lblatedata = new JFormattedTextField(DeAte);
+		lblatedata.setBackground(Color.BLACK);
+		lblatedata.setForeground(Color.WHITE);
+		lblatedata.setColumns(10);
+		lblatedata.setBounds(64, 77, 72, 20);
+		panel_1.add(lblatedata);
+		
+		JButton btnNewButton_1 = new JButton("New button");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if(calendario.isVisible()) {
+					calendario.setVisible(false);
+				}else {
+					calendario.setVisible(true);
+				}
+			}
+		});
+		btnNewButton_1.setBounds(174, 11, 42, 23);
+		panel_1.add(btnNewButton_1);
+		
+		calendario = new JCalendar();
+		calendario.addPropertyChangeListener(new PropertyChangeListener() {
+			public void propertyChange(PropertyChangeEvent arg0) {
+				Date hoje = new Date();
+				
+				Date entrada = new Date();
+				entrada = calendario.getDate();
+				
+				if(entrada.after(hoje) || entrada.getDate() == hoje.getDate()) {
+					SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
+					String umaVez = s.format(calendario.getDate());
+					lbldata.setText(umaVez);
+				}else {
+					JOptionPane.showMessageDialog(null, "A data escolhida deve ser superior ou igual a data de hoje!","Data Inválida",JOptionPane.ERROR_MESSAGE);
+					calendario.setDate(hoje);
+				}
+			}
+		});
+		calendario.setVisible(false);
+		calendario.setBounds(226, 11, 191, 153);
+		panel_1.add(calendario);
 		
 		panel = new JPanel();
 		panel.setBackground(Color.BLACK);
@@ -640,128 +785,6 @@ public class AlteraAulas extends Login{
 		lblatenoite.setColumns(10);
 		lblatenoite.setBounds(523, 96, 72, 20);
 		panel.add(lblatenoite);
-		
-		lblNewLabel_5 = new JLabel("");
-		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Lupa.png"));
-		lblNewLabel_5.setBounds(859, 360, 233, 168);
-		frame.getContentPane().add(lblNewLabel_5);
-		
-		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_2.setBounds(0, 527, 486, 30);
-		frame.getContentPane().add(lblNewLabel_2);
-		
-		JLabel lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_3.setBounds(480, 531, 486, 23);
-		frame.getContentPane().add(lblNewLabel_3);
-		
-		lblNewLabel_4 = new JLabel("");
-		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_4.setBounds(936, 530, 78, 25);
-		frame.getContentPane().add(lblNewLabel_4);
-		
-		lblNewLabel_6 = new JLabel("");
-		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_6.setBounds(0, 82, 320, 25);
-		frame.getContentPane().add(lblNewLabel_6);
-		
-		lblNewLabel_7 = new JLabel("");
-		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_7.setBounds(302, 82, 495, 24);
-		frame.getContentPane().add(lblNewLabel_7);
-		
-		lblNewLabel_8 = new JLabel("");
-		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_8.setBounds(784, 82, 229, 25);
-		frame.getContentPane().add(lblNewLabel_8);
-		
-		lblNewLabel_9 = new JLabel("");
-		lblNewLabel_9.setBounds(566, 45, 46, 14);
-		frame.getContentPane().add(lblNewLabel_9);
-		
-		lblNewLabel_10 = new JLabel("");
-		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\alt.jpg"));
-		lblNewLabel_10.setBounds(259, 11, 509, 71);
-		frame.getContentPane().add(lblNewLabel_10);
-		
-		panel_1 = new JPanel();
-		panel_1.setBounds(240, 119, 422, 192);
-		frame.getContentPane().add(panel_1);
-		panel_1.setBackground(Color.BLACK);
-		panel_1.setVisible(false);
-		panel_1.setLayout(null);
-		
-		JLabel lblNewLabel_1 = new JLabel("Data:");
-		lblNewLabel_1.setForeground(Color.WHITE);
-		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblNewLabel_1.setBounds(10, 11, 56, 19);
-		panel_1.add(lblNewLabel_1);
-		
-		lbldata = new JLabel("");
-		lbldata.setBounds(78, 11, 86, 19);
-		panel_1.add(lbldata);
-		
-		JLabel lblDe = new JLabel("DE:");
-		lblDe.setForeground(Color.WHITE);
-		lblDe.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblDe.setBounds(10, 39, 56, 19);
-		panel_1.add(lblDe);
-		
-		JLabel lblAt_1 = new JLabel("AT\u00C9:");
-		lblAt_1.setForeground(Color.WHITE);
-		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblAt_1.setBounds(10, 76, 56, 19);
-		panel_1.add(lblAt_1);
-		
-		lbldedata = new JFormattedTextField(DeAte);
-		lbldedata.setBackground(Color.BLACK);
-		lbldedata.setForeground(Color.WHITE);
-		lbldedata.setColumns(10);
-		lbldedata.setBounds(64, 41, 72, 20);
-		panel_1.add(lbldedata);
-		
-		lblatedata = new JFormattedTextField(DeAte);
-		lblatedata.setBackground(Color.BLACK);
-		lblatedata.setForeground(Color.WHITE);
-		lblatedata.setColumns(10);
-		lblatedata.setBounds(64, 77, 72, 20);
-		panel_1.add(lblatedata);
-		
-		JButton btnNewButton_1 = new JButton("New button");
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				if(calendario.isVisible()) {
-					calendario.setVisible(false);
-				}else {
-					calendario.setVisible(true);
-				}
-			}
-		});
-		btnNewButton_1.setBounds(174, 11, 42, 23);
-		panel_1.add(btnNewButton_1);
-		
-		calendario = new JCalendar();
-		calendario.addPropertyChangeListener(new PropertyChangeListener() {
-			public void propertyChange(PropertyChangeEvent arg0) {
-				Date hoje = new Date();
-				
-				Date entrada = new Date();
-				entrada = calendario.getDate();
-				
-				if(entrada.after(hoje) || entrada.getDate() == hoje.getDate()) {
-					SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
-					String umaVez = s.format(calendario.getDate());
-					lbldata.setText(umaVez);
-				}else {
-					JOptionPane.showMessageDialog(null, "A data escolhida deve ser superior ou igual a data de hoje!","Data Inválida",JOptionPane.ERROR_MESSAGE);
-					calendario.setDate(hoje);
-				}
-			}
-		});
-		calendario.setVisible(false);
-		calendario.setBounds(226, 11, 191, 153);
-		panel_1.add(calendario);
 		
 		preencherTela();
 		
