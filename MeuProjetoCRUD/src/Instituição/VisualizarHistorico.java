@@ -86,6 +86,7 @@ public class VisualizarHistorico {
 	public static void main(String[] args) {
 		
 		idAula = args[0];
+		VerAulas.hist=1;
 		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -546,7 +547,7 @@ public class VisualizarHistorico {
 		btnNovoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNovoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				TerAula.main(null);
+				VerHistorico.main(null);
 				frmVejaHistorico.dispose();
 			}
 		});
@@ -656,6 +657,7 @@ public class VisualizarHistorico {
 			ArrayList linhas = new ArrayList<>();
 			try {
 				while (dados.next()) {	
+					System.out.println(dados.getString("nome"));
 					/*ResultSet alunos = null;
 					String sql6="SELECT * FROM alunos WHERE idaluno=?";
 					PreparedStatement stmt6 = Conexao.conexao.prepareStatement(sql6);
@@ -693,11 +695,11 @@ public class VisualizarHistorico {
 			//tabela.setModel(modelo);
 			
 			
-			tabela.getColumnModel().getColumn(0).setPreferredWidth(150);
+			/*tabela.getColumnModel().getColumn(0).setPreferredWidth(150);
 			tabela.getColumnModel().getColumn(1).setPreferredWidth(150);
 			tabela.getColumnModel().getColumn(2).setPreferredWidth(100);
 			tabela.getColumnModel().getColumn(3).setPreferredWidth(100);
-			tabela.getColumnModel().getColumn(3).setResizable(false);
+			tabela.getColumnModel().getColumn(3).setResizable(false);*/
 			
 			
 			//*****************************************************************************   tabela nova = discpplina , vagas , inscritos na tabela aulas, professor e aluno inscrito
@@ -709,9 +711,9 @@ public class VisualizarHistorico {
 			DefaultTableCellRenderer centralizado = new DefaultTableCellRenderer();
 			centralizado.setHorizontalAlignment(SwingConstants.CENTER);
 			
-			tabela.getColumnModel().getColumn(0).setCellRenderer(centralizado);
+			/*tabela.getColumnModel().getColumn(0).setCellRenderer(centralizado);
 			tabela.getColumnModel().getColumn(1).setCellRenderer(centralizado);
-			tabela.getColumnModel().getColumn(3).setCellRenderer(centralizado);
+			tabela.getColumnModel().getColumn(3).setCellRenderer(centralizado);*/
 
 
 			
@@ -757,7 +759,7 @@ public class VisualizarHistorico {
 		
 		try {
 			if(dados.next()) {
-				lblmateria.setText(dados.getString("materia"));
+				lblmateria.setText(Materia(dados.getString("materia")));
 				lblconteudo.setText(dados.getString("conteudo"));
 				lblprofessor.setText(NomeProf(idAula));
 				lblvagas.setText(dados.getString("vagas"));

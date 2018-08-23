@@ -57,7 +57,7 @@ public class VerHistorico {
 	private JLabel lblNewLabel_2;
 	private JLabel lblNewLabel_4;
 	private JLabel lblNewLabel_5;
-	public static String idInstitu = null;
+	public static String idInstitu;
 	
 	public String ids[]= new String[100];
 	int cont=0;
@@ -67,8 +67,10 @@ public class VerHistorico {
 	 * Launch the application.-
 	 */
 	public static void main(String[] args) {
+		if(VerAulas.hist==0) {
+			idInstitu = args[0];
+		}
 		
-		idInstitu = args[0];
 		
 		
 		EventQueue.invokeLater(new Runnable() {

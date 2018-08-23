@@ -58,6 +58,7 @@ public class VerAulas extends LoginInstitu{
 	 private JLabel lblNewLabel_5;
 	 private JLabel lblNewLabel_7;
 	 private JLabel lblNewLabel_6;
+	 public static int hist=0;
 	 
 	 public String ids[]= new String[100];
 		int cont=0;
