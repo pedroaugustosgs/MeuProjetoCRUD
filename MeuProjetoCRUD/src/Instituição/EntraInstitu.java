@@ -140,7 +140,7 @@ public class EntraInstitu extends Principal2{
 		
 		JLabel lblNewLabel_8 = new JLabel("New label");
 		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		lblNewLabel_8.setBounds(152, 6, 491, 115);
+		lblNewLabel_8.setBounds(149, -15, 391, 142);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_8);
 	}
 }

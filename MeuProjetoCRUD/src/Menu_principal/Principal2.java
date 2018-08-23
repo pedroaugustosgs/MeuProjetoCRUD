@@ -24,6 +24,8 @@ import JanelaAluno.EntraAluno;
 import javax.swing.SwingConstants;
 
 import Banco.Conexao;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 
 public class Principal2 {
@@ -61,6 +63,21 @@ public class Principal2 {
 	private void initialize() {
 		Conexao.getConexao();
 		frmMeuProjetoCrud = new JFrame();
+		frmMeuProjetoCrud.addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosing(WindowEvent arg0) {
+				int resposta = JOptionPane.showConfirmDialog(null, "Você realmente deseja sair?",
+						"Alerta",
+						JOptionPane.YES_NO_OPTION); 
+				
+				
+				if (resposta == JOptionPane.YES_OPTION) {
+					frmMeuProjetoCrud.dispose();
+				}else {
+					return;
+				}
+			}
+		});
 		frmMeuProjetoCrud.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Imagem\\img\\students-cap.png"));
 		frmMeuProjetoCrud.getContentPane().setBackground(Color.BLACK);
 		frmMeuProjetoCrud.setTitle("Principal");
@@ -186,7 +203,7 @@ public class Principal2 {
 		
 		JLabel lblNewLabel_16 = new JLabel("");
 		lblNewLabel_16.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		lblNewLabel_16.setBounds(254, 0, 461, 118);
+		lblNewLabel_16.setBounds(315, 0, 403, 113);
 		frmMeuProjetoCrud.getContentPane().add(lblNewLabel_16);
 		
 		JLabel lblNewLabel_14 = new JLabel("");

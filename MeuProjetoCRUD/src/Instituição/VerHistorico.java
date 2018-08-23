@@ -251,8 +251,8 @@ public class VerHistorico {
 		frmMeuCrud.getContentPane().add(lblNewLabel_7);
 		
 		lblNewLabel_8 = new JLabel("");
-		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\nova.png"));
-		lblNewLabel_8.setBounds(313, 28, 452, 75);
+		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\historiccccc.jpg"));
+		lblNewLabel_8.setBounds(170, 29, 733, 75);
 		frmMeuCrud.getContentPane().add(lblNewLabel_8);
 		
 		//dadostabela = new CRUDAulas().pegaAula();

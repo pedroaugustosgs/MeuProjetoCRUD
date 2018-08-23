@@ -17,6 +17,7 @@ import com.toedter.calendar.JCalendar;
 import Banco.Conexao;
 import CRUD.CRUDAlunos;
 import CRUD.CRUDEmail;
+import JanelaAluno.ModeloDaTabela;
 import JanelaAluno.TerAula;
 
 import javax.swing.JButton;
@@ -78,6 +79,7 @@ public class VisualizarHistorico {
 	private JLabel lblNewLabel_10;
 	private JLabel lblNewLabel_11;
 	private JLabel lblNewLabel_12;
+	private JLabel lblNewLabel_8;
 
 	
 	/**
@@ -440,107 +442,6 @@ public class VisualizarHistorico {
 		lblvagas.setBounds(65, 239, 153, 19);
 		frmVejaHistorico.getContentPane().add(lblvagas);
 		
-		JButton btnNewButton = new JButton("CONFIRMAR");
-		btnNewButton.setForeground(Color.BLACK);
-		btnNewButton.setBackground(Color.LIGHT_GRAY);
-		btnNewButton.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				int vaga= 0;
-				ResultSet dado=null;
-				String sql1 = "SELECT * FROM aulas WHERE idAula =?";
-				try {
-					PreparedStatement stmt1 = Conexao.conexao.prepareStatement(sql1);
-					stmt1.setString(1, idAula);
-					dado = stmt1.executeQuery();
-					stmt1.execute();
-					stmt1.close();
-					
-					if(dado.next()) {
-						vaga = Integer.parseInt(dado.getString("vagas"))-1;
-					}
-				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-				boolean res = false;
-				String sql ="INSERT INTO alunosconfirmados (idAluno ,idConfirmar) VALUES (?,?)";
-				try {
-					PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
-					//stmt.setString(1, PlaAluno.idaluno);
-					stmt.setString(2, idAula);					
-					stmt.execute();					
-					stmt.close();
-					res = true;
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-				}
-				if(res) {
-					String sql2 = "UPDATE aulas SET vagas =? WHERE idAula =?";
-					try {
-						PreparedStatement stmt2 = Conexao.conexao.prepareStatement(sql2);
-						stmt2.setInt(1, vaga);
-						stmt2.setString(2, idAula);
-						stmt2.execute();
-						stmt2.close();
-						System.out.println(vaga);
-					} catch (SQLException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					
-					
-				}else {
-					JOptionPane.showMessageDialog(null, "Erro ao confirmar nova aula!");
-				}
-				ResultSet prof=null;
-				ResultSet alu=null;
-				ResultSet aula=null;
-				
-				String sqk="SELECT * FROM alunos INNER JOIN Aulas ON Alunos.idaluno=aulas.professor where idaula = ?";
-				String sqkj = "SELECT * FROM alunos WHERE idaluno= ? ";
-				String sq = "SELECT * FROM aulas WHERE idaula=?";
-				try {
-					PreparedStatement stm = Conexao.conexao.prepareStatement(sqk);
-					stm.setString(1, idAula);
-					prof = stm.executeQuery();
-					stm.execute();
-					stm.close();
-					
-					
-					PreparedStatement slot = Conexao.conexao.prepareStatement(sqkj);
-					//slot.setString(1, PlaAluno.idaluno);
-					alu = slot.executeQuery();
-					slot.execute();
-					slot.close();
-					
-					PreparedStatement jda = Conexao.conexao.prepareStatement(sq);
-					jda.setString(1, idAula);
-					aula = jda.executeQuery();
-					jda.execute();
-					jda.close();
-					prof.first();
-					alu.first();
-					aula.first();
-					String msg = "O(a) aluno(a) "+alu.getString("nome")+" foi cadastrado(a) em sua aula de "+Materia(aula.getString("materia"))+" sobre "
-							+ ""+aula.getString("conteudo");
-					
-					CRUDEmail a = new CRUDEmail();
-					a.EmailVisuAulas(prof.getString("email"), msg);
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				JOptionPane.showMessageDialog(null, "Nova Aula Confirmada com Sucesso!");
-				
-				frmVejaHistorico.dispose();
-			}
-		});
-		btnNewButton.setBounds(1, 575, 164, 39);
-		frmVejaHistorico.getContentPane().add(btnNewButton);
-		
 		JButton btnNovoltar = new JButton("VOLTAR");
 		btnNovoltar.setForeground(Color.BLACK);
 		btnNovoltar.setBackground(Color.LIGHT_GRAY);
@@ -557,7 +458,7 @@ public class VisualizarHistorico {
 		tabela = new JTable();
 		
 		JScrollPane scrollPane = new JScrollPane(tabela);
-		scrollPane.setBounds(257, 324, 498, 213);
+		scrollPane.setBounds(357, 323, 300, 213);
 		frmVejaHistorico.getContentPane().add(scrollPane);
 		
 		lblNewLabel_3 = new JLabel("");
@@ -615,10 +516,10 @@ public class VisualizarHistorico {
 		lblatedata.setBounds(64, 59, 86, 19);
 		panel_1.add(lblatedata);
 		
-		JLabel lblNewLabel_9 = new JLabel("New label");
-		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\info.jpg"));
-		lblNewLabel_9.setBounds(117, 5, 893, 94);
-		frmVejaHistorico.getContentPane().add(lblNewLabel_9);
+		lblNewLabel_8 = new JLabel("New label");
+		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\info1111.jpg"));
+		lblNewLabel_8.setBounds(94, 2, 834, 94);
+		frmVejaHistorico.getContentPane().add(lblNewLabel_8);
 		
 		preencherTela();
 		
@@ -690,9 +591,9 @@ public class VisualizarHistorico {
 				e.printStackTrace();
 				System.out.println("Erro ao preencher a tabela");
 			}
-		//	ModeloDaTabela modelo = new ModeloDaTabela(colunas, linhas);
+			ModeloDaTabela modelo = new ModeloDaTabela(colunas, linhas);
 			//
-			//tabela.setModel(modelo);
+			tabela.setModel(modelo);
 			
 			
 			/*tabela.getColumnModel().getColumn(0).setPreferredWidth(150);
