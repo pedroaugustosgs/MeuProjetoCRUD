@@ -192,8 +192,7 @@ public class VerHistorico {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}*/
-				System.out.println(ids[tabela.getSelectedRow()]);
-				ConfirmaAula.main(new String[] {ids[tabela.getSelectedRow()]});
+				VisualizarHistorico.main(new String[] {ids[tabela.getSelectedRow()]});
 
 				/*try {
 					ConfirmaAula.main(new String[] {dadostabela.getString("idaula")});
@@ -216,25 +215,12 @@ public class VerHistorico {
 		btnVoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				PlaAluno.main(null);
+				VerAulas.main(null);
 				frmMeuCrud.dispose();
 			}
 		});
 		btnVoltar.setBounds(0, 433, 122, 39);
 		frmMeuCrud.getContentPane().add(btnVoltar);
-		
-		JButton btnRecomendarAula = new JButton("RECOMENDAR AULA");
-		btnRecomendarAula.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				RecomendarAula.main(null);
-				frmMeuCrud.dispose();
-			}
-		});
-		btnRecomendarAula.setForeground(Color.BLACK);
-		btnRecomendarAula.setFont(new Font("DialogInput", Font.BOLD, 20));
-		btnRecomendarAula.setBackground(Color.LIGHT_GRAY);
-		btnRecomendarAula.setBounds(852, 433, 219, 39);
-		frmMeuCrud.getContentPane().add(btnRecomendarAula);
 		
 		lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("D:\\Coluna grega.jpg"));
@@ -273,32 +259,11 @@ public class VerHistorico {
 	
 	//responsavel por definir os parametros da tabela
 	public void criaTabela(ResultSet dados) {
-	String[] colunas = {"Matéria","Professor","Conteúdo","Local","Vagas"};
+	String[] colunas = {"Matéria","Professor","Conteúdo","Local"};
 		ArrayList linhas = new ArrayList<>();
 		
 		try {
 			while (dados.next()) {
-				
-				boolean continuar=false;
-				java.util.Date data = new java.util.Date();
-				java.util.Date hoje = new java.util.Date();
-				
-				data = dados.getDate("DiaUmaVez");
-				
-				//System.out.println(Integer.parseInt(dados.getString("vagas")));
-				if(Integer.parseInt(dados.getString("vagas"))<1) {
-					continue;
-				}
-				System.out.println(dados.getString("professor"));
-				//SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
-				//***************************************************************************CHAMA O TEO************************************//
-				if(dados.getString("professor")==PlaAluno.idaluno) {
-					continue;
-				}
-				
-				if(data.before(hoje) && Integer.parseInt(dados.getString("periodico"))==0) {
-					continue;
-				}
 				
 				ids[cont++]=dados.getString("idaula");
 
@@ -319,7 +284,6 @@ public class VerHistorico {
 						//dados.getInt("tarde")==0?Boolean.FALSE:Boolean.TRUE,
 						//dados.getInt("noite")==0?Boolean.FALSE:Boolean.TRUE,
 						dados.getString("local"),
-						dados.getString("vagas")
 						//dados.getString("DeManha"),
 						//dados.getString("AteManha"),
 						//dados.getString("DeTarde"),
@@ -345,8 +309,6 @@ public class VerHistorico {
 		tabela.getColumnModel().getColumn(2).setPreferredWidth(100);
 		tabela.getColumnModel().getColumn(3).setPreferredWidth(100);
 		tabela.getColumnModel().getColumn(3).setResizable(false);
-		tabela.getColumnModel().getColumn(4).setPreferredWidth(100);
-		tabela.getColumnModel().getColumn(4).setResizable(false);
 
 		
 		
@@ -437,5 +399,20 @@ public class VerHistorico {
 			materia="SOCIOLOGIA";
 		}
 		return materia;
+	}
+	public ResultSet pegaAula() {
+		ResultSet dados=null;
+		String sql ="SELECT * FROM aulas INNER JOIN alunos ON alunos.idaluno = aulas.professor WHERE escola=?";
+		try {
+			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
+			stmt.setString(1, idInstitu);
+			dados = stmt.executeQuery();
+			stmt.execute();
+			stmt.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return dados;
 	}
 }
