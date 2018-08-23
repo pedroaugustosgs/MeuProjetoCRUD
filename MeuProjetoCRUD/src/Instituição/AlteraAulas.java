@@ -394,9 +394,9 @@ public class AlteraAulas extends Login{
 		btnRemover.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnRemover.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				
 				String sql="DELETE FROM aulas WHERE idAula=?";
-				
-				
+
 				String motivo = JOptionPane.showInputDialog("Insira o motivo da remoção da aula!");
 				
 					try {

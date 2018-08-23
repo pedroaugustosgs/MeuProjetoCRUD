@@ -50,6 +50,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.UIManager;
 import javax.swing.JTextPane;
 import javax.swing.JTextArea;
+import javax.swing.border.LineBorder;
 public class Perfil extends Login {
 
 	int ee;
@@ -183,7 +184,7 @@ public class Perfil extends Login {
 		lblTelefone.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblTelefone.setBounds(18, 252, 86, 21);
 		frmMeuCrud.getContentPane().add(lblTelefone);
-		btnSalvar.setBounds(1, 467, 242, 39);
+		btnSalvar.setBounds(287, 467, 242, 39);
 		frmMeuCrud.getContentPane().add(btnSalvar);
 		
 		JLabel lblSenha = new JLabel("Idade:");
@@ -224,7 +225,7 @@ public class Perfil extends Login {
 		
 		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Chapeu azul.png"));
-		lblNewLabel_3.setBounds(425, 42, 152, 71);
+		lblNewLabel_3.setBounds(480, 42, 152, 58);
 		frmMeuCrud.getContentPane().add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_6 = new JLabel("");
@@ -254,25 +255,25 @@ public class Perfil extends Login {
 		
 		JLabel lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\A.png"));
-		lblNewLabel_5.setBounds(123, 42, 406, 96);
+		lblNewLabel_5.setBounds(123, 40, 406, 96);
 		frmMeuCrud.getContentPane().add(lblNewLabel_5);
 		
-		tfNome = new JLabel("New label");
+		tfNome = new JLabel("");
 		tfNome.setForeground(Color.WHITE);
 		tfNome.setBounds(84, 155, 221, 21);
 		frmMeuCrud.getContentPane().add(tfNome);
 		
-		tfemail = new JLabel("New label");
+		tfemail = new JLabel("");
 		tfemail.setForeground(Color.WHITE);
 		tfemail.setBounds(94, 191, 187, 20);
 		frmMeuCrud.getContentPane().add(tfemail);
 		
-		tfIdade = new JLabel("New label");
+		tfIdade = new JLabel("");
 		tfIdade.setForeground(Color.WHITE);
 		tfIdade.setBounds(88, 222, 89, 23);
 		frmMeuCrud.getContentPane().add(tfIdade);
 		
-		tftelefone = new JLabel("New label");
+		tftelefone = new JLabel("");
 		tftelefone.setBackground(Color.BLACK);
 		tftelefone.setForeground(Color.WHITE);
 		tftelefone.setBounds(98, 254, 225, 22);
@@ -285,11 +286,28 @@ public class Perfil extends Login {
 		frmMeuCrud.getContentPane().add(lblMensagem);
 		
 		taMsg = new JTextArea();
+		taMsg.setBorder(new LineBorder(new Color(255, 255, 255)));
 		taMsg.setForeground(Color.WHITE);
 		taMsg.setBackground(Color.BLACK);
 		taMsg.setLineWrap(true);
 		taMsg.setBounds(18, 316, 501, 109);
 		frmMeuCrud.getContentPane().add(taMsg);
+		
+		JButton btnExpulsar = new JButton("EXPULSAR");
+		btnExpulsar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int r = JOptionPane.showConfirmDialog(null, "Você deseja mesmo expulsar esse aluno de sua aula?");
+				
+				if(r==0) {
+					
+				}
+			}
+		});
+		btnExpulsar.setForeground(Color.BLACK);
+		btnExpulsar.setFont(new Font("DialogInput", Font.BOLD, 20));
+		btnExpulsar.setBackground(Color.LIGHT_GRAY);
+		btnExpulsar.setBounds(11, 467, 166, 39);
+		frmMeuCrud.getContentPane().add(btnExpulsar);
 		//System.out.println(EntraAluno.volt);
 		if(EntraAluno.volt==0) {
 			PreencheTelaC();
