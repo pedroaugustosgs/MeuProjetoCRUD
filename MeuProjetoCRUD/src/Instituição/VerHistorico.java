@@ -253,8 +253,8 @@ public class VerHistorico {
 		lblNewLabel_8.setBounds(313, 28, 452, 75);
 		frmMeuCrud.getContentPane().add(lblNewLabel_8);
 		
-		dadostabela = new CRUDAulas().pegaAula();
-		criaTabela(dadostabela);
+		//dadostabela = new CRUDAulas().pegaAula();
+		criaTabela(pegaAula());
 	}// fim do método inicialize
 	
 	//responsavel por definir os parametros da tabela
@@ -402,6 +402,7 @@ public class VerHistorico {
 	}
 	public ResultSet pegaAula() {
 		ResultSet dados=null;
+		System.out.println(idInstitu);
 		String sql ="SELECT * FROM aulas INNER JOIN alunos ON alunos.idaluno = aulas.professor WHERE escola=?";
 		try {
 			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
