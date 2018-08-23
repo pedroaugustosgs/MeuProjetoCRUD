@@ -275,7 +275,7 @@ public class VerAulas extends LoginInstitu{
 		JButton btnHistricoDeAulas = new JButton("HIST\u00D3RICO DE AULAS");
 		btnHistricoDeAulas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VerHistorico.main(null);
+				VerHistorico.main(new String[] {String.valueOf(id)});
 				frmMeuCrud.dispose();
 			}
 		});

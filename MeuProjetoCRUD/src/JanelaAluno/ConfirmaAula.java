@@ -756,7 +756,7 @@ public class ConfirmaAula extends Login{
 		
 		try {
 			if(dados.next()) {
-				lblmateria.setText(dados.getString("materia"));
+				lblmateria.setText(Materia(dados.getString("materia")));
 				lblconteudo.setText(dados.getString("conteudo"));
 				lblprofessor.setText(NomeProf(idAula));
 				lblvagas.setText(dados.getString("vagas"));
