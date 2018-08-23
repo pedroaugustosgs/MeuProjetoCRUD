@@ -502,7 +502,7 @@ public class VisualizaAulaREC extends Login{
 		btnNovoltar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNovoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				TerAula.main(null);
+				PlaAluno.main(null);
 				frmVejaSuasAula.dispose();
 			}
 		});
@@ -672,7 +672,7 @@ public class VisualizaAulaREC extends Login{
 		
 		try {
 			if(dados.next()) {
-				lblmateria.setText(dados.getString("materia"));
+				lblmateria.setText(Materia(dados.getString("materia")));
 				lblconteudo.setText(dados.getString("conteudo"));
 				lblprofessor.setText(NomeProf(idAula));
 				lblvagas.setText(dados.getString("vagas"));

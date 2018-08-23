@@ -191,6 +191,9 @@ public class Config extends Login {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String senha1 = JOptionPane.showInputDialog("Escreva sua nova Senha");
+				if(senha1 == null) {
+					return;
+				}
 				String senha2 = JOptionPane.showInputDialog("Reescreva a sua nova senha");
 				if(senha1.equals(senha2)) {
 					CRUDAlunos alt = new CRUDAlunos();
