@@ -378,7 +378,6 @@ public class VisualizaAulas extends Login{
 					stmt.close();
 					
 					
-					JOptionPane.showMessageDialog(null, "Aula atualizada com sucesso!");
 										
 					ResultSet dados=null;
 					String sql1="SELECT * FROM aulas WHERE idaula=?";  //pega dados da aula
@@ -410,6 +409,9 @@ public class VisualizaAulas extends Login{
 					}else {
 						System.out.println("nao a alunos cadastrados");
 					}
+
+					JOptionPane.showMessageDialog(null, "Aula atualizada com sucesso!");
+
 					PlaAluno.main(null);
 					frame.dispose();
 				} catch (SQLException e) {

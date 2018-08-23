@@ -34,6 +34,7 @@ import java.io.InputStream;
 import java.awt.event.ActionEvent;
 
 import java.awt.Font;
+import java.awt.Frame;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -279,10 +280,10 @@ public class Perfil extends Login {
 		tftelefone.setBounds(98, 254, 225, 22);
 		frmMeuCrud.getContentPane().add(tftelefone);
 		
-		JLabel lblMensagem = new JLabel("Mensagem:");
+		JLabel lblMensagem = new JLabel("Mensagem ou Motivo da Expuls\u00E3o:");
 		lblMensagem.setForeground(Color.WHITE);
 		lblMensagem.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblMensagem.setBounds(18, 284, 102, 21);
+		lblMensagem.setBounds(18, 284, 291, 21);
 		frmMeuCrud.getContentPane().add(lblMensagem);
 		
 		taMsg = new JTextArea();
@@ -299,7 +300,49 @@ public class Perfil extends Login {
 				int r = JOptionPane.showConfirmDialog(null, "Você deseja mesmo expulsar esse aluno de sua aula?");
 				
 				if(r==0) {
-					
+					String sql ="DELETE FROM alunosconfirmados WHERE idAluno=?";
+					try {
+						ResultSet dadoaula=null;
+						String sql1="SELECT * FROM aulas WHERE idaula=?";  //pega dados da aula
+						PreparedStatement stmt1 = Conexao.conexao.prepareStatement(sql1);
+						stmt1.setString(1, idAula);
+						dadoaula = stmt1.executeQuery();
+						stmt1.execute();
+						stmt1.close();
+						
+						ResultSet dadoalu = null;
+						String sql2="SELECT * FROM alunos WHERE idAluno=?";
+						PreparedStatement stmt2 = Conexao.conexao.prepareStatement(sql2);
+						stmt2.setString(1, idAluno);   // pega dados do aluno
+						dadoalu = stmt2.executeQuery();
+						stmt2.execute();
+						stmt2.close();
+						
+						
+						PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
+						stmt.setString(1, idAluno);
+						stmt.execute();
+						stmt.close();
+						
+						String motivo =taMsg.getText().toString();
+						if(motivo==null || motivo.equals(" ")) {
+							motivo = "Motivo não especificado!";
+						}
+						dadoaula.first();
+						dadoalu.first();
+						String msg= "Você foi expulso da aula de "+Materia(dadoaula.getString("materia")+" sobre "+dadoaula.getString("conteudo")+"!"
+								+ "Motivos: "+motivo);
+						
+						CRUDEmail d = new CRUDEmail();
+						d.EmailVisuAulas(dadoalu.getString("email"), msg);
+						
+						JOptionPane.showMessageDialog(null, "Aluno expulso com sucesso!");
+						VisualizaAulas.main(null);
+						frmMeuCrud.dispose();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 				}
 			}
 		});

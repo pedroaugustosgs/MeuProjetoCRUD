@@ -277,7 +277,8 @@ public class TerAula extends Login{
 				
 				data = dados.getDate("DiaUmaVez");
 				
-				if(Integer.parseInt(dados.getString("vagas"))<=0 ) {
+				//System.out.println(Integer.parseInt(dados.getString("vagas")));
+				if(Integer.parseInt(dados.getString("vagas"))<1) {
 					continue;
 				}
 				System.out.println(dados.getString("professor"));
