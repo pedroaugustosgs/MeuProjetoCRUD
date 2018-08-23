@@ -381,25 +381,25 @@ public class Cadastro_Institu { // CADASTRA A INSTITUICAO
 		lblNewLabel_7.setBounds(725, 411, 333, 23);
 		frmCadastro.getContentPane().add(lblNewLabel_7);
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\Crimson (3).png"));
-		lblNewLabel.setBounds(291, 0, 261, 97);
-		frmCadastro.getContentPane().add(lblNewLabel);
-		
 		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_2.setBounds(0, 78, 286, 23);
+		lblNewLabel_2.setBounds(0, 79, 286, 23);
 		frmCadastro.getContentPane().add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_3.setBounds(257, 78, 485, 23);
+		lblNewLabel_3.setBounds(257, 79, 485, 23);
 		frmCadastro.getContentPane().add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_4.setBounds(725, 78, 100, 23);
+		lblNewLabel_4.setBounds(725, 79, 100, 23);
 		frmCadastro.getContentPane().add(lblNewLabel_4);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\Solicite Uma Nova Aula (2).jpg"));
+		lblNewLabel.setBounds(205, -22, 509, 131);
+		frmCadastro.getContentPane().add(lblNewLabel);
 		
 		
 

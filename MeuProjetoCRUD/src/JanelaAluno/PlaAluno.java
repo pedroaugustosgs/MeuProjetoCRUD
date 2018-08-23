@@ -291,7 +291,7 @@ public class PlaAluno {
 		
 		JLabel lblNewLabel_8 = new JLabel("");
 		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\1.png"));
-		lblNewLabel_8.setBounds(303, 96, 462, 416);
+		lblNewLabel_8.setBounds(303, 96, 462, 446);
 		frmMeuCrud.getContentPane().add(lblNewLabel_8);
 		
 		JLabel lblNewLabel_12 = new JLabel("");

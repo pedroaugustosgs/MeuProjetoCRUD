@@ -615,8 +615,8 @@ public class ConfirmaAula extends Login{
 		panel_1.add(lblatedata);
 		
 		JLabel lblNewLabel_9 = new JLabel("New label");
-		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\students-cap.png"));
-		lblNewLabel_9.setBounds(117, 5, 893, 94);
+		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\info1111.jpg"));
+		lblNewLabel_9.setBounds(117, 3, 893, 94);
 		frmConfirmeSuaAula.getContentPane().add(lblNewLabel_9);
 		
 		preencherTela();

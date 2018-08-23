@@ -167,7 +167,7 @@ public class TerAula extends Login{
 				}
 			}
 		});
-		btnProcurar.setBounds(799, 171, 164, 39);
+		btnProcurar.setBounds(799, 172, 164, 39);
 		frmMeuCrud.getContentPane().add(btnProcurar);
 		
 		tabela = new JTable();

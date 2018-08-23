@@ -157,13 +157,13 @@ public class EntraAluno extends Principal2{
 		frmEntraInstitu.getContentPane().add(lblNewLabel_19);
 		
 		JLabel lblNewLabel_4 = new JLabel("New label");
-		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\fundo.png"));
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\fundo1111.png"));
 		lblNewLabel_4.setBounds(0, 117, 793, 443);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_9 = new JLabel("");
 		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		lblNewLabel_9.setBounds(209, -7, 495, 113);
+		lblNewLabel_9.setBounds(138, 7, 495, 113);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_9);
 	}
 }

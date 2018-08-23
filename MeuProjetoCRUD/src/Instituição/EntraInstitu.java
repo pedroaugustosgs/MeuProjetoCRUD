@@ -85,11 +85,6 @@ public class EntraInstitu extends Principal2{
 				frmEntraInstitu.dispose();
 			}
 		});
-		
-		JLabel lblNewLabel_15 = new JLabel("");
-		lblNewLabel_15.setIcon(new ImageIcon("D:\\Imagem\\img\\Chapeu azul.png"));
-		lblNewLabel_15.setBounds(343, -7, 125, 89);
-		frmEntraInstitu.getContentPane().add(lblNewLabel_15);
 		btnCadastrar.setForeground(Color.BLACK);
 		btnCadastrar.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnCadastrar.setBounds(542, 288, 164, 39);
@@ -102,17 +97,17 @@ public class EntraInstitu extends Principal2{
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
 		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_1.setBounds(0, 60, 465, 30);
+		lblNewLabel_1.setBounds(0, 96, 465, 30);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_6.setBounds(447, 60, 344, 30);
+		lblNewLabel_6.setBounds(459, 96, 344, 30);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_7 = new JLabel("");
 		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega em p\u00E9.jpg"));
-		lblNewLabel_7.setBounds(394, 64, 69, 458);
+		lblNewLabel_7.setBounds(394, 99, 69, 423);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_7);
 		
 		JLabel lblNewLabel_3 = new JLabel("");
@@ -139,8 +134,13 @@ public class EntraInstitu extends Principal2{
 		frmEntraInstitu.getContentPane().add(lblNewLabel_5);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\fundo.png"));
-		lblNewLabel.setBounds(-3, 66, 794, 458);
+		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\fundo1111.png"));
+		lblNewLabel.setBounds(-3, 101, 794, 423);
 		frmEntraInstitu.getContentPane().add(lblNewLabel);
+		
+		JLabel lblNewLabel_8 = new JLabel("New label");
+		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
+		lblNewLabel_8.setBounds(152, 6, 491, 115);
+		frmEntraInstitu.getContentPane().add(lblNewLabel_8);
 	}
 }

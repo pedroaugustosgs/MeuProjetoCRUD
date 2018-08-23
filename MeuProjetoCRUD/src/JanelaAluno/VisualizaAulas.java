@@ -542,8 +542,8 @@ public class VisualizaAulas extends Login{
 		frame.getContentPane().add(lblNewLabel_8);
 		
 		lblNewLabel_10 = new JLabel("New label");
-		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\info.jpg"));
-		lblNewLabel_10.setBounds(66, 4, 799, 94);
+		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\info1111.jpg"));
+		lblNewLabel_10.setBounds(81, 9, 799, 94);
 		frame.getContentPane().add(lblNewLabel_10);
 		
 		panel_1 = new JPanel();

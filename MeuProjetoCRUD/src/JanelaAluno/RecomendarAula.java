@@ -413,7 +413,7 @@ public class RecomendarAula extends Login {
 		frmRecomendeAula.getContentPane().add(lblNewLabel_4);
 		
 		lblNewLabel_5 = new JLabel("New label");
-		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\ggggggggg.jpg"));
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\ggggggggg111.jpg"));
 		lblNewLabel_5.setBounds(15, 11, 906, 77);
 		frmRecomendeAula.getContentPane().add(lblNewLabel_5);
 		

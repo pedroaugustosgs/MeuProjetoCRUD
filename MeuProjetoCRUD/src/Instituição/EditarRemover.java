@@ -248,7 +248,7 @@ public class EditarRemover {
 		
 		JLabel lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		lblNewLabel_5.setBounds(225, -23, 451, 214);
+		lblNewLabel_5.setBounds(225, -18, 451, 214);
 		frmApprofe.getContentPane().add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_8 = new JLabel("");

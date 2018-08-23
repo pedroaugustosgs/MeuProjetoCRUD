@@ -322,7 +322,7 @@ public class Config extends Login {
 		
 		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Chapeu azul.png"));
-		lblNewLabel_3.setBounds(425, 42, 152, 71);
+		lblNewLabel_3.setBounds(425, 34, 152, 68);
 		frmMeuCrud.getContentPane().add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_6 = new JLabel("");
@@ -351,7 +351,7 @@ public class Config extends Login {
 		frmMeuCrud.getContentPane().add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("");
-		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\A.png"));
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\A111.png"));
 		lblNewLabel_5.setBounds(147, 30, 406, 189);
 		frmMeuCrud.getContentPane().add(lblNewLabel_5);
 		//System.out.println(EntraAluno.volt);
