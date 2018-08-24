@@ -56,7 +56,8 @@ public class AulasSolicitadas extends Login{
 	private JLabel lblNewLabel_3;
 	private JLabel lblNewLabel_9;
 	
-	
+	public String ids[]= new String[100];
+	int cont=0;
 	/**
 	 * Launch the application.-
 	 */
@@ -210,7 +211,7 @@ public class AulasSolicitadas extends Login{
 			
 			@Override
 			public void mouseClicked(MouseEvent arg0) {     /////////////////////******************
-				ConfirmaAula.main(new String[] {String.valueOf(tabela.getValueAt(tabela.getSelectedRow(), 0))});  //*****************************
+				SolicitaAula.main(new String[] {ids[tabela.getSelectedRow()]});  //*****************************
 				frmMeuCrud.dispose();
 			}
 			
@@ -244,6 +245,9 @@ public class AulasSolicitadas extends Login{
 		
 		try {
 			while (dados.next()) {
+				
+				ids[cont++]=dados.getString("idSaula");
+
 				linhas.add(new Object[] {
 						//dados.getString("idSAula"),
 						Materia(dados.getString("materia")),
