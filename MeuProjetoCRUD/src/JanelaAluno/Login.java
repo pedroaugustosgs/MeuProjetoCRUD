@@ -95,7 +95,7 @@ public class Login extends Principal2{
 		JButton btnVoltar = new JButton("VOLTAR");
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Principal2.main(null);
+				EntraAluno.main(null);
 				frmLogin.dispose();
 			}
 		});
@@ -191,7 +191,7 @@ public class Login extends Principal2{
 		
 		lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		lblNewLabel.setBounds(25, 39, 447, 135);
+		lblNewLabel.setBounds(95, 32, 447, 135);
 		frmLogin.getContentPane().add(lblNewLabel);
 		
 		lblNewLabel_1 = new JLabel("");
