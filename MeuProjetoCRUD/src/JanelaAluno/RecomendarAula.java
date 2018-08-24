@@ -134,7 +134,7 @@ public class RecomendarAula extends Login {
 			e1.printStackTrace();
 		}
 		
-		JButton btnCriarAula = new JButton("CRIAR AULA");
+		JButton btnCriarAula = new JButton("SOLICITAR");
 		btnCriarAula.setBackground(Color.LIGHT_GRAY);
 		btnCriarAula.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -266,25 +266,13 @@ public class RecomendarAula extends Login {
 				
 				if(InserirAulaSoli(idSoli, disciplina, conteudo, segunda, terca, quarta, quinta, sexta, sabado, domingo, manha, tarde, noite, local,DeManha
 						, AteManha, DeTarde, AteTarde, DeNoite, AteNoite, umaVez, DeUmaVez, AteUmaVez)) {
-					JOptionPane.showMessageDialog(null, "Nova aula cadastrada com sucesso!");
+					JOptionPane.showMessageDialog(null, "Nova aula solicitada com sucesso!");
 				}else {
 					JOptionPane.showMessageDialog(null, "Erro ao cadastrar nova aula!");
 				}
 				
-				chSegunda.setSelected(false);
-				chTarde.setSelected(false);
-				chTerca.setSelected(false);
-				chQuarta.setSelected(false);
-				chQuinta.setSelected(false);
-				chSexta.setSelected(false);
-				chSabado.setSelected(false);
-				chDomingo.setSelected(false);
-				chManha.setSelected(false);
-				chNoite.setSelected(false);
-				tfConteudo.setText(null);
-				tfLocal.setText(null);
-				tfDeUmaVez.setText(null);
-				tfAteUmaVez.setText(null);
+				TerAula.main(null);
+				frmRecomendeAula.dispose();
 			}
 		});
 		
