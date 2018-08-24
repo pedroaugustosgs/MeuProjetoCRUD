@@ -156,9 +156,9 @@ public class Principal {
 		lblNewLabel_7.setBounds(385, 94, 478, 302);
 		frmApprofe.getContentPane().add(lblNewLabel_7);
 		
-		JLabel lblNewLabel_8 = new JLabel("New label");
+		JLabel lblNewLabel_8 = new JLabel("");
 		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		lblNewLabel_8.setBounds(180, 0, 455, 117);
+		lblNewLabel_8.setBounds(268, -14, 455, 117);
 		frmApprofe.getContentPane().add(lblNewLabel_8);
 		
 		frmApprofe.setResizable(false);//impede a tela de ser redimensionada

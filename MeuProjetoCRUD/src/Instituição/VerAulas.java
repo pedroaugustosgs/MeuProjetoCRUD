@@ -114,7 +114,7 @@ public class VerAulas extends LoginInstitu{
 			@Override
 			public void focusGained(FocusEvent arg0) {
 				if(tfProcurar.getText().toString().equalsIgnoreCase("Entre com o nome a ser procurado")) {
-					tfProcurar.setForeground(Color.BLACK);
+					tfProcurar.setForeground(Color.WHITE);
 					tfProcurar.setText(null);
 				}
 			}
@@ -221,11 +221,53 @@ public class VerAulas extends LoginInstitu{
 		btnProcurar.setBackground(Color.LIGHT_GRAY);
 		btnProcurar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if(tfProcurar.getText().equals("Entre com o nome a ser procurado")) {
-					criaTabela(new CRUDAlunos().selecionaAlunos());
-				}else {
-					criaTabela(new CRUDAlunos().procuraNomeAluno(tfProcurar.getText().toString()));	
+				ResultSet dados=null;
+				String sq="SELECT * FROM alunos INNER JOIN aulas ON alunos.idaluno=aulas.professor WHERE escola=?";
+				try {
+					PreparedStatement stmt = Conexao.conexao.prepareStatement(sq);
+					stmt.setInt(1, id);
+					dados = stmt.executeQuery();
+					stmt.execute();
+					stmt.close();
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
+				if(tfProcurar.getText().equals("Entre com o nome a ser procurado")) {
+					ResultSet dadosSL;
+					String sql="SELECT * FROM aulas WHERE professor=? ORDER BY conteudo";
+					try {
+						PreparedStatement s = Conexao.conexao.prepareStatement(sql);
+						while(dados.next()) {
+							s.setString(1, dados.getString("idaluno"));
+						}
+						dadosSL = s.executeQuery();
+						s.execute();
+						s.close();
+						
+						criaTabela(dadosSL);	
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}				
+				}else {
+					ResultSet dadosLike;
+					String sql="SELECT * FROM aulas WHERE materia LIKE ? AND professor=? ORDER BY conteudo";
+					try {
+						PreparedStatement s = Conexao.conexao.prepareStatement(sql);
+						s.setString(1, "%"+tfProcurar.getText()+"%");
+						while(dados.next()) {
+							s.setString(2, dados.getString("idaluno"));
+						}
+						dadosLike = s.executeQuery();
+						s.execute();
+						s.close();
+						
+						criaTabela(dadosLike);
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}				}
 			}
 		});
 		btnProcurar.setBounds(703, 144, 164, 39);

@@ -103,7 +103,7 @@ public class Splash implements Runnable{
 	
 	public void run() {
 		barra.setValue(0);
-		barra.setMaximum(3000);
+		barra.setMaximum(2999);
 		for(int x=0;x<3000;x++) {
 			barra.setValue(x);
 			//definir uma pause 

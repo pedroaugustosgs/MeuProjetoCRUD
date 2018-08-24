@@ -104,7 +104,7 @@ public class VerAlunos extends LoginInstitu{
 			@Override
 			public void focusGained(FocusEvent arg0) {
 				if(tfProcurar.getText().toString().equalsIgnoreCase("Entre com o nome a ser procurado")) {
-					tfProcurar.setForeground(Color.BLACK);
+					tfProcurar.setForeground(Color.WHITE);
 					tfProcurar.setText(null);
 				}
 			}
@@ -206,9 +206,35 @@ public class VerAlunos extends LoginInstitu{
 		btnProcurar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(tfProcurar.getText().equals("Entre com o nome a ser procurado")) {
-					criaTabela(new CRUDAlunos().selecionaAlunos());
+					ResultSet dados=null;
+					String sq="SELECT * FROM alunos WHERE escola=?";
+					try {
+						PreparedStatement stmt = Conexao.conexao.prepareStatement(sq);
+						stmt.setInt(1, id);
+						dados = stmt.executeQuery();
+						stmt.execute();
+						stmt.close();
+						
+					} catch (SQLException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 				}else {
-					criaTabela(new CRUDAlunos().procuraNomeAluno(tfProcurar.getText().toString()));	
+					ResultSet dadosLike;
+					String sql="SELECT * FROM alunos WHERE nome LIKE ? AND escola=? ORDER BY nome";
+					try {
+						PreparedStatement s = Conexao.conexao.prepareStatement(sql);
+						s.setString(1, "%"+tfProcurar.getText()+"%");
+						s.setInt(2, id);
+						dadosLike = s.executeQuery();
+						s.execute();
+						s.close();
+						
+						criaTabela(dadosLike);
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 				}
 			}
 		});

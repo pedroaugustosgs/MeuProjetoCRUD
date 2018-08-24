@@ -157,14 +157,46 @@ public class VerHistorico {
 		btnProcurar.setBackground(Color.LIGHT_GRAY);
 		btnProcurar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if(tfProcurar.getText().equals("Entre com a matéria a ser procurada")) {
-					criaTabela(new CRUDAulas().pegaAula());
-				}else {
+				
+				ResultSet dados=null;
+				String sq="SELECT * FROM alunos INNER JOIN aulas ON alunos.idaluno=aulas.professor WHERE escola=?";
+				try {
+					PreparedStatement stmt = Conexao.conexao.prepareStatement(sq);
+					stmt.setString(1, idInstitu);
+					dados = stmt.executeQuery();
+					stmt.execute();
+					stmt.close();
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+				if(tfProcurar.getText().equals("Entre com a matéria a ser procurada")) {	
+					ResultSet dadosSL;
+					String sql="SELECT * FROM aulas WHERE professor=? ORDER BY conteudo";
+					try {
+						PreparedStatement s = Conexao.conexao.prepareStatement(sql);
+						while(dados.next()) {
+							s.setString(1, dados.getString("idaluno"));
+						}
+						dadosSL = s.executeQuery();
+						s.execute();
+						s.close();
+						
+						criaTabela(dadosSL);	
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					}else {
 					ResultSet dadosLike;
-					String sql="SELECT * FROM aulas WHERE materia LIKE ? ORDER BY conteudo";
+					String sql="SELECT * FROM aulas WHERE materia LIKE ? AND professor=? ORDER BY conteudo";
 					try {
 						PreparedStatement s = Conexao.conexao.prepareStatement(sql);
 						s.setString(1, "%"+tfProcurar.getText()+"%");
+						while(dados.next()) {
+							s.setString(2, dados.getString("idaluno"));
+						}
 						dadosLike = s.executeQuery();
 						s.execute();
 						s.close();
@@ -208,7 +240,7 @@ public class VerHistorico {
 		});
 	
 		JScrollPane scrollPane = new JScrollPane(tabela);
-		scrollPane.setBounds(186, 267, 601, 203);
+		scrollPane.setBounds(228, 269, 601, 203);
 		frmMeuCrud.getContentPane().add(scrollPane);
 		
 		JButton btnVoltar = new JButton("VOLTAR");
@@ -244,10 +276,10 @@ public class VerHistorico {
 		lblNewLabel_5.setBounds(827, 102, 244, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_5);
 		
-		lblNewLabel_7 = new JLabel("AULAS J\u00C1 DISPON\u00CDVEIS");
+		lblNewLabel_7 = new JLabel("HIST\u00D3RICO DE AULAS");
 		lblNewLabel_7.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		lblNewLabel_7.setForeground(Color.WHITE);
-		lblNewLabel_7.setBounds(366, 238, 278, 20);
+		lblNewLabel_7.setBounds(404, 238, 278, 20);
 		frmMeuCrud.getContentPane().add(lblNewLabel_7);
 		
 		lblNewLabel_8 = new JLabel("");

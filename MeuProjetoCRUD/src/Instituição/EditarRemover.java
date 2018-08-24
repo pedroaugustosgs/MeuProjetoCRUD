@@ -280,6 +280,11 @@ public class EditarRemover {
 		lblNewLabel_13.setBounds(459, 583, 421, 33);
 		frmApprofe.getContentPane().add(lblNewLabel_13);
 		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon("D:\\Imagem\\img\\aluno.png"));
+		label.setBounds(531, 159, 214, 225);
+		frmApprofe.getContentPane().add(label);
+		
 		
 		
 		colocaDadosNaTela();
