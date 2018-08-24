@@ -109,7 +109,7 @@ public class EditarRemover {
 		lblNewLabel_3.setBounds(367, 379, 410, 23);
 		frmApprofe.getContentPane().add(lblNewLabel_3);
 		
-		JLabel lblNewLabel_6 = new JLabel("New label");
+		JLabel lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_6.setBounds(0, 146, 492, 23);
 		frmApprofe.getContentPane().add(lblNewLabel_6);

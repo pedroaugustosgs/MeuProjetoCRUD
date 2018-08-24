@@ -564,7 +564,7 @@ public class ConfirmaAula extends Login{
 		lblNewLabel_3.setBounds(435, 527, 488, 52);
 		frmConfirmeSuaAula.getContentPane().add(lblNewLabel_3);
 		
-		lblNewLabel_4 = new JLabel("New label");
+		lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_4.setBounds(915, 527, 129, 52);
 		frmConfirmeSuaAula.getContentPane().add(lblNewLabel_4);
@@ -614,7 +614,7 @@ public class ConfirmaAula extends Login{
 		lblatedata.setBounds(64, 59, 86, 19);
 		panel_1.add(lblatedata);
 		
-		JLabel lblNewLabel_9 = new JLabel("New label");
+		JLabel lblNewLabel_9 = new JLabel("");
 		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\info1111.jpg"));
 		lblNewLabel_9.setBounds(117, 3, 893, 94);
 		frmConfirmeSuaAula.getContentPane().add(lblNewLabel_9);

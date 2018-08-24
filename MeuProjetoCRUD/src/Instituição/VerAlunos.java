@@ -269,7 +269,7 @@ public class VerAlunos extends LoginInstitu{
 		lblNewLabel_4.setBounds(565, 100, 250, 24);
 		frmMeuCrud.getContentPane().add(lblNewLabel_4);
 		
-		lblNewLabel_5 = new JLabel("New label");
+		lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\usuaaaaa.jpg"));
 		lblNewLabel_5.setBounds(240, 11, 327, 88);
 		frmMeuCrud.getContentPane().add(lblNewLabel_5);

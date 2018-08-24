@@ -123,12 +123,12 @@ public class Cadastrar_login extends LoginInstitu{
 		
 		SpinnerModel model = new SpinnerNumberModel(1, 1, 100, 1);
 		
-		JLabel lblNewLabel_5 = new JLabel("New label");
+		JLabel lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_5.setBounds(1, 505, 290, 24);
 		frmCadastro.getContentPane().add(lblNewLabel_5);
 		
-		JLabel lblNewLabel_7 = new JLabel("New label");
+		JLabel lblNewLabel_7 = new JLabel("");
 		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_7.setBounds(278, 505, 128, 24);
 		frmCadastro.getContentPane().add(lblNewLabel_7);
@@ -523,12 +523,12 @@ public class Cadastrar_login extends LoginInstitu{
 		bg.add(fem);
 		bg.add(mas);
 		
-		JLabel lblNewLabel_2 = new JLabel("New label");
+		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_2.setBounds(0, 82, 365, 32);
 		frmCadastro.getContentPane().add(lblNewLabel_2);
 		
-		JLabel lblNewLabel_3 = new JLabel("New label");
+		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_3.setBounds(362, 87, 442, 23);
 		frmCadastro.getContentPane().add(lblNewLabel_3);
@@ -540,7 +540,7 @@ public class Cadastrar_login extends LoginInstitu{
 		label_5.setBounds(329, 409, 12, 14);
 		frmCadastro.getContentPane().add(label_5);
 		
-		JLabel lblNewLabel_6 = new JLabel("New label");
+		JLabel lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_6.setBounds(393, 505, 383, 24);
 		frmCadastro.getContentPane().add(lblNewLabel_6);
@@ -550,7 +550,7 @@ public class Cadastrar_login extends LoginInstitu{
 		lblNewLabel_4.setBounds(486, 198, 263, 229);
 		frmCadastro.getContentPane().add(lblNewLabel_4);
 		
-		JLabel lblNewLabel_1 = new JLabel("New label");
+		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Solicite Uma Nova Aula (2).jpg"));
 		lblNewLabel_1.setBounds(189, 13, 383, 69);
 		frmCadastro.getContentPane().add(lblNewLabel_1);

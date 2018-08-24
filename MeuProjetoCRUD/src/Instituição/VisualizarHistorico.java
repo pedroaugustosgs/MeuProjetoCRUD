@@ -466,7 +466,7 @@ public class VisualizarHistorico {
 		lblNewLabel_3.setBounds(435, 527, 488, 52);
 		frmVejaHistorico.getContentPane().add(lblNewLabel_3);
 		
-		lblNewLabel_4 = new JLabel("New label");
+		lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_4.setBounds(915, 527, 129, 52);
 		frmVejaHistorico.getContentPane().add(lblNewLabel_4);
@@ -516,7 +516,7 @@ public class VisualizarHistorico {
 		lblatedata.setBounds(64, 59, 86, 19);
 		panel_1.add(lblatedata);
 		
-		lblNewLabel_8 = new JLabel("New label");
+		lblNewLabel_8 = new JLabel("");
 		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\info1111.jpg"));
 		lblNewLabel_8.setBounds(94, 2, 834, 94);
 		frmVejaHistorico.getContentPane().add(lblNewLabel_8);

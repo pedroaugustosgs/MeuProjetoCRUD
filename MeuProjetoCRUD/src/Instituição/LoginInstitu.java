@@ -109,7 +109,7 @@ public class LoginInstitu extends Principal2{
 		lblNewLabel_7.setBounds(128, 256, 64, 24);
 		frmLogin.getContentPane().add(lblNewLabel_7);
 		
-		lblNewLabel_5 = new JLabel("New label");
+		lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_5.setBounds(0, 147, 496, 30);
 		frmLogin.getContentPane().add(lblNewLabel_5);
@@ -120,22 +120,22 @@ public class LoginInstitu extends Principal2{
 		lblNewLabel.setBounds(128, 219, 64, 26);
 		frmLogin.getContentPane().add(lblNewLabel);
 		
-		lblNewLabel_6 = new JLabel("New label");
+		lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_6.setBounds(488, 149, 96, 26);
 		frmLogin.getContentPane().add(lblNewLabel_6);
 		
 		lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
-		lblNewLabel_3.setBounds(35, 29, 478, 148);
+		lblNewLabel_3.setBounds(93, 11, 478, 148);
 		frmLogin.getContentPane().add(lblNewLabel_3);
 		
-		lblNewLabel_1 = new JLabel("New label");
+		lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_1.setBounds(0, -1, 496, 26);
 		frmLogin.getContentPane().add(lblNewLabel_1);
 		
-		lblNewLabel_2 = new JLabel("New label");
+		lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_2.setBounds(488, -3, 83, 30);
 		frmLogin.getContentPane().add(lblNewLabel_2);

@@ -202,7 +202,7 @@ public class AulasSolicitadas extends Login{
 		lblNewLabel_6.setBounds(925, 109, 124, 26);
 		frmMeuCrud.getContentPane().add(lblNewLabel_6);
 		
-		lblNewLabel_7 = new JLabel("New label");
+		lblNewLabel_7 = new JLabel("");
 		lblNewLabel_7.setBounds(547, 506, 46, 14);
 		frmMeuCrud.getContentPane().add(lblNewLabel_7);
 		
@@ -225,12 +225,12 @@ public class AulasSolicitadas extends Login{
 			lblNewLabel.setBounds(422, 188, 46, 14);
 			frmMeuCrud.getContentPane().add(lblNewLabel);
 			
-			lblNewLabel_3 = new JLabel("New label");
+			lblNewLabel_3 = new JLabel("");
 			lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 			lblNewLabel_3.setBounds(961, 494, 74, 26);
 			frmMeuCrud.getContentPane().add(lblNewLabel_3);
 			
-			lblNewLabel_9 = new JLabel("New label");
+			lblNewLabel_9 = new JLabel("");
 			lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\aulassss.jpg"));
 			lblNewLabel_9.setBounds(204, 40, 683, 69);
 			frmMeuCrud.getContentPane().add(lblNewLabel_9);

@@ -304,7 +304,7 @@ public class PlaAluno {
 		lblNewLabel_13.setBounds(682, 115, 402, 249);
 		frmMeuCrud.getContentPane().add(lblNewLabel_13);
 		
-		JLabel lblNewLabel_7 = new JLabel("New label");
+		JLabel lblNewLabel_7 = new JLabel("");
 		lblNewLabel_7.setIcon(new ImageIcon("D:\\Imagem\\img\\suap.png"));
 		lblNewLabel_7.setBounds(252, 21, 550, 64);
 		frmMeuCrud.getContentPane().add(lblNewLabel_7);

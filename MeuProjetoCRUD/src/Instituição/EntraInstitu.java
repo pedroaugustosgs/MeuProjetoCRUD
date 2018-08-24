@@ -95,7 +95,7 @@ public class EntraInstitu extends Principal2{
 		lblNewLabel_2.setBounds(527, 219, 276, 200);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_2);
 		
-		JLabel lblNewLabel_1 = new JLabel("New label");
+		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_1.setBounds(0, 96, 465, 30);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_1);
@@ -138,7 +138,7 @@ public class EntraInstitu extends Principal2{
 		lblNewLabel.setBounds(-3, 101, 794, 423);
 		frmEntraInstitu.getContentPane().add(lblNewLabel);
 		
-		JLabel lblNewLabel_8 = new JLabel("New label");
+		JLabel lblNewLabel_8 = new JLabel("");
 		lblNewLabel_8.setIcon(new ImageIcon("D:\\Imagem\\img\\A (1).png"));
 		lblNewLabel_8.setBounds(149, -15, 391, 142);
 		frmEntraInstitu.getContentPane().add(lblNewLabel_8);

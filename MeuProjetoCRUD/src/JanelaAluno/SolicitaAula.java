@@ -72,9 +72,7 @@ public class SolicitaAula extends Login{
 	private JLabel lblNewLabel_5;
 	private JLabel lblNewLabel_6;
 	private JLabel lblNewLabel_7;
-	private JLabel lblNewLabel_10;
-	private JLabel lblNewLabel_11;
-	private JLabel lblNewLabel_12;
+	private JLabel label_4;
 
 	
 	/**
@@ -111,7 +109,7 @@ public class SolicitaAula extends Login{
 		frmConfirmeSuaAula.setTitle("Confirme sua aula");
 		frmConfirmeSuaAula.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Imagem\\img\\students-cap.png"));
 		frmConfirmeSuaAula.getContentPane().setBackground(Color.BLACK);
-		frmConfirmeSuaAula.setBounds(100, 100, 1062, 652);
+		frmConfirmeSuaAula.setBounds(100, 100, 1062, 506);
 		frmConfirmeSuaAula.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frmConfirmeSuaAula.getContentPane().setLayout(null);
 		frmConfirmeSuaAula.setLocationRelativeTo(null);
@@ -121,20 +119,50 @@ public class SolicitaAula extends Login{
 		panel.setBackground(Color.BLACK);
 		panel.setVisible(false);
 		
-		lblNewLabel_12 = new JLabel("");
-		lblNewLabel_12.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
-		lblNewLabel_12.setBounds(759, 304, 280, 14);
-		frmConfirmeSuaAula.getContentPane().add(lblNewLabel_12);
+		panel_1 = new JPanel();
+		panel_1.setBounds(260, 126, 794, 213);
+		frmConfirmeSuaAula.getContentPane().add(panel_1);
+		panel_1.setBackground(Color.BLACK);
+		panel_1.setVisible(false);
+		panel_1.setLayout(null);
 		
-		lblNewLabel_11 = new JLabel("");
-		lblNewLabel_11.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
-		lblNewLabel_11.setBounds(303, 304, 488, 14);
-		frmConfirmeSuaAula.getContentPane().add(lblNewLabel_11);
+		JLabel lblNewLabel_1 = new JLabel("Data:");
+		lblNewLabel_1.setForeground(Color.WHITE);
+		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblNewLabel_1.setBounds(10, 11, 56, 19);
+		panel_1.add(lblNewLabel_1);
 		
-		lblNewLabel_10 = new JLabel("");
-		lblNewLabel_10.setIcon(new ImageIcon("D:\\Imagem\\img\\BARRA ofcial.png"));
-		lblNewLabel_10.setBounds(10, 304, 307, 14);
-		frmConfirmeSuaAula.getContentPane().add(lblNewLabel_10);
+		lbldata = new JLabel("");
+		lbldata.setForeground(Color.WHITE);
+		lbldata.setBounds(78, 11, 86, 19);
+		panel_1.add(lbldata);
+		
+		JLabel lblDe = new JLabel("DE:");
+		lblDe.setForeground(Color.WHITE);
+		lblDe.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblDe.setBounds(10, 60, 56, 19);
+		panel_1.add(lblDe);
+		
+		JLabel lblAt_1 = new JLabel("AT\u00C9:");
+		lblAt_1.setForeground(Color.WHITE);
+		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
+		lblAt_1.setBounds(10, 107, 56, 19);
+		panel_1.add(lblAt_1);
+		
+		lbldedata = new JLabel("");
+		lbldedata.setForeground(Color.WHITE);
+		lbldedata.setBounds(64, 60, 80, 19);
+		panel_1.add(lbldedata);
+		
+		lblatedata = new JLabel("");
+		lblatedata.setForeground(Color.WHITE);
+		lblatedata.setBounds(58, 107, 86, 19);
+		panel_1.add(lblatedata);
+		
+		label_4 = new JLabel("");
+		label_4.setIcon(new ImageIcon("D:\\Imagem\\img\\pesquisa.png"));
+		label_4.setBounds(463, -4, 200, 230);
+		panel_1.add(label_4);
 		
 		lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
@@ -145,7 +173,7 @@ public class SolicitaAula extends Login{
 		lblNewLabel_6.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
 		lblNewLabel_6.setBounds(435, 88, 470, 34);
 		frmConfirmeSuaAula.getContentPane().add(lblNewLabel_6);
-		panel.setBounds(274, 133, 770, 173);
+		panel.setBounds(250, 133, 770, 173);
 		frmConfirmeSuaAula.getContentPane().add(panel);
 		panel.setLayout(null);
 		
@@ -378,7 +406,7 @@ public class SolicitaAula extends Login{
 		
 		lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_2.setBounds(-36, 527, 488, 52);
+		lblNewLabel_2.setBounds(-50, 350, 488, 52);
 		frmConfirmeSuaAula.getContentPane().add(lblNewLabel_2);
 		
 		Label label = new Label("Mat\u00E9ria:");
@@ -390,19 +418,19 @@ public class SolicitaAula extends Login{
 		Label label_1 = new Label("Solicitante:");
 		label_1.setForeground(Color.WHITE);
 		label_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_1.setBounds(15, 153, 66, 22);
+		label_1.setBounds(18, 175, 66, 22);
 		frmConfirmeSuaAula.getContentPane().add(label_1);
 		
 		Label label_2 = new Label("Conte\u00FAdo:");
 		label_2.setForeground(Color.WHITE);
 		label_2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_2.setBounds(13, 181, 66, 22);
+		label_2.setBounds(18, 225, 66, 22);
 		frmConfirmeSuaAula.getContentPane().add(label_2);
 		
 		Label label_3 = new Label("Local:");
 		label_3.setForeground(Color.WHITE);
 		label_3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
-		label_3.setBounds(14, 210, 49, 22);
+		label_3.setBounds(18, 276, 49, 22);
 		frmConfirmeSuaAula.getContentPane().add(label_3);
 		
 		lblmateria = new JLabel("");
@@ -412,17 +440,17 @@ public class SolicitaAula extends Login{
 		
 		lblprofessor = new JLabel("");
 		lblprofessor.setForeground(Color.WHITE);
-		lblprofessor.setBounds(85, 152, 137, 22);
+		lblprofessor.setBounds(91, 175, 137, 22);
 		frmConfirmeSuaAula.getContentPane().add(lblprofessor);
 		
 		lblconteudo = new JLabel("");
 		lblconteudo.setForeground(Color.WHITE);
-		lblconteudo.setBounds(82, 180, 146, 22);
+		lblconteudo.setBounds(82, 225, 146, 22);
 		frmConfirmeSuaAula.getContentPane().add(lblconteudo);
 		
 		lbllocal = new JLabel("");
 		lbllocal.setForeground(Color.WHITE);
-		lbllocal.setBounds(68, 210, 153, 22);
+		lbllocal.setBounds(68, 271, 153, 22);
 		frmConfirmeSuaAula.getContentPane().add(lbllocal);
 		
 		JButton btnNewButton = new JButton("CONFIRMAR");
@@ -431,6 +459,11 @@ public class SolicitaAula extends Login{
 		btnNewButton.setFont(new Font("DialogInput", Font.BOLD, 20));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				ResultSet dd=null;
+				String r =JOptionPane.showInputDialog("Entre com o total de vagas dessa aula!");
+				if(r.isEmpty()) {
+					return;
+				}
 				
 				ResultSet dado=null;
 				String sql1 = "SELECT * FROM solicitaraula WHERE idSAula =?";
@@ -440,28 +473,117 @@ public class SolicitaAula extends Login{
 					dado = stmt1.executeQuery();
 					stmt1.execute();
 					stmt1.close();
-					
+					dado.first();
 					
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 				
-				boolean res = false;
-				String sql ="INSERT INTO alunosconfirmados (idAluno ,idConfirmar) VALUES (?,?)";
+				String sql="INSERT INTO aulas (materia,conteudo,segunda,terca,quarta,quinta,sexta,sabado,domingo,cedo,tarde,noite,local,professor,vagas,DeManha,AteManha,"
+						+ "DeTarde,AteTarde,DeNoite,AteNoite,DiaUmaVez,DeUmaVez,AteUmaVez,periodico)"
+						+" VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 				try {
 					PreparedStatement stmt = Conexao.conexao.prepareStatement(sql);
-					stmt.setString(1, PlaAluno.idaluno);
-					stmt.setString(2, idAula);					
+					stmt.setString(1, dado.getString("materia"));
+					stmt.setString(2, dado.getString("conteudo"));
+					stmt.setString(3, dado.getString("segunda"));
+					stmt.setString(4, dado.getString("terca"));
+					stmt.setString(5, dado.getString("quarta"));
+					stmt.setString(6, dado.getString("quinta"));
+					stmt.setString(7, dado.getString("sexta"));
+					stmt.setString(8, dado.getString("sabado"));
+					stmt.setString(9, dado.getString("domingo"));
+					stmt.setString(10, dado.getString("manha"));
+					stmt.setString(11, dado.getString("tarde"));
+					stmt.setString(12, dado.getString("noite"));
+					stmt.setString(13, dado.getString("local"));
+					stmt.setString(14, PlaAluno.idaluno);
+					stmt.setString(15, r);
+					stmt.setString(16, dado.getString("demanha"));
+					stmt.setString(17, dado.getString("atemanha"));
+					stmt.setString(18, dado.getString("detarde"));
+					stmt.setString(19, dado.getString("atetarde"));
+					stmt.setString(20, dado.getString("denoite"));
+					stmt.setString(21, dado.getString("atenoite"));
+					SimpleDateFormat simples = new SimpleDateFormat("yyyy/MM/dd");
+					
+					Date data = null;
+					try {
+						data = simples.parse(lbldata.getText().toString());
+					} catch (ParseException e) {
+						data=null;
+						// TODO Auto-generated catch block
+						//e.printStackTrace();
+					}
+					/*Date date = null;
+					try {
+						date = simples.parse(data);
+					} catch (ParseException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+*/					if(data != null) {
+						long d = data.getTime();
+						stmt.setDate(22, new java.sql.Date(d));
+					}else {
+						 long d = 0000-00-00;
+						stmt.setDate(22, new java.sql.Date(d));
+					}
+					
+					stmt.setString(23, dado.getString("deumavez"));
+					stmt.setString(24, dado.getString("ateumavez"));
+					if(data==null) {
+						stmt.setString(25, "1");
+					}else {
+						stmt.setString(25, "0");
+					}
+					
+					stmt.execute();
+					stmt.close();
+					
+					
+					
+					String sel="SELECT * FROM aulas";
+					PreparedStatement st = Conexao.conexao.prepareStatement(sel);
+					dd = st.executeQuery();
+					st.execute();
+					st.close();
+					dd.last();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					System.out.println("erro1");
+				}
+
+				boolean res = false;
+				String sql2 ="INSERT INTO alunosconfirmados (idAluno ,idConfirmar) VALUES (?,?)";
+				try {
+					PreparedStatement stmt = Conexao.conexao.prepareStatement(sql2);
+					stmt.setString(1, dado.getString("solicitante"));
+					stmt.setString(2, dd.getString("idAula"));					
 					stmt.execute();					
 					stmt.close();
 					res = true;
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+					e.printStackTrace();               
+					System.out.println("Erro2");
 				}		
-					
-				ResultSet prof=null;
+				
+				String del="DELETE FROM solicitaraula WHERE idSaula=?";
+				try {
+					PreparedStatement s = Conexao.conexao.prepareStatement(del);
+					s.setString(1, dado.getString("idSaula"));
+					s.execute();
+					s.close();
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+					System.out.println("ERRRO3");
+				}
+
+				/*ResultSet prof=null;
 				ResultSet alu=null;
 				ResultSet aula=null;
 				
@@ -498,14 +620,15 @@ public class SolicitaAula extends Login{
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				}
+				}*/
 				JOptionPane.showMessageDialog(null, "Nova Aula Confirmada com Sucesso!");
 				
 				PlaAluno.main(null);       
 				frmConfirmeSuaAula.dispose();
+			
 			}
 		});
-		btnNewButton.setBounds(1, 575, 164, 39);
+		btnNewButton.setBounds(18, 413, 164, 39);
 		frmConfirmeSuaAula.getContentPane().add(btnNewButton);
 		
 		JButton btnNovoltar = new JButton("VOLTAR");
@@ -518,17 +641,17 @@ public class SolicitaAula extends Login{
 				frmConfirmeSuaAula.dispose();
 			}
 		});
-		btnNovoltar.setBounds(880, 575, 164, 39);
+		btnNovoltar.setBounds(876, 413, 164, 39);
 		frmConfirmeSuaAula.getContentPane().add(btnNovoltar);
 		
 		lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_3.setBounds(435, 527, 488, 52);
+		lblNewLabel_3.setBounds(435, 350, 488, 52);
 		frmConfirmeSuaAula.getContentPane().add(lblNewLabel_3);
 		
-		lblNewLabel_4 = new JLabel("New label");
+		lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon("D:\\Imagem\\img\\Coluna grega.jpg"));
-		lblNewLabel_4.setBounds(915, 527, 129, 52);
+		lblNewLabel_4.setBounds(917, 350, 137, 52);
 		frmConfirmeSuaAula.getContentPane().add(lblNewLabel_4);
 		
 		lblNewLabel_7 = new JLabel("");
@@ -536,47 +659,7 @@ public class SolicitaAula extends Login{
 		lblNewLabel_7.setBounds(876, 93, 168, 24);
 		frmConfirmeSuaAula.getContentPane().add(lblNewLabel_7);
 		
-		panel_1 = new JPanel();
-		panel_1.setBounds(232, 138, 168, 109);
-		frmConfirmeSuaAula.getContentPane().add(panel_1);
-		panel_1.setBackground(Color.BLACK);
-		panel_1.setVisible(false);
-		panel_1.setLayout(null);
-		
-		JLabel lblNewLabel_1 = new JLabel("Data:");
-		lblNewLabel_1.setForeground(Color.WHITE);
-		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblNewLabel_1.setBounds(10, 11, 56, 19);
-		panel_1.add(lblNewLabel_1);
-		
-		lbldata = new JLabel("");
-		lbldata.setForeground(Color.WHITE);
-		lbldata.setBounds(78, 11, 86, 19);
-		panel_1.add(lbldata);
-		
-		JLabel lblDe = new JLabel("DE:");
-		lblDe.setForeground(Color.WHITE);
-		lblDe.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblDe.setBounds(10, 39, 56, 19);
-		panel_1.add(lblDe);
-		
-		JLabel lblAt_1 = new JLabel("AT\u00C9:");
-		lblAt_1.setForeground(Color.WHITE);
-		lblAt_1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
-		lblAt_1.setBounds(10, 60, 56, 19);
-		panel_1.add(lblAt_1);
-		
-		lbldedata = new JLabel("");
-		lbldedata.setForeground(Color.WHITE);
-		lbldedata.setBounds(64, 36, 80, 19);
-		panel_1.add(lbldedata);
-		
-		lblatedata = new JLabel("");
-		lblatedata.setForeground(Color.WHITE);
-		lblatedata.setBounds(64, 59, 86, 19);
-		panel_1.add(lblatedata);
-		
-		JLabel lblNewLabel_9 = new JLabel("New label");
+		JLabel lblNewLabel_9 = new JLabel("");
 		lblNewLabel_9.setIcon(new ImageIcon("D:\\Imagem\\img\\info1111.jpg"));
 		lblNewLabel_9.setBounds(117, 3, 893, 94);
 		frmConfirmeSuaAula.getContentPane().add(lblNewLabel_9);
@@ -711,7 +794,6 @@ public class SolicitaAula extends Login{
 				lblatenoite.setText(dados.getString("ateNoite"));
 
 				if(panels==1) {
-					
 					lbldata.setText(dados.getString("DiaUmaVez"));
 					lbldedata.setText(dados.getString("DeUmaVez"));
 					lblatedata.setText(dados.getString("AteUmaVez"));
@@ -728,24 +810,16 @@ public class SolicitaAula extends Login{
 
 		String idprof=null;
 		ResultSet ddNome;
-		String sql ="Select * From solicitaraula Where solicitante=?";
+		String sql ="Select * From alunos INNER JOIN aulas ON Alunos.idAluno=aulas.professor Where idaula=?";
 		try {
 			PreparedStatement s = Conexao.conexao.prepareStatement(sql);
 			s.setString(1, idAula2);
 			dadosAula = s.executeQuery();
 			s.execute();
 			s.close();
+			
 			if(dadosAula.next()) {
-				idprof = dadosAula.getString("professor");
-			} 
-			String sql2="Select * From alunos Where idAluno=?";
-			PreparedStatement stmt = Conexao.conexao.prepareStatement(sql2);
-			stmt.setString(1, idprof);
-			ddNome = stmt.executeQuery();
-			stmt.execute();
-			stmt.close();
-			if(ddNome.next()) {
-				nomeProf = ddNome.getString("nome");
+				nomeProf = dadosAula.getString("nome");
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
